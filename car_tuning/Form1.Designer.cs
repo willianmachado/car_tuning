@@ -34,10 +34,10 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.mephTabcontrol1 = new CS_ClassLibraryTester.MephTabcontrol();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.ambiance_TabControl1 = new Ambiance.Ambiance_TabControl();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.mephTabcontrol1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.ambiance_TabControl1.SuspendLayout();
@@ -108,16 +108,6 @@
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "tabPage5";
             // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.tabPage6.Location = new System.Drawing.Point(89, 4);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(662, 418);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "tabPage6";
-            // 
             // ambiance_TabControl1
             // 
             this.ambiance_TabControl1.Controls.Add(this.tabPage7);
@@ -148,6 +138,16 @@
             this.tabPage8.Size = new System.Drawing.Size(645, 380);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tabPage6.Location = new System.Drawing.Point(89, 4);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(662, 418);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "tabPage6";
             // 
             // Form1
             // 
