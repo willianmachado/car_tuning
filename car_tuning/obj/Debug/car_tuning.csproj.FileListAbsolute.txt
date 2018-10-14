@@ -1,0 +1,9 @@
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\bin\Debug\car_tuning.exe.config
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\bin\Debug\car_tuning.exe
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\bin\Debug\car_tuning.pdb
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\obj\Debug\car_tuning.Properties.Resources.resources
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\obj\Debug\car_tuning.csproj.GenerateResource.cache
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\obj\Debug\car_tuning.csproj.CoreCompileInputs.cache
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\obj\Debug\car_tuning.exe
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\obj\Debug\car_tuning.pdb
+C:\Users\wdragon\source\repos\car_tuning\car_tuning\obj\Debug\car_tuning.Form1.resources
