@@ -65,16 +65,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ambiance Theme.cs" />
-    <Compile Include="DataBase\DataBase.cs" />
+    <Compile Include="Resouces\DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataBase\iTalk Theme.cs" />
-    <Compile Include="DataBase\MephTheme.cs" />
-    <Compile Include="DataBase\MonoFlat Theme.cs" />
+    <Compile Include="Resouces\iTalk Theme.cs" />
+    <Compile Include="Resouces\MephTheme.cs" />
+    <Compile Include="Resouces\MonoFlat Theme.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
