@@ -34,11 +34,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.mephTabcontrol1 = new CS_ClassLibraryTester.MephTabcontrol();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.mephTabcontrol2 = new CS_ClassLibraryTester.MephTabcontrol();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.iTalk_Panel1 = new iTalk.iTalk_Panel();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.mephTabcontrol1.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.mephTabcontrol2.SuspendLayout();
@@ -92,10 +92,11 @@
             this.mephTabcontrol1.Controls.Add(this.tabPage6);
             this.mephTabcontrol1.ItemSize = new System.Drawing.Size(35, 85);
             this.mephTabcontrol1.Location = new System.Drawing.Point(1, 2);
+            this.mephTabcontrol1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mephTabcontrol1.Multiline = true;
             this.mephTabcontrol1.Name = "mephTabcontrol1";
             this.mephTabcontrol1.SelectedIndex = 0;
-            this.mephTabcontrol1.Size = new System.Drawing.Size(1061, 556);
+            this.mephTabcontrol1.Size = new System.Drawing.Size(796, 452);
             this.mephTabcontrol1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.mephTabcontrol1.TabIndex = 0;
             // 
@@ -104,21 +105,12 @@
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tabPage5.Controls.Add(this.mephTabcontrol2);
             this.tabPage5.Location = new System.Drawing.Point(89, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(968, 548);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Size = new System.Drawing.Size(703, 444);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "tabPage5";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.tabPage6.Location = new System.Drawing.Point(89, 4);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(968, 548);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "tabPage6";
             // 
             // mephTabcontrol2
             // 
@@ -126,11 +118,12 @@
             this.mephTabcontrol2.Controls.Add(this.tabPage7);
             this.mephTabcontrol2.Controls.Add(this.tabPage8);
             this.mephTabcontrol2.ItemSize = new System.Drawing.Size(35, 85);
-            this.mephTabcontrol2.Location = new System.Drawing.Point(6, 6);
+            this.mephTabcontrol2.Location = new System.Drawing.Point(4, 5);
+            this.mephTabcontrol2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.mephTabcontrol2.Multiline = true;
             this.mephTabcontrol2.Name = "mephTabcontrol2";
             this.mephTabcontrol2.SelectedIndex = 0;
-            this.mephTabcontrol2.Size = new System.Drawing.Size(959, 536);
+            this.mephTabcontrol2.Size = new System.Drawing.Size(719, 436);
             this.mephTabcontrol2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.mephTabcontrol2.TabIndex = 0;
             // 
@@ -138,9 +131,10 @@
             // 
             this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tabPage7.Location = new System.Drawing.Point(89, 4);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(866, 528);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Size = new System.Drawing.Size(626, 428);
             this.tabPage7.TabIndex = 0;
             this.tabPage7.Text = "tabPage7";
             // 
@@ -149,31 +143,43 @@
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.tabPage8.Controls.Add(this.iTalk_Panel1);
             this.tabPage8.Location = new System.Drawing.Point(89, 4);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(866, 528);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Size = new System.Drawing.Size(626, 428);
             this.tabPage8.TabIndex = 1;
             this.tabPage8.Text = "tabPage8";
             // 
             // iTalk_Panel1
             // 
             this.iTalk_Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Panel1.Location = new System.Drawing.Point(6, 3);
+            this.iTalk_Panel1.Location = new System.Drawing.Point(4, 2);
+            this.iTalk_Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iTalk_Panel1.Name = "iTalk_Panel1";
-            this.iTalk_Panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.iTalk_Panel1.Size = new System.Drawing.Size(860, 523);
+            this.iTalk_Panel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iTalk_Panel1.Size = new System.Drawing.Size(645, 425);
             this.iTalk_Panel1.TabIndex = 0;
             this.iTalk_Panel1.Text = "iTalk_Panel1";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tabPage6.Location = new System.Drawing.Point(89, 4);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Size = new System.Drawing.Size(703, 444);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "tabPage6";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mephTabcontrol1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(126, 39);
+            this.MinimumSize = new System.Drawing.Size(94, 32);
             this.Name = "Form1";
             this.Text = "monoFlat_ThemeContainer1";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
