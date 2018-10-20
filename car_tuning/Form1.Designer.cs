@@ -34,13 +34,15 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.mephTabcontrol1 = new CS_ClassLibraryTester.MephTabcontrol();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.ambiance_TabControl1 = new Ambiance.Ambiance_TabControl();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.mephTabcontrol2 = new CS_ClassLibraryTester.MephTabcontrol();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.iTalk_Panel1 = new iTalk.iTalk_Panel();
             this.mephTabcontrol1.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.ambiance_TabControl1.SuspendLayout();
+            this.mephTabcontrol2.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -89,55 +91,24 @@
             this.mephTabcontrol1.Controls.Add(this.tabPage5);
             this.mephTabcontrol1.Controls.Add(this.tabPage6);
             this.mephTabcontrol1.ItemSize = new System.Drawing.Size(35, 85);
-            this.mephTabcontrol1.Location = new System.Drawing.Point(12, 12);
+            this.mephTabcontrol1.Location = new System.Drawing.Point(1, 2);
             this.mephTabcontrol1.Multiline = true;
             this.mephTabcontrol1.Name = "mephTabcontrol1";
             this.mephTabcontrol1.SelectedIndex = 0;
-            this.mephTabcontrol1.Size = new System.Drawing.Size(755, 426);
+            this.mephTabcontrol1.Size = new System.Drawing.Size(1061, 556);
             this.mephTabcontrol1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.mephTabcontrol1.TabIndex = 0;
             // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.tabPage5.Controls.Add(this.ambiance_TabControl1);
+            this.tabPage5.Controls.Add(this.mephTabcontrol2);
             this.tabPage5.Location = new System.Drawing.Point(89, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(662, 418);
+            this.tabPage5.Size = new System.Drawing.Size(968, 548);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "tabPage5";
-            // 
-            // ambiance_TabControl1
-            // 
-            this.ambiance_TabControl1.Controls.Add(this.tabPage7);
-            this.ambiance_TabControl1.Controls.Add(this.tabPage8);
-            this.ambiance_TabControl1.ItemSize = new System.Drawing.Size(80, 24);
-            this.ambiance_TabControl1.Location = new System.Drawing.Point(6, 3);
-            this.ambiance_TabControl1.Name = "ambiance_TabControl1";
-            this.ambiance_TabControl1.SelectedIndex = 0;
-            this.ambiance_TabControl1.Size = new System.Drawing.Size(653, 412);
-            this.ambiance_TabControl1.TabIndex = 0;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage7.Location = new System.Drawing.Point(4, 28);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(645, 380);
-            this.tabPage7.TabIndex = 0;
-            this.tabPage7.Text = "tabPage7";
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage8.Location = new System.Drawing.Point(4, 28);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(645, 380);
-            this.tabPage8.TabIndex = 1;
-            this.tabPage8.Text = "tabPage8";
             // 
             // tabPage6
             // 
@@ -145,24 +116,71 @@
             this.tabPage6.Location = new System.Drawing.Point(89, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(662, 418);
+            this.tabPage6.Size = new System.Drawing.Size(968, 548);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "tabPage6";
             // 
+            // mephTabcontrol2
+            // 
+            this.mephTabcontrol2.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.mephTabcontrol2.Controls.Add(this.tabPage7);
+            this.mephTabcontrol2.Controls.Add(this.tabPage8);
+            this.mephTabcontrol2.ItemSize = new System.Drawing.Size(35, 85);
+            this.mephTabcontrol2.Location = new System.Drawing.Point(6, 6);
+            this.mephTabcontrol2.Multiline = true;
+            this.mephTabcontrol2.Name = "mephTabcontrol2";
+            this.mephTabcontrol2.SelectedIndex = 0;
+            this.mephTabcontrol2.Size = new System.Drawing.Size(959, 536);
+            this.mephTabcontrol2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.mephTabcontrol2.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tabPage7.Location = new System.Drawing.Point(89, 4);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(866, 528);
+            this.tabPage7.TabIndex = 0;
+            this.tabPage7.Text = "tabPage7";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.tabPage8.Controls.Add(this.iTalk_Panel1);
+            this.tabPage8.Location = new System.Drawing.Point(89, 4);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(866, 528);
+            this.tabPage8.TabIndex = 1;
+            this.tabPage8.Text = "tabPage8";
+            // 
+            // iTalk_Panel1
+            // 
+            this.iTalk_Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Panel1.Location = new System.Drawing.Point(6, 3);
+            this.iTalk_Panel1.Name = "iTalk_Panel1";
+            this.iTalk_Panel1.Padding = new System.Windows.Forms.Padding(5);
+            this.iTalk_Panel1.Size = new System.Drawing.Size(860, 523);
+            this.iTalk_Panel1.TabIndex = 0;
+            this.iTalk_Panel1.Text = "iTalk_Panel1";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.mephTabcontrol1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(261, 65);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(126, 39);
             this.Name = "Form1";
             this.Text = "monoFlat_ThemeContainer1";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.mephTabcontrol1.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            this.ambiance_TabControl1.ResumeLayout(false);
+            this.mephTabcontrol2.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -175,9 +193,10 @@
         private System.Windows.Forms.TabPage tabPage3;
         private CS_ClassLibraryTester.MephTabcontrol mephTabcontrol1;
         private System.Windows.Forms.TabPage tabPage5;
-        private Ambiance.Ambiance_TabControl ambiance_TabControl1;
+        private CS_ClassLibraryTester.MephTabcontrol mephTabcontrol2;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
+        private iTalk.iTalk_Panel iTalk_Panel1;
         private System.Windows.Forms.TabPage tabPage6;
     }
 }

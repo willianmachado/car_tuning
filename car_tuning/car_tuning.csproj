@@ -65,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ambiance Theme.cs" />
+    <Compile Include="Modelo\Carro.cs" />
+    <Compile Include="Modelo\Cliente.cs" />
+    <Compile Include="Modelo\Funcionario.cs" />
+    <Compile Include="Modelo\Pecas.cs" />
+    <Compile Include="Modelo\Servico.cs" />
+    <Compile Include="Modelo\Teste.cs" />
     <Compile Include="Resouces\DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -106,7 +112,6 @@
   <ItemGroup>
     <Folder Include="Controle\" />
     <Folder Include="DAO\" />
-    <Folder Include="Modelo\" />
     <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
