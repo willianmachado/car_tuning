@@ -10,7 +10,8 @@ namespace car_tuning.Modelo
     {
         private string ano;
         private string fabricante;
-        private Cliente cliente;
+        private int CodCliente;
+        
         private string placa;
         private string modelo;
         private int codigo;
@@ -21,9 +22,9 @@ namespace car_tuning.Modelo
         public string Modelo { get => modelo; set => modelo = value; } 
         public string Ano { get => ano; set => ano = value; }
         public string Fabricante { get => fabricante; set => fabricante = value; }
-        internal Cliente Cliente { get => cliente; set => cliente = value; }
         public int Codigo { get => codigo; set => codigo = value; }
         public string CpfClinte { get => cpfClinte; set => cpfClinte = value; }
         public double Peso { get => peso; set => peso = value; }
+        public int CodCliente1 { get => CodCliente; set => CodCliente = value; }
     }
 }
