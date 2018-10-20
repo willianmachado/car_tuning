@@ -8,6 +8,18 @@ namespace car_tuning.Modelo
 {
     class FuncionarioDAO
     {
+        private long cpf; 
+        private string nome, telefone;
 
+        public FuncionarioDAO(long cpf, string nome, string telefone)
+        {
+            this.Cpf = cpf;
+            this.Nome = nome;
+            this.Telefone = telefone;
+        }
+
+        public long Cpf { get => cpf; set => cpf = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
     }
 }
