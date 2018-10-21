@@ -58,7 +58,6 @@
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
             this.txtModelo = new iTalk.iTalk_ComboBox();
             this.txtMarca = new iTalk.iTalk_ComboBox();
-            this.btVisualizar = new iTalk.iTalk_Button_2();
             this.iTalk_Label8 = new iTalk.iTalk_Label();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.iTalk_Label6 = new iTalk.iTalk_Label();
@@ -71,6 +70,7 @@
             this.txtTelefone = new iTalk.iTalk_TextBox_Small();
             this.txtNome = new iTalk.iTalk_TextBox_Small();
             this.txtCpf = new iTalk.iTalk_TextBox_Small();
+            this.btPesquisar = new iTalk.iTalk_Button_2();
             this.btNovo = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
@@ -88,6 +88,7 @@
             this.scPanel.BackColor = System.Drawing.Color.Transparent;
             this.scPanel.Controls.Add(this.iTalk_GroupBox2);
             this.scPanel.Controls.Add(this.iTalk_GroupBox1);
+            this.scPanel.Controls.Add(this.btPesquisar);
             this.scPanel.Controls.Add(this.btNovo);
             this.scPanel.Controls.Add(this.btSalvar);
             this.scPanel.Controls.Add(this.btLimpar);
@@ -441,7 +442,6 @@
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_GroupBox1.Controls.Add(this.txtModelo);
             this.iTalk_GroupBox1.Controls.Add(this.txtMarca);
-            this.iTalk_GroupBox1.Controls.Add(this.btVisualizar);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label8);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label6);
@@ -492,25 +492,160 @@
             this.txtMarca.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.txtMarca.IntegralHeight = false;
             this.txtMarca.ItemHeight = 20;
+            this.txtMarca.Items.AddRange(new object[] {
+            "CHEVROLET",
+            "VOLKSWAGEN",
+            "FIAT",
+            "MERCEDES-BENZ",
+            "CITROEN",
+            "CHANA",
+            "HONDA",
+            "SUBARU",
+            "FERRARI",
+            "BUGATTI",
+            "LAMBORGHINI",
+            "FORD",
+            "HYUNDAI",
+            "JAC",
+            "KIA",
+            "GURGEL",
+            "DODGE",
+            "CHRYSLER",
+            "BENTLEY",
+            "SSANGYONG",
+            "PEUGEOT",
+            "TOYOTA",
+            "RENAULT",
+            "ACURA",
+            "ADAMO",
+            "AGRALE",
+            "ALFA ROMEO",
+            "AMERICAR",
+            "ASTON MARTIN",
+            "AUDI",
+            "BEACH",
+            "BIANCO",
+            "BMW",
+            "BORGWARD",
+            "BRILLIANCE",
+            "BUICK",
+            "CBT",
+            "NISSAN",
+            "CHAMONIX",
+            "CHEDA",
+            "CHERY",
+            "CORD",
+            "COYOTE",
+            "CROSS LANDER",
+            "DAEWOO",
+            "DAIHATSU",
+            "VOLVO",
+            "DE SOTO",
+            "DETOMAZO",
+            "DELOREAN",
+            "DKW-VEMAG",
+            "SUZUKI",
+            "EAGLE",
+            "EFFA",
+            "ENGESA",
+            "ENVEMO",
+            "FARUS",
+            "FERCAR",
+            "FNM",
+            "PONTIAC",
+            "PORSCHE",
+            "GEO",
+            "GRANCAR",
+            "GREAT WALL",
+            "HAFEI",
+            "HOFSTETTER",
+            "HUDSON",
+            "HUMMER",
+            "INFINITI",
+            "INTERNATIONAL",
+            "JAGUAR",
+            "JEEP",
+            "JINBEI",
+            "JPX",
+            "KAISER",
+            "KOENIGSEGG",
+            "LAUTOMOBILE",
+            "LAUTOCRAFT",
+            "LADA",
+            "LANCIA",
+            "LAND ROVER",
+            "LEXUS",
+            "LIFAN",
+            "LINCOLN",
+            "LOBINI",
+            "LOTUS",
+            "MAHINDRA",
+            "MASERATI",
+            "MATRA",
+            "MAYBACH",
+            "MAZDA",
+            "MENON",
+            "MERCURY",
+            "MITSUBISHI",
+            "MG",
+            "MINI",
+            "MIURA",
+            "MORRIS",
+            "MP LAFER",
+            "MPLM",
+            "NEWTRACK",
+            "NISSIN",
+            "OLDSMOBILE",
+            "PAG",
+            "PAGANI",
+            "PLYMOUTH",
+            "PUMA",
+            "RENO",
+            "REVA-I",
+            "ROLLS-ROYCE",
+            "ROMI",
+            "SEAT",
+            "UTILITARIOS AGRICOLAS",
+            "SHINERAY",
+            "SAAB",
+            "SHORT",
+            "SIMCA",
+            "SMART",
+            "SPYKER",
+            "STANDARD",
+            "STUDEBAKER",
+            "TAC",
+            "TANGER",
+            "TRIUMPH",
+            "TROLLER",
+            "UNIMOG",
+            "WIESMANN",
+            "CADILLAC",
+            "AM GEN",
+            "BUGGY",
+            "WILLYS OVERLAND",
+            "KASEA",
+            "SATURN",
+            "SWELL MINI",
+            "SKODA",
+            "KARMANN GHIA",
+            "KART",
+            "HANOMAG",
+            "OUTROS",
+            "HILLMAN",
+            "HRG",
+            "GAIOLA",
+            "TATA",
+            "DITALLY",
+            "RELY",
+            "MCLAREN",
+            "GEELY"});
             this.txtMarca.Location = new System.Drawing.Point(134, 374);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(130, 26);
             this.txtMarca.StartIndex = 0;
             this.txtMarca.TabIndex = 2;
-            // 
-            // btVisualizar
-            // 
-            this.btVisualizar.BackColor = System.Drawing.Color.Transparent;
-            this.btVisualizar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btVisualizar.ForeColor = System.Drawing.Color.White;
-            this.btVisualizar.Image = null;
-            this.btVisualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btVisualizar.Location = new System.Drawing.Point(114, 473);
-            this.btVisualizar.Name = "btVisualizar";
-            this.btVisualizar.Size = new System.Drawing.Size(116, 40);
-            this.btVisualizar.TabIndex = 1;
-            this.btVisualizar.Text = "Visualizar";
-            this.btVisualizar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.txtMarca.SelectedIndexChanged += new System.EventHandler(this.txtMarca_SelectedIndexChanged);
             // 
             // iTalk_Label8
             // 
@@ -671,6 +806,20 @@
             this.txtCpf.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCpf.UseSystemPasswordChar = false;
             // 
+            // btPesquisar
+            // 
+            this.btPesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.btPesquisar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btPesquisar.Image = null;
+            this.btPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPesquisar.Location = new System.Drawing.Point(0, 374);
+            this.btPesquisar.Name = "btPesquisar";
+            this.btPesquisar.Size = new System.Drawing.Size(116, 40);
+            this.btPesquisar.TabIndex = 1;
+            this.btPesquisar.Text = "Pesquisar";
+            this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
             // btNovo
             // 
             this.btNovo.BackColor = System.Drawing.Color.Transparent;
@@ -699,6 +848,7 @@
             this.btSalvar.TabIndex = 1;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // btLimpar
             // 
@@ -806,7 +956,7 @@
         private iTalk.iTalk_TextBox_Small txtNome;
         private iTalk.iTalk_ComboBox txtModelo;
         private iTalk.iTalk_ComboBox txtMarca;
-        private iTalk.iTalk_Button_2 btVisualizar;
+        private iTalk.iTalk_Button_2 btPesquisar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private iTalk.iTalk_Label iTalk_Label12;
         private iTalk.iTalk_Label iTalk_Label11;

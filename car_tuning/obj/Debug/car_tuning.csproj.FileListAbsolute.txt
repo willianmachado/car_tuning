@@ -68,3 +68,4 @@ D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.csproj.CoreCompileInputs.c
 D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.exe
 D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.pdb
 D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormCliente.resources
+D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormPesquisa.resources
