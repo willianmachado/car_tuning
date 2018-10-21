@@ -13,8 +13,8 @@ namespace SS_Car___Auto_Mecanica.resources
     {
         private static SQLiteConnection conexao;
         private static DataBase instance;
-        private const string URL = "Data Source=sscar.db";
-        public static string nomeBanco = "sscar.db";
+        private const string URL = "Data Source=car.db";
+        public static string nomeBanco = "car.db";
 
         private DataBase()
         {
@@ -59,18 +59,9 @@ namespace SS_Car___Auto_Mecanica.resources
             //cria tabela Cliente
             StringBuilder sql = new StringBuilder();
             sql.AppendLine("CREATE TABLE `cliente` ( " +
-                "`codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, " +
+                "`cpf` TEXT NOT NULL PRIMARY KEY UNIQUE, " +
                 "`nome` TEXT NOT NULL, " +
-                "`cpf` TEXT NOT NULL UNIQUE, " +
-                "`celular` TEXT, " +
-                "`telefone` TEXT, " +
-                "`email` TEXT NOT NULL," +
-                " `endereco` TEXT, " +
-                "`bairro` TEXT," +
-                " `cep` TEXT NOT NULL," +
-                " `estado` TEXT," +
-                " `numero` INTEGER, " +
-                "`cidade` TEXT )");
+                "`telefone` TEXT, ");
 
             SQLiteCommand cmd = new SQLiteCommand(sql.ToString(), conn);
             try
@@ -87,11 +78,10 @@ namespace SS_Car___Auto_Mecanica.resources
 
 
             sql.Clear();
-            sql.AppendLine("CREATE TABLE `fornecedor` (`codigo`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
-                "`nome`	TEXT NOT NULL," +
-                "`cnpj`	TEXT NOT NULL UNIQUE,`celular`	TEXT," +
-                "`telefone`	TEXT," +
-                "`email`	TEXT); ");
+            sql.AppendLine("CREATE TABLE `funcionario` ( " +
+                "`cpf`	TEXT NOT NULL PRIMARY KEY UNIQUE," +
+                "`nome`	TEXT NOT NULL," +               
+                "`telefone`	TEXT); ");
             
 
             cmd = new SQLiteCommand(sql.ToString(), conn);
@@ -109,12 +99,13 @@ namespace SS_Car___Auto_Mecanica.resources
 
             sql.Clear();
             sql.AppendLine("CREATE TABLE `peca` ( " +
-                "`codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
-                " `nome` TEXT NOT NULL, `codigoPartNumber` TEXT NOT NULL UNIQUE," +
-                " `quantidade` REAL NOT NULL, `preco` NUMERIC NOT NULL, " +
-                "`codVeiculos` TEXT, `fabricante` TEXT," +
-                " `cnpjFornecedor` TEXT NOT NULL, " +
-                "FOREIGN KEY(`cnpjFornecedor`) REFERENCES `fornecedor`(`cnpj`)); ");
+                " `codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
+                " `descricao` TEXT NOT NULL, " +
+                " `tipo` TEXT NOT NULL, `valor` NUMERIC NOT NULL, " +
+                " `compatibilidade` TEXT," +
+                " `addTorque` INTEGER, " +
+                " `addPeso` INTEGER, " +
+                " `addPotencia` INTEGER); ");
             
 
             cmd = new SQLiteCommand(sql.ToString(), conn);
@@ -130,14 +121,14 @@ namespace SS_Car___Auto_Mecanica.resources
             conn.Close();
             //cria tabela Veiculo
             sql.Clear();
-            sql.AppendLine("CREATE TABLE `veiculo` ( " +
-                "`codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
-                " `placa` TEXT NOT NULL UNIQUE," +
+            sql.AppendLine("CREATE TABLE `carro` ( " +
+                " `placa` TEXT NOT NULL PRIMARY KEY UNIQUE," +
                 " `modelo` TEXT," +
-                " `fabricante` TEXT," +
+                " `marca` TEXT," +
                 " `cor` TEXT," +
                 " `ano` TEXT," +
-                " `cpfCliente` TEXT );");
+                " `cpfCliente` TEXT );" +
+                "FOREIGN KEY('cpfCliente') REFERENCES 'cliente'('cpf') )");
             
 
             cmd = new SQLiteCommand(sql.ToString(), conn);
@@ -147,19 +138,22 @@ namespace SS_Car___Auto_Mecanica.resources
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao criar banco de dados TABELA VELICULO: " + ex.Message);
+                MessageBox.Show("Erro ao criar banco de dados TABELA CARRO: " + ex.Message);
             }
 
             conn.Close();
 
-            //cria tabela Orcamento
+            //cria tabela serviço
             sql.Clear();
-            sql.AppendLine("CREATE TABLE 'orcamento' ( `codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, " +
-                "`cpfCliente` INTEGER NOT NULL, `data` DATE NOT NULL, `codPartNum` INTEGER NOT NULL, " +
-                "`palacaVeiculo` INTEGER NOT NULL, `nomeProd` INTEGER NOT NULL, " +
-                "`status` TEXT, `valor` NUMERIC," +
-                " FOREIGN KEY(`codPartNum`) REFERENCES `peca`(`codigoPartNumber`), " +
-                "FOREIGN KEY(`palacaVeiculo`) REFERENCES `veiculo`(`placa`), " +
+            sql.AppendLine("CREATE TABLE 'servico' ( " +
+                "`cod` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, " +
+                "`placaCarro` TEXT NOT NULL, " +
+                "`codPeca` INTEGER NOT NULL, " +
+                "`valorTotal` INTEGER NOT NULL," +
+                "'cpfFuncionaio' INTEGER NOT NULL " +
+                "`cpfCliente` INTEGER NOT NULL, " +
+                " FOREIGN KEY(`placaCarro`) REFERENCES `carro`(`placa`), " +
+                "FOREIGN KEY(`cpfFuncionario`) REFERENCES `funcionario`(`cpf`), " +
                 "FOREIGN KEY(`cpfCliente`) REFERENCES `cliente`(`cpf`) )");
             
 
@@ -171,24 +165,6 @@ namespace SS_Car___Auto_Mecanica.resources
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao criar banco de dados tabela ORCAMENTO: " + ex.Message);
-            }
-
-            conn.Close();
-            sql.Clear();
-            sql.AppendLine("CREATE TABLE 'carrinho' ( `codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, " +
-                "`codigoOrc` INTEGER NOT NULL, `quatidade` REAL, `codigoPeca` INTEGER NOT NULL, " +
-                "FOREIGN KEY(`codigoOrc`) REFERENCES `orcamento`(`codigo`)," +
-                " FOREIGN KEY(`codigoPeca`) REFERENCES `peca`(`codigo`) )");
-
-
-            cmd = new SQLiteCommand(sql.ToString(), conn);
-            try
-            {
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao criar banco de dados tabela carrinho: " + ex.Message);
             }
 
             conn.Close();

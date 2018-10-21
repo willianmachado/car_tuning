@@ -16,6 +16,7 @@ namespace car_tuning
         {
             InitializeComponent();
             ControlaBotoes(true);
+            
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace car_tuning
             txtModelo.Text = "";
             txtMarca.Text = "";
             txtAno.Text = "";
+
             
         }
 
@@ -72,6 +74,9 @@ namespace car_tuning
                 btSalvar.ForeColor = Color.Gray;
                 btLimpar.Enabled = false;
                 btLimpar.ForeColor = Color.Gray;
+                btPesquisar.Enabled = true;
+                btPesquisar.ForeColor = Color.White;
+
             }
             else
             {
@@ -86,10 +91,37 @@ namespace car_tuning
                 btSalvar.ForeColor = Color.White;
                 btLimpar.Enabled = true;
                 btLimpar.ForeColor = Color.White;
+                btPesquisar.Enabled = false;
+                btPesquisar.ForeColor = Color.Gray;
             }
 
         }
 
-        
+        private void btSalvar_Click(object sender, EventArgs e)
+        {
+                     
+             
+            
+        }
+
+        private void txtMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OpenFileDialog fdlg = new OpenFileDialog();
+
+            fdlg.Title = "marcas-carro";
+            fdlg.InitialDirectory = @"D:\ADS\LP2\marcas-e-modelos";
+            fdlg.FileName = txtMarca.Text;
+            fdlg.Filter = "Excel Sheet(*.xls)|*.xls|All Files(*.*)|*.*";
+            fdlg.FilterIndex = 1;
+            fdlg.RestoreDirectory = true;
+
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                txtModelo.Text = fdlg.FileName;
+                //Import();
+
+                Application.DoEvents();
+            }
+        }
     }
 }
