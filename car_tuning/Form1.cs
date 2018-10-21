@@ -16,5 +16,11 @@ namespace car_tuning
         {
             InitializeComponent();
         }
+
+        private void btCliente_Click(object sender, EventArgs e)
+        {
+            FormCliente form = new FormCliente();
+            form.ShowDialog();
+        }
     }
 }
