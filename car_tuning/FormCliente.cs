@@ -103,25 +103,7 @@ namespace car_tuning
              
             
         }
+        
 
-        private void txtMarca_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            OpenFileDialog fdlg = new OpenFileDialog();
-
-            fdlg.Title = "marcas-carro";
-            fdlg.InitialDirectory = @"D:\ADS\LP2\marcas-e-modelos";
-            fdlg.FileName = txtMarca.Text;
-            fdlg.Filter = "Excel Sheet(*.xls)|*.xls|All Files(*.*)|*.*";
-            fdlg.FilterIndex = 1;
-            fdlg.RestoreDirectory = true;
-
-            if (fdlg.ShowDialog() == DialogResult.OK)
-            {
-                txtModelo.Text = fdlg.FileName;
-                //Import();
-
-                Application.DoEvents();
-            }
-        }
     }
 }
