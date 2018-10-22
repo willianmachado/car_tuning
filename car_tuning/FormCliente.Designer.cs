@@ -101,6 +101,7 @@
             this.scPanel.Size = new System.Drawing.Size(1045, 609);
             this.scPanel.TabIndex = 0;
             this.scPanel.Text = "iTalk_Panel1";
+            this.scPanel.Click += new System.EventHandler(this.scPanel_Click);
             // 
             // iTalk_GroupBox2
             // 
@@ -137,6 +138,7 @@
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(541, 601);
             this.iTalk_GroupBox2.TabIndex = 2;
             this.iTalk_GroupBox2.Text = "Carro";
+            this.iTalk_GroupBox2.Click += new System.EventHandler(this.iTalk_GroupBox2_Click);
             // 
             // mephProgressBar7
             // 
@@ -149,6 +151,7 @@
             this.mephProgressBar7.TabIndex = 2;
             this.mephProgressBar7.Text = "Rotação Maxima";
             this.mephProgressBar7.Value = 0;
+            this.mephProgressBar7.Click += new System.EventHandler(this.mephProgressBar7_Click);
             // 
             // mephProgressBar6
             // 
@@ -161,6 +164,7 @@
             this.mephProgressBar6.TabIndex = 2;
             this.mephProgressBar6.Text = "mephProgressBar1";
             this.mephProgressBar6.Value = 0;
+            this.mephProgressBar6.Click += new System.EventHandler(this.mephProgressBar6_Click);
             // 
             // mephProgressBar4
             // 
@@ -173,6 +177,7 @@
             this.mephProgressBar4.TabIndex = 2;
             this.mephProgressBar4.Text = "mephProgressBar1";
             this.mephProgressBar4.Value = 0;
+            this.mephProgressBar4.Click += new System.EventHandler(this.mephProgressBar4_Click);
             // 
             // mephProgressBar3
             // 
@@ -185,6 +190,7 @@
             this.mephProgressBar3.TabIndex = 2;
             this.mephProgressBar3.Text = "mephProgressBar1";
             this.mephProgressBar3.Value = 0;
+            this.mephProgressBar3.Click += new System.EventHandler(this.mephProgressBar3_Click);
             // 
             // mephProgressBar2
             // 
@@ -197,6 +203,7 @@
             this.mephProgressBar2.TabIndex = 2;
             this.mephProgressBar2.Text = "mephProgressBar1";
             this.mephProgressBar2.Value = 0;
+            this.mephProgressBar2.Click += new System.EventHandler(this.mephProgressBar2_Click);
             // 
             // mephProgressBar5
             // 
@@ -209,6 +216,7 @@
             this.mephProgressBar5.TabIndex = 2;
             this.mephProgressBar5.Text = "mephProgressBar1";
             this.mephProgressBar5.Value = 0;
+            this.mephProgressBar5.Click += new System.EventHandler(this.mephProgressBar5_Click);
             // 
             // mephProgressBar1
             // 
@@ -221,6 +229,7 @@
             this.mephProgressBar1.TabIndex = 2;
             this.mephProgressBar1.Text = "mephProgressBar1";
             this.mephProgressBar1.Value = 0;
+            this.mephProgressBar1.Click += new System.EventHandler(this.mephProgressBar1_Click);
             // 
             // iTalk_Label20
             // 
@@ -233,6 +242,7 @@
             this.iTalk_Label20.Size = new System.Drawing.Size(125, 21);
             this.iTalk_Label20.TabIndex = 0;
             this.iTalk_Label20.Text = "Rotação Maxima";
+            this.iTalk_Label20.Click += new System.EventHandler(this.iTalk_Label20_Click);
             // 
             // pictureBox1
             // 
@@ -241,6 +251,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(205, 166);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // iTalk_Label18
             // 
@@ -253,6 +264,7 @@
             this.iTalk_Label18.Size = new System.Drawing.Size(77, 21);
             this.iTalk_Label18.TabIndex = 0;
             this.iTalk_Label18.Text = "Consumo";
+            this.iTalk_Label18.Click += new System.EventHandler(this.iTalk_Label18_Click);
             // 
             // iTalk_Label12
             // 
@@ -265,6 +277,7 @@
             this.iTalk_Label12.Size = new System.Drawing.Size(57, 21);
             this.iTalk_Label12.TabIndex = 0;
             this.iTalk_Label12.Text = "Torque";
+            this.iTalk_Label12.Click += new System.EventHandler(this.iTalk_Label12_Click);
             // 
             // iTalk_Label11
             // 
@@ -277,6 +290,7 @@
             this.iTalk_Label11.Size = new System.Drawing.Size(141, 21);
             this.iTalk_Label11.TabIndex = 0;
             this.iTalk_Label11.Text = "Aceleração (0-100)";
+            this.iTalk_Label11.Click += new System.EventHandler(this.iTalk_Label11_Click);
             // 
             // iTalk_Label9
             // 
@@ -289,6 +303,7 @@
             this.iTalk_Label9.Size = new System.Drawing.Size(144, 21);
             this.iTalk_Label9.TabIndex = 0;
             this.iTalk_Label9.Text = "Velocidade Maxima";
+            this.iTalk_Label9.Click += new System.EventHandler(this.iTalk_Label9_Click);
             // 
             // lbAno
             // 
@@ -302,6 +317,7 @@
             this.lbAno.TabIndex = 0;
             this.lbAno.Text = "return Ano";
             this.lbAno.Visible = false;
+            this.lbAno.Click += new System.EventHandler(this.lbAno_Click);
             // 
             // lbMarca
             // 
@@ -315,6 +331,7 @@
             this.lbMarca.TabIndex = 0;
             this.lbMarca.Text = "return Marca";
             this.lbMarca.Visible = false;
+            this.lbMarca.Click += new System.EventHandler(this.lbMarca_Click);
             // 
             // lbModelo
             // 
@@ -328,6 +345,7 @@
             this.lbModelo.TabIndex = 0;
             this.lbModelo.Text = "return Modelo";
             this.lbModelo.Visible = false;
+            this.lbModelo.Click += new System.EventHandler(this.lbModelo_Click);
             // 
             // iTalk_Label10
             // 
@@ -340,6 +358,7 @@
             this.iTalk_Label10.Size = new System.Drawing.Size(68, 21);
             this.iTalk_Label10.TabIndex = 0;
             this.iTalk_Label10.Text = "Potência";
+            this.iTalk_Label10.Click += new System.EventHandler(this.iTalk_Label10_Click);
             // 
             // iTalk_Label21
             // 
@@ -352,6 +371,7 @@
             this.iTalk_Label21.Size = new System.Drawing.Size(39, 21);
             this.iTalk_Label21.TabIndex = 0;
             this.iTalk_Label21.Text = "rpm";
+            this.iTalk_Label21.Click += new System.EventHandler(this.iTalk_Label21_Click);
             // 
             // iTalk_Label19
             // 
@@ -364,6 +384,7 @@
             this.iTalk_Label19.Size = new System.Drawing.Size(46, 21);
             this.iTalk_Label19.TabIndex = 0;
             this.iTalk_Label19.Text = "km/L";
+            this.iTalk_Label19.Click += new System.EventHandler(this.iTalk_Label19_Click);
             // 
             // iTalk_Label17
             // 
@@ -376,6 +397,7 @@
             this.iTalk_Label17.Size = new System.Drawing.Size(34, 21);
             this.iTalk_Label17.TabIndex = 0;
             this.iTalk_Label17.Text = "seg";
+            this.iTalk_Label17.Click += new System.EventHandler(this.iTalk_Label17_Click);
             // 
             // iTalk_Label16
             // 
@@ -388,6 +410,7 @@
             this.iTalk_Label16.Size = new System.Drawing.Size(46, 21);
             this.iTalk_Label16.TabIndex = 0;
             this.iTalk_Label16.Text = "kgfm";
+            this.iTalk_Label16.Click += new System.EventHandler(this.iTalk_Label16_Click);
             // 
             // iTalk_Label15
             // 
@@ -400,6 +423,7 @@
             this.iTalk_Label15.Size = new System.Drawing.Size(47, 21);
             this.iTalk_Label15.TabIndex = 0;
             this.iTalk_Label15.Text = "km/h";
+            this.iTalk_Label15.Click += new System.EventHandler(this.iTalk_Label15_Click);
             // 
             // iTalk_Label14
             // 
@@ -412,6 +436,7 @@
             this.iTalk_Label14.Size = new System.Drawing.Size(25, 21);
             this.iTalk_Label14.TabIndex = 0;
             this.iTalk_Label14.Text = "cv";
+            this.iTalk_Label14.Click += new System.EventHandler(this.iTalk_Label14_Click);
             // 
             // iTalk_Label13
             // 
@@ -424,6 +449,7 @@
             this.iTalk_Label13.Size = new System.Drawing.Size(27, 21);
             this.iTalk_Label13.TabIndex = 0;
             this.iTalk_Label13.Text = "kg";
+            this.iTalk_Label13.Click += new System.EventHandler(this.iTalk_Label13_Click);
             // 
             // iTalk_Label5
             // 
@@ -436,6 +462,7 @@
             this.iTalk_Label5.Size = new System.Drawing.Size(116, 21);
             this.iTalk_Label5.TabIndex = 0;
             this.iTalk_Label5.Text = "Peso de Fabrica";
+            this.iTalk_Label5.Click += new System.EventHandler(this.iTalk_Label5_Click);
             // 
             // iTalk_GroupBox1
             // 
@@ -461,6 +488,7 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(342, 601);
             this.iTalk_GroupBox1.TabIndex = 2;
             this.iTalk_GroupBox1.Text = "Cliente";
+            this.iTalk_GroupBox1.Click += new System.EventHandler(this.iTalk_GroupBox1_Click);
             // 
             // txtModelo
             // 
@@ -479,6 +507,7 @@
             this.txtModelo.Size = new System.Drawing.Size(130, 26);
             this.txtModelo.StartIndex = 0;
             this.txtModelo.TabIndex = 2;
+            this.txtModelo.SelectedIndexChanged += new System.EventHandler(this.txtModelo_SelectedIndexChanged);
             // 
             // txtMarca
             // 
@@ -658,6 +687,7 @@
             this.iTalk_Label8.Size = new System.Drawing.Size(63, 21);
             this.iTalk_Label8.TabIndex = 1;
             this.iTalk_Label8.Text = "Modelo";
+            this.iTalk_Label8.Click += new System.EventHandler(this.iTalk_Label8_Click);
             // 
             // iTalk_Label7
             // 
@@ -670,6 +700,7 @@
             this.iTalk_Label7.Size = new System.Drawing.Size(53, 21);
             this.iTalk_Label7.TabIndex = 1;
             this.iTalk_Label7.Text = "Marca";
+            this.iTalk_Label7.Click += new System.EventHandler(this.iTalk_Label7_Click);
             // 
             // iTalk_Label6
             // 
@@ -682,6 +713,7 @@
             this.iTalk_Label6.Size = new System.Drawing.Size(46, 21);
             this.iTalk_Label6.TabIndex = 1;
             this.iTalk_Label6.Text = "Placa";
+            this.iTalk_Label6.Click += new System.EventHandler(this.iTalk_Label6_Click);
             // 
             // iTalk_Label4
             // 
@@ -694,6 +726,7 @@
             this.iTalk_Label4.Size = new System.Drawing.Size(38, 21);
             this.iTalk_Label4.TabIndex = 1;
             this.iTalk_Label4.Text = "Ano";
+            this.iTalk_Label4.Click += new System.EventHandler(this.iTalk_Label4_Click);
             // 
             // iTalk_Label3
             // 
@@ -706,6 +739,7 @@
             this.iTalk_Label3.Size = new System.Drawing.Size(67, 21);
             this.iTalk_Label3.TabIndex = 1;
             this.iTalk_Label3.Text = "Telefone";
+            this.iTalk_Label3.Click += new System.EventHandler(this.iTalk_Label3_Click);
             // 
             // iTalk_Label2
             // 
@@ -718,6 +752,7 @@
             this.iTalk_Label2.Size = new System.Drawing.Size(53, 21);
             this.iTalk_Label2.TabIndex = 1;
             this.iTalk_Label2.Text = "Nome";
+            this.iTalk_Label2.Click += new System.EventHandler(this.iTalk_Label2_Click);
             // 
             // txtAno
             // 
@@ -733,6 +768,7 @@
             this.txtAno.TabIndex = 0;
             this.txtAno.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAno.UseSystemPasswordChar = false;
+            this.txtAno.TextChanged += new System.EventHandler(this.txtAno_TextChanged);
             // 
             // txtPlaca
             // 
@@ -748,6 +784,7 @@
             this.txtPlaca.TabIndex = 0;
             this.txtPlaca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPlaca.UseSystemPasswordChar = false;
+            this.txtPlaca.TextChanged += new System.EventHandler(this.txtPlaca_TextChanged);
             // 
             // iTalk_Label1
             // 
@@ -760,6 +797,7 @@
             this.iTalk_Label1.Size = new System.Drawing.Size(37, 21);
             this.iTalk_Label1.TabIndex = 1;
             this.iTalk_Label1.Text = "CPF";
+            this.iTalk_Label1.Click += new System.EventHandler(this.iTalk_Label1_Click);
             // 
             // txtTelefone
             // 
@@ -775,6 +813,7 @@
             this.txtTelefone.TabIndex = 0;
             this.txtTelefone.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTelefone.UseSystemPasswordChar = false;
+            this.txtTelefone.TextChanged += new System.EventHandler(this.txtTelefone_TextChanged);
             // 
             // txtNome
             // 
@@ -790,6 +829,7 @@
             this.txtNome.TabIndex = 0;
             this.txtNome.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNome.UseSystemPasswordChar = false;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtCpf
             // 
@@ -805,6 +845,7 @@
             this.txtCpf.TabIndex = 0;
             this.txtCpf.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCpf.UseSystemPasswordChar = false;
+            this.txtCpf.TextChanged += new System.EventHandler(this.txtCpf_TextChanged);
             // 
             // btPesquisar
             // 
@@ -819,6 +860,7 @@
             this.btPesquisar.TabIndex = 1;
             this.btPesquisar.Text = "Pesquisar";
             this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // btNovo
             // 
@@ -893,6 +935,7 @@
             this.btExcluir.TabIndex = 1;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btVoltar
             // 

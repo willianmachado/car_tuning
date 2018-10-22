@@ -22,5 +22,17 @@ namespace car_tuning
             FormCliente form = new FormCliente();
             form.ShowDialog();
         }
+
+        private void btPesquisa_Click(object sender, EventArgs e)
+        {
+            FormPesquisa form = new FormPesquisa();
+            form.ShowDialog();
+        }
+
+        private void btFuncionario_Click(object sender, EventArgs e)
+        {
+            FormFuncionario form = new FormFuncionario();
+            form.ShowDialog();
+        }
     }
 }
