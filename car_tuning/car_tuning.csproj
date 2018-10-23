@@ -107,6 +107,12 @@
     <Compile Include="Modelo\Pecas.cs" />
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Teste.cs" />
+    <Compile Include="Relatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Relatorio.Designer.cs">
+      <DependentUpon>Relatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Resouces\DataBase.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -145,7 +151,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Relatorio.resx">
+      <DependentUpon>Relatorio.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -163,6 +173,9 @@
   <ItemGroup>
     <Folder Include="Controle\" />
     <Folder Include="View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resouces\turbo.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
