@@ -34,5 +34,23 @@ namespace car_tuning
             FormFuncionario form = new FormFuncionario();
             form.ShowDialog();
         }
+
+        private void btPecas_Click(object sender, EventArgs e)
+        {
+            FormPecas form = new FormPecas();
+            form.ShowDialog();
+        }
+
+        private void btServicos_Click(object sender, EventArgs e)
+        {
+            FormServico form = new FormServico();
+            form.ShowDialog();
+        }
+                
+        private void btSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
     }
 }

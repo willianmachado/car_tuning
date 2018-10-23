@@ -72,3 +72,6 @@ D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormPesquisa.resources
 H:\Projeto\car_tuning\car_tuning\obj\Debug\car_tuning.FormCliente.resources
 H:\Projeto\car_tuning\car_tuning\obj\Debug\car_tuning.FormPesquisa.resources
 H:\Projeto\car_tuning\car_tuning\obj\Debug\car_tuning.FormFuncionario.resources
+D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormFuncionario.resources
+D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormServico.resources
+D:\ADS\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormPecas.resources

@@ -83,11 +83,23 @@
     <Compile Include="FormFuncionario.Designer.cs">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPecas.Designer.cs">
+      <DependentUpon>FormPecas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPesquisa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPesquisa.Designer.cs">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormServico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormServico.Designer.cs">
+      <DependentUpon>FormServico.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Carro.cs" />
     <Compile Include="Modelo\Cliente.cs" />
@@ -116,8 +128,14 @@
     <EmbeddedResource Include="FormFuncionario.resx">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPecas.resx">
+      <DependentUpon>FormPecas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPesquisa.resx">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormServico.resx">
+      <DependentUpon>FormServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

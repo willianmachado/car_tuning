@@ -33,10 +33,15 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btSair = new Ambiance.Ambiance_Button_1();
+            this.ambiance_Button_15 = new Ambiance.Ambiance_Button_1();
+            this.ambiance_Button_14 = new Ambiance.Ambiance_Button_1();
+            this.btPecas = new Ambiance.Ambiance_Button_1();
+            this.ambiance_Button_12 = new Ambiance.Ambiance_Button_1();
+            this.btRelatorio = new Ambiance.Ambiance_Button_1();
+            this.btServicos = new Ambiance.Ambiance_Button_1();
             this.btPesquisa = new Ambiance.Ambiance_Button_1();
             this.btCliente = new Ambiance.Ambiance_Button_1();
-            this.ambiance_ControlBox1 = new Ambiance.Ambiance_ControlBox();
-            this.btFuncionario = new Ambiance.Ambiance_Button_1();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -79,15 +84,110 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
             // 
+            // btSair
+            // 
+            this.btSair.BackColor = System.Drawing.Color.Transparent;
+            this.btSair.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btSair.Image = null;
+            this.btSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSair.Location = new System.Drawing.Point(736, 573);
+            this.btSair.Name = "btSair";
+            this.btSair.Size = new System.Drawing.Size(52, 41);
+            this.btSair.TabIndex = 4;
+            this.btSair.Text = "Sair";
+            this.btSair.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
+            // 
+            // ambiance_Button_15
+            // 
+            this.ambiance_Button_15.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Button_15.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ambiance_Button_15.Image = null;
+            this.ambiance_Button_15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ambiance_Button_15.Location = new System.Drawing.Point(678, 573);
+            this.ambiance_Button_15.Name = "ambiance_Button_15";
+            this.ambiance_Button_15.Size = new System.Drawing.Size(52, 41);
+            this.ambiance_Button_15.TabIndex = 3;
+            this.ambiance_Button_15.Text = "Ajuda";
+            this.ambiance_Button_15.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // ambiance_Button_14
+            // 
+            this.ambiance_Button_14.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Button_14.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ambiance_Button_14.Image = null;
+            this.ambiance_Button_14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ambiance_Button_14.Location = new System.Drawing.Point(620, 573);
+            this.ambiance_Button_14.Name = "ambiance_Button_14";
+            this.ambiance_Button_14.Size = new System.Drawing.Size(52, 41);
+            this.ambiance_Button_14.TabIndex = 3;
+            this.ambiance_Button_14.Text = "Sobre";
+            this.ambiance_Button_14.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btPecas
+            // 
+            this.btPecas.BackColor = System.Drawing.Color.Transparent;
+            this.btPecas.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btPecas.Image = null;
+            this.btPecas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPecas.Location = new System.Drawing.Point(-2, 191);
+            this.btPecas.Name = "btPecas";
+            this.btPecas.Size = new System.Drawing.Size(177, 77);
+            this.btPecas.TabIndex = 3;
+            this.btPecas.Text = "Peças";
+            this.btPecas.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btPecas.Click += new System.EventHandler(this.btPecas_Click);
+            // 
+            // ambiance_Button_12
+            // 
+            this.ambiance_Button_12.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Button_12.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ambiance_Button_12.Image = null;
+            this.ambiance_Button_12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ambiance_Button_12.Location = new System.Drawing.Point(-2, 108);
+            this.ambiance_Button_12.Name = "ambiance_Button_12";
+            this.ambiance_Button_12.Size = new System.Drawing.Size(177, 77);
+            this.ambiance_Button_12.TabIndex = 3;
+            this.ambiance_Button_12.Text = "Funcionario";
+            this.ambiance_Button_12.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.ambiance_Button_12.Click += new System.EventHandler(this.btFuncionario_Click);
+            // 
+            // btRelatorio
+            // 
+            this.btRelatorio.BackColor = System.Drawing.Color.Transparent;
+            this.btRelatorio.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btRelatorio.Image = null;
+            this.btRelatorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btRelatorio.Location = new System.Drawing.Point(-2, 440);
+            this.btRelatorio.Name = "btRelatorio";
+            this.btRelatorio.Size = new System.Drawing.Size(177, 77);
+            this.btRelatorio.TabIndex = 3;
+            this.btRelatorio.Text = "Relatórios";
+            this.btRelatorio.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btServicos
+            // 
+            this.btServicos.BackColor = System.Drawing.Color.Transparent;
+            this.btServicos.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btServicos.Image = null;
+            this.btServicos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btServicos.Location = new System.Drawing.Point(-2, 357);
+            this.btServicos.Name = "btServicos";
+            this.btServicos.Size = new System.Drawing.Size(177, 77);
+            this.btServicos.TabIndex = 3;
+            this.btServicos.Text = "Serviço";
+            this.btServicos.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btServicos.Click += new System.EventHandler(this.btServicos_Click);
+            // 
             // btPesquisa
             // 
             this.btPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.btPesquisa.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btPesquisa.Image = null;
             this.btPesquisa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPesquisa.Location = new System.Drawing.Point(12, 181);
+            this.btPesquisa.Location = new System.Drawing.Point(-2, 274);
             this.btPesquisa.Name = "btPesquisa";
-            this.btPesquisa.Size = new System.Drawing.Size(177, 30);
+            this.btPesquisa.Size = new System.Drawing.Size(177, 77);
             this.btPesquisa.TabIndex = 1;
             this.btPesquisa.Text = "Pesquisa";
             this.btPesquisa.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -99,52 +199,33 @@
             this.btCliente.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btCliente.Image = null;
             this.btCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCliente.Location = new System.Drawing.Point(12, 84);
+            this.btCliente.Location = new System.Drawing.Point(-2, 25);
             this.btCliente.Name = "btCliente";
-            this.btCliente.Size = new System.Drawing.Size(177, 30);
+            this.btCliente.Size = new System.Drawing.Size(177, 77);
             this.btCliente.TabIndex = 0;
-            this.btCliente.Text = "CLIENTES";
+            this.btCliente.Text = "Clientes";
             this.btCliente.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btCliente.Click += new System.EventHandler(this.btCliente_Click);
-            // 
-            // ambiance_ControlBox1
-            // 
-            this.ambiance_ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ambiance_ControlBox1.EnableMaximize = true;
-            this.ambiance_ControlBox1.Font = new System.Drawing.Font("Marlett", 7F);
-            this.ambiance_ControlBox1.Location = new System.Drawing.Point(5, 13);
-            this.ambiance_ControlBox1.Name = "ambiance_ControlBox1";
-            this.ambiance_ControlBox1.Size = new System.Drawing.Size(64, 22);
-            this.ambiance_ControlBox1.TabIndex = 2;
-            this.ambiance_ControlBox1.Text = "ambiance_ControlBox1";
-            // 
-            // btFuncionario
-            // 
-            this.btFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.btFuncionario.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btFuncionario.Image = null;
-            this.btFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btFuncionario.Location = new System.Drawing.Point(12, 288);
-            this.btFuncionario.Name = "btFuncionario";
-            this.btFuncionario.Size = new System.Drawing.Size(177, 30);
-            this.btFuncionario.TabIndex = 3;
-            this.btFuncionario.Text = "Funcionario";
-            this.btFuncionario.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btFuncionario.Click += new System.EventHandler(this.btFuncionario_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btFuncionario);
-            this.Controls.Add(this.ambiance_ControlBox1);
+            this.ClientSize = new System.Drawing.Size(800, 626);
+            this.Controls.Add(this.btSair);
+            this.Controls.Add(this.ambiance_Button_15);
+            this.Controls.Add(this.ambiance_Button_14);
+            this.Controls.Add(this.btPecas);
+            this.Controls.Add(this.ambiance_Button_12);
+            this.Controls.Add(this.btRelatorio);
+            this.Controls.Add(this.btServicos);
             this.Controls.Add(this.btPesquisa);
             this.Controls.Add(this.btCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(94, 32);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "monoFlat_ThemeContainer1";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.ResumeLayout(false);
@@ -159,8 +240,13 @@
         private System.Windows.Forms.TabPage tabPage3;
         private Ambiance.Ambiance_Button_1 btCliente;
         private Ambiance.Ambiance_Button_1 btPesquisa;
-        private Ambiance.Ambiance_ControlBox ambiance_ControlBox1;
-        private Ambiance.Ambiance_Button_1 btFuncionario;
+        private Ambiance.Ambiance_Button_1 btServicos;
+        private Ambiance.Ambiance_Button_1 btRelatorio;
+        private Ambiance.Ambiance_Button_1 ambiance_Button_12;
+        private Ambiance.Ambiance_Button_1 btPecas;
+        private Ambiance.Ambiance_Button_1 ambiance_Button_14;
+        private Ambiance.Ambiance_Button_1 ambiance_Button_15;
+        private Ambiance.Ambiance_Button_1 btSair;
     }
 }
 

@@ -16,5 +16,25 @@ namespace car_tuning
         {
             InitializeComponent();
         }
+
+
+
+        private void btPesquisar_Click(object sender, EventArgs e)
+        {
+            FormPesquisa form = new FormPesquisa();
+            form.ShowDialog();
+        }
+
+        private void btLimpar_Click( object sender, EventArgs e)
+        {
+            txtCpf.Text = "";
+            txtNome.Text = "";
+            txtTelefone.Text = "";
+        }
+
+        private void btVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
