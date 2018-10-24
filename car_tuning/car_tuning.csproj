@@ -83,6 +83,12 @@
     <Compile Include="FormFuncionario.Designer.cs">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPecas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,11 +113,11 @@
     <Compile Include="Modelo\Pecas.cs" />
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Teste.cs" />
-    <Compile Include="Relatorio.cs">
+    <Compile Include="FormRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Relatorio.Designer.cs">
-      <DependentUpon>Relatorio.cs</DependentUpon>
+    <Compile Include="FormRelatorio.Designer.cs">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Resouces\DataBase.cs" />
     <Compile Include="Form1.cs">
@@ -134,6 +140,9 @@
     <EmbeddedResource Include="FormFuncionario.resx">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPecas.resx">
       <DependentUpon>FormPecas.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,8 +162,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Relatorio.resx">
-      <DependentUpon>Relatorio.cs</DependentUpon>
+    <EmbeddedResource Include="FormRelatorio.resx">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

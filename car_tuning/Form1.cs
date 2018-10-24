@@ -15,6 +15,7 @@ namespace car_tuning
         public Form1()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btCliente_Click(object sender, EventArgs e)
@@ -51,6 +52,12 @@ namespace car_tuning
         {
             this.Close();
         }
-        
+
+        private void btRelatorio_Click(object sender, EventArgs e)
+        {
+            FormRelatorio form = new FormRelatorio();
+            form.ShowDialog();
+            form.StartPosition = FormStartPosition.CenterParent;
+        }
     }
 }

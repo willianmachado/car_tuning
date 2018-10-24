@@ -164,6 +164,7 @@
             this.btRelatorio.TabIndex = 3;
             this.btRelatorio.Text = "Relatórios";
             this.btRelatorio.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btRelatorio.Click += new System.EventHandler(this.btRelatorio_Click);
             // 
             // btServicos
             // 

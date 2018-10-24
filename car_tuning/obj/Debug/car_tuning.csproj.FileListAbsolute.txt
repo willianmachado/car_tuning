@@ -98,4 +98,5 @@ C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\D
 C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.pdb
 C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.FormPecas.resources
 C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.FormServico.resources
-C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.Relatorio.resources
+C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.FormRelatorio.resources
+C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.FormHome.resources
