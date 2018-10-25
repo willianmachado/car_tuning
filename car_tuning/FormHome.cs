@@ -17,13 +17,36 @@ namespace car_tuning
             
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            formC = new FormCliente();
+            formP = new FormPecas();
+        }
+        FormCliente formC;
+        FormPecas formP;
+
+        private void tsCliente_Click(object sender, EventArgs e)
+        {
+            
+            formC.MdiParent = this;
+            formC.Show();
+            
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void tsPeca_Click(object sender, EventArgs e)
         {
-            FormPecas form = new FormPecas();
-            form.MdiParent = this;
-            form.Show();
+            
+            formP.MdiParent = this;
+            formP.Show();
+            
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
