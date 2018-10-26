@@ -17,25 +17,27 @@ namespace car_tuning
             
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            formC = new FormCliente();
-            formP = new FormPecas();
+            
         }
-        FormCliente formC;
-        FormPecas formP;
+        
+        
 
         private void tsCliente_Click(object sender, EventArgs e)
         {
-            
-            formC.MdiParent = this;
+            FormCliente formC = new FormCliente();
+            //formC.MdiParent = this;
+            formC.StartPosition = FormStartPosition.CenterScreen;
             formC.Show();
             
         }
 
         private void tsPeca_Click(object sender, EventArgs e)
         {
-            
+            FormPecas formP = new FormPecas();
             formP.MdiParent = this;
+            formP.StartPosition = FormStartPosition.Manual;
             formP.Show();
+            
             
         }
 
@@ -44,9 +46,28 @@ namespace car_tuning
             this.Close();
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void tsPesquisa_Click(object sender, EventArgs e)
         {
+            FormPesquisa formPq = new FormPesquisa();
+            formPq.MdiParent = this;
+            formPq.StartPosition = FormStartPosition.Manual;
+            formPq.Show();
+        }
 
+        private void tsServico_Click(object sender, EventArgs e)
+        {
+            FormServico formS = new FormServico();
+            formS.MdiParent = this;
+            formS.StartPosition = FormStartPosition.Manual;
+            formS.Show();
+        }
+
+        private void tsRelatorio_Click(object sender, EventArgs e)
+        {
+            FormRelatorio formR = new FormRelatorio();
+            formR.MdiParent = this;
+            formR.StartPosition = FormStartPosition.Manual;
+            formR.Show();
         }
     }
 }

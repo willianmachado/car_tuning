@@ -32,9 +32,9 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsCliente = new System.Windows.Forms.ToolStripButton();
             this.tsPeca = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.tsSrevico = new System.Windows.Forms.ToolStripButton();
+            this.tsPesquisa = new System.Windows.Forms.ToolStripButton();
+            this.tsRelatorio = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -50,9 +50,9 @@
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsCliente,
             this.tsPeca,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton5,
+            this.tsSrevico,
+            this.tsPesquisa,
+            this.tsRelatorio,
             this.toolStripButton6});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
@@ -77,30 +77,32 @@
             this.tsPeca.Text = "Peças";
             this.tsPeca.Click += new System.EventHandler(this.tsPeca_Click);
             // 
-            // toolStripButton2
+            // tsSrevico
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(100, 50);
-            this.toolStripButton2.Text = "Serviços";
+            this.tsSrevico.Image = ((System.Drawing.Image)(resources.GetObject("tsSrevico.Image")));
+            this.tsSrevico.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsSrevico.Name = "tsSrevico";
+            this.tsSrevico.Size = new System.Drawing.Size(100, 50);
+            this.tsSrevico.Text = "Serviços";
+            this.tsSrevico.Click += new System.EventHandler(this.tsServico_Click);
             // 
-            // toolStripButton3
+            // tsPesquisa
             // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(103, 50);
-            this.toolStripButton3.Text = "Pesquisa";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.tsPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("tsPesquisa.Image")));
+            this.tsPesquisa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsPesquisa.Name = "tsPesquisa";
+            this.tsPesquisa.Size = new System.Drawing.Size(103, 50);
+            this.tsPesquisa.Text = "Pesquisa";
+            this.tsPesquisa.Click += new System.EventHandler(this.tsPesquisa_Click);
             // 
-            // toolStripButton5
+            // tsRelatorio
             // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(109, 50);
-            this.toolStripButton5.Text = "Relatórios";
+            this.tsRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("tsRelatorio.Image")));
+            this.tsRelatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsRelatorio.Name = "tsRelatorio";
+            this.tsRelatorio.Size = new System.Drawing.Size(109, 50);
+            this.tsRelatorio.Text = "Relatórios";
+            this.tsRelatorio.Click += new System.EventHandler(this.tsRelatorio_Click);
             // 
             // toolStripButton6
             // 
@@ -170,15 +172,15 @@
 
         private System.Windows.Forms.ToolStripButton tsCliente;
         private System.Windows.Forms.ToolStripButton tsPeca;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton tsSrevico;
+        private System.Windows.Forms.ToolStripButton tsPesquisa;
         private System.Windows.Forms.ToolStrip toolStrip2;
         private System.Windows.Forms.ToolStripPanel BottomToolStripPanel;
         private System.Windows.Forms.ToolStripPanel TopToolStripPanel;
         private System.Windows.Forms.ToolStripPanel RightToolStripPanel;
         private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
         private System.Windows.Forms.ToolStripContentPanel ContentPanel;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton tsRelatorio;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }
