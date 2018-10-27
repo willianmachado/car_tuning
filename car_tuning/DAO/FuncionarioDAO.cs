@@ -8,18 +8,35 @@ namespace car_tuning.Modelo
 {
     class FuncionarioDAO
     {
-        private long cpf; 
-        private string nome, telefone;
-
-        public FuncionarioDAO(long cpf, string nome, string telefone)
+        public void Salvar(Cliente cliente)
         {
-            this.Cpf = cpf;
-            this.Nome = nome;
-            this.Telefone = telefone;
+
         }
 
-        public long Cpf { get => cpf; set => cpf = value; }
-        public string Nome { get => nome; set => nome = value; }
-        public string Telefone { get => telefone; set => telefone = value; }
+        public void Deletar(int id)
+        {
+
+        }
+        public void atualizar(Cliente cliente)
+        {
+
+        }
+        public List<Cliente> listAll()
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente cliente = null;
+
+
+            return lista;
+
+        }
+        public List<Cliente> BuscaNome(string cpf)
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente cliente = null;
+
+
+            return lista;
+        }
     }
 }

@@ -3,22 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
 
 namespace car_tuning
 {
     class ClienteDAO
     {
-        private string cpf, nome, telefone;
-
-        public ClienteDAO(string cpf, string nome, string telefone)
+        public void Salvar(Cliente cliente)
         {
-            this.Cpf = cpf;
-            this.Nome = nome;
-            this.Telefone = telefone;
+           
         }
 
-        public string Cpf { get => cpf; set => cpf = value; }
-        public string Nome { get => nome; set => nome = value; }
-        public string Telefone { get => telefone; set => telefone = value; }
+        public void Deletar(int id)
+        {
+            
+        }
+        public void atualizar(Cliente cliente)
+        {
+            
+        }
+        public List<Cliente> listAll()
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente cliente = null;
+
+
+            return lista;
+
+        }
+        public List<Cliente> BuscaNome(string cpf)
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente cliente = null;
+            
+
+            return lista;
+        }
     }
 }

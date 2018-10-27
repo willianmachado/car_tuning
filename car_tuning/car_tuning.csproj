@@ -65,46 +65,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ambiance Theme.cs" />
+    <Compile Include="Controle\ValidaCPF.cs" />
     <Compile Include="DAO\CarroDAO.cs" />
+    <Compile Include="DAO\CarroOriginalDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PecasDAO.cs" />
     <Compile Include="DAO\ServicoDAO.cs" />
     <Compile Include="DAO\TesteDAO.cs" />
-    <Compile Include="FormCliente.cs">
+    <Compile Include="Modelo\CarroOriginal.cs" />
+    <Compile Include="View\Carro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCliente.Designer.cs">
+    <Compile Include="View\Carro.Designer.cs">
+      <DependentUpon>Carro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCliente.Designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFuncionario.cs">
+    <Compile Include="View\FormFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFuncionario.Designer.cs">
+    <Compile Include="View\FormFuncionario.Designer.cs">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHome.cs">
+    <Compile Include="View\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHome.Designer.cs">
+    <Compile Include="View\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPecas.cs">
+    <Compile Include="View\FormPecas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPecas.Designer.cs">
+    <Compile Include="View\FormPecas.Designer.cs">
       <DependentUpon>FormPecas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPesquisa.cs">
+    <Compile Include="View\FormPesquisa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPesquisa.Designer.cs">
+    <Compile Include="View\FormPesquisa.Designer.cs">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormServico.cs">
+    <Compile Include="View\FormServico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormServico.Designer.cs">
+    <Compile Include="View\FormServico.Designer.cs">
       <DependentUpon>FormServico.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Carro.cs" />
@@ -113,17 +122,17 @@
     <Compile Include="Modelo\Pecas.cs" />
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Teste.cs" />
-    <Compile Include="FormRelatorio.cs">
+    <Compile Include="View\FormRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRelatorio.Designer.cs">
+    <Compile Include="View\FormRelatorio.Designer.cs">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Resouces\DataBase.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="View\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Resouces\iTalk Theme.cs" />
@@ -131,25 +140,28 @@
     <Compile Include="Resouces\MonoFlat Theme.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="View\Carro.resx">
+      <DependentUpon>Carro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCliente.resx">
+    <EmbeddedResource Include="View\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFuncionario.resx">
+    <EmbeddedResource Include="View\FormFuncionario.resx">
       <DependentUpon>FormFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHome.resx">
+    <EmbeddedResource Include="View\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPecas.resx">
+    <EmbeddedResource Include="View\FormPecas.resx">
       <DependentUpon>FormPecas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPesquisa.resx">
+    <EmbeddedResource Include="View\FormPesquisa.resx">
       <DependentUpon>FormPesquisa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormServico.resx">
+    <EmbeddedResource Include="View\FormServico.resx">
       <DependentUpon>FormServico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -162,7 +174,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FormRelatorio.resx">
+    <EmbeddedResource Include="View\FormRelatorio.resx">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -179,10 +191,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controle\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resouces\turbo.JPG" />
   </ItemGroup>
