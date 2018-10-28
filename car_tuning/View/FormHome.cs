@@ -1,4 +1,5 @@
-﻿using System;
+﻿using car_tuning.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,26 +20,44 @@ namespace car_tuning
             StartPosition = FormStartPosition.CenterScreen;
             
         }
-        
-        
+
+        FormCliente formC = new FormCliente();
+        FormPecas formP = new FormPecas();
+        FormPesquisa formPq = new FormPesquisa();
+        FormServico formS = new FormServico();
+        FormCarro FormCa = new FormCarro();
+        FormRelatorio formR = new FormRelatorio();
+
 
         private void tsCliente_Click(object sender, EventArgs e)
         {
-            FormCliente formC = new FormCliente();
-            //formC.MdiParent = this;
+            
+            formC.MdiParent = this;
             formC.StartPosition = FormStartPosition.CenterScreen;
             formC.Show();
-            
+
+
+            formP.Visible = false;
+            formPq.Visible = false;
+            formS.Visible = false;
+            FormCa.Visible = false;
+            formR.Visible = false;
         }
 
         private void tsPeca_Click(object sender, EventArgs e)
         {
-            FormPecas formP = new FormPecas();
+            
             formP.MdiParent = this;
             formP.StartPosition = FormStartPosition.Manual;
             formP.Show();
+
             
-            
+
+            formC.Visible = false;
+            formPq.Visible = false;
+            formS.Visible = false;
+            FormCa.Visible = false;
+            formR.Visible = false;
         }
 
         private void toolStripButton6_Click(object sender, EventArgs e)
@@ -48,26 +67,62 @@ namespace car_tuning
 
         private void tsPesquisa_Click(object sender, EventArgs e)
         {
-            FormPesquisa formPq = new FormPesquisa();
+            
             formPq.MdiParent = this;
             formPq.StartPosition = FormStartPosition.Manual;
             formPq.Show();
+
+
+            formC.Visible = false;
+            formP.Visible = false;
+            formS.Visible = false;
+            FormCa.Visible = false;
+            formR.Visible = false;
         }
 
         private void tsServico_Click(object sender, EventArgs e)
         {
-            FormServico formS = new FormServico();
+            
             formS.MdiParent = this;
             formS.StartPosition = FormStartPosition.Manual;
             formS.Show();
+
+
+            formC.Visible = false;
+            formP.Visible = false;
+            formPq.Visible = false;
+            FormCa.Visible = false;
+            formR.Visible = false;
         }
 
         private void tsRelatorio_Click(object sender, EventArgs e)
         {
-            FormRelatorio formR = new FormRelatorio();
+            
             formR.MdiParent = this;
             formR.StartPosition = FormStartPosition.Manual;
             formR.Show();
+
+
+            formC.Visible = false;
+            formP.Visible = false;
+            formPq.Visible = false;
+            formS.Visible = false;
+            FormCa.Visible = false;
+        }
+
+        private void tsCarro_Click(object sender, EventArgs e)
+        {
+            FormCa.MdiParent = this;
+            FormCa.StartPosition = FormStartPosition.Manual;
+            FormCa.Show();
+
+
+
+            formC.Visible = false;
+            formP.Visible = false;
+            formPq.Visible = false;
+            formS.Visible = false;
+            formR.Visible = false;
         }
     }
 }

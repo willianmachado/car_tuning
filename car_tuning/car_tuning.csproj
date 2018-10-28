@@ -74,11 +74,11 @@
     <Compile Include="DAO\ServicoDAO.cs" />
     <Compile Include="DAO\TesteDAO.cs" />
     <Compile Include="Modelo\CarroOriginal.cs" />
-    <Compile Include="View\Carro.cs">
+    <Compile Include="View\FormCarro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Carro.Designer.cs">
-      <DependentUpon>Carro.cs</DependentUpon>
+    <Compile Include="View\FormCarro.Designer.cs">
+      <DependentUpon>FormCarro.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormCliente.cs">
       <SubType>Form</SubType>
@@ -140,8 +140,8 @@
     <Compile Include="Resouces\MonoFlat Theme.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\Carro.resx">
-      <DependentUpon>Carro.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormCarro.resx">
+      <DependentUpon>FormCarro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

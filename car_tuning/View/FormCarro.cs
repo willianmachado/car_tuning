@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace car_tuning.View
 {
-    public partial class Carro : Form
+    public partial class FormCarro : Form
     {
-        public Carro()
+        public FormCarro()
         {
             InitializeComponent();
         }
+
+        
     }
 }
