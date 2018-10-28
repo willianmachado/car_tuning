@@ -36,7 +36,6 @@
             this.iTalk_Label6 = new iTalk.iTalk_Label();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.txtAno = new iTalk.iTalk_TextBox_Small();
-            this.txtPlaca = new iTalk.iTalk_TextBox_Small();
             this.mephProgressBar7 = new CS_ClassLibraryTester.MephProgressBar();
             this.mephProgressBar6 = new CS_ClassLibraryTester.MephProgressBar();
             this.mephProgressBar4 = new CS_ClassLibraryTester.MephProgressBar();
@@ -69,6 +68,7 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
+            this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             // iTalk_GroupBox2
             // 
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox2.Controls.Add(this.txtPlaca);
             this.iTalk_GroupBox2.Controls.Add(this.txtModelo);
             this.iTalk_GroupBox2.Controls.Add(this.txtMarca);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label8);
@@ -83,7 +84,6 @@
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label6);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox2.Controls.Add(this.txtAno);
-            this.iTalk_GroupBox2.Controls.Add(this.txtPlaca);
             this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar7);
             this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar6);
             this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar4);
@@ -371,22 +371,6 @@
             this.txtAno.TabIndex = 3;
             this.txtAno.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAno.UseSystemPasswordChar = false;
-            // 
-            // txtPlaca
-            // 
-            this.txtPlaca.BackColor = System.Drawing.Color.Transparent;
-            this.txtPlaca.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtPlaca.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPlaca.Location = new System.Drawing.Point(196, 87);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPlaca.MaxLength = 32767;
-            this.txtPlaca.Multiline = false;
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.ReadOnly = false;
-            this.txtPlaca.Size = new System.Drawing.Size(173, 33);
-            this.txtPlaca.TabIndex = 4;
-            this.txtPlaca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPlaca.UseSystemPasswordChar = false;
             // 
             // mephProgressBar7
             // 
@@ -817,6 +801,17 @@
             this.btVoltar.Text = "Voltar";
             this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaca.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPlaca.Location = new System.Drawing.Point(196, 87);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPlaca.Mask = "aaa-0000";
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(172, 32);
+            this.txtPlaca.TabIndex = 34;
+            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -882,6 +877,6 @@
         private iTalk.iTalk_Label iTalk_Label6;
         private iTalk.iTalk_Label iTalk_Label4;
         private iTalk.iTalk_TextBox_Small txtAno;
-        private iTalk.iTalk_TextBox_Small txtPlaca;
+        private System.Windows.Forms.MaskedTextBox txtPlaca;
     }
 }

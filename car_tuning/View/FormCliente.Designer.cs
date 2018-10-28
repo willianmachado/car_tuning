@@ -30,6 +30,8 @@
         {
             this.scPanel = new iTalk.iTalk_Panel();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.iTalk_Label4 = new iTalk.iTalk_Label();
+            this.txtEmail = new iTalk.iTalk_TextBox_Small();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
@@ -43,10 +45,19 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
-            this.iTalk_Label4 = new iTalk.iTalk_Label();
-            this.txtEmail = new iTalk.iTalk_TextBox_Small();
+            this.iTalk_Label6 = new iTalk.iTalk_Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
+            this.maskedTextBoxPlacaVei = new System.Windows.Forms.MaskedTextBox();
+            this.btBuscarCarro = new Ambiance.Ambiance_Button_2();
             this.scPanel.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.iTalk_GroupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // scPanel
@@ -72,6 +83,10 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.btBuscarCarro);
+            this.iTalk_GroupBox1.Controls.Add(this.maskedTextBoxPlacaVei);
+            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label6);
+            this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox1.Controls.Add(this.txtEmail);
             this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
@@ -85,10 +100,39 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(181, 62);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(7, 34, 7, 6);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(816, 740);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(987, 740);
             this.iTalk_GroupBox1.TabIndex = 2;
             this.iTalk_GroupBox1.Text = "Cliente";
             this.iTalk_GroupBox1.Click += new System.EventHandler(this.iTalk_GroupBox1_Click);
+            // 
+            // iTalk_Label4
+            // 
+            this.iTalk_Label4.AutoSize = true;
+            this.iTalk_Label4.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label4.Location = new System.Drawing.Point(463, 183);
+            this.iTalk_Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iTalk_Label4.Name = "iTalk_Label4";
+            this.iTalk_Label4.Size = new System.Drawing.Size(59, 28);
+            this.iTalk_Label4.TabIndex = 18;
+            this.iTalk_Label4.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtEmail.Location = new System.Drawing.Point(561, 183);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.MaxLength = 32767;
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = false;
+            this.txtEmail.Size = new System.Drawing.Size(309, 33);
+            this.txtEmail.TabIndex = 17;
+            this.txtEmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmail.UseSystemPasswordChar = false;
             // 
             // txtCpf
             // 
@@ -105,7 +149,7 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefone.Location = new System.Drawing.Point(119, 274);
+            this.txtTelefone.Location = new System.Drawing.Point(561, 77);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefone.Mask = "(99) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
@@ -118,7 +162,7 @@
             this.iTalk_Label3.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label3.Location = new System.Drawing.Point(21, 276);
+            this.iTalk_Label3.Location = new System.Drawing.Point(463, 79);
             this.iTalk_Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.iTalk_Label3.Name = "iTalk_Label3";
             this.iTalk_Label3.Size = new System.Drawing.Size(84, 28);
@@ -283,34 +327,93 @@
             this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
-            // iTalk_Label4
+            // iTalk_Label6
             // 
-            this.iTalk_Label4.AutoSize = true;
-            this.iTalk_Label4.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label4.Location = new System.Drawing.Point(21, 401);
-            this.iTalk_Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iTalk_Label4.Name = "iTalk_Label4";
-            this.iTalk_Label4.Size = new System.Drawing.Size(59, 28);
-            this.iTalk_Label4.TabIndex = 18;
-            this.iTalk_Label4.Text = "Email";
+            this.iTalk_Label6.AutoSize = true;
+            this.iTalk_Label6.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label6.Location = new System.Drawing.Point(22, 315);
+            this.iTalk_Label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iTalk_Label6.Name = "iTalk_Label6";
+            this.iTalk_Label6.Size = new System.Drawing.Size(57, 28);
+            this.iTalk_Label6.TabIndex = 24;
+            this.iTalk_Label6.Text = "Placa";
             // 
-            // txtEmail
+            // dataGridView1
             // 
-            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEmail.Location = new System.Drawing.Point(119, 401);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.MaxLength = 32767;
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = false;
-            this.txtEmail.Size = new System.Drawing.Size(309, 33);
-            this.txtEmail.TabIndex = 17;
-            this.txtEmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEmail.UseSystemPasswordChar = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column3,
+            this.Column2,
+            this.Column4});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 37);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(977, 328);
+            this.dataGridView1.TabIndex = 28;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Marca";
+            this.Column4.Name = "Column4";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Modelo";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "ano";
+            this.Column3.Name = "Column3";
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Placa";
+            this.Column1.Name = "Column1";
+            // 
+            // iTalk_GroupBox2
+            // 
+            this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox2.Controls.Add(this.dataGridView1);
+            this.iTalk_GroupBox2.Location = new System.Drawing.Point(0, 356);
+            this.iTalk_GroupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(181, 62);
+            this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
+            this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(7, 34, 7, 6);
+            this.iTalk_GroupBox2.Size = new System.Drawing.Size(987, 374);
+            this.iTalk_GroupBox2.TabIndex = 19;
+            this.iTalk_GroupBox2.Text = "Carro";
+            // 
+            // maskedTextBoxPlacaVei
+            // 
+            this.maskedTextBoxPlacaVei.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBoxPlacaVei.ForeColor = System.Drawing.Color.Black;
+            this.maskedTextBoxPlacaVei.Location = new System.Drawing.Point(86, 315);
+            this.maskedTextBoxPlacaVei.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.maskedTextBoxPlacaVei.Mask = "aaa-0000";
+            this.maskedTextBoxPlacaVei.Name = "maskedTextBoxPlacaVei";
+            this.maskedTextBoxPlacaVei.Size = new System.Drawing.Size(183, 32);
+            this.maskedTextBoxPlacaVei.TabIndex = 34;
+            // 
+            // btBuscarCarro
+            // 
+            this.btBuscarCarro.BackColor = System.Drawing.Color.Transparent;
+            this.btBuscarCarro.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btBuscarCarro.Image = null;
+            this.btBuscarCarro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btBuscarCarro.Location = new System.Drawing.Point(296, 313);
+            this.btBuscarCarro.Name = "btBuscarCarro";
+            this.btBuscarCarro.Size = new System.Drawing.Size(113, 30);
+            this.btBuscarCarro.TabIndex = 35;
+            this.btBuscarCarro.Text = "Pesquisar";
+            this.btBuscarCarro.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // FormCliente
             // 
@@ -328,6 +431,8 @@
             this.scPanel.ResumeLayout(false);
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.iTalk_GroupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,5 +456,14 @@
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private iTalk.iTalk_Label iTalk_Label4;
         private iTalk.iTalk_TextBox_Small txtEmail;
+        private iTalk.iTalk_Label iTalk_Label6;
+        private iTalk.iTalk_GroupBox iTalk_GroupBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.MaskedTextBox maskedTextBoxPlacaVei;
+        private Ambiance.Ambiance_Button_2 btBuscarCarro;
     }
 }
