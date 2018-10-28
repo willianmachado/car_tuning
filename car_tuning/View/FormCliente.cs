@@ -50,10 +50,7 @@ namespace car_tuning
             txtNome.Text = "";
             txtCpf.Text = "";
             txtTelefone.Text = "";
-            txtPlaca.Text = "";
-            txtModelo.Text = "";
-            txtMarca.Text = "";
-            txtAno.Text = "";
+            
 
             
         }

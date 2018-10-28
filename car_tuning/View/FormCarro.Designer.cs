@@ -719,7 +719,7 @@
             this.btPesquisar.ForeColor = System.Drawing.Color.White;
             this.btPesquisar.Image = null;
             this.btPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPesquisar.Location = new System.Drawing.Point(1, 400);
+            this.btPesquisar.Location = new System.Drawing.Point(4, 432);
             this.btPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btPesquisar.Name = "btPesquisar";
             this.btPesquisar.Size = new System.Drawing.Size(155, 49);
@@ -734,7 +734,7 @@
             this.btNovo.ForeColor = System.Drawing.Color.White;
             this.btNovo.Image = null;
             this.btNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNovo.Location = new System.Drawing.Point(1, 4);
+            this.btNovo.Location = new System.Drawing.Point(4, 36);
             this.btNovo.Margin = new System.Windows.Forms.Padding(4);
             this.btNovo.Name = "btNovo";
             this.btNovo.Size = new System.Drawing.Size(155, 49);
@@ -749,7 +749,7 @@
             this.btSalvar.ForeColor = System.Drawing.Color.White;
             this.btSalvar.Image = null;
             this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSalvar.Location = new System.Drawing.Point(1, 60);
+            this.btSalvar.Location = new System.Drawing.Point(4, 92);
             this.btSalvar.Margin = new System.Windows.Forms.Padding(4);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(155, 49);
@@ -764,7 +764,7 @@
             this.btLimpar.ForeColor = System.Drawing.Color.White;
             this.btLimpar.Image = null;
             this.btLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLimpar.Location = new System.Drawing.Point(1, 117);
+            this.btLimpar.Location = new System.Drawing.Point(4, 149);
             this.btLimpar.Margin = new System.Windows.Forms.Padding(4);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(155, 49);
@@ -779,7 +779,7 @@
             this.btEditar.ForeColor = System.Drawing.Color.White;
             this.btEditar.Image = null;
             this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditar.Location = new System.Drawing.Point(1, 174);
+            this.btEditar.Location = new System.Drawing.Point(4, 206);
             this.btEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(155, 49);
@@ -794,7 +794,7 @@
             this.btExcluir.ForeColor = System.Drawing.Color.White;
             this.btExcluir.Image = null;
             this.btExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btExcluir.Location = new System.Drawing.Point(1, 230);
+            this.btExcluir.Location = new System.Drawing.Point(4, 262);
             this.btExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(155, 49);
@@ -809,7 +809,7 @@
             this.btVoltar.ForeColor = System.Drawing.Color.White;
             this.btVoltar.Image = null;
             this.btVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btVoltar.Location = new System.Drawing.Point(1, 598);
+            this.btVoltar.Location = new System.Drawing.Point(4, 630);
             this.btVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(155, 49);
