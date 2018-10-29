@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.tsCliente = new System.Windows.Forms.ToolStripButton();
+            this.tsCarro = new System.Windows.Forms.ToolStripButton();
             this.tsPeca = new System.Windows.Forms.ToolStripButton();
             this.tsSrevico = new System.Windows.Forms.ToolStripButton();
             this.tsPesquisa = new System.Windows.Forms.ToolStripButton();
@@ -41,7 +42,6 @@
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.LeftToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
-            this.tsCarro = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +58,7 @@
             this.toolStripButton6});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1605, 53);
+            this.toolStrip2.Size = new System.Drawing.Size(1584, 53);
             this.toolStrip2.TabIndex = 0;
             // 
             // tsCliente
@@ -66,16 +66,25 @@
             this.tsCliente.Image = global::car_tuning.Properties.Resources.Cliente;
             this.tsCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsCliente.Name = "tsCliente";
-            this.tsCliente.Size = new System.Drawing.Size(105, 50);
+            this.tsCliente.Size = new System.Drawing.Size(94, 50);
             this.tsCliente.Text = "Cliente";
             this.tsCliente.Click += new System.EventHandler(this.tsCliente_Click);
+            // 
+            // tsCarro
+            // 
+            this.tsCarro.Image = ((System.Drawing.Image)(resources.GetObject("tsCarro.Image")));
+            this.tsCarro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsCarro.Name = "tsCarro";
+            this.tsCarro.Size = new System.Drawing.Size(86, 50);
+            this.tsCarro.Text = "Carro";
+            this.tsCarro.Click += new System.EventHandler(this.tsCarro_Click);
             // 
             // tsPeca
             // 
             this.tsPeca.Image = ((System.Drawing.Image)(resources.GetObject("tsPeca.Image")));
             this.tsPeca.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsPeca.Name = "tsPeca";
-            this.tsPeca.Size = new System.Drawing.Size(95, 50);
+            this.tsPeca.Size = new System.Drawing.Size(87, 50);
             this.tsPeca.Text = "Peças";
             this.tsPeca.Click += new System.EventHandler(this.tsPeca_Click);
             // 
@@ -84,7 +93,7 @@
             this.tsSrevico.Image = ((System.Drawing.Image)(resources.GetObject("tsSrevico.Image")));
             this.tsSrevico.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsSrevico.Name = "tsSrevico";
-            this.tsSrevico.Size = new System.Drawing.Size(113, 50);
+            this.tsSrevico.Size = new System.Drawing.Size(100, 50);
             this.tsSrevico.Text = "Serviços";
             this.tsSrevico.Click += new System.EventHandler(this.tsServico_Click);
             // 
@@ -93,7 +102,7 @@
             this.tsPesquisa.Image = ((System.Drawing.Image)(resources.GetObject("tsPesquisa.Image")));
             this.tsPesquisa.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsPesquisa.Name = "tsPesquisa";
-            this.tsPesquisa.Size = new System.Drawing.Size(115, 50);
+            this.tsPesquisa.Size = new System.Drawing.Size(103, 50);
             this.tsPesquisa.Text = "Pesquisa";
             this.tsPesquisa.Click += new System.EventHandler(this.tsPesquisa_Click);
             // 
@@ -102,7 +111,7 @@
             this.tsRelatorio.Image = ((System.Drawing.Image)(resources.GetObject("tsRelatorio.Image")));
             this.tsRelatorio.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsRelatorio.Name = "tsRelatorio";
-            this.tsRelatorio.Size = new System.Drawing.Size(126, 50);
+            this.tsRelatorio.Size = new System.Drawing.Size(109, 50);
             this.tsRelatorio.Text = "Relatórios";
             this.tsRelatorio.Click += new System.EventHandler(this.tsRelatorio_Click);
             // 
@@ -153,24 +162,14 @@
             // 
             this.ContentPanel.Size = new System.Drawing.Size(796, 446);
             // 
-            // tsCarro
-            // 
-            this.tsCarro.Image = ((System.Drawing.Image)(resources.GetObject("tsCarro.Image")));
-            this.tsCarro.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsCarro.Name = "tsCarro";
-            this.tsCarro.Size = new System.Drawing.Size(95, 50);
-            this.tsCarro.Text = "Carro";
-            this.tsCarro.Click += new System.EventHandler(this.tsCarro_Click);
-            // 
             // FormHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1605, 879);
+            this.ClientSize = new System.Drawing.Size(1584, 861);
+            this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHome";

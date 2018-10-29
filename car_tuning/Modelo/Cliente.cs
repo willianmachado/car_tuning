@@ -14,6 +14,7 @@ namespace car_tuning
         private string telefone;
         private string email;
 
+
         public Cliente(int codigo, string cpf, string nome, string telefone, string email)
         {
             this.Codigo = codigo;
@@ -23,10 +24,72 @@ namespace car_tuning
             this.Email = email;
         }
 
-        public int Codigo { get => codigo; set => codigo = value; }
-        public string Cpf { get => cpf; set => cpf = value; }
-        public string Nome { get => nome; set => nome = value; }
-        public string Telefone { get => telefone; set => telefone = value; }
-        public string Email { get => email; set => email = value; }
+
+        public int Codigo
+        {
+            get
+            {
+                return codigo;
+            }
+
+            set
+            {
+                codigo = value;
+            }
+        }
+
+        public string Cpf
+        {
+            get
+            {
+                return cpf;
+            }
+
+            set
+            {
+                cpf = value;
+            }
+        }
+
+        public string Nome
+        {
+            get
+            {
+                return nome;
+            }
+
+            set
+            {
+                nome = value;
+            }
+        }
+
+        public string Telefone
+        {
+            get
+            {
+                return telefone;
+            }
+
+            set
+            {
+                telefone = value;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
+            }
+        }
+
     }
+        
 }

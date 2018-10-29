@@ -15,15 +15,63 @@ namespace car_tuning.Modelo
 
         public Funcionario(int codigo, string cpf, string nome, string telefone)
         {
-            this.codigo = codigo;
-            this.cpf = cpf;
-            this.nome = nome;
-            this.telefone = telefone;
+            this.Codigo = codigo;
+            this.Cpf = cpf;
+            this.Nome = nome;
+            this.Telefone = telefone;
         }
 
-        public int Codigo { get => codigo; set => codigo = value; }
-        public string Cpf { get => cpf; set => cpf = value; }
-        public string Nome { get => nome; set => nome = value; }
-        public string Telefone { get => telefone; set => telefone = value; }
+        public int Codigo
+        {
+            get
+            {
+                return codigo;
+            }
+
+            set
+            {
+                codigo = value;
+            }
+        }
+
+        public string Cpf
+        {
+            get
+            {
+                return cpf;
+            }
+
+            set
+            {
+                cpf = value;
+            }
+        }
+
+        public string Nome
+        {
+            get
+            {
+                return nome;
+            }
+
+            set
+            {
+                nome = value;
+            }
+        }
+
+        public string Telefone
+        {
+            get
+            {
+                return telefone;
+            }
+
+            set
+            {
+                telefone = value;
+            }
+        }
     }
+        
 }
