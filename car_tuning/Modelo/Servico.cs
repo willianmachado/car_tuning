@@ -23,10 +23,69 @@ namespace car_tuning.Modelo
             this.valorTotal = valorTotal;
         }
 
-        public int Codigo { get => codigo; set => codigo = value; }
-        public int CodCliente1 { get => CodCliente; set => CodCliente = value; }
-        public int CodCarro1 { get => CodCarro; set => CodCarro = value; }
-        public int CodFuncionario1 { get => CodFuncionario; set => CodFuncionario = value; }
-        public double ValorTotal { get => valorTotal; set => valorTotal = value; }
+        public int Codigo
+        {
+            get
+            {
+                return codigo;
+            }
+
+            set
+            {
+                codigo = value;
+            }
+        }
+
+        public int CodCliente1
+        {
+            get
+            {
+                return CodCliente;
+            }
+
+            set
+            {
+                CodCliente = value;
+            }
+        }
+
+        public int CodCarro1
+        {
+            get
+            {
+                return CodCarro;
+            }
+
+            set
+            {
+                CodCarro = value;
+            }
+        }
+
+        public int CodFuncionario1
+        {
+            get
+            {
+                return CodFuncionario;
+            }
+
+            set
+            {
+                CodFuncionario = value;
+            }
+        }
+
+        public double ValorTotal
+        {
+            get
+            {
+                return valorTotal;
+            }
+
+            set
+            {
+                valorTotal = value;
+            }
+        }
     }
 }

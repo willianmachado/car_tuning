@@ -17,14 +17,123 @@ namespace car_tuning.Modelo
         private int codigo;
         private string cpfClinte;
         private double peso;
+               
 
-        public string Placa { get => placa; set => placa = value; }
-        public string Modelo { get => modelo; set => modelo = value; } 
-        public string Ano { get => ano; set => ano = value; }
-        public string Fabricante { get => fabricante; set => fabricante = value; }
-        public int Codigo { get => codigo; set => codigo = value; }
-        public string CpfClinte { get => cpfClinte; set => cpfClinte = value; }
-        public double Peso { get => peso; set => peso = value; }
-        public int CodCliente1 { get => CodCliente; set => CodCliente = value; }
+        public Carro(string ano, string fabricante, int codCliente, string placa, string modelo, int codigo, string cpfClinte, double peso)
+        {
+            this.Ano = ano;
+            this.Fabricante = fabricante;
+            CodCliente1 = codCliente;
+            this.Placa = placa;
+            this.Modelo = modelo;
+            this.Codigo = codigo;
+            this.CpfClinte = cpfClinte;
+            this.Peso = peso;
+        }
+
+        public string Ano
+        {
+            get
+            {
+                return ano;
+            }
+
+            set
+            {
+                ano = value;
+            }
+        }
+
+        public string Fabricante
+        {
+            get
+            {
+                return fabricante;
+            }
+
+            set
+            {
+                fabricante = value;
+            }
+        }
+
+        public int CodCliente1
+        {
+            get
+            {
+                return CodCliente;
+            }
+
+            set
+            {
+                CodCliente = value;
+            }
+        }
+
+        public string Placa
+        {
+            get
+            {
+                return placa;
+            }
+
+            set
+            {
+                placa = value;
+            }
+        }
+
+        public string Modelo
+        {
+            get
+            {
+                return modelo;
+            }
+
+            set
+            {
+                modelo = value;
+            }
+        }
+
+        public int Codigo
+        {
+            get
+            {
+                return codigo;
+            }
+
+            set
+            {
+                codigo = value;
+            }
+        }
+
+        public string CpfClinte
+        {
+            get
+            {
+                return cpfClinte;
+            }
+
+            set
+            {
+                cpfClinte = value;
+            }
+        }
+
+        public double Peso
+        {
+            get
+            {
+                return peso;
+            }
+
+            set
+            {
+                peso = value;
+            }
+        }
+
     }
 }
