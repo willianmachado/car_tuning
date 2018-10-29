@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.ambiance_TabControl1 = new Ambiance.Ambiance_TabControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.iTalk_Button_21 = new iTalk.iTalk_Button_2();
-            this.iTalk_Button_22 = new iTalk.iTalk_Button_2();
-            this.iTalk_Button_23 = new iTalk.iTalk_Button_2();
-            this.iTalk_Button_24 = new iTalk.iTalk_Button_2();
-            this.iTalk_Button_25 = new iTalk.iTalk_Button_2();
             this.iTalk_Button_26 = new iTalk.iTalk_Button_2();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.iTalk_Button_25 = new iTalk.iTalk_Button_2();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.iTalk_Button_24 = new iTalk.iTalk_Button_2();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.iTalk_Button_23 = new iTalk.iTalk_Button_2();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.iTalk_Button_22 = new iTalk.iTalk_Button_2();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.iTalk_Button_21 = new iTalk.iTalk_Button_2();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ambiance_TabControl1 = new Ambiance.Ambiance_TabControl();
             this.tabPage6.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.ambiance_TabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ambiance_TabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage6
@@ -74,6 +74,29 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Rank ";
             // 
+            // iTalk_Button_26
+            // 
+            this.iTalk_Button_26.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Button_26.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.iTalk_Button_26.ForeColor = System.Drawing.Color.White;
+            this.iTalk_Button_26.Image = null;
+            this.iTalk_Button_26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iTalk_Button_26.Location = new System.Drawing.Point(1008, 607);
+            this.iTalk_Button_26.Name = "iTalk_Button_26";
+            this.iTalk_Button_26.Size = new System.Drawing.Size(132, 26);
+            this.iTalk_Button_26.TabIndex = 2;
+            this.iTalk_Button_26.Text = "Carregar";
+            this.iTalk_Button_26.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.RowTemplate.Height = 24;
+            this.dataGridView6.Size = new System.Drawing.Size(1137, 585);
+            this.dataGridView6.TabIndex = 0;
+            // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -85,6 +108,29 @@
             this.tabPage5.Size = new System.Drawing.Size(1236, 643);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Funcionário";
+            // 
+            // iTalk_Button_25
+            // 
+            this.iTalk_Button_25.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Button_25.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.iTalk_Button_25.ForeColor = System.Drawing.Color.White;
+            this.iTalk_Button_25.Image = null;
+            this.iTalk_Button_25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iTalk_Button_25.Location = new System.Drawing.Point(988, 593);
+            this.iTalk_Button_25.Name = "iTalk_Button_25";
+            this.iTalk_Button_25.Size = new System.Drawing.Size(132, 26);
+            this.iTalk_Button_25.TabIndex = 2;
+            this.iTalk_Button_25.Text = "Carregar";
+            this.iTalk_Button_25.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.Size = new System.Drawing.Size(1120, 573);
+            this.dataGridView5.TabIndex = 0;
             // 
             // tabPage4
             // 
@@ -98,6 +144,29 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Serviços";
             // 
+            // iTalk_Button_24
+            // 
+            this.iTalk_Button_24.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Button_24.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.iTalk_Button_24.ForeColor = System.Drawing.Color.White;
+            this.iTalk_Button_24.Image = null;
+            this.iTalk_Button_24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iTalk_Button_24.Location = new System.Drawing.Point(1000, 607);
+            this.iTalk_Button_24.Name = "iTalk_Button_24";
+            this.iTalk_Button_24.Size = new System.Drawing.Size(132, 26);
+            this.iTalk_Button_24.TabIndex = 2;
+            this.iTalk_Button_24.Text = "Carregar";
+            this.iTalk_Button_24.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.Size = new System.Drawing.Size(1132, 583);
+            this.dataGridView4.TabIndex = 0;
+            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -109,6 +178,29 @@
             this.tabPage3.Size = new System.Drawing.Size(1236, 643);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Peças";
+            // 
+            // iTalk_Button_23
+            // 
+            this.iTalk_Button_23.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Button_23.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.iTalk_Button_23.ForeColor = System.Drawing.Color.White;
+            this.iTalk_Button_23.Image = null;
+            this.iTalk_Button_23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iTalk_Button_23.Location = new System.Drawing.Point(987, 598);
+            this.iTalk_Button_23.Name = "iTalk_Button_23";
+            this.iTalk_Button_23.Size = new System.Drawing.Size(132, 26);
+            this.iTalk_Button_23.TabIndex = 2;
+            this.iTalk_Button_23.Text = "Carregar";
+            this.iTalk_Button_23.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 0);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1116, 581);
+            this.dataGridView3.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -122,6 +214,29 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carros";
             // 
+            // iTalk_Button_22
+            // 
+            this.iTalk_Button_22.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Button_22.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.iTalk_Button_22.ForeColor = System.Drawing.Color.White;
+            this.iTalk_Button_22.Image = null;
+            this.iTalk_Button_22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iTalk_Button_22.Location = new System.Drawing.Point(993, 607);
+            this.iTalk_Button_22.Name = "iTalk_Button_22";
+            this.iTalk_Button_22.Size = new System.Drawing.Size(132, 26);
+            this.iTalk_Button_22.TabIndex = 2;
+            this.iTalk_Button_22.Text = "Carregar";
+            this.iTalk_Button_22.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1125, 580);
+            this.dataGridView2.TabIndex = 0;
+            // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -133,6 +248,29 @@
             this.tabPage1.Size = new System.Drawing.Size(1236, 643);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clientes";
+            // 
+            // iTalk_Button_21
+            // 
+            this.iTalk_Button_21.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Button_21.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.iTalk_Button_21.ForeColor = System.Drawing.Color.White;
+            this.iTalk_Button_21.Image = null;
+            this.iTalk_Button_21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iTalk_Button_21.Location = new System.Drawing.Point(1010, 607);
+            this.iTalk_Button_21.Name = "iTalk_Button_21";
+            this.iTalk_Button_21.Size = new System.Drawing.Size(132, 26);
+            this.iTalk_Button_21.TabIndex = 1;
+            this.iTalk_Button_21.Text = "Carregar";
+            this.iTalk_Button_21.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-4, -3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1146, 595);
+            this.dataGridView1.TabIndex = 0;
             // 
             // ambiance_TabControl1
             // 
@@ -149,166 +287,29 @@
             this.ambiance_TabControl1.Size = new System.Drawing.Size(1244, 675);
             this.ambiance_TabControl1.TabIndex = 0;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, -3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1146, 595);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1125, 580);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(3, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1116, 581);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(1132, 583);
-            this.dataGridView4.TabIndex = 0;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(1120, 573);
-            this.dataGridView5.TabIndex = 0;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(1137, 585);
-            this.dataGridView6.TabIndex = 0;
-            // 
-            // iTalk_Button_21
-            // 
-            this.iTalk_Button_21.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Button_21.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.iTalk_Button_21.ForeColor = System.Drawing.Color.White;
-            this.iTalk_Button_21.Image = null;
-            this.iTalk_Button_21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_21.Location = new System.Drawing.Point(1010, 607);
-            this.iTalk_Button_21.Name = "iTalk_Button_21";
-            this.iTalk_Button_21.Size = new System.Drawing.Size(132, 26);
-            this.iTalk_Button_21.TabIndex = 1;
-            this.iTalk_Button_21.Text = "Carregar";
-            this.iTalk_Button_21.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // iTalk_Button_22
-            // 
-            this.iTalk_Button_22.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Button_22.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.iTalk_Button_22.ForeColor = System.Drawing.Color.White;
-            this.iTalk_Button_22.Image = null;
-            this.iTalk_Button_22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_22.Location = new System.Drawing.Point(993, 607);
-            this.iTalk_Button_22.Name = "iTalk_Button_22";
-            this.iTalk_Button_22.Size = new System.Drawing.Size(132, 26);
-            this.iTalk_Button_22.TabIndex = 2;
-            this.iTalk_Button_22.Text = "Carregar";
-            this.iTalk_Button_22.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // iTalk_Button_23
-            // 
-            this.iTalk_Button_23.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Button_23.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.iTalk_Button_23.ForeColor = System.Drawing.Color.White;
-            this.iTalk_Button_23.Image = null;
-            this.iTalk_Button_23.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_23.Location = new System.Drawing.Point(987, 598);
-            this.iTalk_Button_23.Name = "iTalk_Button_23";
-            this.iTalk_Button_23.Size = new System.Drawing.Size(132, 26);
-            this.iTalk_Button_23.TabIndex = 2;
-            this.iTalk_Button_23.Text = "Carregar";
-            this.iTalk_Button_23.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // iTalk_Button_24
-            // 
-            this.iTalk_Button_24.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Button_24.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.iTalk_Button_24.ForeColor = System.Drawing.Color.White;
-            this.iTalk_Button_24.Image = null;
-            this.iTalk_Button_24.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_24.Location = new System.Drawing.Point(1000, 607);
-            this.iTalk_Button_24.Name = "iTalk_Button_24";
-            this.iTalk_Button_24.Size = new System.Drawing.Size(132, 26);
-            this.iTalk_Button_24.TabIndex = 2;
-            this.iTalk_Button_24.Text = "Carregar";
-            this.iTalk_Button_24.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // iTalk_Button_25
-            // 
-            this.iTalk_Button_25.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Button_25.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.iTalk_Button_25.ForeColor = System.Drawing.Color.White;
-            this.iTalk_Button_25.Image = null;
-            this.iTalk_Button_25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_25.Location = new System.Drawing.Point(988, 593);
-            this.iTalk_Button_25.Name = "iTalk_Button_25";
-            this.iTalk_Button_25.Size = new System.Drawing.Size(132, 26);
-            this.iTalk_Button_25.TabIndex = 2;
-            this.iTalk_Button_25.Text = "Carregar";
-            this.iTalk_Button_25.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // iTalk_Button_26
-            // 
-            this.iTalk_Button_26.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Button_26.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.iTalk_Button_26.ForeColor = System.Drawing.Color.White;
-            this.iTalk_Button_26.Image = null;
-            this.iTalk_Button_26.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_26.Location = new System.Drawing.Point(1008, 607);
-            this.iTalk_Button_26.Name = "iTalk_Button_26";
-            this.iTalk_Button_26.Size = new System.Drawing.Size(132, 26);
-            this.iTalk_Button_26.TabIndex = 2;
-            this.iTalk_Button_26.Text = "Carregar";
-            this.iTalk_Button_26.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // FormRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1252, 673);
+            this.ControlBox = false;
             this.Controls.Add(this.ambiance_TabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormRelatorio";
             this.Text = "Relatorio";
             this.tabPage6.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.ambiance_TabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ambiance_TabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
