@@ -35,14 +35,14 @@
             this.iTalk_TextBox_Small1 = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.dgCliente = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.iTalk_TextBox_Small2 = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_Label2 = new iTalk.iTalk_Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.iTalk_TextBox_Small2 = new iTalk.iTalk_TextBox_Small();
+            this.iTalk_Label2 = new iTalk.iTalk_Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFabricante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,31 +53,31 @@
             this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.iTalk_TextBox_Small3 = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.iTalk_TextBox_Small4 = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iTalk_TextBox_Small3 = new iTalk.iTalk_TextBox_Small();
+            this.iTalk_Label3 = new iTalk.iTalk_Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.iTalk_TextBox_Small4 = new iTalk.iTalk_TextBox_Small();
+            this.iTalk_Label4 = new iTalk.iTalk_Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.iTalk_TextBox_Small5 = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_Label5 = new iTalk.iTalk_Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iTalk_TextBox_Small5 = new iTalk.iTalk_TextBox_Small();
+            this.iTalk_Label5 = new iTalk.iTalk_Label();
             this.tabCliente.SuspendLayout();
             this.Cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
@@ -196,6 +196,31 @@
             this.dgCliente.Size = new System.Drawing.Size(1303, 510);
             this.dgCliente.TabIndex = 6;
             // 
+            // colCpf
+            // 
+            this.colCpf.HeaderText = "CPF";
+            this.colCpf.Name = "colCpf";
+            this.colCpf.ReadOnly = true;
+            // 
+            // colNome
+            // 
+            this.colNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colNome.HeaderText = "Nome";
+            this.colNome.Name = "colNome";
+            this.colNome.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "telefone";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Email";
+            this.Column2.Name = "Column2";
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
@@ -257,31 +282,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1311, 513);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // colCpf
-            // 
-            this.colCpf.HeaderText = "CPF";
-            this.colCpf.Name = "colCpf";
-            this.colCpf.ReadOnly = true;
-            // 
-            // colNome
-            // 
-            this.colNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNome.HeaderText = "Nome";
-            this.colNome.Name = "colNome";
-            this.colNome.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "telefone";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Email";
-            this.Column2.Name = "Column2";
             // 
             // colCod
             // 
@@ -358,35 +358,6 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Peças";
             // 
-            // iTalk_TextBox_Small3
-            // 
-            this.iTalk_TextBox_Small3.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small3.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small3.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small3.Location = new System.Drawing.Point(252, 13);
-            this.iTalk_TextBox_Small3.Margin = new System.Windows.Forms.Padding(4);
-            this.iTalk_TextBox_Small3.MaxLength = 32767;
-            this.iTalk_TextBox_Small3.Multiline = false;
-            this.iTalk_TextBox_Small3.Name = "iTalk_TextBox_Small3";
-            this.iTalk_TextBox_Small3.ReadOnly = false;
-            this.iTalk_TextBox_Small3.Size = new System.Drawing.Size(1035, 33);
-            this.iTalk_TextBox_Small3.TabIndex = 12;
-            this.iTalk_TextBox_Small3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small3.UseSystemPasswordChar = false;
-            // 
-            // iTalk_Label3
-            // 
-            this.iTalk_Label3.AutoSize = true;
-            this.iTalk_Label3.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label3.Location = new System.Drawing.Point(10, 13);
-            this.iTalk_Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iTalk_Label3.Name = "iTalk_Label3";
-            this.iTalk_Label3.Size = new System.Drawing.Size(247, 32);
-            this.iTalk_Label3.TabIndex = 11;
-            this.iTalk_Label3.Text = "Buscar:CodPartNum";
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -402,61 +373,6 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(1318, 518);
             this.dataGridView2.TabIndex = 13;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage3.Controls.Add(this.iTalk_TextBox_Small4);
-            this.tabPage3.Controls.Add(this.iTalk_Label4);
-            this.tabPage3.Controls.Add(this.dataGridView3);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1321, 601);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "Funcionario";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column9,
-            this.Column10,
-            this.Column11});
-            this.dataGridView3.Location = new System.Drawing.Point(0, 85);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1321, 520);
-            this.dataGridView3.TabIndex = 0;
-            // 
-            // iTalk_TextBox_Small4
-            // 
-            this.iTalk_TextBox_Small4.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small4.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small4.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small4.Location = new System.Drawing.Point(159, 29);
-            this.iTalk_TextBox_Small4.Margin = new System.Windows.Forms.Padding(4);
-            this.iTalk_TextBox_Small4.MaxLength = 32767;
-            this.iTalk_TextBox_Small4.Multiline = false;
-            this.iTalk_TextBox_Small4.Name = "iTalk_TextBox_Small4";
-            this.iTalk_TextBox_Small4.ReadOnly = false;
-            this.iTalk_TextBox_Small4.Size = new System.Drawing.Size(1128, 33);
-            this.iTalk_TextBox_Small4.TabIndex = 14;
-            this.iTalk_TextBox_Small4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small4.UseSystemPasswordChar = false;
-            // 
-            // iTalk_Label4
-            // 
-            this.iTalk_Label4.AutoSize = true;
-            this.iTalk_Label4.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label4.Location = new System.Drawing.Point(10, 29);
-            this.iTalk_Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iTalk_Label4.Name = "iTalk_Label4";
-            this.iTalk_Label4.Size = new System.Drawing.Size(141, 32);
-            this.iTalk_Label4.TabIndex = 13;
-            this.iTalk_Label4.Text = "Buscar:CPF";
             // 
             // Column3
             // 
@@ -494,6 +410,90 @@
             this.Column8.HeaderText = "CodVeiculos";
             this.Column8.Name = "Column8";
             // 
+            // iTalk_TextBox_Small3
+            // 
+            this.iTalk_TextBox_Small3.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_TextBox_Small3.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.iTalk_TextBox_Small3.ForeColor = System.Drawing.Color.DimGray;
+            this.iTalk_TextBox_Small3.Location = new System.Drawing.Point(252, 13);
+            this.iTalk_TextBox_Small3.Margin = new System.Windows.Forms.Padding(4);
+            this.iTalk_TextBox_Small3.MaxLength = 32767;
+            this.iTalk_TextBox_Small3.Multiline = false;
+            this.iTalk_TextBox_Small3.Name = "iTalk_TextBox_Small3";
+            this.iTalk_TextBox_Small3.ReadOnly = false;
+            this.iTalk_TextBox_Small3.Size = new System.Drawing.Size(1035, 33);
+            this.iTalk_TextBox_Small3.TabIndex = 12;
+            this.iTalk_TextBox_Small3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.iTalk_TextBox_Small3.UseSystemPasswordChar = false;
+            // 
+            // iTalk_Label3
+            // 
+            this.iTalk_Label3.AutoSize = true;
+            this.iTalk_Label3.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label3.Location = new System.Drawing.Point(10, 13);
+            this.iTalk_Label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iTalk_Label3.Name = "iTalk_Label3";
+            this.iTalk_Label3.Size = new System.Drawing.Size(247, 32);
+            this.iTalk_Label3.TabIndex = 11;
+            this.iTalk_Label3.Text = "Buscar:CodPartNum";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.tabPage3.Controls.Add(this.iTalk_TextBox_Small4);
+            this.tabPage3.Controls.Add(this.iTalk_Label4);
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1321, 601);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Funcionario";
+            // 
+            // iTalk_TextBox_Small4
+            // 
+            this.iTalk_TextBox_Small4.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_TextBox_Small4.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.iTalk_TextBox_Small4.ForeColor = System.Drawing.Color.DimGray;
+            this.iTalk_TextBox_Small4.Location = new System.Drawing.Point(159, 29);
+            this.iTalk_TextBox_Small4.Margin = new System.Windows.Forms.Padding(4);
+            this.iTalk_TextBox_Small4.MaxLength = 32767;
+            this.iTalk_TextBox_Small4.Multiline = false;
+            this.iTalk_TextBox_Small4.Name = "iTalk_TextBox_Small4";
+            this.iTalk_TextBox_Small4.ReadOnly = false;
+            this.iTalk_TextBox_Small4.Size = new System.Drawing.Size(1128, 33);
+            this.iTalk_TextBox_Small4.TabIndex = 14;
+            this.iTalk_TextBox_Small4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.iTalk_TextBox_Small4.UseSystemPasswordChar = false;
+            // 
+            // iTalk_Label4
+            // 
+            this.iTalk_Label4.AutoSize = true;
+            this.iTalk_Label4.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label4.Location = new System.Drawing.Point(10, 29);
+            this.iTalk_Label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iTalk_Label4.Name = "iTalk_Label4";
+            this.iTalk_Label4.Size = new System.Drawing.Size(141, 32);
+            this.iTalk_Label4.TabIndex = 13;
+            this.iTalk_Label4.Text = "Buscar:CPF";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            this.dataGridView3.Location = new System.Drawing.Point(0, 85);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(1321, 520);
+            this.dataGridView3.TabIndex = 0;
+            // 
             // Column9
             // 
             this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -524,35 +524,6 @@
             this.tabPage4.Size = new System.Drawing.Size(1321, 601);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "tabPage4";
-            // 
-            // iTalk_TextBox_Small5
-            // 
-            this.iTalk_TextBox_Small5.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small5.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small5.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small5.Location = new System.Drawing.Point(198, 30);
-            this.iTalk_TextBox_Small5.Margin = new System.Windows.Forms.Padding(4);
-            this.iTalk_TextBox_Small5.MaxLength = 32767;
-            this.iTalk_TextBox_Small5.Multiline = false;
-            this.iTalk_TextBox_Small5.Name = "iTalk_TextBox_Small5";
-            this.iTalk_TextBox_Small5.ReadOnly = false;
-            this.iTalk_TextBox_Small5.Size = new System.Drawing.Size(1102, 33);
-            this.iTalk_TextBox_Small5.TabIndex = 16;
-            this.iTalk_TextBox_Small5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small5.UseSystemPasswordChar = false;
-            // 
-            // iTalk_Label5
-            // 
-            this.iTalk_Label5.AutoSize = true;
-            this.iTalk_Label5.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label5.Location = new System.Drawing.Point(23, 30);
-            this.iTalk_Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.iTalk_Label5.Name = "iTalk_Label5";
-            this.iTalk_Label5.Size = new System.Drawing.Size(181, 32);
-            this.iTalk_Label5.TabIndex = 15;
-            this.iTalk_Label5.Text = "Buscar:Codigo";
             // 
             // dataGridView4
             // 
@@ -598,6 +569,35 @@
             this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column16.HeaderText = "ValorTotal";
             this.Column16.Name = "Column16";
+            // 
+            // iTalk_TextBox_Small5
+            // 
+            this.iTalk_TextBox_Small5.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_TextBox_Small5.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.iTalk_TextBox_Small5.ForeColor = System.Drawing.Color.DimGray;
+            this.iTalk_TextBox_Small5.Location = new System.Drawing.Point(198, 30);
+            this.iTalk_TextBox_Small5.Margin = new System.Windows.Forms.Padding(4);
+            this.iTalk_TextBox_Small5.MaxLength = 32767;
+            this.iTalk_TextBox_Small5.Multiline = false;
+            this.iTalk_TextBox_Small5.Name = "iTalk_TextBox_Small5";
+            this.iTalk_TextBox_Small5.ReadOnly = false;
+            this.iTalk_TextBox_Small5.Size = new System.Drawing.Size(1102, 33);
+            this.iTalk_TextBox_Small5.TabIndex = 16;
+            this.iTalk_TextBox_Small5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.iTalk_TextBox_Small5.UseSystemPasswordChar = false;
+            // 
+            // iTalk_Label5
+            // 
+            this.iTalk_Label5.AutoSize = true;
+            this.iTalk_Label5.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label5.Location = new System.Drawing.Point(23, 30);
+            this.iTalk_Label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.iTalk_Label5.Name = "iTalk_Label5";
+            this.iTalk_Label5.Size = new System.Drawing.Size(181, 32);
+            this.iTalk_Label5.TabIndex = 15;
+            this.iTalk_Label5.Text = "Buscar:Codigo";
             // 
             // FormPesquisa
             // 
