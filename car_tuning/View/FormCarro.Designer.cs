@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
+            this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.txtModelo = new iTalk.iTalk_ComboBox();
             this.txtMarca = new iTalk.iTalk_ComboBox();
             this.iTalk_Label8 = new iTalk.iTalk_Label();
@@ -68,7 +69,6 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
-            this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +117,17 @@
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(1004, 740);
             this.iTalk_GroupBox2.TabIndex = 9;
             this.iTalk_GroupBox2.Text = "Carro";
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaca.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPlaca.Location = new System.Drawing.Point(196, 87);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPlaca.Mask = "aaa-0000";
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(172, 32);
+            this.txtPlaca.TabIndex = 34;
             // 
             // txtModelo
             // 
@@ -801,17 +812,6 @@
             this.btVoltar.Text = "Voltar";
             this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // txtPlaca
-            // 
-            this.txtPlaca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPlaca.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPlaca.Location = new System.Drawing.Point(196, 87);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPlaca.Mask = "aaa-0000";
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(172, 32);
-            this.txtPlaca.TabIndex = 34;
-            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -827,7 +827,6 @@
             this.Controls.Add(this.btVoltar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCarro";
-            this.Text = "Carro";
             this.iTalk_GroupBox2.ResumeLayout(false);
             this.iTalk_GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

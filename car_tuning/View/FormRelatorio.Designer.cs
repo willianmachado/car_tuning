@@ -132,7 +132,7 @@
             this.iTalk_Button_25.ForeColor = System.Drawing.Color.White;
             this.iTalk_Button_25.Image = null;
             this.iTalk_Button_25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_25.Location = new System.Drawing.Point(988, 593);
+            this.iTalk_Button_25.Location = new System.Drawing.Point(1084, 594);
             this.iTalk_Button_25.Name = "iTalk_Button_25";
             this.iTalk_Button_25.Size = new System.Drawing.Size(132, 26);
             this.iTalk_Button_25.TabIndex = 2;
@@ -149,7 +149,7 @@
             this.dataGridView5.Location = new System.Drawing.Point(0, 0);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(1120, 573);
+            this.dataGridView5.Size = new System.Drawing.Size(1230, 573);
             this.dataGridView5.TabIndex = 0;
             // 
             // tabPage4
@@ -429,7 +429,6 @@
             this.Controls.Add(this.ambiance_TabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormRelatorio";
-            this.Text = "Relatorio";
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             this.tabPage5.ResumeLayout(false);
