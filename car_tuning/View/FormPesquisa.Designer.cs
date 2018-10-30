@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisa));
             this.btVoltar = new iTalk.iTalk_Button_2();
             this.btSelecionar = new iTalk.iTalk_Button_2();
             this.tabCliente = new Ambiance.Ambiance_TabControl();
@@ -97,7 +98,7 @@
             this.btVoltar.ForeColor = System.Drawing.Color.White;
             this.btVoltar.Image = null;
             this.btVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btVoltar.Location = new System.Drawing.Point(1216, 700);
+            this.btVoltar.Location = new System.Drawing.Point(1216, 697);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(116, 40);
             this.btVoltar.TabIndex = 2;
@@ -113,7 +114,7 @@
             this.btSelecionar.ForeColor = System.Drawing.Color.White;
             this.btSelecionar.Image = null;
             this.btSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSelecionar.Location = new System.Drawing.Point(1094, 700);
+            this.btSelecionar.Location = new System.Drawing.Point(1094, 697);
             this.btSelecionar.Name = "btSelecionar";
             this.btSelecionar.Size = new System.Drawing.Size(116, 40);
             this.btSelecionar.TabIndex = 2;
@@ -135,7 +136,7 @@
             this.tabCliente.Location = new System.Drawing.Point(1, 25);
             this.tabCliente.Name = "tabCliente";
             this.tabCliente.SelectedIndex = 0;
-            this.tabCliente.Size = new System.Drawing.Size(1331, 668);
+            this.tabCliente.Size = new System.Drawing.Size(1331, 665);
             this.tabCliente.TabIndex = 6;
             // 
             // Cliente
@@ -147,7 +148,7 @@
             this.Cliente.Location = new System.Drawing.Point(4, 28);
             this.Cliente.Name = "Cliente";
             this.Cliente.Padding = new System.Windows.Forms.Padding(3);
-            this.Cliente.Size = new System.Drawing.Size(1323, 636);
+            this.Cliente.Size = new System.Drawing.Size(1323, 633);
             this.Cliente.TabIndex = 0;
             this.Cliente.Text = "Cliente";
             // 
@@ -199,7 +200,7 @@
             this.dgCliente.Location = new System.Drawing.Point(6, 62);
             this.dgCliente.Name = "dgCliente";
             this.dgCliente.ReadOnly = true;
-            this.dgCliente.Size = new System.Drawing.Size(1311, 571);
+            this.dgCliente.Size = new System.Drawing.Size(1311, 568);
             this.dgCliente.TabIndex = 6;
             // 
             // colCpf
@@ -238,7 +239,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1323, 636);
+            this.tabPage2.Size = new System.Drawing.Size(1323, 633);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carro";
             // 
@@ -350,7 +351,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1323, 636);
+            this.tabPage1.Size = new System.Drawing.Size(1323, 633);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Peças";
             // 
@@ -454,7 +455,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(1323, 636);
+            this.tabPage3.Size = new System.Drawing.Size(1323, 633);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Funcionario";
             // 
@@ -534,7 +535,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(1323, 636);
+            this.tabPage4.Size = new System.Drawing.Size(1323, 633);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "tabPage4";
             // 
@@ -624,11 +625,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1344, 752);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(1344, 749);
             this.Controls.Add(this.tabCliente);
             this.Controls.Add(this.btSelecionar);
             this.Controls.Add(this.btVoltar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPesquisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar";

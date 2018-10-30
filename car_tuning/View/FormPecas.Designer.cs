@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPecas));
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.colPeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCompativel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_TextBox_Small7 = new iTalk.iTalk_TextBox_Small();
             this.iTalk_TextBox_Small6 = new iTalk.iTalk_TextBox_Small();
             this.txtModelo = new iTalk.iTalk_ComboBox();
@@ -55,15 +65,6 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.colPeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCompativel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +100,84 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 726);
             this.iTalk_GroupBox1.TabIndex = 10;
             this.iTalk_GroupBox1.Text = "Peças";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colPeca,
+            this.colDescricao,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.colCompativel,
+            this.colPeso,
+            this.colPotencia,
+            this.colTorque});
+            this.dataGridView2.Location = new System.Drawing.Point(22, 361);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1144, 352);
+            this.dataGridView2.TabIndex = 14;
+            // 
+            // colPeca
+            // 
+            this.colPeca.HeaderText = "Codigo";
+            this.colPeca.Name = "colPeca";
+            this.colPeca.ReadOnly = true;
+            this.colPeca.Width = 80;
+            // 
+            // colDescricao
+            // 
+            this.colDescricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colDescricao.HeaderText = "Descricao";
+            this.colDescricao.Name = "colDescricao";
+            this.colDescricao.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Fabricante";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // colCompativel
+            // 
+            this.colCompativel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCompativel.HeaderText = "Compativel";
+            this.colCompativel.Name = "colCompativel";
+            this.colCompativel.ReadOnly = true;
+            // 
+            // colPeso
+            // 
+            this.colPeso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colPeso.HeaderText = "Peso";
+            this.colPeso.Name = "colPeso";
+            this.colPeso.ReadOnly = true;
+            // 
+            // colPotencia
+            // 
+            this.colPotencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colPotencia.HeaderText = "+Potencia";
+            this.colPotencia.Name = "colPotencia";
+            this.colPotencia.ReadOnly = true;
+            // 
+            // colTorque
+            // 
+            this.colTorque.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTorque.HeaderText = "+Torque";
+            this.colTorque.Name = "colTorque";
+            this.colTorque.ReadOnly = true;
             // 
             // iTalk_TextBox_Small7
             // 
@@ -405,6 +484,7 @@
             this.btNovo.TabIndex = 4;
             this.btNovo.Text = "Novo";
             this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
             // 
             // btSalvar
             // 
@@ -419,6 +499,7 @@
             this.btSalvar.TabIndex = 5;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // btLimpar
             // 
@@ -433,6 +514,7 @@
             this.btLimpar.TabIndex = 6;
             this.btLimpar.Text = "Cancelar";
             this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
             // btEditar
             // 
@@ -447,6 +529,7 @@
             this.btEditar.TabIndex = 7;
             this.btEditar.Text = "Editar";
             this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btExcluir
             // 
@@ -462,84 +545,6 @@
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colPeca,
-            this.colDescricao,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.colCompativel,
-            this.colPeso,
-            this.colPotencia,
-            this.colTorque});
-            this.dataGridView2.Location = new System.Drawing.Point(22, 361);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1144, 352);
-            this.dataGridView2.TabIndex = 14;
-            // 
-            // colPeca
-            // 
-            this.colPeca.HeaderText = "Codigo";
-            this.colPeca.Name = "colPeca";
-            this.colPeca.ReadOnly = true;
-            this.colPeca.Width = 80;
-            // 
-            // colDescricao
-            // 
-            this.colDescricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colDescricao.HeaderText = "Descricao";
-            this.colDescricao.Name = "colDescricao";
-            this.colDescricao.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Fabricante";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // colCompativel
-            // 
-            this.colCompativel.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCompativel.HeaderText = "Compativel";
-            this.colCompativel.Name = "colCompativel";
-            this.colCompativel.ReadOnly = true;
-            // 
-            // colPeso
-            // 
-            this.colPeso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPeso.HeaderText = "Peso";
-            this.colPeso.Name = "colPeso";
-            this.colPeso.ReadOnly = true;
-            // 
-            // colPotencia
-            // 
-            this.colPotencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPotencia.HeaderText = "+Potencia";
-            this.colPotencia.Name = "colPotencia";
-            this.colPotencia.ReadOnly = true;
-            // 
-            // colTorque
-            // 
-            this.colTorque.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTorque.HeaderText = "+Torque";
-            this.colTorque.Name = "colTorque";
-            this.colTorque.ReadOnly = true;
-            // 
             // FormPecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,6 +558,7 @@
             this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.btExcluir);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPecas";

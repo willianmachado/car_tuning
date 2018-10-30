@@ -727,12 +727,10 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1358, 766);
             this.ControlBox = false;
             this.Controls.Add(this.iTalk_GroupBox2);
@@ -749,7 +747,6 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.iTalk_GroupBox2.ResumeLayout(false);
             this.iTalk_GroupBox2.PerformLayout();
             this.iTalk_GroupBox1.ResumeLayout(false);

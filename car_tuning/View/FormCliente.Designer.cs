@@ -500,7 +500,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 766);
+            this.CausesValidation = false;
+            this.ClientSize = new System.Drawing.Size(1358, 749);
             this.ControlBox = false;
             this.Controls.Add(this.iTalk_GroupBox1);
             this.Controls.Add(this.btPesquisar);
@@ -514,7 +515,6 @@
             this.MinimizeBox = false;
             this.Name = "FormCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).EndInit();

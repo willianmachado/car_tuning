@@ -1,4 +1,5 @@
-﻿using System;
+﻿using car_tuning.Modelo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace car_tuning
         private string nome;
         private string telefone;
         private string email;
-
+        private Carro carro;
 
         public Cliente(int codigo, string cpf, string nome, string telefone, string email)
         {

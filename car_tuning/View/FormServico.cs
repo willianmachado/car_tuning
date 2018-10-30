@@ -58,6 +58,14 @@ namespace car_tuning
             btEditar.Enabled = true;
             btSalvar.Enabled = false;
         }
+        private void btSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public void ControlaBotoes(bool statusBtNovo)
         {
@@ -100,7 +108,9 @@ namespace car_tuning
             txtCod.Text = "";
             txtCarro.Text = "";
             txtCliente.Text = "";
-            txtCodFuncionario = "";
+            txtCodFuncionario.Text = "";
         }
+
+        
     }
 }

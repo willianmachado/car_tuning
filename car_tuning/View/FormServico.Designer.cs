@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormServico));
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.iTalk_Label6 = new iTalk.iTalk_Label();
+            this.txtCodFuncionario = new iTalk.iTalk_TextBox_Small();
             this.btIniciar = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
             this.ambiance_Label2 = new Ambiance.Ambiance_Label();
@@ -97,8 +100,6 @@
             this.btPesquisar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
-            this.iTalk_Label6 = new iTalk.iTalk_Label();
-            this.txtCodFuncionario = new iTalk.iTalk_TextBox_Small();
             this.iTalk_GroupBox1.SuspendLayout();
             this.iTalk_GroupBox4.SuspendLayout();
             this.iTalk_GroupBox3.SuspendLayout();
@@ -130,9 +131,36 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1426, 846);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1178, 652);
             this.iTalk_GroupBox1.TabIndex = 8;
             this.iTalk_GroupBox1.Text = "Serviço";
+            // 
+            // iTalk_Label6
+            // 
+            this.iTalk_Label6.AutoSize = true;
+            this.iTalk_Label6.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label6.Location = new System.Drawing.Point(152, 74);
+            this.iTalk_Label6.Name = "iTalk_Label6";
+            this.iTalk_Label6.Size = new System.Drawing.Size(92, 21);
+            this.iTalk_Label6.TabIndex = 12;
+            this.iTalk_Label6.Text = "Funcionario";
+            // 
+            // txtCodFuncionario
+            // 
+            this.txtCodFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.txtCodFuncionario.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtCodFuncionario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCodFuncionario.Location = new System.Drawing.Point(259, 74);
+            this.txtCodFuncionario.MaxLength = 32767;
+            this.txtCodFuncionario.Multiline = false;
+            this.txtCodFuncionario.Name = "txtCodFuncionario";
+            this.txtCodFuncionario.ReadOnly = false;
+            this.txtCodFuncionario.Size = new System.Drawing.Size(128, 28);
+            this.txtCodFuncionario.TabIndex = 11;
+            this.txtCodFuncionario.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCodFuncionario.UseSystemPasswordChar = false;
             // 
             // btIniciar
             // 
@@ -196,11 +224,11 @@
             this.iTalk_GroupBox4.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox4.Controls.Add(this.iTalk_Button_21);
             this.iTalk_GroupBox4.Controls.Add(this.iTalk_TextBox_Small1);
-            this.iTalk_GroupBox4.Location = new System.Drawing.Point(97, 283);
+            this.iTalk_GroupBox4.Location = new System.Drawing.Point(8, 236);
             this.iTalk_GroupBox4.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox4.Name = "iTalk_GroupBox4";
             this.iTalk_GroupBox4.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox4.Size = new System.Drawing.Size(556, 472);
+            this.iTalk_GroupBox4.Size = new System.Drawing.Size(537, 408);
             this.iTalk_GroupBox4.TabIndex = 7;
             this.iTalk_GroupBox4.Text = "Items";
             // 
@@ -223,7 +251,7 @@
             this.iTalk_Button_22.ForeColor = System.Drawing.Color.White;
             this.iTalk_Button_22.Image = null;
             this.iTalk_Button_22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_22.Location = new System.Drawing.Point(275, 381);
+            this.iTalk_Button_22.Location = new System.Drawing.Point(242, 342);
             this.iTalk_Button_22.Name = "iTalk_Button_22";
             this.iTalk_Button_22.Size = new System.Drawing.Size(83, 40);
             this.iTalk_Button_22.TabIndex = 1;
@@ -249,7 +277,7 @@
             this.iTalk_Button_21.ForeColor = System.Drawing.Color.White;
             this.iTalk_Button_21.Image = null;
             this.iTalk_Button_21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iTalk_Button_21.Location = new System.Drawing.Point(186, 381);
+            this.iTalk_Button_21.Location = new System.Drawing.Point(153, 342);
             this.iTalk_Button_21.Name = "iTalk_Button_21";
             this.iTalk_Button_21.Size = new System.Drawing.Size(83, 40);
             this.iTalk_Button_21.TabIndex = 1;
@@ -295,7 +323,7 @@
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label33);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label34);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label35);
-            this.iTalk_GroupBox3.Location = new System.Drawing.Point(748, 392);
+            this.iTalk_GroupBox3.Location = new System.Drawing.Point(562, 327);
             this.iTalk_GroupBox3.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox3.Name = "iTalk_GroupBox3";
             this.iTalk_GroupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -597,7 +625,7 @@
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label14);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label13);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label5);
-            this.iTalk_GroupBox2.Location = new System.Drawing.Point(748, 108);
+            this.iTalk_GroupBox2.Location = new System.Drawing.Point(562, 50);
             this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -978,6 +1006,7 @@
             this.btExcluir.TabIndex = 1;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btEditar
             // 
@@ -1037,40 +1066,13 @@
             this.btSalvar.TabIndex = 1;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // iTalk_Label6
-            // 
-            this.iTalk_Label6.AutoSize = true;
-            this.iTalk_Label6.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label6.Location = new System.Drawing.Point(152, 74);
-            this.iTalk_Label6.Name = "iTalk_Label6";
-            this.iTalk_Label6.Size = new System.Drawing.Size(92, 21);
-            this.iTalk_Label6.TabIndex = 12;
-            this.iTalk_Label6.Text = "Funcionario";
-            // 
-            // txtCodFuncionario
-            // 
-            this.txtCodFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.txtCodFuncionario.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtCodFuncionario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCodFuncionario.Location = new System.Drawing.Point(259, 74);
-            this.txtCodFuncionario.MaxLength = 32767;
-            this.txtCodFuncionario.Multiline = false;
-            this.txtCodFuncionario.Name = "txtCodFuncionario";
-            this.txtCodFuncionario.ReadOnly = false;
-            this.txtCodFuncionario.Size = new System.Drawing.Size(128, 28);
-            this.txtCodFuncionario.TabIndex = 11;
-            this.txtCodFuncionario.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCodFuncionario.UseSystemPasswordChar = false;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // FormServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1584, 861);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(1349, 676);
             this.Controls.Add(this.iTalk_GroupBox1);
             this.Controls.Add(this.rtValor);
             this.Controls.Add(this.iTalk_Label36);
@@ -1080,6 +1082,7 @@
             this.Controls.Add(this.btPesquisar);
             this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.btSalvar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormServico";

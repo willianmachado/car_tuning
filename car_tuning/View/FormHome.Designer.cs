@@ -37,6 +37,7 @@
             this.tsPesquisa = new System.Windows.Forms.ToolStripButton();
             this.tsRelatorio = new System.Windows.Forms.ToolStripButton();
             this.btSair = new System.Windows.Forms.ToolStripButton();
+            this.tsfuncionario = new System.Windows.Forms.ToolStripButton();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -55,7 +56,8 @@
             this.tsSrevico,
             this.tsPesquisa,
             this.tsRelatorio,
-            this.btSair});
+            this.btSair,
+            this.tsfuncionario});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1344, 53);
@@ -126,6 +128,15 @@
             this.btSair.Size = new System.Drawing.Size(50, 50);
             this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
+            // tsfuncionario
+            // 
+            this.tsfuncionario.Image = ((System.Drawing.Image)(resources.GetObject("tsfuncionario.Image")));
+            this.tsfuncionario.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsfuncionario.Name = "tsfuncionario";
+            this.tsfuncionario.Size = new System.Drawing.Size(120, 50);
+            this.tsfuncionario.Text = "Funcionário";
+            this.tsfuncionario.Click += new System.EventHandler(this.tsfuncionario_Click);
+            // 
             // BottomToolStripPanel
             // 
             this.BottomToolStripPanel.Location = new System.Drawing.Point(0, 0);
@@ -166,13 +177,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 861);
+            this.ClientSize = new System.Drawing.Size(1344, 749);
             this.ControlBox = false;
             this.Controls.Add(this.toolStrip2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHome";
+            this.Text = "Car_Tuning";
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -195,5 +208,6 @@
         private System.Windows.Forms.ToolStripButton tsRelatorio;
         private System.Windows.Forms.ToolStripButton btSair;
         private System.Windows.Forms.ToolStripButton tsCarro;
+        private System.Windows.Forms.ToolStripButton tsfuncionario;
     }
 }

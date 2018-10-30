@@ -25,16 +25,16 @@ namespace car_tuning
         FormPecas formP = new FormPecas();
         FormCarro FormCa = new FormCarro();
         FormRelatorio formR = new FormRelatorio();
-
+        FormFuncionario formFunc = new FormFuncionario();
 
         private void tsCliente_Click(object sender, EventArgs e)
         {
             
             formC.MdiParent = this;
-            formC.StartPosition = FormStartPosition.CenterScreen;
+            formC.StartPosition = FormStartPosition.Manual;
             formC.Show();
 
-
+            formFunc.Visible = false;
             formP.Visible = false;
             FormCa.Visible = false;
             formR.Visible = false;
@@ -47,22 +47,14 @@ namespace car_tuning
             formP.StartPosition = FormStartPosition.Manual;
             formP.Show();
 
-            
 
+            formFunc.Visible = false;
             formC.Visible = false;
             FormCa.Visible = false;
             formR.Visible = false;
         }
 
-        private void btSair_Click(object sender, EventArgs e)
-        {
-
-            if (MessageBox.Show(" Deseja mesmo sair? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-
-        }
+        
 
         private void tsPesquisa_Click(object sender, EventArgs e)
         {
@@ -88,7 +80,7 @@ namespace car_tuning
             formR.StartPosition = FormStartPosition.Manual;
             formR.Show();
 
-
+            formFunc.Visible = false;
             formC.Visible = false;
             formP.Visible = false;
             FormCa.Visible = false;
@@ -101,11 +93,33 @@ namespace car_tuning
             FormCa.Show();
 
 
-
+            formFunc.Visible = false;
             formC.Visible = false;
             formP.Visible = false;
             formR.Visible = false;
         }
-        
+
+        private void tsfuncionario_Click(object sender, EventArgs e)
+        {
+
+            formFunc.MdiParent = this;
+            formFunc.StartPosition = FormStartPosition.Manual;
+            formFunc.Show();
+
+            FormCa.Visible = false;
+            formC.Visible = false;
+            formP.Visible = false;
+            formR.Visible = false;
+        }
+
+        private void btSair_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show(" Deseja mesmo sair? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
+        }
     }
 }
