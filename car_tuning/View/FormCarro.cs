@@ -17,6 +17,29 @@ namespace car_tuning.View
             InitializeComponent();
         }
 
+
+        private void txtAno_TextChanged_1(object sender, EventArgs e)
+        {
+            lbAno.Text = txtAno.Text;
+        }
+        
+        private void txtMarca_TextChanged(object sender, EventArgs e)
+        {
+
+            lbMarca.Text = txtMarca.Text;
+        }    
+
+
+        private void txtModelo_TextChanged(object sender, EventArgs e)
+        {
+
+            lbModelo.Text = txtModelo.Text;
+            lbMarca.Visible = true;
+            lbModelo.Visible = true;
+            imgCarro.Visible = true;
+            lbAno.Visible = true;
+        }
+
         
     }
 }

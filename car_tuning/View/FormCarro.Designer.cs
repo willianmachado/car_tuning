@@ -30,6 +30,7 @@
         {
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.txtAno = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.txtModelo = new System.Windows.Forms.ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
-            this.txtAno = new System.Windows.Forms.TextBox();
             this.iTalk_Label8 = new iTalk.iTalk_Label();
             this.mephProgressBar7 = new CS_ClassLibraryTester.MephProgressBar();
             this.mephProgressBar6 = new CS_ClassLibraryTester.MephProgressBar();
@@ -123,6 +123,7 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.txtAno);
             this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
             this.iTalk_GroupBox1.Controls.Add(this.textBox1);
@@ -134,7 +135,6 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox1.Controls.Add(this.txtModelo);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
-            this.iTalk_GroupBox1.Controls.Add(this.txtAno);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label8);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(8, 31);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
@@ -143,6 +143,16 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(603, 604);
             this.iTalk_GroupBox1.TabIndex = 38;
             this.iTalk_GroupBox1.Text = "Carro";
+            // 
+            // txtAno
+            // 
+            this.txtAno.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAno.Location = new System.Drawing.Point(203, 128);
+            this.txtAno.Mask = "9900";
+            this.txtAno.Name = "txtAno";
+            this.txtAno.Size = new System.Drawing.Size(185, 27);
+            this.txtAno.TabIndex = 41;
+            this.txtAno.TextChanged += new System.EventHandler(this.txtAno_TextChanged_1);
             // 
             // txtCpf
             // 
@@ -252,7 +262,6 @@
             // txtMarca
             // 
             this.txtMarca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMarca.FormattingEnabled = true;
             this.txtMarca.Items.AddRange(new object[] {
             "",
             "FIAT",
@@ -280,7 +289,6 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.FormattingEnabled = true;
             this.txtModelo.Items.AddRange(new object[] {
             "UNO",
             "M3",
@@ -304,15 +312,6 @@
             this.iTalk_Label7.Size = new System.Drawing.Size(53, 21);
             this.iTalk_Label7.TabIndex = 6;
             this.iTalk_Label7.Text = "Marca";
-            // 
-            // txtAno
-            // 
-            this.txtAno.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAno.Location = new System.Drawing.Point(203, 127);
-            this.txtAno.Name = "txtAno";
-            this.txtAno.Size = new System.Drawing.Size(185, 27);
-            this.txtAno.TabIndex = 2;
-            this.txtAno.TextChanged += new System.EventHandler(this.txtAno_TextChanged);
             // 
             // iTalk_Label8
             // 
@@ -425,6 +424,7 @@
             // imgCarro
             // 
             this.imgCarro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgCarro.Image = global::car_tuning.Properties.Resources.carro;
             this.imgCarro.Location = new System.Drawing.Point(864, 59);
             this.imgCarro.Name = "imgCarro";
             this.imgCarro.Size = new System.Drawing.Size(263, 166);
@@ -641,7 +641,6 @@
             this.btPesquisar.TabIndex = 2;
             this.btPesquisar.Text = "Pesquisar";
             this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // btNovo
             // 
@@ -656,7 +655,6 @@
             this.btNovo.TabIndex = 3;
             this.btNovo.Text = "Novo";
             this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
             // 
             // btSalvar
             // 
@@ -671,7 +669,6 @@
             this.btSalvar.TabIndex = 4;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // btLimpar
             // 
@@ -686,7 +683,6 @@
             this.btLimpar.TabIndex = 5;
             this.btLimpar.Text = "Cancelar";
             this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
             // btEditar
             // 
@@ -701,7 +697,6 @@
             this.btEditar.TabIndex = 6;
             this.btEditar.Text = "Editar";
             this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btExcluir
             // 
@@ -716,7 +711,6 @@
             this.btExcluir.TabIndex = 7;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // FormCarro
             // 
@@ -733,7 +727,11 @@
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.btExcluir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormCarro";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.iTalk_GroupBox2.ResumeLayout(false);
@@ -787,7 +785,6 @@
         private System.Windows.Forms.MaskedTextBox txtPlaca;
         private System.Windows.Forms.ComboBox txtMarca;
         private System.Windows.Forms.ComboBox txtModelo;
-        private System.Windows.Forms.TextBox txtAno;
         private iTalk.iTalk_GroupBox iTalk_GroupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -798,5 +795,6 @@
         private Ambiance.Ambiance_Button_2 btBuscarCarro;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private iTalk.iTalk_Label iTalk_Label1;
+        private System.Windows.Forms.MaskedTextBox txtAno;
     }
 }

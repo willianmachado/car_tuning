@@ -280,7 +280,6 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(185, 26);
             this.txtModelo.TabIndex = 7;
-            this.txtModelo.TextChanged += new System.EventHandler(this.txtModelo_TextChanged);
             // 
             // iTalk_Label8
             // 
