@@ -23,7 +23,6 @@ namespace car_tuning
 
         FormCliente formC = new FormCliente();
         FormPecas formP = new FormPecas();
-        FormPesquisa formPq = new FormPesquisa();
         FormServico formS = new FormServico();
         FormCarro FormCa = new FormCarro();
         FormRelatorio formR = new FormRelatorio();
@@ -38,7 +37,6 @@ namespace car_tuning
 
 
             formP.Visible = false;
-            formPq.Visible = false;
             formS.Visible = false;
             FormCa.Visible = false;
             formR.Visible = false;
@@ -54,7 +52,6 @@ namespace car_tuning
             
 
             formC.Visible = false;
-            formPq.Visible = false;
             formS.Visible = false;
             FormCa.Visible = false;
             formR.Visible = false;
@@ -63,22 +60,19 @@ namespace car_tuning
         private void btSair_Click(object sender, EventArgs e)
         {
 
-            this.Close();
+            if (MessageBox.Show(" Deseja mesmo sair? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+
         }
 
         private void tsPesquisa_Click(object sender, EventArgs e)
         {
-            
-            formPq.MdiParent = this;
-            formPq.StartPosition = FormStartPosition.Manual;
+
+            FormPesquisa formPq = new FormPesquisa();
             formPq.Show();
-
-
-            formC.Visible = false;
-            formP.Visible = false;
-            formS.Visible = false;
-            FormCa.Visible = false;
-            formR.Visible = false;
+            
         }
 
         private void tsServico_Click(object sender, EventArgs e)
@@ -91,7 +85,6 @@ namespace car_tuning
 
             formC.Visible = false;
             formP.Visible = false;
-            formPq.Visible = false;
             FormCa.Visible = false;
             formR.Visible = false;
         }
@@ -106,7 +99,6 @@ namespace car_tuning
 
             formC.Visible = false;
             formP.Visible = false;
-            formPq.Visible = false;
             formS.Visible = false;
             FormCa.Visible = false;
         }
@@ -121,11 +113,9 @@ namespace car_tuning
 
             formC.Visible = false;
             formP.Visible = false;
-            formPq.Visible = false;
             formS.Visible = false;
             formR.Visible = false;
         }
-
         
     }
 }

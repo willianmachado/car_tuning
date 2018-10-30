@@ -35,6 +35,8 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.imgCarro = new System.Windows.Forms.PictureBox();
             this.lbAno = new iTalk.iTalk_Label();
             this.lbMarca = new iTalk.iTalk_Label();
@@ -55,13 +57,11 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
-            this.txtEmail = new iTalk.iTalk_TextBox_Small();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
-            this.txtNome = new iTalk.iTalk_TextBox_Small();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
@@ -81,6 +81,7 @@
             this.btPesquisar.TabIndex = 1;
             this.btPesquisar.Text = "Pesquisar";
             this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // btNovo
             // 
@@ -159,6 +160,8 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.txtEmail);
+            this.iTalk_GroupBox1.Controls.Add(this.txtNome);
             this.iTalk_GroupBox1.Controls.Add(this.imgCarro);
             this.iTalk_GroupBox1.Controls.Add(this.lbAno);
             this.iTalk_GroupBox1.Controls.Add(this.lbMarca);
@@ -174,13 +177,11 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label6);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label4);
-            this.iTalk_GroupBox1.Controls.Add(this.txtEmail);
             this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Controls.Add(this.txtTelefone);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
-            this.iTalk_GroupBox1.Controls.Add(this.txtNome);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(166, 28);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
@@ -188,6 +189,22 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 726);
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Cliente";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(91, 129);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(231, 27);
+            this.txtEmail.TabIndex = 49;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(91, 96);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(231, 27);
+            this.txtNome.TabIndex = 49;
             // 
             // imgCarro
             // 
@@ -421,21 +438,6 @@
             this.iTalk_Label4.TabIndex = 18;
             this.iTalk_Label4.Text = "Email";
             // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEmail.Location = new System.Drawing.Point(90, 129);
-            this.txtEmail.MaxLength = 32767;
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = false;
-            this.txtEmail.Size = new System.Drawing.Size(232, 28);
-            this.txtEmail.TabIndex = 2;
-            this.txtEmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEmail.UseSystemPasswordChar = false;
-            // 
             // txtCpf
             // 
             this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -451,11 +453,11 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefone.Location = new System.Drawing.Point(89, 162);
+            this.txtTelefone.Location = new System.Drawing.Point(91, 162);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(182, 27);
+            this.txtTelefone.Size = new System.Drawing.Size(148, 27);
             this.txtTelefone.TabIndex = 3;
             // 
             // iTalk_Label3
@@ -493,21 +495,6 @@
             this.iTalk_Label1.Size = new System.Drawing.Size(37, 21);
             this.iTalk_Label1.TabIndex = 1;
             this.iTalk_Label1.Text = "CPF";
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.Transparent;
-            this.txtNome.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNome.Location = new System.Drawing.Point(90, 95);
-            this.txtNome.MaxLength = 32767;
-            this.txtNome.Multiline = false;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.ReadOnly = false;
-            this.txtNome.Size = new System.Drawing.Size(232, 28);
-            this.txtNome.TabIndex = 1;
-            this.txtNome.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNome.UseSystemPasswordChar = false;
             // 
             // FormCliente
             // 
@@ -551,13 +538,11 @@
         private iTalk.iTalk_GroupBox iTalk_GroupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private iTalk.iTalk_Label iTalk_Label4;
-        private iTalk.iTalk_TextBox_Small txtEmail;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private iTalk.iTalk_Label iTalk_Label3;
         private iTalk.iTalk_Label iTalk_Label2;
         private iTalk.iTalk_Label iTalk_Label1;
-        private iTalk.iTalk_TextBox_Small txtNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -572,5 +557,7 @@
         private iTalk.iTalk_Label lbAno;
         private iTalk.iTalk_Label lbMarca;
         private iTalk.iTalk_Label lbModelo;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }

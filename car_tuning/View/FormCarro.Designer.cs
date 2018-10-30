@@ -266,7 +266,6 @@
             this.txtMarca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.FormattingEnabled = true;
             this.txtMarca.Items.AddRange(new object[] {
-            "",
             "FIAT",
             "MERCEDEZ",
             "BMW",
@@ -431,7 +430,7 @@
             // 
             this.imgCarro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imgCarro.Image = global::car_tuning.Properties.Resources.carro;
-            this.imgCarro.Location = new System.Drawing.Point(864, 59);
+            this.imgCarro.Location = new System.Drawing.Point(862, 49);
             this.imgCarro.Name = "imgCarro";
             this.imgCarro.Size = new System.Drawing.Size(263, 166);
             this.imgCarro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -647,6 +646,7 @@
             this.btPesquisar.TabIndex = 2;
             this.btPesquisar.Text = "Pesquisar";
             this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // btNovo
             // 
@@ -661,6 +661,7 @@
             this.btNovo.TabIndex = 3;
             this.btNovo.Text = "Novo";
             this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
             // 
             // btSalvar
             // 
@@ -675,6 +676,7 @@
             this.btSalvar.TabIndex = 4;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // btLimpar
             // 
@@ -689,6 +691,7 @@
             this.btLimpar.TabIndex = 5;
             this.btLimpar.Text = "Cancelar";
             this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
             // btEditar
             // 
@@ -703,6 +706,7 @@
             this.btEditar.TabIndex = 6;
             this.btEditar.Text = "Editar";
             this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btExcluir
             // 
@@ -717,6 +721,7 @@
             this.btExcluir.TabIndex = 7;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // FormCarro
             // 

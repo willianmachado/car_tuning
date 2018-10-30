@@ -21,5 +21,11 @@ namespace car_tuning
         {
             this.Close();
         }
+
+        private void btPesquisar_Click(object sender, EventArgs e)
+        {
+            FormPesquisa pesquisa = new FormPesquisa();
+            pesquisa.Show();
+        }
     }
 }

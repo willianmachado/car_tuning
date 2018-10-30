@@ -18,12 +18,7 @@ namespace car_tuning
             ControlaBotoes(true);
             
         }
-
-        private void btVoltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+            
         private void btLimpar_Click(object sender, EventArgs e)
         {
             ControlaBotoes(true);
@@ -64,35 +59,35 @@ namespace car_tuning
             //Habilita e desabilita os botoes de acordo com a atual situação do cadastro
             if (statusBtNovo == true)
             {
-                btNovo.Enabled = true;
-                btNovo.ForeColor = Color.White;
-                btExcluir.Enabled = true;
-                btExcluir.ForeColor = Color.White;
-                btEditar.Enabled = true;
-                btEditar.ForeColor = Color.White;
-                btSalvar.Enabled = false;
-                btSalvar.ForeColor = Color.Gray;
-                btLimpar.Enabled = false;
-                btLimpar.ForeColor = Color.Gray;
-                btPesquisar.Enabled = true;
-                btPesquisar.ForeColor = Color.White;
+                this.btNovo.Enabled = true;
+                this.btNovo.ForeColor = Color.White;
+                this.btExcluir.Enabled = true;
+                this.btExcluir.ForeColor = Color.White;
+                this.btEditar.Enabled = true;
+                this.btEditar.ForeColor = Color.White;
+                this.btSalvar.Enabled = false;
+                this.btSalvar.ForeColor = Color.Gray;
+                this.btLimpar.Enabled = false;
+                this.btLimpar.ForeColor = Color.Gray;
+                this.btPesquisar.Enabled = true;
+                this.btPesquisar.ForeColor = Color.White;
 
             }
             else
             {
-                btNovo.Enabled = false;
-                btNovo.ForeColor = Color.Gray;
-                btExcluir.Enabled = false;
-                btExcluir.ForeColor = Color.Gray;
-                btEditar.Enabled = false;
-                btEditar.ForeColor = Color.Gray;
-                txtCpf.Enabled = true;
-                btSalvar.Enabled = true;
-                btSalvar.ForeColor = Color.White;
-                btLimpar.Enabled = true;
-                btLimpar.ForeColor = Color.White;
-                btPesquisar.Enabled = false;
-                btPesquisar.ForeColor = Color.Gray;
+                this.btNovo.Enabled = false;
+                this.btNovo.ForeColor = Color.Gray;
+                this.btExcluir.Enabled = false;
+                this.btExcluir.ForeColor = Color.Gray;
+                this.btEditar.Enabled = false;
+                this.btEditar.ForeColor = Color.Gray;
+                this.txtCpf.Enabled = true;
+                this.btSalvar.Enabled = true;
+                this.btSalvar.ForeColor = Color.White;
+                this.btLimpar.Enabled = true;
+                this.btLimpar.ForeColor = Color.White;
+                this.btPesquisar.Enabled = false;
+                this.btPesquisar.ForeColor = Color.Gray;
             }
         }
 
@@ -132,6 +127,12 @@ namespace car_tuning
                 imgCarro.Visible = true;
                 lbAno.Visible = true;
             }
+        }
+
+        private void btPesquisar_Click(object sender, EventArgs e)
+        {
+            FormPesquisa pesquisa = new FormPesquisa();
+            pesquisa.Show();
         }
     }
 }
