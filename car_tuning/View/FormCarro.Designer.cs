@@ -78,6 +78,7 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
+            this.bgPeso = new System.ComponentModel.BackgroundWorker();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -86,6 +87,9 @@
             // 
             // iTalk_GroupBox2
             // 
+            this.iTalk_GroupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_GroupBox1);
             this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar7);
@@ -406,7 +410,7 @@
             // 
             this.mephProgressBar1.BackColor = System.Drawing.Color.Transparent;
             this.mephProgressBar1.Location = new System.Drawing.Point(837, 387);
-            this.mephProgressBar1.Maximum = 100;
+            this.mephProgressBar1.Maximum = 200;
             this.mephProgressBar1.Name = "mephProgressBar1";
             this.mephProgressBar1.ShowPercentage = false;
             this.mephProgressBar1.Size = new System.Drawing.Size(208, 23);
@@ -723,6 +727,7 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
+            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -807,5 +812,6 @@
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private iTalk.iTalk_Label iTalk_Label1;
         private System.Windows.Forms.MaskedTextBox txtAno;
+        private System.ComponentModel.BackgroundWorker bgPeso;
     }
 }

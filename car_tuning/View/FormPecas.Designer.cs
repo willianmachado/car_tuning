@@ -105,7 +105,7 @@
             this.iTalk_TextBox_Small7.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_TextBox_Small7.Font = new System.Drawing.Font("Tahoma", 11F);
             this.iTalk_TextBox_Small7.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small7.Location = new System.Drawing.Point(620, 181);
+            this.iTalk_TextBox_Small7.Location = new System.Drawing.Point(754, 221);
             this.iTalk_TextBox_Small7.MaxLength = 32767;
             this.iTalk_TextBox_Small7.Multiline = false;
             this.iTalk_TextBox_Small7.Name = "iTalk_TextBox_Small7";
@@ -120,7 +120,7 @@
             this.iTalk_TextBox_Small6.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_TextBox_Small6.Font = new System.Drawing.Font("Tahoma", 11F);
             this.iTalk_TextBox_Small6.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small6.Location = new System.Drawing.Point(620, 135);
+            this.iTalk_TextBox_Small6.Location = new System.Drawing.Point(754, 174);
             this.iTalk_TextBox_Small6.MaxLength = 32767;
             this.iTalk_TextBox_Small6.Multiline = false;
             this.iTalk_TextBox_Small6.Name = "iTalk_TextBox_Small6";
@@ -147,9 +147,9 @@
             "MERCEDEZ",
             "BMW",
             "VOLKSWAGEM"});
-            this.txtModelo.Location = new System.Drawing.Point(256, 237);
+            this.txtModelo.Location = new System.Drawing.Point(754, 82);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(179, 26);
+            this.txtModelo.Size = new System.Drawing.Size(185, 26);
             this.txtModelo.StartIndex = 0;
             this.txtModelo.TabIndex = 2;
             // 
@@ -159,7 +159,7 @@
             this.iTalk_Label7.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label7.Location = new System.Drawing.Point(546, 181);
+            this.iTalk_Label7.Location = new System.Drawing.Point(680, 221);
             this.iTalk_Label7.Name = "iTalk_Label7";
             this.iTalk_Label7.Size = new System.Drawing.Size(68, 21);
             this.iTalk_Label7.TabIndex = 1;
@@ -171,7 +171,7 @@
             this.iTalk_Label8.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label8.Location = new System.Drawing.Point(114, 239);
+            this.iTalk_Label8.Location = new System.Drawing.Point(612, 84);
             this.iTalk_Label8.Name = "iTalk_Label8";
             this.iTalk_Label8.Size = new System.Drawing.Size(136, 21);
             this.iTalk_Label8.TabIndex = 1;
@@ -183,7 +183,7 @@
             this.iTalk_Label6.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label6.Location = new System.Drawing.Point(537, 135);
+            this.iTalk_Label6.Location = new System.Drawing.Point(669, 174);
             this.iTalk_Label6.Name = "iTalk_Label6";
             this.iTalk_Label6.Size = new System.Drawing.Size(79, 21);
             this.iTalk_Label6.TabIndex = 1;
@@ -195,7 +195,7 @@
             this.iTalk_Label4.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label4.Location = new System.Drawing.Point(559, 89);
+            this.iTalk_Label4.Location = new System.Drawing.Point(706, 130);
             this.iTalk_Label4.Name = "iTalk_Label4";
             this.iTalk_Label4.Size = new System.Drawing.Size(42, 21);
             this.iTalk_Label4.TabIndex = 1;
@@ -207,7 +207,7 @@
             this.iTalk_Label3.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label3.Location = new System.Drawing.Point(118, 133);
+            this.iTalk_Label3.Location = new System.Drawing.Point(130, 155);
             this.iTalk_Label3.Name = "iTalk_Label3";
             this.iTalk_Label3.Size = new System.Drawing.Size(81, 21);
             this.iTalk_Label3.TabIndex = 1;
@@ -218,7 +218,7 @@
             this.iTalk_TextBox_Small5.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_TextBox_Small5.Font = new System.Drawing.Font("Tahoma", 11F);
             this.iTalk_TextBox_Small5.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small5.Location = new System.Drawing.Point(620, 89);
+            this.iTalk_TextBox_Small5.Location = new System.Drawing.Point(754, 127);
             this.iTalk_TextBox_Small5.MaxLength = 32767;
             this.iTalk_TextBox_Small5.Multiline = false;
             this.iTalk_TextBox_Small5.Name = "iTalk_TextBox_Small5";
@@ -234,7 +234,7 @@
             this.iTalk_Label9.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label9.Location = new System.Drawing.Point(118, 203);
+            this.iTalk_Label9.Location = new System.Drawing.Point(130, 256);
             this.iTalk_Label9.Name = "iTalk_Label9";
             this.iTalk_Label9.Size = new System.Drawing.Size(40, 21);
             this.iTalk_Label9.TabIndex = 1;
@@ -246,7 +246,7 @@
             this.iTalk_Label2.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label2.Location = new System.Drawing.Point(118, 99);
+            this.iTalk_Label2.Location = new System.Drawing.Point(130, 107);
             this.iTalk_Label2.Name = "iTalk_Label2";
             this.iTalk_Label2.Size = new System.Drawing.Size(77, 21);
             this.iTalk_Label2.TabIndex = 1;
@@ -258,7 +258,7 @@
             this.iTalk_Label5.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label5.Location = new System.Drawing.Point(118, 169);
+            this.iTalk_Label5.Location = new System.Drawing.Point(130, 208);
             this.iTalk_Label5.Name = "iTalk_Label5";
             this.iTalk_Label5.Size = new System.Drawing.Size(49, 21);
             this.iTalk_Label5.TabIndex = 1;
@@ -282,7 +282,7 @@
             this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label1.Location = new System.Drawing.Point(118, 65);
+            this.iTalk_Label1.Location = new System.Drawing.Point(130, 58);
             this.iTalk_Label1.Name = "iTalk_Label1";
             this.iTalk_Label1.Size = new System.Drawing.Size(38, 21);
             this.iTalk_Label1.TabIndex = 1;
@@ -293,7 +293,7 @@
             this.iTalk_TextBox_Small2.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_TextBox_Small2.Font = new System.Drawing.Font("Tahoma", 11F);
             this.iTalk_TextBox_Small2.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small2.Location = new System.Drawing.Point(203, 203);
+            this.iTalk_TextBox_Small2.Location = new System.Drawing.Point(215, 256);
             this.iTalk_TextBox_Small2.MaxLength = 32767;
             this.iTalk_TextBox_Small2.Multiline = false;
             this.iTalk_TextBox_Small2.Name = "iTalk_TextBox_Small2";
@@ -308,7 +308,7 @@
             this.txtTelefone.BackColor = System.Drawing.Color.Transparent;
             this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtTelefone.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefone.Location = new System.Drawing.Point(203, 133);
+            this.txtTelefone.Location = new System.Drawing.Point(215, 155);
             this.txtTelefone.MaxLength = 32767;
             this.txtTelefone.Multiline = false;
             this.txtTelefone.Name = "txtTelefone";
@@ -323,7 +323,7 @@
             this.iTalk_TextBox_Small1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_TextBox_Small1.Font = new System.Drawing.Font("Tahoma", 11F);
             this.iTalk_TextBox_Small1.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small1.Location = new System.Drawing.Point(203, 169);
+            this.iTalk_TextBox_Small1.Location = new System.Drawing.Point(215, 208);
             this.iTalk_TextBox_Small1.MaxLength = 32767;
             this.iTalk_TextBox_Small1.Multiline = false;
             this.iTalk_TextBox_Small1.Name = "iTalk_TextBox_Small1";
@@ -338,7 +338,7 @@
             this.txtNome.BackColor = System.Drawing.Color.Transparent;
             this.txtNome.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtNome.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNome.Location = new System.Drawing.Point(203, 99);
+            this.txtNome.Location = new System.Drawing.Point(215, 107);
             this.txtNome.MaxLength = 32767;
             this.txtNome.Multiline = false;
             this.txtNome.Name = "txtNome";
@@ -368,7 +368,7 @@
             this.txtCpf.BackColor = System.Drawing.Color.Transparent;
             this.txtCpf.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtCpf.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCpf.Location = new System.Drawing.Point(203, 65);
+            this.txtCpf.Location = new System.Drawing.Point(215, 58);
             this.txtCpf.MaxLength = 32767;
             this.txtCpf.Multiline = false;
             this.txtCpf.Name = "txtCpf";

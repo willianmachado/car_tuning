@@ -91,6 +91,7 @@
             // 
             // btVoltar
             // 
+            this.btVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btVoltar.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btVoltar.ForeColor = System.Drawing.Color.White;
@@ -106,6 +107,7 @@
             // 
             // btSelecionar
             // 
+            this.btSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btSelecionar.BackColor = System.Drawing.Color.Transparent;
             this.btSelecionar.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btSelecionar.ForeColor = System.Drawing.Color.White;
@@ -121,6 +123,9 @@
             // 
             // tabCliente
             // 
+            this.tabCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabCliente.Controls.Add(this.Cliente);
             this.tabCliente.Controls.Add(this.tabPage2);
             this.tabCliente.Controls.Add(this.tabPage1);
@@ -148,6 +153,9 @@
             // 
             // txtPesquisa
             // 
+            this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
             this.txtPesquisa.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtPesquisa.ForeColor = System.Drawing.Color.DimGray;
@@ -179,6 +187,9 @@
             // 
             this.dgCliente.AllowUserToAddRows = false;
             this.dgCliente.AllowUserToDeleteRows = false;
+            this.dgCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCpf,
@@ -330,6 +341,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.tabPage1.Controls.Add(this.dataGridView2);
             this.tabPage1.Controls.Add(this.iTalk_TextBox_Small3);
@@ -610,8 +622,8 @@
             // 
             // FormPesquisa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1344, 752);
             this.ControlBox = false;
             this.Controls.Add(this.tabCliente);

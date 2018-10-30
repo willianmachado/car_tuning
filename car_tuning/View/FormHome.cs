@@ -23,7 +23,6 @@ namespace car_tuning
 
         FormCliente formC = new FormCliente();
         FormPecas formP = new FormPecas();
-        FormServico formS = new FormServico();
         FormCarro FormCa = new FormCarro();
         FormRelatorio formR = new FormRelatorio();
 
@@ -37,7 +36,6 @@ namespace car_tuning
 
 
             formP.Visible = false;
-            formS.Visible = false;
             FormCa.Visible = false;
             formR.Visible = false;
         }
@@ -52,7 +50,6 @@ namespace car_tuning
             
 
             formC.Visible = false;
-            formS.Visible = false;
             FormCa.Visible = false;
             formR.Visible = false;
         }
@@ -77,16 +74,11 @@ namespace car_tuning
 
         private void tsServico_Click(object sender, EventArgs e)
         {
-            
-            formS.MdiParent = this;
-            formS.StartPosition = FormStartPosition.Manual;
+
+            FormServico formS = new FormServico();
             formS.Show();
 
-
-            formC.Visible = false;
-            formP.Visible = false;
-            FormCa.Visible = false;
-            formR.Visible = false;
+            
         }
 
         private void tsRelatorio_Click(object sender, EventArgs e)
@@ -99,7 +91,6 @@ namespace car_tuning
 
             formC.Visible = false;
             formP.Visible = false;
-            formS.Visible = false;
             FormCa.Visible = false;
         }
 
@@ -113,7 +104,6 @@ namespace car_tuning
 
             formC.Visible = false;
             formP.Visible = false;
-            formS.Visible = false;
             formR.Visible = false;
         }
         

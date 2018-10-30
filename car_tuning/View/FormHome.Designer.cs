@@ -63,6 +63,7 @@
             // 
             // tsCliente
             // 
+            this.tsCliente.BackColor = System.Drawing.SystemColors.Control;
             this.tsCliente.Image = global::car_tuning.Properties.Resources.Cliente;
             this.tsCliente.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsCliente.Name = "tsCliente";

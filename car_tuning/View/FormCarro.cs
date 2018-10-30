@@ -108,7 +108,9 @@ namespace car_tuning.View
         {
             FormPesquisa pesquisa = new FormPesquisa();
             pesquisa.Show();
-            //tentar selecionar a aba carro
         }
+        
+
+          
     }
 }
