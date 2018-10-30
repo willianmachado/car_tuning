@@ -36,7 +36,7 @@
             this.tsSrevico = new System.Windows.Forms.ToolStripButton();
             this.tsPesquisa = new System.Windows.Forms.ToolStripButton();
             this.tsRelatorio = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.btSair = new System.Windows.Forms.ToolStripButton();
             this.BottomToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.TopToolStripPanel = new System.Windows.Forms.ToolStripPanel();
             this.RightToolStripPanel = new System.Windows.Forms.ToolStripPanel();
@@ -55,7 +55,7 @@
             this.tsSrevico,
             this.tsPesquisa,
             this.tsRelatorio,
-            this.toolStripButton6});
+            this.btSair});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1344, 53);
@@ -115,16 +115,15 @@
             this.tsRelatorio.Text = "Relatórios";
             this.tsRelatorio.Click += new System.EventHandler(this.tsRelatorio_Click);
             // 
-            // toolStripButton6
+            // btSair
             // 
-            this.toolStripButton6.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(50, 50);
-            this.toolStripButton6.Text = "toolStripButton6";
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
+            this.btSair.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btSair.Image = ((System.Drawing.Image)(resources.GetObject("btSair.Image")));
+            this.btSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btSair.Name = "btSair";
+            this.btSair.Size = new System.Drawing.Size(50, 50);
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
             // BottomToolStripPanel
             // 
@@ -193,7 +192,7 @@
         private System.Windows.Forms.ToolStripPanel LeftToolStripPanel;
         private System.Windows.Forms.ToolStripContentPanel ContentPanel;
         private System.Windows.Forms.ToolStripButton tsRelatorio;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton btSair;
         private System.Windows.Forms.ToolStripButton tsCarro;
     }
 }

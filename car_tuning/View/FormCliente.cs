@@ -50,10 +50,15 @@ namespace car_tuning
             txtNome.Text = "";
             txtCpf.Text = "";
             txtTelefone.Text = "";
-            
+            txtAno.Text = "";
+            txtModelo.Text = "";
+            txtPlaca.Text = "";
+            txtMarca.Text = "";
 
-            
+
+
         }
+
         public void ControlaBotoes(bool statusBtNovo)
         {
             //Habilita e desabilita os botoes de acordo com a atual situação do cadastro
@@ -89,7 +94,6 @@ namespace car_tuning
                 btPesquisar.Enabled = false;
                 btPesquisar.ForeColor = Color.Gray;
             }
-
         }
 
 
@@ -100,6 +104,34 @@ namespace car_tuning
             
         }
 
-       
+        private void txtAno_TextChanged(object sender, EventArgs e)
+        {
+            lbAno.Text = txtAno.Text;
+        }
+
+        private void txtMarca_TextChanged(object sender, EventArgs e)
+        {
+            lbMarca.Text = txtMarca.Text;
+        }
+
+        private void txtModelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (txtMarca.Text == "")
+            {
+                MessageBox.Show("Selecione a Marca do carro");
+                lbModelo.Text = txtModelo.Text;
+            }
+
+            else
+            {
+
+                lbMarca.Visible = true;
+                lbModelo.Text = txtModelo.Text;
+                lbModelo.Visible = true;
+                imgCarro.Visible = true;
+                lbAno.Visible = true;
+            }
+        }
     }
 }

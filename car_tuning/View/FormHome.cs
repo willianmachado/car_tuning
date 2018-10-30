@@ -60,8 +60,9 @@ namespace car_tuning
             formR.Visible = false;
         }
 
-        private void toolStripButton6_Click(object sender, EventArgs e)
+        private void btSair_Click(object sender, EventArgs e)
         {
+
             this.Close();
         }
 

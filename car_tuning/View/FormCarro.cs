@@ -33,13 +33,35 @@ namespace car_tuning.View
         private void txtModelo_TextChanged(object sender, EventArgs e)
         {
 
-            lbModelo.Text = txtModelo.Text;
-            lbMarca.Visible = true;
-            lbModelo.Visible = true;
-            imgCarro.Visible = true;
-            lbAno.Visible = true;
+            
+
+            if (txtMarca.Text == "")
+            {
+                MessageBox.Show("Selecione a Marca do carro");
+                lbModelo.Text = txtModelo.Text;
+            }
+
+            else
+            {
+
+                lbMarca.Visible = true;
+                lbModelo.Text = txtModelo.Text;
+                lbModelo.Visible = true;
+                imgCarro.Visible = true;
+                lbAno.Visible = true;
+            }
         }
 
-        
+        private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+                if (!char.IsDigit(e.KeyChar))
+
+                {
+
+                    e.Handled = true;
+
+                }
+            }
     }
 }

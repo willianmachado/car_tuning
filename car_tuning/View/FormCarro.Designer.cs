@@ -140,7 +140,7 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(603, 604);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(603, 664);
             this.iTalk_GroupBox1.TabIndex = 38;
             this.iTalk_GroupBox1.Text = "Carro";
             // 
@@ -153,6 +153,7 @@
             this.txtAno.Size = new System.Drawing.Size(185, 27);
             this.txtAno.TabIndex = 41;
             this.txtAno.TextChanged += new System.EventHandler(this.txtAno_TextChanged_1);
+            this.txtAno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAno_KeyPress);
             // 
             // txtCpf
             // 
@@ -211,7 +212,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(573, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(573, 357);
             this.dataGridView1.TabIndex = 28;
             // 
             // Column1
@@ -261,7 +262,9 @@
             // 
             // txtMarca
             // 
+            this.txtMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMarca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.FormattingEnabled = true;
             this.txtMarca.Items.AddRange(new object[] {
             "",
             "FIAT",
@@ -272,6 +275,7 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(185, 26);
             this.txtMarca.TabIndex = 3;
+            this.txtMarca.SelectedIndexChanged += new System.EventHandler(this.txtMarca_TextChanged);
             this.txtMarca.TextChanged += new System.EventHandler(this.txtMarca_TextChanged);
             // 
             // iTalk_Label4
@@ -288,6 +292,7 @@
             // 
             // txtModelo
             // 
+            this.txtModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtModelo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Items.AddRange(new object[] {
             "UNO",
@@ -299,6 +304,7 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(185, 26);
             this.txtModelo.TabIndex = 4;
+            this.txtModelo.SelectedIndexChanged += new System.EventHandler(this.txtModelo_TextChanged);
             this.txtModelo.TextChanged += new System.EventHandler(this.txtModelo_TextChanged);
             // 
             // iTalk_Label7

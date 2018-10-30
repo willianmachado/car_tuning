@@ -185,13 +185,14 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 696);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 726);
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Cliente";
             // 
             // imgCarro
             // 
             this.imgCarro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgCarro.Image = global::car_tuning.Properties.Resources.carro;
             this.imgCarro.Location = new System.Drawing.Point(862, 46);
             this.imgCarro.Name = "imgCarro";
             this.imgCarro.Size = new System.Drawing.Size(263, 166);
@@ -241,6 +242,7 @@
             // 
             // txtMarca
             // 
+            this.txtMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMarca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.FormattingEnabled = true;
             this.txtMarca.Items.AddRange(new object[] {
@@ -253,6 +255,8 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(185, 26);
             this.txtMarca.TabIndex = 6;
+            this.txtMarca.SelectedIndexChanged += new System.EventHandler(this.txtMarca_TextChanged);
+            this.txtMarca.TextChanged += new System.EventHandler(this.txtMarca_TextChanged);
             // 
             // iTalk_Label7
             // 
@@ -268,6 +272,7 @@
             // 
             // txtModelo
             // 
+            this.txtModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtModelo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.FormattingEnabled = true;
             this.txtModelo.Items.AddRange(new object[] {
@@ -280,6 +285,7 @@
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(185, 26);
             this.txtModelo.TabIndex = 7;
+            this.txtModelo.SelectedIndexChanged += new System.EventHandler(this.txtModelo_SelectedIndexChanged);
             // 
             // iTalk_Label8
             // 
@@ -297,9 +303,11 @@
             // 
             this.txtAno.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAno.Location = new System.Drawing.Point(493, 97);
+            this.txtAno.MaxLength = 4;
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(185, 27);
             this.txtAno.TabIndex = 5;
+            this.txtAno.TextChanged += new System.EventHandler(this.txtAno_TextChanged);
             // 
             // iTalk_Label9
             // 
@@ -335,7 +343,7 @@
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(138, 27);
+            this.txtPlaca.Size = new System.Drawing.Size(101, 27);
             this.txtPlaca.TabIndex = 4;
             // 
             // iTalk_Label6
@@ -358,7 +366,7 @@
             this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox2.Size = new System.Drawing.Size(1164, 382);
+            this.iTalk_GroupBox2.Size = new System.Drawing.Size(1164, 417);
             this.iTalk_GroupBox2.TabIndex = 19;
             this.iTalk_GroupBox2.Text = "Carro";
             // 
@@ -374,7 +382,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1136, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(1136, 380);
             this.dataGridView1.TabIndex = 28;
             // 
             // Column1
@@ -434,7 +442,7 @@
             this.txtCpf.ForeColor = System.Drawing.Color.DimGray;
             this.txtCpf.Location = new System.Drawing.Point(91, 63);
             this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCpf.Mask = "000,000,000,00";
+            this.txtCpf.Mask = "000,000,000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(138, 27);
             this.txtCpf.TabIndex = 0;
@@ -445,9 +453,9 @@
             this.txtTelefone.ForeColor = System.Drawing.Color.DimGray;
             this.txtTelefone.Location = new System.Drawing.Point(89, 162);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTelefone.Mask = "(99) 0000-0000";
+            this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(140, 27);
+            this.txtTelefone.Size = new System.Drawing.Size(182, 27);
             this.txtTelefone.TabIndex = 3;
             // 
             // iTalk_Label3
