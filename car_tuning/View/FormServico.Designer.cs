@@ -93,7 +93,6 @@
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.txtCod = new iTalk.iTalk_TextBox_Small();
             this.rtValor = new iTalk.iTalk_Label();
-            this.iTalk_Label36 = new iTalk.iTalk_Label();
             this.btNovo = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
@@ -119,14 +118,14 @@
             this.iTalk_GroupBox1.Controls.Add(this.ambiance_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.lbValor);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox4);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox3);
             this.iTalk_GroupBox1.Controls.Add(this.txtCarro);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox2);
             this.iTalk_GroupBox1.Controls.Add(this.txtCliente);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
             this.iTalk_GroupBox1.Controls.Add(this.txtCod);
+            this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox2);
+            this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox3);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(159, 12);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
@@ -966,18 +965,6 @@
             this.rtValor.TabIndex = 4;
             this.rtValor.Text = "return VALOR";
             // 
-            // iTalk_Label36
-            // 
-            this.iTalk_Label36.AutoSize = true;
-            this.iTalk_Label36.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label36.Location = new System.Drawing.Point(978, 619);
-            this.iTalk_Label36.Name = "iTalk_Label36";
-            this.iTalk_Label36.Size = new System.Drawing.Size(72, 21);
-            this.iTalk_Label36.TabIndex = 5;
-            this.iTalk_Label36.Text = "Valor: R$";
-            // 
             // btNovo
             // 
             this.btNovo.BackColor = System.Drawing.Color.Transparent;
@@ -1073,15 +1060,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1349, 676);
-            this.Controls.Add(this.iTalk_GroupBox1);
             this.Controls.Add(this.rtValor);
-            this.Controls.Add(this.iTalk_Label36);
             this.Controls.Add(this.btNovo);
             this.Controls.Add(this.btExcluir);
             this.Controls.Add(this.btEditar);
             this.Controls.Add(this.btPesquisar);
             this.Controls.Add(this.btLimpar);
             this.Controls.Add(this.btSalvar);
+            this.Controls.Add(this.iTalk_GroupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1166,7 +1152,6 @@
         private iTalk.iTalk_Label iTalk_Label1;
         private iTalk.iTalk_TextBox_Small txtCod;
         private iTalk.iTalk_Label rtValor;
-        private iTalk.iTalk_Label iTalk_Label36;
         private Ambiance.Ambiance_Label lbValor;
         private Ambiance.Ambiance_Label ambiance_Label2;
         private iTalk.iTalk_Button_2 btVoltar;
