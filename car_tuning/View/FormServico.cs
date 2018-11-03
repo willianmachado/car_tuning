@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,12 +13,20 @@ namespace car_tuning
 {
     public partial class FormServico : Form
     {
+        
+
         public FormServico()
         {
             InitializeComponent();
             ControlaBotoes(true);
         }
-        
+
+        private void Loading()
+        {
+            View.FormLoading f  = new View.FormLoading();
+            f.ShowDialog();
+        }
+
         private void btPesquisar_Click(object sender, EventArgs e)
         {
             FormPesquisa pesquisa = new FormPesquisa();
@@ -111,6 +120,38 @@ namespace car_tuning
             txtCodFuncionario.Text = "";
         }
 
-        
+        private void btExecutar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Executar o Serviço? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //para chamar o splash
+                Thread t = new Thread((new ThreadStart(Loading)));
+                ////inicializar a thread
+                t.Start();
+                Thread.Sleep(2000);
+                t.Abort();
+
+                MessageBox.Show("Serviço encaminhado com sucesso!");
+            }
+
+            else
+            {
+                MessageBox.Show("Serviço cancelado");
+            }
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja cancelar o Serviço? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    this.Close();
+        }
+
+       
+
+           
+
     }
+
+    
 }
+

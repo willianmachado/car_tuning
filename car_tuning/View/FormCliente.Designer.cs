@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btPesquisar = new iTalk.iTalk_Button_2();
-            this.btNovo = new iTalk.iTalk_Button_2();
-            this.btSalvar = new iTalk.iTalk_Button_2();
-            this.btLimpar = new iTalk.iTalk_Button_2();
-            this.btEditar = new iTalk.iTalk_Button_2();
-            this.btExcluir = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -52,6 +46,7 @@
             this.iTalk_Label6 = new iTalk.iTalk_Label();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,100 +57,18 @@
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
+            this.btPesquisar = new iTalk.iTalk_Button_2();
+            this.btNovo = new iTalk.iTalk_Button_2();
+            this.btExcluir = new iTalk.iTalk_Button_2();
+            this.btSalvar = new iTalk.iTalk_Button_2();
+            this.btEditar = new iTalk.iTalk_Button_2();
+            this.btLimpar = new iTalk.iTalk_Button_2();
+            this.ambiance_Button_21 = new Ambiance.Ambiance_Button_2();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btPesquisar
-            // 
-            this.btPesquisar.BackColor = System.Drawing.Color.Transparent;
-            this.btPesquisar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btPesquisar.ForeColor = System.Drawing.Color.White;
-            this.btPesquisar.Image = null;
-            this.btPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btPesquisar.Location = new System.Drawing.Point(23, 396);
-            this.btPesquisar.Name = "btPesquisar";
-            this.btPesquisar.Size = new System.Drawing.Size(116, 40);
-            this.btPesquisar.TabIndex = 1;
-            this.btPesquisar.Text = "Pesquisar";
-            this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
-            // 
-            // btNovo
-            // 
-            this.btNovo.BackColor = System.Drawing.Color.Transparent;
-            this.btNovo.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btNovo.ForeColor = System.Drawing.Color.White;
-            this.btNovo.Image = null;
-            this.btNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btNovo.Location = new System.Drawing.Point(23, 74);
-            this.btNovo.Name = "btNovo";
-            this.btNovo.Size = new System.Drawing.Size(116, 40);
-            this.btNovo.TabIndex = 1;
-            this.btNovo.Text = "Novo";
-            this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
-            // 
-            // btSalvar
-            // 
-            this.btSalvar.BackColor = System.Drawing.Color.Transparent;
-            this.btSalvar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btSalvar.ForeColor = System.Drawing.Color.White;
-            this.btSalvar.Image = null;
-            this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSalvar.Location = new System.Drawing.Point(23, 120);
-            this.btSalvar.Name = "btSalvar";
-            this.btSalvar.Size = new System.Drawing.Size(116, 40);
-            this.btSalvar.TabIndex = 1;
-            this.btSalvar.Text = "Salvar";
-            this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
-            // 
-            // btLimpar
-            // 
-            this.btLimpar.BackColor = System.Drawing.Color.Transparent;
-            this.btLimpar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btLimpar.ForeColor = System.Drawing.Color.White;
-            this.btLimpar.Image = null;
-            this.btLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLimpar.Location = new System.Drawing.Point(23, 166);
-            this.btLimpar.Name = "btLimpar";
-            this.btLimpar.Size = new System.Drawing.Size(116, 40);
-            this.btLimpar.TabIndex = 1;
-            this.btLimpar.Text = "Cancelar";
-            this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
-            // 
-            // btEditar
-            // 
-            this.btEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btEditar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btEditar.ForeColor = System.Drawing.Color.White;
-            this.btEditar.Image = null;
-            this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditar.Location = new System.Drawing.Point(23, 212);
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(116, 40);
-            this.btEditar.TabIndex = 1;
-            this.btEditar.Text = "Editar";
-            this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
-            // 
-            // btExcluir
-            // 
-            this.btExcluir.BackColor = System.Drawing.Color.Transparent;
-            this.btExcluir.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btExcluir.ForeColor = System.Drawing.Color.White;
-            this.btExcluir.Image = null;
-            this.btExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btExcluir.Location = new System.Drawing.Point(23, 258);
-            this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(116, 40);
-            this.btExcluir.TabIndex = 1;
-            this.btExcluir.Text = "Excluir";
-            this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // iTalk_GroupBox1
             // 
@@ -172,6 +85,7 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label8);
             this.iTalk_GroupBox1.Controls.Add(this.txtAno);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label9);
+            this.iTalk_GroupBox1.Controls.Add(this.ambiance_Button_21);
             this.iTalk_GroupBox1.Controls.Add(this.btBuscarCarro);
             this.iTalk_GroupBox1.Controls.Add(this.txtPlaca);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label6);
@@ -186,7 +100,7 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 726);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1184, 726);
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Cliente";
             // 
@@ -270,7 +184,7 @@
             "VOLKSWAGEM"});
             this.txtMarca.Location = new System.Drawing.Point(493, 130);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(185, 26);
+            this.txtMarca.Size = new System.Drawing.Size(190, 26);
             this.txtMarca.TabIndex = 6;
             this.txtMarca.SelectedIndexChanged += new System.EventHandler(this.txtMarca_TextChanged);
             this.txtMarca.TextChanged += new System.EventHandler(this.txtMarca_TextChanged);
@@ -300,7 +214,7 @@
             "UP!"});
             this.txtModelo.Location = new System.Drawing.Point(493, 162);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(185, 26);
+            this.txtModelo.Size = new System.Drawing.Size(190, 26);
             this.txtModelo.TabIndex = 7;
             this.txtModelo.SelectedIndexChanged += new System.EventHandler(this.txtModelo_SelectedIndexChanged);
             // 
@@ -322,7 +236,7 @@
             this.txtAno.Location = new System.Drawing.Point(493, 97);
             this.txtAno.MaxLength = 4;
             this.txtAno.Name = "txtAno";
-            this.txtAno.Size = new System.Drawing.Size(185, 27);
+            this.txtAno.Size = new System.Drawing.Size(189, 27);
             this.txtAno.TabIndex = 5;
             this.txtAno.TextChanged += new System.EventHandler(this.txtAno_TextChanged);
             // 
@@ -391,6 +305,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCpf,
             this.Column1,
             this.Column3,
             this.Column2,
@@ -401,6 +316,13 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1136, 380);
             this.dataGridView1.TabIndex = 28;
+            // 
+            // colCpf
+            // 
+            this.colCpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCpf.HeaderText = "CPF";
+            this.colCpf.Name = "colCpf";
+            this.colCpf.ReadOnly = true;
             // 
             // Column1
             // 
@@ -496,12 +418,115 @@
             this.iTalk_Label1.TabIndex = 1;
             this.iTalk_Label1.Text = "CPF";
             // 
+            // btPesquisar
+            // 
+            this.btPesquisar.BackColor = System.Drawing.Color.Transparent;
+            this.btPesquisar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btPesquisar.ForeColor = System.Drawing.Color.White;
+            this.btPesquisar.Image = null;
+            this.btPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btPesquisar.Location = new System.Drawing.Point(23, 396);
+            this.btPesquisar.Name = "btPesquisar";
+            this.btPesquisar.Size = new System.Drawing.Size(116, 40);
+            this.btPesquisar.TabIndex = 1;
+            this.btPesquisar.Text = "Pesquisar";
+            this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
+            // 
+            // btNovo
+            // 
+            this.btNovo.BackColor = System.Drawing.Color.Transparent;
+            this.btNovo.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btNovo.ForeColor = System.Drawing.Color.White;
+            this.btNovo.Image = null;
+            this.btNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btNovo.Location = new System.Drawing.Point(23, 74);
+            this.btNovo.Name = "btNovo";
+            this.btNovo.Size = new System.Drawing.Size(116, 40);
+            this.btNovo.TabIndex = 1;
+            this.btNovo.Text = "Novo";
+            this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
+            // 
+            // btExcluir
+            // 
+            this.btExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btExcluir.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btExcluir.ForeColor = System.Drawing.Color.White;
+            this.btExcluir.Image = null;
+            this.btExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btExcluir.Location = new System.Drawing.Point(23, 258);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(116, 40);
+            this.btExcluir.TabIndex = 1;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btSalvar
+            // 
+            this.btSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btSalvar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btSalvar.ForeColor = System.Drawing.Color.White;
+            this.btSalvar.Image = null;
+            this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSalvar.Location = new System.Drawing.Point(23, 120);
+            this.btSalvar.Name = "btSalvar";
+            this.btSalvar.Size = new System.Drawing.Size(116, 40);
+            this.btSalvar.TabIndex = 1;
+            this.btSalvar.Text = "Salvar";
+            this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            // 
+            // btEditar
+            // 
+            this.btEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btEditar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btEditar.ForeColor = System.Drawing.Color.White;
+            this.btEditar.Image = null;
+            this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEditar.Location = new System.Drawing.Point(23, 212);
+            this.btEditar.Name = "btEditar";
+            this.btEditar.Size = new System.Drawing.Size(116, 40);
+            this.btEditar.TabIndex = 1;
+            this.btEditar.Text = "Editar";
+            this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
+            // 
+            // btLimpar
+            // 
+            this.btLimpar.BackColor = System.Drawing.Color.Transparent;
+            this.btLimpar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btLimpar.ForeColor = System.Drawing.Color.White;
+            this.btLimpar.Image = null;
+            this.btLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLimpar.Location = new System.Drawing.Point(23, 166);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(116, 40);
+            this.btLimpar.TabIndex = 1;
+            this.btLimpar.Text = "Cancelar";
+            this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
+            // ambiance_Button_21
+            // 
+            this.ambiance_Button_21.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Button_21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.ambiance_Button_21.Image = null;
+            this.ambiance_Button_21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ambiance_Button_21.Location = new System.Drawing.Point(598, 66);
+            this.ambiance_Button_21.Margin = new System.Windows.Forms.Padding(2);
+            this.ambiance_Button_21.Name = "ambiance_Button_21";
+            this.ambiance_Button_21.Size = new System.Drawing.Size(85, 24);
+            this.ambiance_Button_21.TabIndex = 35;
+            this.ambiance_Button_21.Text = "Pesquisar";
+            this.ambiance_Button_21.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1358, 749);
+            this.ClientSize = new System.Drawing.Size(1357, 767);
             this.ControlBox = false;
             this.Controls.Add(this.iTalk_GroupBox1);
             this.Controls.Add(this.btPesquisar);
@@ -543,10 +568,6 @@
         private iTalk.iTalk_Label iTalk_Label3;
         private iTalk.iTalk_Label iTalk_Label2;
         private iTalk.iTalk_Label iTalk_Label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.ComboBox txtMarca;
         private iTalk.iTalk_Label iTalk_Label7;
         private System.Windows.Forms.ComboBox txtModelo;
@@ -559,5 +580,11 @@
         private iTalk.iTalk_Label lbModelo;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private Ambiance.Ambiance_Button_2 ambiance_Button_21;
     }
 }

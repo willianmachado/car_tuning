@@ -188,7 +188,7 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 726);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 705);
             this.iTalk_GroupBox1.TabIndex = 15;
             this.iTalk_GroupBox1.Text = "Carros";
             // 
@@ -211,7 +211,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1144, 352);
+            this.dataGridView2.Size = new System.Drawing.Size(1144, 330);
             this.dataGridView2.TabIndex = 14;
             // 
             // iTalk_Label3

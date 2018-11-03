@@ -16,6 +16,10 @@ namespace car_tuning
         {
             InitializeComponent();
             ControlaBotoes(true);
+            txtNome.Enabled = false;
+            txtEmail.Enabled = false;
+            txtTelefone.Enabled = false;
+            txtAno.Enabled = false;
             
         }
             
@@ -45,10 +49,11 @@ namespace car_tuning
             txtNome.Text = "";
             txtCpf.Text = "";
             txtTelefone.Text = "";
+            txtEmail.Text = "";
             txtAno.Text = "";
-            txtModelo.Text = "";
+            txtModelo.Text = " ";
             txtPlaca.Text = "";
-            txtMarca.Text = "";
+            txtMarca.Text = " ";
 
 
 
@@ -72,6 +77,13 @@ namespace car_tuning
                 this.btPesquisar.Enabled = true;
                 this.btPesquisar.ForeColor = Color.White;
 
+                this.txtNome.Enabled = false;
+                this.txtEmail.Enabled = false;
+                this.txtTelefone.Enabled = false;
+                this.txtAno.Enabled = false;
+                this.txtMarca.Enabled = false;
+                this.txtModelo.Enabled = false;
+
             }
             else
             {
@@ -88,6 +100,13 @@ namespace car_tuning
                 this.btLimpar.ForeColor = Color.White;
                 this.btPesquisar.Enabled = false;
                 this.btPesquisar.ForeColor = Color.Gray;
+
+                this.txtNome.Enabled = true;
+                this.txtEmail.Enabled = true;
+                this.txtTelefone.Enabled = true;
+                this.txtAno.Enabled = true;
+                this.txtMarca.Enabled = true;
+                this.txtModelo.Enabled = true;
             }
         }
 

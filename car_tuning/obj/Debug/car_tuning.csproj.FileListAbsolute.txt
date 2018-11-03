@@ -161,3 +161,5 @@ D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.csproj.CoreCompileInputs.c
 D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.exe
 D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.pdb
 C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormCarro.resources
+D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormCadastroCarro.resources
+D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormLoading.resources
