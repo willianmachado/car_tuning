@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.btData = new Ambiance.Ambiance_Button_1();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.imgCarro = new System.Windows.Forms.PictureBox();
@@ -41,16 +43,12 @@
             this.iTalk_Label8 = new iTalk.iTalk_Label();
             this.txtAno = new System.Windows.Forms.TextBox();
             this.iTalk_Label9 = new iTalk.iTalk_Label();
+            this.ambiance_Button_21 = new Ambiance.Ambiance_Button_2();
             this.btBuscarCarro = new Ambiance.Ambiance_Button_2();
             this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label6 = new iTalk.iTalk_Label();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
@@ -63,16 +61,18 @@
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
-            this.ambiance_Button_21 = new Ambiance.Ambiance_Button_2();
+            this.clienteDAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDAOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.btData);
             this.iTalk_GroupBox1.Controls.Add(this.txtEmail);
             this.iTalk_GroupBox1.Controls.Add(this.txtNome);
             this.iTalk_GroupBox1.Controls.Add(this.imgCarro);
@@ -103,6 +103,20 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1184, 726);
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Cliente";
+            // 
+            // btData
+            // 
+            this.btData.BackColor = System.Drawing.Color.Transparent;
+            this.btData.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btData.Image = null;
+            this.btData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btData.Location = new System.Drawing.Point(62, 265);
+            this.btData.Name = "btData";
+            this.btData.Size = new System.Drawing.Size(177, 30);
+            this.btData.TabIndex = 50;
+            this.btData.Text = "Data Grid View";
+            this.btData.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btData.Click += new System.EventHandler(this.btData_Click);
             // 
             // txtEmail
             // 
@@ -252,6 +266,20 @@
             this.iTalk_Label9.TabIndex = 38;
             this.iTalk_Label9.Text = "Modelo";
             // 
+            // ambiance_Button_21
+            // 
+            this.ambiance_Button_21.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Button_21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.ambiance_Button_21.Image = null;
+            this.ambiance_Button_21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ambiance_Button_21.Location = new System.Drawing.Point(598, 66);
+            this.ambiance_Button_21.Margin = new System.Windows.Forms.Padding(2);
+            this.ambiance_Button_21.Name = "ambiance_Button_21";
+            this.ambiance_Button_21.Size = new System.Drawing.Size(85, 24);
+            this.ambiance_Button_21.TabIndex = 35;
+            this.ambiance_Button_21.Text = "Pesquisar";
+            this.ambiance_Button_21.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
             // btBuscarCarro
             // 
             this.btBuscarCarro.BackColor = System.Drawing.Color.Transparent;
@@ -292,7 +320,7 @@
             // iTalk_GroupBox2
             // 
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox2.Controls.Add(this.dataGridView1);
+            this.iTalk_GroupBox2.Controls.Add(this.dgvCliente);
             this.iTalk_GroupBox2.Location = new System.Drawing.Point(8, 301);
             this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
@@ -301,52 +329,19 @@
             this.iTalk_GroupBox2.TabIndex = 19;
             this.iTalk_GroupBox2.Text = "Carro";
             // 
-            // dataGridView1
+            // dgvCliente
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCpf,
-            this.Column1,
-            this.Column3,
-            this.Column2,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 30);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1136, 380);
-            this.dataGridView1.TabIndex = 28;
-            // 
-            // colCpf
-            // 
-            this.colCpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCpf.HeaderText = "CPF";
-            this.colCpf.Name = "colCpf";
-            this.colCpf.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Placa";
-            this.Column1.Name = "Column1";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Ano";
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Modelo";
-            this.Column2.Name = "Column2";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Marca";
-            this.Column4.Name = "Column4";
+            this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AllowUserToDeleteRows = false;
+            this.dgvCliente.AllowUserToOrderColumns = true;
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Location = new System.Drawing.Point(12, 30);
+            this.dgvCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.RowTemplate.Height = 24;
+            this.dgvCliente.Size = new System.Drawing.Size(1136, 380);
+            this.dgvCliente.TabIndex = 28;
             // 
             // iTalk_Label4
             // 
@@ -507,19 +502,9 @@
             this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
-            // ambiance_Button_21
+            // clienteDAOBindingSource
             // 
-            this.ambiance_Button_21.BackColor = System.Drawing.Color.Transparent;
-            this.ambiance_Button_21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.ambiance_Button_21.Image = null;
-            this.ambiance_Button_21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ambiance_Button_21.Location = new System.Drawing.Point(598, 66);
-            this.ambiance_Button_21.Margin = new System.Windows.Forms.Padding(2);
-            this.ambiance_Button_21.Name = "ambiance_Button_21";
-            this.ambiance_Button_21.Size = new System.Drawing.Size(85, 24);
-            this.ambiance_Button_21.TabIndex = 35;
-            this.ambiance_Button_21.Text = "Pesquisar";
-            this.ambiance_Button_21.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.clienteDAOBindingSource.DataSource = typeof(car_tuning.ClienteDAO);
             // 
             // FormCliente
             // 
@@ -544,7 +529,8 @@
             this.iTalk_GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).EndInit();
             this.iTalk_GroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteDAOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -561,7 +547,7 @@
         private System.Windows.Forms.MaskedTextBox txtPlaca;
         private iTalk.iTalk_Label iTalk_Label6;
         private iTalk.iTalk_GroupBox iTalk_GroupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCliente;
         private iTalk.iTalk_Label iTalk_Label4;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
@@ -580,11 +566,8 @@
         private iTalk.iTalk_Label lbModelo;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private Ambiance.Ambiance_Button_2 ambiance_Button_21;
+        private System.Windows.Forms.BindingSource clienteDAOBindingSource;
+        private Ambiance.Ambiance_Button_1 btData;
     }
 }

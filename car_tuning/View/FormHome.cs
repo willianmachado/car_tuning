@@ -12,13 +12,19 @@ using System.Windows.Forms;
 namespace car_tuning
 {
     public partial class FormHome : Form
-    {
+    {      
+
         public FormHome()
-        {
-            
+                         
+        {            
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            
+        }
+
+        private void FormHome_Load(object sender, EventArgs e)
+        {
+            DataBase bd = new DataBase();
+            bd.GerarBD();
         }
 
         FormCliente formC = new FormCliente();
@@ -121,5 +127,7 @@ namespace car_tuning
             }
 
         }
+
+        
     }
 }

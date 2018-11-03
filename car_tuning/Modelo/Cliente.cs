@@ -9,88 +9,31 @@ namespace car_tuning
 {
     class Cliente
     {
-        private int codigo;
+
         private string cpf;
         private string nome;
         private string telefone;
         private string email;
-        private Carro carro;
 
-        public Cliente(int codigo, string cpf, string nome, string telefone, string email)
+        public Cliente()
         {
-            this.Codigo = codigo;
+        }
+
+        // private Carro carro;
+
+        public Cliente(string cpf, string nome, string telefone, string email)
+        {
             this.Cpf = cpf;
             this.Nome = nome;
             this.Telefone = telefone;
             this.Email = email;
+            //this.Carro = carro;
         }
 
-
-        public int Codigo
-        {
-            get
-            {
-                return codigo;
-            }
-
-            set
-            {
-                codigo = value;
-            }
-        }
-
-        public string Cpf
-        {
-            get
-            {
-                return cpf;
-            }
-
-            set
-            {
-                cpf = value;
-            }
-        }
-
-        public string Nome
-        {
-            get
-            {
-                return nome;
-            }
-
-            set
-            {
-                nome = value;
-            }
-        }
-
-        public string Telefone
-        {
-            get
-            {
-                return telefone;
-            }
-
-            set
-            {
-                telefone = value;
-            }
-        }
-
-        public string Email
-        {
-            get
-            {
-                return email;
-            }
-
-            set
-            {
-                email = value;
-            }
-        }
-
+        public string Cpf { get => cpf; set => cpf = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
+        public string Email { get => email; set => email = value; }
+       // internal Carro Carro { get => carro; set => carro = value; }
     }
-        
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,17 +13,25 @@ namespace car_tuning
 {
     public partial class FormCliente : Form
     {
+        
+
         public FormCliente()
         {
+            ClienteDAO c = new ClienteDAO();
+            
+
             InitializeComponent();
             ControlaBotoes(true);
             txtNome.Enabled = false;
             txtEmail.Enabled = false;
             txtTelefone.Enabled = false;
             txtAno.Enabled = false;
-            
+            c.Carregar();
         }
-            
+
+
+        
+
         private void btLimpar_Click(object sender, EventArgs e)
         {
             ControlaBotoes(true);
@@ -109,14 +118,7 @@ namespace car_tuning
                 this.txtModelo.Enabled = true;
             }
         }
-
-
-        private void btSalvar_Click(object sender, EventArgs e)
-        {
-                     
-             
-            
-        }
+                
 
         private void txtAno_TextChanged(object sender, EventArgs e)
         {
@@ -152,6 +154,27 @@ namespace car_tuning
         {
             FormPesquisa pesquisa = new FormPesquisa();
             pesquisa.Show();
+        }
+
+        private void btSalvar_Click(object sender, EventArgs e)
+        {
+            ClienteDAO c = new ClienteDAO();
+            Cliente cliente = new Cliente();
+
+            cliente.Cpf = txtCpf.Text.Trim();
+            cliente.Nome = txtNome.Text.Trim();
+            cliente.Telefone = txtTelefone.Text.Trim();
+            cliente.Email = txtEmail.Text.Trim();
+
+
+            c.Salvar();
+
+        }
+
+        private void btData_Click(object sender, EventArgs e)
+        {
+            ClienteDAO c = new ClienteDAO(); 
+            dgvCliente.DataSource = c.Carregar();
         }
     }
 }

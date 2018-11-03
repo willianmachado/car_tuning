@@ -186,6 +186,7 @@
             this.MinimizeBox = false;
             this.Name = "FormHome";
             this.Text = "Car_Tuning";
+            this.Load += new System.EventHandler(this.FormHome_Load);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);

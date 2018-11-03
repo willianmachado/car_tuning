@@ -163,3 +163,4 @@ D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.pdb
 C:\Users\wdragon\Documents\Materias\LP2_Novo\projeto\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormCarro.resources
 D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormCadastroCarro.resources
 D:\ADS\GIT\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormLoading.resources
+D:\ADS\GIT\car_tuning\car_tuning\bin\Debug\System.Data.SQLite.dll.config
