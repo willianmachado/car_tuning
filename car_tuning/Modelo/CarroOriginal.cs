@@ -8,134 +8,33 @@ namespace car_tuning.Modelo
 {
     class CarroOriginal
     {
-        private string ano;
-        private string fabricante;
-        private int CodCliente;
 
-        private string placa;
-        private string modelo;
-        private int codigo;
-        private string cpfClinte;
-        private double peso;
+        private string modelo, marca;
+        private int cod, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax;
 
-
-        public CarroOriginal(string ano, string fabricante, int codCliente, string placa, string modelo, int codigo, string cpfClinte, double peso)
+        public CarroOriginal(string modelo, string marca, int cod, int peso, int aceleracao, int torque, int potencia, int velocidadeMax, int consumo, int rotacaoMax)
         {
-            this.Ano = ano;
-            this.Fabricante = fabricante;
-            this.CodCliente1 = codCliente;
-            this.Placa = placa;
             this.Modelo = modelo;
-            this.Codigo = codigo;
-            this.CpfClinte = cpfClinte;
+            this.Marca = marca;
+            this.Cod = cod;
             this.Peso = peso;
+            this.Aceleracao = aceleracao;
+            this.Torque = torque;
+            this.Potencia = potencia;
+            this.VelocidadeMax = velocidadeMax;
+            this.Consumo = consumo;
+            this.RotacaoMax = rotacaoMax;
         }
 
-
-        public string Ano
-        {
-            get
-            {
-                return ano;
-            }
-
-            set
-            {
-                ano = value;
-            }
-        }
-
-        public string Fabricante
-        {
-            get
-            {
-                return fabricante;
-            }
-
-            set
-            {
-                fabricante = value;
-            }
-        }
-
-        public int CodCliente1
-        {
-            get
-            {
-                return CodCliente;
-            }
-
-            set
-            {
-                CodCliente = value;
-            }
-        }
-
-        public string Placa
-        {
-            get
-            {
-                return placa;
-            }
-
-            set
-            {
-                placa = value;
-            }
-        }
-
-        public string Modelo
-        {
-            get
-            {
-                return modelo;
-            }
-
-            set
-            {
-                modelo = value;
-            }
-        }
-
-        public int Codigo
-        {
-            get
-            {
-                return codigo;
-            }
-
-            set
-            {
-                codigo = value;
-            }
-        }
-
-        public string CpfClinte
-        {
-            get
-            {
-                return cpfClinte;
-            }
-
-            set
-            {
-                cpfClinte = value;
-            }
-        }
-
-        public double Peso
-        {
-            get
-            {
-                return peso;
-            }
-
-            set
-            {
-                peso = value;
-            }
-        }
-
-        
+        public string Modelo { get => modelo; set => modelo = value; }
+        public string Marca { get => marca; set => marca = value; }
+        public int Cod { get => cod; set => cod = value; }
+        public int Peso { get => peso; set => peso = value; }
+        public int Aceleracao { get => aceleracao; set => aceleracao = value; }
+        public int Torque { get => torque; set => torque = value; }
+        public int Potencia { get => potencia; set => potencia = value; }
+        public int VelocidadeMax { get => velocidadeMax; set => velocidadeMax = value; }
+        public int Consumo { get => consumo; set => consumo = value; }
+        public int RotacaoMax { get => rotacaoMax; set => rotacaoMax = value; }
     }
 }

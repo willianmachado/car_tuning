@@ -17,7 +17,7 @@ namespace car_tuning.DAO
         {
 
         }
-        public void atualizar(Cliente cliente)
+        public void Atualizar(Cliente cliente)
         {
 
         }
