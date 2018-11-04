@@ -23,7 +23,8 @@ namespace car_tuning
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            DataBase bd = new DataBase();
+
+            DataBase bd = DataBase.GetInstance();
             bd.GerarBD();
         }
 

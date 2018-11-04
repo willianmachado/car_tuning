@@ -158,7 +158,22 @@ namespace car_tuning
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            ClienteDAO c = new ClienteDAO();
+
+            ClienteDAO clienteDAO = new ClienteDAO();
+            Cliente cliente = getDTO();
+
+            clienteDAO.Salvar(cliente);           
+            
+        }
+
+        private void btData_Click(object sender, EventArgs e)
+        {
+            ClienteDAO c = new ClienteDAO(); 
+            dgvCliente.DataSource = c.Carregar();
+        }
+
+        private Cliente getDTO()
+        {
             Cliente cliente = new Cliente();
 
             cliente.Cpf = txtCpf.Text.Trim();
@@ -166,15 +181,15 @@ namespace car_tuning
             cliente.Telefone = txtTelefone.Text.Trim();
             cliente.Email = txtEmail.Text.Trim();
 
-
-            c.Salvar();
-
+            return cliente;
         }
 
-        private void btData_Click(object sender, EventArgs e)
-        {
-            ClienteDAO c = new ClienteDAO(); 
-            dgvCliente.DataSource = c.Carregar();
+        private void setDTO(Cliente c)
+        {            
+            txtCpf.Text = c.Cpf;
+            txtNome.Text = c.Nome;
+            txtTelefone.Text = c.Telefone;
+            txtEmail.Text = c.Email;            
         }
     }
 }

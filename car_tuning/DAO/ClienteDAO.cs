@@ -35,7 +35,7 @@ namespace car_tuning
         {
             List<Cliente> lista = new List<Cliente>();
             Cliente c = new Cliente();
-            DataBase bd = new DataBase();
+            DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
             SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
@@ -58,27 +58,20 @@ namespace car_tuning
             return lista;
         }
 
-        public List<Cliente> Salvar()
+        public void Salvar(Cliente c)
         {
             List<Cliente> lista = new List<Cliente>();
-            Cliente c = new Cliente();
-            DataBase bd = new DataBase();
+            DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
             SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
 
-            SQLiteCommand cmd = new SQLiteCommand(
-                "INSERT INTO CLIENTE (CPF, NOME, TEL, EMAIL) VALUES (@CPF, @NOME, @TEL, @EMAIL)", conn);
 
-            cmd.Parameters.AddWithValue("CPF", c.Cpf);
-            cmd.Parameters.AddWithValue("NOME", c.Nome);
-            cmd.Parameters.AddWithValue("TEL", c.Telefone);
-            cmd.Parameters.AddWithValue("EMAIL", c.Email);
+            string qry = string.Format("INSERT INTO CLIENTE(CPF, NOME, TEL, EMAIL) VALUES ('{0}', '{1}', '{2}', '{3}')", c.Cpf, c.Nome, c.Telefone, c.Email);
 
-            return lista;
-
+            bd.ExecuteSQL(qry);
 
         }
     }

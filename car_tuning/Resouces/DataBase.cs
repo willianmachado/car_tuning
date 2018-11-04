@@ -45,8 +45,23 @@ namespace car_tuning
         public void ExecuteSQL(string qry)
         {
 
-            SQLiteCommand conn = new SQLiteCommand(conexao);
-            conn.ExecuteNonQuery();
+            SQLiteConnection conn = new SQLiteConnection(conexao);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            
+
+            SQLiteCommand cmd = new SQLiteCommand(qry.ToString(), conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro de BD " + ex.Message);
+            }
+
+            conn.Close();
         }
 
 
