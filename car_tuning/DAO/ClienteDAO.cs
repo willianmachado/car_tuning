@@ -10,13 +10,40 @@ namespace car_tuning
 {
     class ClienteDAO : DataBase
     {
-        
-       
 
-        public void Deletar(int id)
+        public void Salvar(Cliente c)
         {
+            //Salvar um Cliente DAO
+            
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
 
+            SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            
+            string qry = string.Format("INSERT INTO CLIENTE(CPF, NOME, TEL, EMAIL) VALUES ('{0}', '{1}', '{2}', '{3}')", c.Cpf, c.Nome, c.Telefone, c.Email);
+
+            bd.ExecuteSQL(qry);
+            conn.Close();
         }
+
+
+        public void Deletar(string index)
+        {
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+
+            SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            string qry = string.Format("DELETE FROM CLIENTE WHERE CPF = '" + index + "';");
+
+            bd.ExecuteSQL(qry);
+            conn.Close();
+        }
+
         public void Atualizar(Cliente cliente)
         {
 
@@ -58,21 +85,6 @@ namespace car_tuning
             return lista;
         }
 
-        public void Salvar(Cliente c)
-        {
-            List<Cliente> lista = new List<Cliente>();
-            DataBase bd = DataBase.GetInstance();
-            bd.GetConnection();
-
-            SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-
-
-            string qry = string.Format("INSERT INTO CLIENTE(CPF, NOME, TEL, EMAIL) VALUES ('{0}', '{1}', '{2}', '{3}')", c.Cpf, c.Nome, c.Telefone, c.Email);
-
-            bd.ExecuteSQL(qry);
-
-        }
+       
     }
 }

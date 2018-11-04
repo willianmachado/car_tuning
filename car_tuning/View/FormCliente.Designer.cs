@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
-            this.btData = new Ambiance.Ambiance_Button_1();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.imgCarro = new System.Windows.Forms.PictureBox();
@@ -62,6 +61,7 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.clienteDAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lbCpf = new System.Windows.Forms.Label();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
@@ -72,7 +72,7 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox1.Controls.Add(this.btData);
+            this.iTalk_GroupBox1.Controls.Add(this.lbCpf);
             this.iTalk_GroupBox1.Controls.Add(this.txtEmail);
             this.iTalk_GroupBox1.Controls.Add(this.txtNome);
             this.iTalk_GroupBox1.Controls.Add(this.imgCarro);
@@ -103,20 +103,6 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1184, 726);
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Cliente";
-            // 
-            // btData
-            // 
-            this.btData.BackColor = System.Drawing.Color.Transparent;
-            this.btData.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btData.Image = null;
-            this.btData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btData.Location = new System.Drawing.Point(62, 265);
-            this.btData.Name = "btData";
-            this.btData.Size = new System.Drawing.Size(177, 30);
-            this.btData.TabIndex = 50;
-            this.btData.Text = "Data Grid View";
-            this.btData.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btData.Click += new System.EventHandler(this.btData_Click);
             // 
             // txtEmail
             // 
@@ -342,6 +328,7 @@
             this.dgvCliente.RowTemplate.Height = 24;
             this.dgvCliente.Size = new System.Drawing.Size(1136, 380);
             this.dgvCliente.TabIndex = 28;
+            this.dgvCliente.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentDoubleClick);
             // 
             // iTalk_Label4
             // 
@@ -456,6 +443,7 @@
             this.btExcluir.TabIndex = 1;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btSalvar
             // 
@@ -505,6 +493,15 @@
             // clienteDAOBindingSource
             // 
             this.clienteDAOBindingSource.DataSource = typeof(car_tuning.ClienteDAO);
+            // 
+            // lbCpf
+            // 
+            this.lbCpf.AutoSize = true;
+            this.lbCpf.Location = new System.Drawing.Point(91, 45);
+            this.lbCpf.Name = "lbCpf";
+            this.lbCpf.Size = new System.Drawing.Size(31, 13);
+            this.lbCpf.TabIndex = 50;
+            this.lbCpf.Text = "lbCpf";
             // 
             // FormCliente
             // 
@@ -568,6 +565,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private Ambiance.Ambiance_Button_2 ambiance_Button_21;
         private System.Windows.Forms.BindingSource clienteDAOBindingSource;
-        private Ambiance.Ambiance_Button_1 btData;
+        private System.Windows.Forms.Label lbCpf;
     }
 }
