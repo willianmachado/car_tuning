@@ -25,6 +25,7 @@ namespace car_tuning
         {
             View.FormLoading f  = new View.FormLoading();
             f.ShowDialog();
+            
         }
 
         private void btPesquisar_Click(object sender, EventArgs e)
@@ -73,7 +74,7 @@ namespace car_tuning
         }
         private void btExcluir_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         public void ControlaBotoes(bool statusBtNovo)
@@ -146,10 +147,10 @@ namespace car_tuning
                     this.Close();
         }
 
-       
 
-           
+        
 
+        
     }
 
     
