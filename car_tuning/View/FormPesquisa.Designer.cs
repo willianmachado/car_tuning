@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisa));
-            this.btVoltar = new iTalk.iTalk_Button_2();
-            this.btSelecionar = new iTalk.iTalk_Button_2();
             this.tabCliente = new Ambiance.Ambiance_TabControl();
             this.Cliente = new System.Windows.Forms.TabPage();
-            this.txtPesquisa = new iTalk.iTalk_TextBox_Small();
+            this.txtPesquisaCli = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.dgCliente = new System.Windows.Forms.DataGridView();
             this.colCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,7 +39,7 @@
             this.colTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.iTalk_TextBox_Small2 = new iTalk.iTalk_TextBox_Small();
+            this.txtPesquisaCarro = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,24 +57,26 @@
             this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCompativel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iTalk_TextBox_Small3 = new iTalk.iTalk_TextBox_Small();
+            this.txtPesquisaPecas = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.iTalk_TextBox_Small4 = new iTalk.iTalk_TextBox_Small();
+            this.txtPesquisaFunc = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tbServiço = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.colCodServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCpfServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlacaServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomeFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colValorServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iTalk_TextBox_Small5 = new iTalk.iTalk_TextBox_Small();
+            this.txtPesquisaServ = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label5 = new iTalk.iTalk_Label();
+            this.btSelecionar = new iTalk.iTalk_Button_2();
+            this.btVoltar = new iTalk.iTalk_Button_2();
             this.tabCliente.SuspendLayout();
             this.Cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
@@ -86,41 +86,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.tabPage4.SuspendLayout();
+            this.tbServiço.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btVoltar
-            // 
-            this.btVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.btVoltar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btVoltar.ForeColor = System.Drawing.Color.White;
-            this.btVoltar.Image = null;
-            this.btVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btVoltar.Location = new System.Drawing.Point(1216, 697);
-            this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Size = new System.Drawing.Size(116, 40);
-            this.btVoltar.TabIndex = 2;
-            this.btVoltar.Text = "Voltar";
-            this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
-            // 
-            // btSelecionar
-            // 
-            this.btSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btSelecionar.BackColor = System.Drawing.Color.Transparent;
-            this.btSelecionar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btSelecionar.ForeColor = System.Drawing.Color.White;
-            this.btSelecionar.Image = null;
-            this.btSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSelecionar.Location = new System.Drawing.Point(1094, 697);
-            this.btSelecionar.Name = "btSelecionar";
-            this.btSelecionar.Size = new System.Drawing.Size(116, 40);
-            this.btSelecionar.TabIndex = 2;
-            this.btSelecionar.Text = "Selecionar";
-            this.btSelecionar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btSelecionar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
             // tabCliente
             // 
@@ -131,7 +99,7 @@
             this.tabCliente.Controls.Add(this.tabPage2);
             this.tabCliente.Controls.Add(this.tabPage1);
             this.tabCliente.Controls.Add(this.tabPage3);
-            this.tabCliente.Controls.Add(this.tabPage4);
+            this.tabCliente.Controls.Add(this.tbServiço);
             this.tabCliente.ItemSize = new System.Drawing.Size(80, 24);
             this.tabCliente.Location = new System.Drawing.Point(1, 25);
             this.tabCliente.Name = "tabCliente";
@@ -142,7 +110,7 @@
             // Cliente
             // 
             this.Cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.Cliente.Controls.Add(this.txtPesquisa);
+            this.Cliente.Controls.Add(this.txtPesquisaCli);
             this.Cliente.Controls.Add(this.iTalk_Label1);
             this.Cliente.Controls.Add(this.dgCliente);
             this.Cliente.Location = new System.Drawing.Point(4, 28);
@@ -152,25 +120,27 @@
             this.Cliente.TabIndex = 0;
             this.Cliente.Text = "Cliente";
             // 
-            // txtPesquisa
+            // txtPesquisaCli
             // 
-            this.txtPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtPesquisaCli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPesquisa.BackColor = System.Drawing.Color.Transparent;
-            this.txtPesquisa.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtPesquisa.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPesquisa.Location = new System.Drawing.Point(93, 15);
-            this.txtPesquisa.MaxLength = 32767;
-            this.txtPesquisa.Multiline = false;
-            this.txtPesquisa.Name = "txtPesquisa";
-            this.txtPesquisa.ReadOnly = false;
-            this.txtPesquisa.Size = new System.Drawing.Size(1149, 28);
-            this.txtPesquisa.TabIndex = 8;
-            this.txtPesquisa.Tag = "";
-            this.txtPesquisa.Text = "Digite o CPF, Nome ou Email";
-            this.txtPesquisa.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPesquisa.UseSystemPasswordChar = false;
+            this.txtPesquisaCli.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisaCli.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPesquisaCli.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPesquisaCli.Location = new System.Drawing.Point(93, 15);
+            this.txtPesquisaCli.MaxLength = 32767;
+            this.txtPesquisaCli.Multiline = false;
+            this.txtPesquisaCli.Name = "txtPesquisaCli";
+            this.txtPesquisaCli.ReadOnly = false;
+            this.txtPesquisaCli.Size = new System.Drawing.Size(1149, 28);
+            this.txtPesquisaCli.TabIndex = 8;
+            this.txtPesquisaCli.Tag = "";
+            this.txtPesquisaCli.Text = "Digite o CPF, Nome ou Email";
+            this.txtPesquisaCli.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesquisaCli.UseSystemPasswordChar = false;
+            this.txtPesquisaCli.Enter += new System.EventHandler(this.txtPesquisa_Enter);
+            this.txtPesquisaCli.Leave += new System.EventHandler(this.txtPesquisa_Leave);
             // 
             // iTalk_Label1
             // 
@@ -233,7 +203,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage2.Controls.Add(this.iTalk_TextBox_Small2);
+            this.tabPage2.Controls.Add(this.txtPesquisaCarro);
             this.tabPage2.Controls.Add(this.iTalk_Label2);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
@@ -243,21 +213,23 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carro";
             // 
-            // iTalk_TextBox_Small2
+            // txtPesquisaCarro
             // 
-            this.iTalk_TextBox_Small2.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small2.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small2.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small2.Location = new System.Drawing.Point(93, 15);
-            this.iTalk_TextBox_Small2.MaxLength = 32767;
-            this.iTalk_TextBox_Small2.Multiline = false;
-            this.iTalk_TextBox_Small2.Name = "iTalk_TextBox_Small2";
-            this.iTalk_TextBox_Small2.ReadOnly = false;
-            this.iTalk_TextBox_Small2.Size = new System.Drawing.Size(1153, 28);
-            this.iTalk_TextBox_Small2.TabIndex = 10;
-            this.iTalk_TextBox_Small2.Text = "Digite a Placa ou CPF do Cliente";
-            this.iTalk_TextBox_Small2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.iTalk_TextBox_Small2.UseSystemPasswordChar = false;
+            this.txtPesquisaCarro.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisaCarro.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPesquisaCarro.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPesquisaCarro.Location = new System.Drawing.Point(93, 15);
+            this.txtPesquisaCarro.MaxLength = 32767;
+            this.txtPesquisaCarro.Multiline = false;
+            this.txtPesquisaCarro.Name = "txtPesquisaCarro";
+            this.txtPesquisaCarro.ReadOnly = false;
+            this.txtPesquisaCarro.Size = new System.Drawing.Size(1153, 28);
+            this.txtPesquisaCarro.TabIndex = 10;
+            this.txtPesquisaCarro.Text = "Digite a Placa ou CPF do Cliente";
+            this.txtPesquisaCarro.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesquisaCarro.UseSystemPasswordChar = false;
+            this.txtPesquisaCarro.Enter += new System.EventHandler(this.txtPesquisaCarro_Enter);
+            this.txtPesquisaCarro.Leave += new System.EventHandler(this.txtPesquisaCarro_Leave);
             // 
             // iTalk_Label2
             // 
@@ -345,7 +317,7 @@
             this.tabPage1.AutoScroll = true;
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.iTalk_TextBox_Small3);
+            this.tabPage1.Controls.Add(this.txtPesquisaPecas);
             this.tabPage1.Controls.Add(this.iTalk_Label3);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
@@ -417,21 +389,23 @@
             this.colCompativel.Name = "colCompativel";
             this.colCompativel.ReadOnly = true;
             // 
-            // iTalk_TextBox_Small3
+            // txtPesquisaPecas
             // 
-            this.iTalk_TextBox_Small3.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small3.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small3.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small3.Location = new System.Drawing.Point(93, 15);
-            this.iTalk_TextBox_Small3.MaxLength = 32767;
-            this.iTalk_TextBox_Small3.Multiline = false;
-            this.iTalk_TextBox_Small3.Name = "iTalk_TextBox_Small3";
-            this.iTalk_TextBox_Small3.ReadOnly = false;
-            this.iTalk_TextBox_Small3.Size = new System.Drawing.Size(1152, 28);
-            this.iTalk_TextBox_Small3.TabIndex = 12;
-            this.iTalk_TextBox_Small3.Text = "Digite o Código, Fabricante ou Tipo";
-            this.iTalk_TextBox_Small3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.iTalk_TextBox_Small3.UseSystemPasswordChar = false;
+            this.txtPesquisaPecas.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisaPecas.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPesquisaPecas.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPesquisaPecas.Location = new System.Drawing.Point(93, 15);
+            this.txtPesquisaPecas.MaxLength = 32767;
+            this.txtPesquisaPecas.Multiline = false;
+            this.txtPesquisaPecas.Name = "txtPesquisaPecas";
+            this.txtPesquisaPecas.ReadOnly = false;
+            this.txtPesquisaPecas.Size = new System.Drawing.Size(1152, 28);
+            this.txtPesquisaPecas.TabIndex = 12;
+            this.txtPesquisaPecas.Text = "Digite o Código, Fabricante ou Tipo";
+            this.txtPesquisaPecas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesquisaPecas.UseSystemPasswordChar = false;
+            this.txtPesquisaPecas.Enter += new System.EventHandler(this.txtPesquisaPecas_Enter);
+            this.txtPesquisaPecas.Leave += new System.EventHandler(this.txtPesquisaPecas_Leave);
             // 
             // iTalk_Label3
             // 
@@ -448,7 +422,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage3.Controls.Add(this.iTalk_TextBox_Small4);
+            this.tabPage3.Controls.Add(this.txtPesquisaFunc);
             this.tabPage3.Controls.Add(this.iTalk_Label4);
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
@@ -459,21 +433,23 @@
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Funcionario";
             // 
-            // iTalk_TextBox_Small4
+            // txtPesquisaFunc
             // 
-            this.iTalk_TextBox_Small4.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small4.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small4.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small4.Location = new System.Drawing.Point(93, 15);
-            this.iTalk_TextBox_Small4.MaxLength = 32767;
-            this.iTalk_TextBox_Small4.Multiline = false;
-            this.iTalk_TextBox_Small4.Name = "iTalk_TextBox_Small4";
-            this.iTalk_TextBox_Small4.ReadOnly = false;
-            this.iTalk_TextBox_Small4.Size = new System.Drawing.Size(1135, 28);
-            this.iTalk_TextBox_Small4.TabIndex = 14;
-            this.iTalk_TextBox_Small4.Text = "Digite o CPF ou Nome ";
-            this.iTalk_TextBox_Small4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.iTalk_TextBox_Small4.UseSystemPasswordChar = false;
+            this.txtPesquisaFunc.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisaFunc.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPesquisaFunc.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPesquisaFunc.Location = new System.Drawing.Point(93, 15);
+            this.txtPesquisaFunc.MaxLength = 32767;
+            this.txtPesquisaFunc.Multiline = false;
+            this.txtPesquisaFunc.Name = "txtPesquisaFunc";
+            this.txtPesquisaFunc.ReadOnly = false;
+            this.txtPesquisaFunc.Size = new System.Drawing.Size(1135, 28);
+            this.txtPesquisaFunc.TabIndex = 14;
+            this.txtPesquisaFunc.Text = "Digite o CPF ou Nome ";
+            this.txtPesquisaFunc.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesquisaFunc.UseSystemPasswordChar = false;
+            this.txtPesquisaFunc.Enter += new System.EventHandler(this.txtPesquisaFunc_Enter);
+            this.txtPesquisaFunc.Leave += new System.EventHandler(this.txtPesquisaFunc_Leave);
             // 
             // iTalk_Label4
             // 
@@ -525,19 +501,19 @@
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             // 
-            // tabPage4
+            // tbServiço
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage4.Controls.Add(this.dataGridView4);
-            this.tabPage4.Controls.Add(this.iTalk_TextBox_Small5);
-            this.tabPage4.Controls.Add(this.iTalk_Label5);
-            this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(1323, 633);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "tabPage4";
+            this.tbServiço.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.tbServiço.Controls.Add(this.dataGridView4);
+            this.tbServiço.Controls.Add(this.txtPesquisaServ);
+            this.tbServiço.Controls.Add(this.iTalk_Label5);
+            this.tbServiço.Location = new System.Drawing.Point(4, 28);
+            this.tbServiço.Margin = new System.Windows.Forms.Padding(2);
+            this.tbServiço.Name = "tbServiço";
+            this.tbServiço.Padding = new System.Windows.Forms.Padding(2);
+            this.tbServiço.Size = new System.Drawing.Size(1323, 633);
+            this.tbServiço.TabIndex = 4;
+            this.tbServiço.Text = "Serviço";
             // 
             // dataGridView4
             // 
@@ -593,21 +569,23 @@
             this.colValorServico.Name = "colValorServico";
             this.colValorServico.ReadOnly = true;
             // 
-            // iTalk_TextBox_Small5
+            // txtPesquisaServ
             // 
-            this.iTalk_TextBox_Small5.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small5.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small5.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small5.Location = new System.Drawing.Point(93, 15);
-            this.iTalk_TextBox_Small5.MaxLength = 32767;
-            this.iTalk_TextBox_Small5.Multiline = false;
-            this.iTalk_TextBox_Small5.Name = "iTalk_TextBox_Small5";
-            this.iTalk_TextBox_Small5.ReadOnly = false;
-            this.iTalk_TextBox_Small5.Size = new System.Drawing.Size(1134, 28);
-            this.iTalk_TextBox_Small5.TabIndex = 16;
-            this.iTalk_TextBox_Small5.Text = "Digite o Codigo do Serviço, Placa do Carro ou CPF do Cliente";
-            this.iTalk_TextBox_Small5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.iTalk_TextBox_Small5.UseSystemPasswordChar = false;
+            this.txtPesquisaServ.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisaServ.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPesquisaServ.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPesquisaServ.Location = new System.Drawing.Point(93, 15);
+            this.txtPesquisaServ.MaxLength = 32767;
+            this.txtPesquisaServ.Multiline = false;
+            this.txtPesquisaServ.Name = "txtPesquisaServ";
+            this.txtPesquisaServ.ReadOnly = false;
+            this.txtPesquisaServ.Size = new System.Drawing.Size(1134, 28);
+            this.txtPesquisaServ.TabIndex = 16;
+            this.txtPesquisaServ.Text = "Digite o Codigo do Serviço, Placa do Carro ou CPF do Cliente";
+            this.txtPesquisaServ.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesquisaServ.UseSystemPasswordChar = false;
+            this.txtPesquisaServ.Enter += new System.EventHandler(this.txtPesquisaServ_Enter);
+            this.txtPesquisaServ.Leave += new System.EventHandler(this.txtPesquisaServ_Leave);
             // 
             // iTalk_Label5
             // 
@@ -620,6 +598,38 @@
             this.iTalk_Label5.Size = new System.Drawing.Size(71, 25);
             this.iTalk_Label5.TabIndex = 15;
             this.iTalk_Label5.Text = "Buscar";
+            // 
+            // btSelecionar
+            // 
+            this.btSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSelecionar.BackColor = System.Drawing.Color.Transparent;
+            this.btSelecionar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btSelecionar.ForeColor = System.Drawing.Color.White;
+            this.btSelecionar.Image = null;
+            this.btSelecionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSelecionar.Location = new System.Drawing.Point(1094, 697);
+            this.btSelecionar.Name = "btSelecionar";
+            this.btSelecionar.Size = new System.Drawing.Size(116, 40);
+            this.btSelecionar.TabIndex = 2;
+            this.btSelecionar.Text = "Selecionar";
+            this.btSelecionar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSelecionar.Click += new System.EventHandler(this.btVoltar_Click);
+            // 
+            // btVoltar
+            // 
+            this.btVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.btVoltar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btVoltar.ForeColor = System.Drawing.Color.White;
+            this.btVoltar.Image = null;
+            this.btVoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btVoltar.Location = new System.Drawing.Point(1216, 697);
+            this.btVoltar.Name = "btVoltar";
+            this.btVoltar.Size = new System.Drawing.Size(116, 40);
+            this.btVoltar.TabIndex = 2;
+            this.btVoltar.Text = "Voltar";
+            this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
             // FormPesquisa
             // 
@@ -646,8 +656,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.tbServiço.ResumeLayout(false);
+            this.tbServiço.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
@@ -662,24 +672,24 @@
         private System.Windows.Forms.DataGridView dgCliente;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private iTalk.iTalk_TextBox_Small txtPesquisa;
+        private iTalk.iTalk_TextBox_Small txtPesquisaCli;
         private iTalk.iTalk_Label iTalk_Label1;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small2;
+        private iTalk.iTalk_TextBox_Small txtPesquisaCarro;
         private iTalk.iTalk_Label iTalk_Label2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small3;
+        private iTalk.iTalk_TextBox_Small txtPesquisaPecas;
         private iTalk.iTalk_Label iTalk_Label3;
         private System.Windows.Forms.TabPage tabPage3;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small4;
+        private iTalk.iTalk_TextBox_Small txtPesquisaFunc;
         private iTalk.iTalk_Label iTalk_Label4;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tbServiço;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small5;
+        private iTalk.iTalk_TextBox_Small txtPesquisaServ;
         private iTalk.iTalk_Label iTalk_Label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNome;

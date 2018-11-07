@@ -24,11 +24,87 @@ namespace car_tuning
             this.Close();
         }
 
-        private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void txtPesquisa_Leave(object sender, EventArgs e)
         {
-           
+            if (txtPesquisaCli.Text == "")
+            {
+                txtPesquisaCli.Text = "Digite o CPF, Nome ou Email";
+            }
         }
 
-        
+
+        private void txtPesquisa_Enter(object sender, EventArgs e)
+        {
+            if(txtPesquisaCli.Text == "Digite o CPF, Nome ou Email")
+            {
+                txtPesquisaCli.Text = "";
+            }
+        }
+
+        private void txtPesquisaCarro_Leave(object sender, EventArgs e)
+        {
+            if (txtPesquisaCarro.Text == "")
+            {
+                txtPesquisaCarro.Text = "Digite a Placa ou CPF do Cliente";
+            }
+        }
+
+        private void txtPesquisaCarro_Enter(object sender, EventArgs e)
+        {
+            if (txtPesquisaCarro.Text == "Digite a Placa ou CPF do Cliente")
+            {
+                txtPesquisaCarro.Text = "";
+            }
+        }
+
+        private void txtPesquisaPecas_Leave(object sender, EventArgs e)
+        {
+            if (txtPesquisaPecas.Text == "")
+            {
+                txtPesquisaPecas.Text = "Digite o Código, Fabricante ou Tipo";
+            }
+        }
+
+        private void txtPesquisaPecas_Enter(object sender, EventArgs e)
+        {
+            if (txtPesquisaPecas.Text == "Digite o Código, Fabricante ou Tipo")
+            {
+                txtPesquisaPecas.Text = "";
+            }
+        }
+
+        private void txtPesquisaFunc_Leave(object sender, EventArgs e)
+        {
+            if (txtPesquisaFunc.Text == "")
+            {
+                txtPesquisaFunc.Text = "Digite o CPF ou Nome ";
+            }
+        }
+
+        private void txtPesquisaFunc_Enter(object sender, EventArgs e)
+        {
+            if (txtPesquisaFunc.Text == "Digite o CPF ou Nome ")
+            {
+                txtPesquisaFunc.Text = "";
+            }
+        }
+
+        private void txtPesquisaServ_Leave(object sender, EventArgs e)
+        {
+            if (txtPesquisaServ.Text == "")
+            {
+                txtPesquisaServ.Text = "Digite o Codigo do Serviço, Placa do Carro ou CPF do Cliente";
+            }
+        }
+
+        private void txtPesquisaServ_Enter(object sender, EventArgs e)
+        {
+            if (txtPesquisaServ.Text == "Digite o Codigo do Serviço, Placa do Carro ou CPF do Cliente")
+            {
+                txtPesquisaServ.Text = "";
+            }
+        }
     }
 }

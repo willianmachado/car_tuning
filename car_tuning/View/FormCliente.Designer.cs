@@ -61,7 +61,6 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.clienteDAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lbCpf = new System.Windows.Forms.Label();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
@@ -72,7 +71,6 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox1.Controls.Add(this.lbCpf);
             this.iTalk_GroupBox1.Controls.Add(this.txtEmail);
             this.iTalk_GroupBox1.Controls.Add(this.txtNome);
             this.iTalk_GroupBox1.Controls.Add(this.imgCarro);
@@ -494,15 +492,6 @@
             // 
             this.clienteDAOBindingSource.DataSource = typeof(car_tuning.ClienteDAO);
             // 
-            // lbCpf
-            // 
-            this.lbCpf.AutoSize = true;
-            this.lbCpf.Location = new System.Drawing.Point(91, 45);
-            this.lbCpf.Name = "lbCpf";
-            this.lbCpf.Size = new System.Drawing.Size(31, 13);
-            this.lbCpf.TabIndex = 50;
-            this.lbCpf.Text = "lbCpf";
-            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,6 +554,5 @@
         private System.Windows.Forms.TextBox txtNome;
         private Ambiance.Ambiance_Button_2 ambiance_Button_21;
         private System.Windows.Forms.BindingSource clienteDAOBindingSource;
-        private System.Windows.Forms.Label lbCpf;
     }
 }
