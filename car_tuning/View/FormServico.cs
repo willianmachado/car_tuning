@@ -26,6 +26,7 @@ namespace car_tuning
             View.FormLoading f  = new View.FormLoading();
             f.ShowDialog();
             
+
         }
 
         private void btPesquisar_Click(object sender, EventArgs e)

@@ -10,7 +10,7 @@ namespace car_tuning
 {
     class ClienteDAO : DataBase
     {
-
+        private const string Data = "Data Source = car.db";
         public void Salvar(Cliente c)
         {
             //Salvar um Cliente DAO
@@ -18,7 +18,7 @@ namespace car_tuning
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
-            SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
+            SQLiteConnection conn = new SQLiteConnection(Data);
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
             
@@ -34,7 +34,7 @@ namespace car_tuning
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
-            SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
+            SQLiteConnection conn = new SQLiteConnection(Data);
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
 
@@ -65,7 +65,7 @@ namespace car_tuning
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
-            SQLiteConnection conn = new SQLiteConnection("Data Source = car.db");
+            SQLiteConnection conn = new SQLiteConnection(Data);
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
             SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM CLIENTE", conn);
