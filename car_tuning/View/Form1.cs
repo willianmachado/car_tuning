@@ -59,5 +59,20 @@ namespace car_tuning
             form.ShowDialog();
             form.StartPosition = FormStartPosition.CenterParent;
         }
+
+        private void ambiance_Button_11_Click(object sender, EventArgs e)
+        {
+           
+            progressBar1.Value = 50;
+            iTalk_ProgressBar1.Value = 75;
+            progressBar2.Value = 90;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            progressBar1.Value = 0;
+            iTalk_ProgressBar1.Value = 0;
+            progressBar2.Value = 0;
+        }
     }
 }

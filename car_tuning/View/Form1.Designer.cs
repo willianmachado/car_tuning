@@ -33,6 +33,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.iTalk_ProgressBar1 = new iTalk.iTalk_ProgressBar();
+            this.bttest = new Ambiance.Ambiance_Button_1();
             this.btSair = new Ambiance.Ambiance_Button_1();
             this.ambiance_Button_15 = new Ambiance.Ambiance_Button_1();
             this.ambiance_Button_14 = new Ambiance.Ambiance_Button_1();
@@ -42,6 +46,7 @@
             this.btServicos = new Ambiance.Ambiance_Button_1();
             this.btPesquisa = new Ambiance.Ambiance_Button_1();
             this.btCliente = new Ambiance.Ambiance_Button_1();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -83,6 +88,55 @@
             this.tabPage3.Size = new System.Drawing.Size(675, 357);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "tabPage3";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.progressBar1.Location = new System.Drawing.Point(374, 154);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(240, 65);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 5;
+            this.progressBar1.Value = 20;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(440, 488);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 52);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // iTalk_ProgressBar1
+            // 
+            this.iTalk_ProgressBar1.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.iTalk_ProgressBar1.Location = new System.Drawing.Point(217, 233);
+            this.iTalk_ProgressBar1.Maximum = ((long)(100));
+            this.iTalk_ProgressBar1.MinimumSize = new System.Drawing.Size(100, 100);
+            this.iTalk_ProgressBar1.Name = "iTalk_ProgressBar1";
+            this.iTalk_ProgressBar1.ProgressColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.iTalk_ProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(92)))), ((int)(((byte)(92)))));
+            this.iTalk_ProgressBar1.ProgressShape = iTalk.iTalk_ProgressBar._ProgressShape.Round;
+            this.iTalk_ProgressBar1.Size = new System.Drawing.Size(130, 130);
+            this.iTalk_ProgressBar1.TabIndex = 9;
+            this.iTalk_ProgressBar1.Text = "iTalk_ProgressBar1";
+            this.iTalk_ProgressBar1.Value = ((long)(0));
+            // 
+            // bttest
+            // 
+            this.bttest.BackColor = System.Drawing.Color.Transparent;
+            this.bttest.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bttest.Image = null;
+            this.bttest.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttest.Location = new System.Drawing.Point(450, 404);
+            this.bttest.Name = "bttest";
+            this.bttest.Size = new System.Drawing.Size(177, 30);
+            this.bttest.TabIndex = 6;
+            this.bttest.Text = "ambiance_Button_11";
+            this.bttest.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bttest.Click += new System.EventHandler(this.ambiance_Button_11_Click);
             // 
             // btSair
             // 
@@ -208,11 +262,25 @@
             this.btCliente.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btCliente.Click += new System.EventHandler(this.btCliente_Click);
             // 
+            // progressBar2
+            // 
+            this.progressBar2.ForeColor = System.Drawing.Color.GreenYellow;
+            this.progressBar2.Location = new System.Drawing.Point(282, 56);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(122, 46);
+            this.progressBar2.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar2.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 626);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.iTalk_ProgressBar1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bttest);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btSair);
             this.Controls.Add(this.ambiance_Button_15);
             this.Controls.Add(this.ambiance_Button_14);
@@ -248,6 +316,11 @@
         private Ambiance.Ambiance_Button_1 ambiance_Button_14;
         private Ambiance.Ambiance_Button_1 ambiance_Button_15;
         private Ambiance.Ambiance_Button_1 btSair;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private Ambiance.Ambiance_Button_1 bttest;
+        private System.Windows.Forms.Button button1;
+        private iTalk.iTalk_ProgressBar iTalk_ProgressBar1;
+        private System.Windows.Forms.ProgressBar progressBar2;
     }
 }
 

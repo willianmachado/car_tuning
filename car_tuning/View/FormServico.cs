@@ -25,7 +25,6 @@ namespace car_tuning
         {
             View.FormLoading f  = new View.FormLoading();
             f.ShowDialog();
-            
 
         }
 
@@ -71,7 +70,8 @@ namespace car_tuning
         }
         private void btSalvar_Click(object sender, EventArgs e)
         {
-
+            
+            
         }
         private void btExcluir_Click(object sender, EventArgs e)
         {
@@ -149,9 +149,9 @@ namespace car_tuning
         }
 
 
-        
 
         
+
     }
 
     
