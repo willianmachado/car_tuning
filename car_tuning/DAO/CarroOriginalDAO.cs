@@ -8,8 +8,12 @@ namespace car_tuning.DAO
 {
     class CarroOriginalDAO
     {
-        public void Salvar(Cliente cliente)
+        public void Salvar(Modelo.CarroOriginal carro)
         {
+            DataBase db = DataBase.GetInstance();
+            db.GetConnection();
+
+
 
         }
 

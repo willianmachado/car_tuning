@@ -235,11 +235,12 @@ namespace car_tuning
         private Cliente getDTO()
         {
             Cliente cliente = new Cliente();
-
+            
             cliente.Cpf = txtCpf.Text.Trim();
             cliente.Nome = txtNome.Text.Trim();
             cliente.Telefone = txtTelefone.Text.Trim();
             cliente.Email = txtEmail.Text.Trim();
+            
 
             return cliente;
         }
@@ -256,6 +257,9 @@ namespace car_tuning
             return c;
         }
 
-        
+        private void FormCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

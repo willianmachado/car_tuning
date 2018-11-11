@@ -14,27 +14,150 @@ namespace car_tuning.Modelo
 
         public CarroOriginal(string modelo, string marca, int cod, int peso, int aceleracao, int torque, int potencia, int velocidadeMax, int consumo, int rotacaoMax)
         {
-            this.Modelo = modelo;
-            this.Marca = marca;
-            this.Cod = cod;
-            this.Peso = peso;
-            this.Aceleracao = aceleracao;
-            this.Torque = torque;
-            this.Potencia = potencia;
-            this.VelocidadeMax = velocidadeMax;
-            this.Consumo = consumo;
-            this.RotacaoMax = rotacaoMax;
+            this.modelo = modelo;
+            this.marca = marca;
+            this.cod = cod;
+            this.peso = peso;
+            this.aceleracao = aceleracao;
+            this.torque = torque;
+            this.potencia = potencia;
+            this.velocidadeMax = velocidadeMax;
+            this.consumo = consumo;
+            this.rotacaoMax = rotacaoMax;
         }
 
-        public string Modelo { get => modelo; set => modelo = value; }
-        public string Marca { get => marca; set => marca = value; }
-        public int Cod { get => cod; set => cod = value; }
-        public int Peso { get => peso; set => peso = value; }
-        public int Aceleracao { get => aceleracao; set => aceleracao = value; }
-        public int Torque { get => torque; set => torque = value; }
-        public int Potencia { get => potencia; set => potencia = value; }
-        public int VelocidadeMax { get => velocidadeMax; set => velocidadeMax = value; }
-        public int Consumo { get => consumo; set => consumo = value; }
-        public int RotacaoMax { get => rotacaoMax; set => rotacaoMax = value; }
+
+        public string Modelo
+        {
+            get
+            {
+                return modelo;
+            }
+
+            set
+            {
+                modelo = value;
+            }
+        }
+
+        public string Marca
+        {
+            get
+            {
+                return marca;
+            }
+
+            set
+            {
+                marca = value;
+            }
+        }
+
+        public int Cod
+        {
+            get
+            {
+                return cod;
+            }
+
+            set
+            {
+                cod = value;
+            }
+        }
+
+        public int Peso
+        {
+            get
+            {
+                return peso;
+            }
+
+            set
+            {
+                peso = value;
+            }
+        }
+
+        public int Aceleracao
+        {
+            get
+            {
+                return aceleracao;
+            }
+
+            set
+            {
+                aceleracao = value;
+            }
+        }
+
+        public int Torque
+        {
+            get
+            {
+                return torque;
+            }
+
+            set
+            {
+                torque = value;
+            }
+        }
+
+        public int Potencia
+        {
+            get
+            {
+                return potencia;
+            }
+
+            set
+            {
+                potencia = value;
+            }
+        }
+
+        public int VelocidadeMax
+        {
+            get
+            {
+                return velocidadeMax;
+            }
+
+            set
+            {
+                velocidadeMax = value;
+            }
+        }
+
+        public int Consumo
+        {
+            get
+            {
+                return consumo;
+            }
+
+            set
+            {
+                consumo = value;
+            }
+        }
+
+        public int RotacaoMax
+        {
+            get
+            {
+                return rotacaoMax;
+            }
+
+            set
+            {
+                rotacaoMax = value;
+            }
+        }
+
+        
     }
+       
 }

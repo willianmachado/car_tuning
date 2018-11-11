@@ -163,19 +163,36 @@ namespace car_tuning
                     }
 
 
-                    //cria tabela Veiculo
-                    sql.Clear();
-                    sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO` ( " +
-                        " `placa` TEXT NOT NULL PRIMARY KEY UNIQUE," +
-                        " `modelo` TEXT," +
-                        " `marca` TEXT," +
-                        " `cor` TEXT," +
-                        " `ano` TEXT," +
-                        " `cpfCliente` TEXT NOT NULL ," +
-                        "FOREIGN KEY('cpfCliente') REFERENCES 'CLIENTE'('cpf') );");
+                //cria tabela Veiculo
+                sql.Clear();
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO` ( " +
+                    " `placa` TEXT NOT NULL PRIMARY KEY UNIQUE," +
+                    " `modelo` TEXT," +
+                    " `marca` TEXT," +
+                    " `ano` TEXT," +
+                    " `cpfCliente` TEXT NOT NULL ," +
+                    "FOREIGN KEY('marca') REFERENCES 'CARRO_ORIGINAL'('marca'), " + 
+                    "FOREIGN KEY('modelo') REFERENCES 'CARRO_ORIGINAL'('modelo'), " +
+                    "FOREIGN KEY('cpfCliente') REFERENCES 'CLIENTE'('cpf'));");
+                
+                //cria tabela CARRO ORIGINAL
+                sql.Clear();
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO_ORIGINAL` ( " +
 
 
-                    cmd = new SQLiteCommand(sql.ToString(), conn);
+                    " `codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
+                    " `modelo` TEXT," +
+                    " `marca` TEXT," +
+                    " 'peso' INTEGER," +
+                    " 'velocidade_max' INTEGER," +
+                    " 'potencia' INTEGER," +
+                    " 'aceleracao' INTEGER," +
+                    " 'torque' INTEGER," +
+                    " 'potencia' INTEGER," +
+                    " 'rotacao_max' INTEGER ;" );
+
+
+                cmd = new SQLiteCommand(sql.ToString(), conn);
                     try
                     {
                         cmd.ExecuteNonQuery();

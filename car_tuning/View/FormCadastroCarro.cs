@@ -21,5 +21,10 @@ namespace car_tuning.View
         {
 
         }
+
+        private void btVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

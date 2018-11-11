@@ -109,8 +109,11 @@ namespace car_tuning.View
             FormPesquisa pesquisa = new FormPesquisa();
             pesquisa.Show();
         }
-        
 
-          
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormCadastroCarro form = new FormCadastroCarro();
+            form.Show();
+        }
     }
 }

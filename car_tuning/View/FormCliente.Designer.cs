@@ -61,6 +61,8 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.clienteDAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
@@ -71,6 +73,8 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.checkBox1);
+            this.iTalk_GroupBox1.Controls.Add(this.linkLabel1);
             this.iTalk_GroupBox1.Controls.Add(this.txtEmail);
             this.iTalk_GroupBox1.Controls.Add(this.txtNome);
             this.iTalk_GroupBox1.Controls.Add(this.imgCarro);
@@ -492,6 +496,26 @@
             // 
             this.clienteDAOBindingSource.DataSource = typeof(car_tuning.ClienteDAO);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(689, 138);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(110, 13);
+            this.linkLabel1.TabIndex = 43;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Adicionar nova marca";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(493, 195);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(61, 17);
+            this.checkBox1.TabIndex = 50;
+            this.checkBox1.Text = "Original";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,6 +535,7 @@
             this.MinimizeBox = false;
             this.Name = "FormCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).EndInit();
@@ -554,5 +579,7 @@
         private System.Windows.Forms.TextBox txtNome;
         private Ambiance.Ambiance_Button_2 ambiance_Button_21;
         private System.Windows.Forms.BindingSource clienteDAOBindingSource;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

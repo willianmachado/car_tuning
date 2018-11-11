@@ -6,29 +6,18 @@ using System.Threading.Tasks;
 
 namespace car_tuning.Modelo
 {
-    class Carro
+    class Carro : CarroOriginal
+
     {
-        private string ano;
-        private string fabricante;
-        private int CodCliente;
         
+        private string ano;
         private string placa;
-        private string modelo;
         private int codigo;
         private string cpfClinte;
         private double peso;
-               
 
-        public Carro(string ano, string fabricante, int codCliente, string placa, string modelo, int codigo, string cpfClinte, double peso)
+        public Carro(string modelo, string marca, int cod, int peso, int aceleracao, int torque, int potencia, int velocidadeMax, int consumo, int rotacaoMax) : base(modelo, marca, cod, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax)
         {
-            this.Ano = ano;
-            this.Fabricante = fabricante;
-            CodCliente1 = codCliente;
-            this.Placa = placa;
-            this.Modelo = modelo;
-            this.Codigo = codigo;
-            this.CpfClinte = cpfClinte;
-            this.Peso = peso;
         }
 
         public string Ano
@@ -44,32 +33,6 @@ namespace car_tuning.Modelo
             }
         }
 
-        public string Fabricante
-        {
-            get
-            {
-                return fabricante;
-            }
-
-            set
-            {
-                fabricante = value;
-            }
-        }
-
-        public int CodCliente1
-        {
-            get
-            {
-                return CodCliente;
-            }
-
-            set
-            {
-                CodCliente = value;
-            }
-        }
-
         public string Placa
         {
             get
@@ -80,19 +43,6 @@ namespace car_tuning.Modelo
             set
             {
                 placa = value;
-            }
-        }
-
-        public string Modelo
-        {
-            get
-            {
-                return modelo;
-            }
-
-            set
-            {
-                modelo = value;
             }
         }
 
@@ -134,6 +84,5 @@ namespace car_tuning.Modelo
                 peso = value;
             }
         }
-
     }
 }
