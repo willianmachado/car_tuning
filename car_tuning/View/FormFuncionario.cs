@@ -1,4 +1,5 @@
-﻿using System;
+﻿using car_tuning.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace car_tuning
 {
     public partial class FormFuncionario : Form
     {
+        FuncionarioDAO f = new FuncionarioDAO();
         public FormFuncionario()
         {
             InitializeComponent();
+            dgvFunc.DataSource = f.Carregar();
         }
 
 
@@ -43,7 +46,31 @@ namespace car_tuning
         }
         private void btSalvar_Click(object sender, EventArgs e)
         {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            Funcionario funcionario = getDTO();
+            txtCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
 
+            if (txtCPF.Text != "" || txtNome.Text != "")
+            {
+                funcionarioDAO.Salvar(funcionario);
+                dgvFunc.DataSource = f.Carregar();
+                try
+                {
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                    ControlaBotoes(true);
+                    limparCampos();
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("CPF Já cadastrado! ");
+                }
+            }
+            else
+            {
+                MessageBox.Show(this, "Favor preencher: CPF/Nome ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
         private void btEditar_Click(object sender, EventArgs e)
         {
@@ -54,7 +81,17 @@ namespace car_tuning
 
         private void btExcluir_Click(object sender, EventArgs e)
         {
-
+            if (dgvFunc.CurrentRow != null)
+            {
+                String key = dgvFunc.CurrentRow.Cells[0].Value.ToString();
+                FuncionarioDAO dao = new FuncionarioDAO();
+                dao.Deletar(key);
+                
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha para remover.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void ControlaBotoes(bool statusBtNovo)
@@ -94,11 +131,26 @@ namespace car_tuning
         }
         public void limparCampos()
         {
-            txtCpf.Text = "";
+            txtCPF.Text = "";
             txtNome.Text = "";
             txtTelefone.Text = "";
         }
+        private Funcionario getDTO()
+        {
+            Funcionario funcionario = new Funcionario();
+            funcionario.Cpf = txtCPF.Text.Trim();
+            funcionario.Nome = txtNome.Text.Trim();
+            funcionario.Telefone = txtTelefone.Text.Trim();
+            return funcionario;
+        }
+        private Funcionario setDTO()
+        {
+            Funcionario f = new Funcionario();
+            txtCPF.Text = f.Cpf;
+            txtNome.Text = f.Nome;
+            txtTelefone.Text = f.Telefone;
 
-        
+            return f;
+        }
     }
 }

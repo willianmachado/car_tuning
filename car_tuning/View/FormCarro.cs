@@ -23,7 +23,7 @@ namespace car_tuning.View
 
         private void txtAno_TextChanged_1(object sender, EventArgs e)
         {
-            lbAno.Text = txtAno.Text;
+
         }
         
         private void txtMarca_TextChanged(object sender, EventArgs e)
@@ -38,14 +38,13 @@ namespace car_tuning.View
             if (txtMarca.Text == "")
             {
                 MessageBox.Show("Selecione a Marca do carro");
-                lbModelo.Text = txtModelo.Text;
+                lbModelo.Text = txtMarca.Text;
             }
 
             else
             {
 
                 lbMarca.Visible = true;
-                lbModelo.Text = txtModelo.Text;
                 lbModelo.Visible = true;
                 imgCarro.Visible = true;
                 lbAno.Visible = true;
@@ -99,9 +98,7 @@ namespace car_tuning.View
         {
             txtCpf.Text = "";
             txtMarca.Text = "";
-            txtAno.Text = "";
-            txtModelo.Text = "";
-            txtPlaca.Text = "";
+            
         }
 
         private void btPesquisar_Click(object sender, EventArgs e)

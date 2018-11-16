@@ -41,7 +41,21 @@ namespace car_tuning
 
             return connection;
         }
+        public DataSet ExecuteQuery(string qry)
+        {
+            if (connection.State != System.Data.ConnectionState.Open)
+                connection.Open();
 
+            SQLiteCommand comm = new SQLiteCommand(qry, connection);
+            SQLiteDataAdapter da = new SQLiteDataAdapter(comm);
+
+            DataSet ds = new DataSet();
+            ds.Clear();
+            da.Fill(ds);
+
+            connection.Close();
+            return ds;
+        }
         public void ExecuteSQL(string qry)
         {
 

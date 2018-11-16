@@ -13,12 +13,16 @@ namespace car_tuning.Modelo
         private string nome;
         private string telefone;
 
-        public Funcionario(int codigo, string cpf, string nome, string telefone)
+        public Funcionario(string cpf, string nome, string telefone)
         {
-            this.Codigo = codigo;
+            
             this.Cpf = cpf;
             this.Nome = nome;
             this.Telefone = telefone;
+        }
+        public Funcionario()
+        {
+
         }
 
         public int Codigo

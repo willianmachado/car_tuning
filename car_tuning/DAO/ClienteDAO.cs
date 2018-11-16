@@ -15,8 +15,8 @@ namespace car_tuning
         {
             //Salvar um Cliente DAO
             
-            DataBase bd = DataBase.GetInstance();
-            bd.GetConnection();
+                DataBase bd = DataBase.GetInstance();
+                bd.GetConnection();
 
             SQLiteConnection conn = new SQLiteConnection(Data);
             if (conn.State == ConnectionState.Closed)

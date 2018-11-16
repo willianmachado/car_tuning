@@ -10,20 +10,22 @@ namespace car_tuning.DAO
     {
         public void Salvar(Modelo.CarroOriginal carro)
         {
-            DataBase db = DataBase.GetInstance();
-            db.GetConnection();
-
-
-
+            String sql = string.Format("");
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
 
         public void Deletar(int id)
         {
-
+            String sql = string.Format("");
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
         public void Atualizar(Cliente cliente)
         {
-
+            String sql = string.Format("");
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
         public List<Cliente> listAll()
         {

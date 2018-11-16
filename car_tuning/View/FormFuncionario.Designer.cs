@@ -30,26 +30,27 @@
         {
             this.btNovo = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
-            this.dgCliente = new System.Windows.Forms.DataGridView();
-            this.colCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFunc = new System.Windows.Forms.DataGridView();
             this.iTalk_TextBox_Small1 = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.txtTelefone = new iTalk.iTalk_TextBox_Small();
             this.txtNome = new iTalk.iTalk_TextBox_Small();
-            this.txtCpf = new iTalk.iTalk_TextBox_Small();
             this.btPesquisar = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             this.SuspendLayout();
             // 
             // btNovo
@@ -70,15 +71,15 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.txtCPF);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label4);
-            this.iTalk_GroupBox1.Controls.Add(this.dgCliente);
+            this.iTalk_GroupBox1.Controls.Add(this.dgvFunc);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small1);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
             this.iTalk_GroupBox1.Controls.Add(this.txtTelefone);
             this.iTalk_GroupBox1.Controls.Add(this.txtNome);
-            this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(149, 3);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
@@ -86,6 +87,17 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(993, 572);
             this.iTalk_GroupBox1.TabIndex = 10;
             this.iTalk_GroupBox1.Text = "Funcionario";
+            // 
+            // txtCPF
+            // 
+            this.txtCPF.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCPF.Location = new System.Drawing.Point(97, 57);
+            this.txtCPF.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCPF.Mask = "000,000,000-00";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(138, 27);
+            this.txtCPF.TabIndex = 10;
             // 
             // iTalk_Label4
             // 
@@ -99,36 +111,21 @@
             this.iTalk_Label4.TabIndex = 9;
             this.iTalk_Label4.Text = "Pesquisar";
             // 
-            // dgCliente
+            // dgvFunc
             // 
-            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCpf,
-            this.colNome,
-            this.colTelefone});
-            this.dgCliente.Location = new System.Drawing.Point(401, 83);
-            this.dgCliente.Name = "dgCliente";
-            this.dgCliente.Size = new System.Drawing.Size(571, 465);
-            this.dgCliente.TabIndex = 7;
-            // 
-            // colCpf
-            // 
-            this.colCpf.HeaderText = "CPF";
-            this.colCpf.Name = "colCpf";
-            this.colCpf.ReadOnly = true;
-            // 
-            // colNome
-            // 
-            this.colNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNome.HeaderText = "Nome";
-            this.colNome.Name = "colNome";
-            this.colNome.ReadOnly = true;
-            // 
-            // colTelefone
-            // 
-            this.colTelefone.HeaderText = "Telefone";
-            this.colTelefone.Name = "colTelefone";
-            this.colTelefone.ReadOnly = true;
+            this.dgvFunc.AllowUserToAddRows = false;
+            this.dgvFunc.AllowUserToDeleteRows = false;
+            this.dgvFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFunc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Codigo,
+            this.cpf,
+            this.nome,
+            this.telefone});
+            this.dgvFunc.Location = new System.Drawing.Point(401, 83);
+            this.dgvFunc.Name = "dgvFunc";
+            this.dgvFunc.ReadOnly = true;
+            this.dgvFunc.Size = new System.Drawing.Size(571, 465);
+            this.dgvFunc.TabIndex = 7;
             // 
             // iTalk_TextBox_Small1
             // 
@@ -210,21 +207,6 @@
             this.txtNome.TabIndex = 0;
             this.txtNome.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNome.UseSystemPasswordChar = false;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.BackColor = System.Drawing.Color.Transparent;
-            this.txtCpf.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtCpf.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCpf.Location = new System.Drawing.Point(97, 58);
-            this.txtCpf.MaxLength = 32767;
-            this.txtCpf.Multiline = false;
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.ReadOnly = false;
-            this.txtCpf.Size = new System.Drawing.Size(232, 28);
-            this.txtCpf.TabIndex = 0;
-            this.txtCpf.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCpf.UseSystemPasswordChar = false;
             // 
             // btPesquisar
             // 
@@ -316,6 +298,33 @@
             this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // cpf
+            // 
+            this.cpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cpf.HeaderText = "Cpf";
+            this.cpf.Name = "cpf";
+            this.cpf.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // telefone
+            // 
+            this.telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefone.HeaderText = "Telefone";
+            this.telefone.Name = "telefone";
+            this.telefone.ReadOnly = true;
+            // 
             // FormFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +348,7 @@
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,19 +361,20 @@
         private iTalk.iTalk_Label iTalk_Label1;
         private iTalk.iTalk_TextBox_Small txtTelefone;
         private iTalk.iTalk_TextBox_Small txtNome;
-        private iTalk.iTalk_TextBox_Small txtCpf;
         private iTalk.iTalk_Button_2 btPesquisar;
         private iTalk.iTalk_Button_2 btSalvar;
         private iTalk.iTalk_Button_2 btLimpar;
         private iTalk.iTalk_Button_2 btEditar;
         private iTalk.iTalk_Button_2 btExcluir;
         private iTalk.iTalk_Button_2 btVoltar;
-        private System.Windows.Forms.DataGridView dgCliente;
+        private System.Windows.Forms.DataGridView dgvFunc;
         private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small1;
         private iTalk.iTalk_Label iTalk_Label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTelefone;
         private iTalk.iTalk_Button_2 btNovo;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
     }
 }

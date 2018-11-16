@@ -11,15 +11,22 @@ namespace car_tuning.Modelo
         public void Salvar(Cliente cliente)
         {
 
+            String sql = string.Format("");
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
 
         public void Deletar(int id)
         {
-
+            String sql = string.Format("");
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
         public void atualizar(Cliente cliente)
         {
-
+            String sql = string.Format("");
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
         public List<Cliente> listAll()
         {
