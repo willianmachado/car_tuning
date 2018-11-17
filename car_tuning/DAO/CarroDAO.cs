@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,28 +10,57 @@ namespace car_tuning.Modelo
 {
     class CarroDAO
     {
-        public void Salvar(Cliente cliente)
+        private const string Data = "Data Source = car.db";
+        public void Salvar(Carro carro)
         {
-
+            String sql = string.Format("INSERT INTO CARRO (modelo,marca,peso,velocidade_max,potencia,aceleracao,torque,consumo,rotacao_max) VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}','{7}','{8}')",
+                carro.Modelo, carro.Marca, carro.Peso, carro.VelocidadeMax, carro.Potencia, carro.Aceleracao, carro.Torque, carro.Consumo, carro.RotacaoMax);
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
 
-        public void Deletar(int id)
+        public void Deletar(int index)
         {
-
+            String sql = string.Format("DELETE CARRO WHERE codigo='" + index + "';");
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
-        public void Atualizar(Cliente cliente)
+        public void Atualizar(Carro carro)
         {
-
+            String sql = string.Format("UPDATE CARRO SET modelo='{0}',marca='{1}',peso='{2}',velocidade_max='{3}',potencia='{4}',aceleracao='{5}',torque='{6}',consumo='{7}',rotacao_max='{8}'", carro.Modelo, carro.Marca, carro.Peso, carro.VelocidadeMax, carro.Potencia, carro.Aceleracao, carro.Torque, carro.Consumo, carro.RotacaoMax);
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
         }
-        public List<Cliente> listAll()
+        /*
+        public List<CarroOriginal> Carregar()
         {
-            List<Cliente> lista = new List<Cliente>();
-            Cliente cliente = null;
+            List<Carro> lista = new List<Carro>();
+            Carro c = new Carro();
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM CARRO", conn);
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                c.Modelo = dr["modelo"].ToString();
+                c.Marca = dr["marca"].ToString();
+                c.Peso = Double.Parse(dr["peso"].ToString());
+                c.VelocidadeMax = Int32.Parse(dr["velocidade_max"].ToString());
+                c.Potencia = Int32.Parse(dr["potencia"].ToString());
+                c.Aceleracao = Int32.Parse(dr["aceleracao"].ToString());
+                c.Torque = Int32.Parse(dr["torque"].ToString());
+                c.Consumo = Int32.Parse(dr["consumo"].ToString());
+                c.RotacaoMax = Int32.Parse(dr["rotacao_max"].ToString());
 
-
+                 lista.Add(new Carro(c.Modelo, c.Marca, c.Peso, c.Aceleracao, c.Torque, c.Potencia, c.VelocidadeMax, c.Consumo, c.RotacaoMax));
+            }
             return lista;
 
         }
+        */
         public List<Cliente> BuscaNome(string cpf)
         {
             List<Cliente> lista = new List<Cliente>();

@@ -12,11 +12,10 @@ namespace car_tuning.Modelo
         private string modelo, marca;
         private int cod, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax;
 
-        public CarroOriginal(string modelo, string marca, int cod, int peso, int aceleracao, int torque, int potencia, int velocidadeMax, int consumo, int rotacaoMax)
+        public CarroOriginal(string modelo, string marca, int peso, int aceleracao, int torque, int potencia, int velocidadeMax, int consumo, int rotacaoMax)
         {
             this.modelo = modelo;
             this.marca = marca;
-            this.cod = cod;
             this.peso = peso;
             this.aceleracao = aceleracao;
             this.torque = torque;
@@ -25,7 +24,10 @@ namespace car_tuning.Modelo
             this.consumo = consumo;
             this.rotacaoMax = rotacaoMax;
         }
+        public CarroOriginal()
+        {
 
+        }
 
         public string Modelo
         {

@@ -15,11 +15,15 @@ namespace car_tuning.Modelo
         private int codigo;
         private string cpfClinte;
         private double peso;
-
+        /*
         public Carro(string modelo, string marca, int cod, int peso, int aceleracao, int torque, int potencia, int velocidadeMax, int consumo, int rotacaoMax) : base(modelo, marca, cod, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax)
         {
         }
+        */
+        public Carro()
+        {
 
+        }
         public string Ano
         {
             get

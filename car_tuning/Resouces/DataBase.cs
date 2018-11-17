@@ -162,6 +162,7 @@ namespace car_tuning
                         " `tipo` TEXT NOT NULL, `valor` NUMERIC NOT NULL, " +
                         " `compatibilidade` TEXT," +
                         " `addTorque` INTEGER, " +
+                        " `fabricante` TEXT," +
                         " `addPeso` INTEGER, " +
                         " `addPotencia` INTEGER); ");
 
@@ -202,7 +203,7 @@ namespace car_tuning
                     " 'potencia' INTEGER," +
                     " 'aceleracao' INTEGER," +
                     " 'torque' INTEGER," +
-                    " 'potencia' INTEGER," +
+                    " 'consumo' INTEGER," +
                     " 'rotacao_max' INTEGER ;" );
 
 

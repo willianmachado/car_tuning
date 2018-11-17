@@ -9,130 +9,40 @@ namespace car_tuning.Modelo
     class Pecas
     {
         private int codigo;
-        private string nome;
-
         private string fabricante;
-        private float preco;
-        private string codVeiculos;
-        private string codPartNum;
+        private Double preco;
+        private string compatibilidade;
         private string tipo;
-        private float status;
+        private string descricao;
+        private Double addTorque;
+        private Double addPeso;
+        private Double addPotencia;
 
-        public Pecas(int codigo, string nome, string fabricante, float preco, string codVeiculos, string codPartNum, string tipo, float status)
+        public Pecas(int codigo, string fabricante, double preco, string compatibilidade, string tipo, string descricao, double addTorque, double addPeso, double addPotencia)
         {
             this.codigo = codigo;
-            this.nome = nome;
             this.fabricante = fabricante;
             this.preco = preco;
-            this.codVeiculos = codVeiculos;
-            this.codPartNum = codPartNum;
+            this.compatibilidade = compatibilidade;
             this.tipo = tipo;
-            this.status = status;
+            this.descricao = descricao;
+            this.addTorque = addTorque;
+            this.addPeso = addPeso;
+            this.addPotencia = addPotencia;
         }
-
-        public int Codigo
+        public Pecas()
         {
-            get
-            {
-                return codigo;
-            }
 
-            set
-            {
-                codigo = value;
-            }
         }
-
-        public string Nome
-        {
-            get
-            {
-                return nome;
-            }
-
-            set
-            {
-                nome = value;
-            }
-        }
-
-        public string Fabricante
-        {
-            get
-            {
-                return fabricante;
-            }
-
-            set
-            {
-                fabricante = value;
-            }
-        }
-
-        public float Preco
-        {
-            get
-            {
-                return preco;
-            }
-
-            set
-            {
-                preco = value;
-            }
-        }
-
-        public string CodVeiculos
-        {
-            get
-            {
-                return codVeiculos;
-            }
-
-            set
-            {
-                codVeiculos = value;
-            }
-        }
-
-        public string CodPartNum
-        {
-            get
-            {
-                return codPartNum;
-            }
-
-            set
-            {
-                codPartNum = value;
-            }
-        }
-
-        public string Tipo
-        {
-            get
-            {
-                return tipo;
-            }
-
-            set
-            {
-                tipo = value;
-            }
-        }
-
-        public float Status
-        {
-            get
-            {
-                return status;
-            }
-
-            set
-            {
-                status = value;
-            }
-        }
+        public int Codigo { get => codigo; set => codigo = value; }
+        public string Fabricante { get => fabricante; set => fabricante = value; }
+        public double Preco { get => preco; set => preco = value; }
+        public string Compatibilidade { get => compatibilidade; set => compatibilidade = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
+        public string Descricao { get => descricao; set => descricao = value; }
+        public double AddTorque { get => addTorque; set => addTorque = value; }
+        public double AddPeso { get => addPeso; set => addPeso = value; }
+        public double AddPotencia { get => addPotencia; set => addPotencia = value; }
     }
 
 }
