@@ -10,9 +10,9 @@ namespace car_tuning.Modelo
     {
 
         private string modelo, marca;
-        private int cod, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax;
+        private double cod, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax;
 
-        public CarroOriginal(string modelo, string marca, int peso, int aceleracao, int torque, int potencia, int velocidadeMax, int consumo, int rotacaoMax)
+        public CarroOriginal(string modelo, string marca, double peso, double aceleracao, double torque, double potencia, double velocidadeMax, double consumo, double rotacaoMax)
         {
             this.modelo = modelo;
             this.marca = marca;
@@ -55,7 +55,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Cod
+        public double Cod
         {
             get
             {
@@ -68,7 +68,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Peso
+        public double Peso
         {
             get
             {
@@ -81,7 +81,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Aceleracao
+        public double Aceleracao
         {
             get
             {
@@ -94,7 +94,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Torque
+        public double Torque
         {
             get
             {
@@ -107,7 +107,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Potencia
+        public double Potencia
         {
             get
             {
@@ -120,7 +120,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int VelocidadeMax
+        public double VelocidadeMax
         {
             get
             {
@@ -133,7 +133,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Consumo
+        public double Consumo
         {
             get
             {
@@ -146,7 +146,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int RotacaoMax
+        public double RotacaoMax
         {
             get
             {

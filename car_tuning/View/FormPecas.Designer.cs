@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPecas));
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvPecas = new System.Windows.Forms.DataGridView();
             this.colPeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,26 +39,26 @@
             this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iTalk_TextBox_Small7 = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_TextBox_Small6 = new iTalk.iTalk_TextBox_Small();
+            this.txtTorque = new iTalk.iTalk_TextBox_Small();
+            this.txtPotencia = new iTalk.iTalk_TextBox_Small();
             this.txtModelo = new iTalk.iTalk_ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.iTalk_Label8 = new iTalk.iTalk_Label();
             this.iTalk_Label6 = new iTalk.iTalk_Label();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
-            this.iTalk_TextBox_Small5 = new iTalk.iTalk_TextBox_Small();
+            this.txtPeso = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label9 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label5 = new iTalk.iTalk_Label();
             this.iTalk_Label11 = new iTalk.iTalk_Label();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
-            this.iTalk_TextBox_Small2 = new iTalk.iTalk_TextBox_Small();
-            this.txtTelefone = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_TextBox_Small1 = new iTalk.iTalk_TextBox_Small();
-            this.txtNome = new iTalk.iTalk_TextBox_Small();
+            this.txtTipo = new iTalk.iTalk_TextBox_Small();
+            this.txtFabri = new iTalk.iTalk_TextBox_Small();
+            this.txtPreco = new iTalk.iTalk_TextBox_Small();
+            this.txtDescri = new iTalk.iTalk_TextBox_Small();
             this.iTalk_TextBox_Small4 = new iTalk.iTalk_TextBox_Small();
-            this.txtCpf = new iTalk.iTalk_TextBox_Small();
+            this.txtCodigo = new iTalk.iTalk_TextBox_Small();
             this.btPesquisar = new iTalk.iTalk_Button_2();
             this.btNovo = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
@@ -66,33 +66,33 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPecas)).BeginInit();
             this.SuspendLayout();
             // 
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox1.Controls.Add(this.dataGridView2);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small7);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small6);
+            this.iTalk_GroupBox1.Controls.Add(this.dgvPecas);
+            this.iTalk_GroupBox1.Controls.Add(this.txtTorque);
+            this.iTalk_GroupBox1.Controls.Add(this.txtPotencia);
             this.iTalk_GroupBox1.Controls.Add(this.txtModelo);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label8);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label6);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small5);
+            this.iTalk_GroupBox1.Controls.Add(this.txtPeso);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label9);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label5);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label11);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small2);
-            this.iTalk_GroupBox1.Controls.Add(this.txtTelefone);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small1);
-            this.iTalk_GroupBox1.Controls.Add(this.txtNome);
+            this.iTalk_GroupBox1.Controls.Add(this.txtTipo);
+            this.iTalk_GroupBox1.Controls.Add(this.txtFabri);
+            this.iTalk_GroupBox1.Controls.Add(this.txtPreco);
+            this.iTalk_GroupBox1.Controls.Add(this.txtDescri);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small4);
-            this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
+            this.iTalk_GroupBox1.Controls.Add(this.txtCodigo);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(159, 21);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
@@ -101,12 +101,12 @@
             this.iTalk_GroupBox1.TabIndex = 10;
             this.iTalk_GroupBox1.Text = "Peças";
             // 
-            // dataGridView2
+            // dgvPecas
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPecas.AllowUserToAddRows = false;
+            this.dgvPecas.AllowUserToDeleteRows = false;
+            this.dgvPecas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPecas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPeca,
             this.colDescricao,
             this.dataGridViewTextBoxColumn1,
@@ -115,13 +115,13 @@
             this.colPeso,
             this.colPotencia,
             this.colTorque});
-            this.dataGridView2.Location = new System.Drawing.Point(22, 361);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1144, 352);
-            this.dataGridView2.TabIndex = 14;
+            this.dgvPecas.Location = new System.Drawing.Point(22, 361);
+            this.dgvPecas.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvPecas.Name = "dgvPecas";
+            this.dgvPecas.ReadOnly = true;
+            this.dgvPecas.RowTemplate.Height = 24;
+            this.dgvPecas.Size = new System.Drawing.Size(1144, 352);
+            this.dgvPecas.TabIndex = 14;
             // 
             // colPeca
             // 
@@ -179,35 +179,35 @@
             this.colTorque.Name = "colTorque";
             this.colTorque.ReadOnly = true;
             // 
-            // iTalk_TextBox_Small7
+            // txtTorque
             // 
-            this.iTalk_TextBox_Small7.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small7.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small7.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small7.Location = new System.Drawing.Point(754, 221);
-            this.iTalk_TextBox_Small7.MaxLength = 32767;
-            this.iTalk_TextBox_Small7.Multiline = false;
-            this.iTalk_TextBox_Small7.Name = "iTalk_TextBox_Small7";
-            this.iTalk_TextBox_Small7.ReadOnly = false;
-            this.iTalk_TextBox_Small7.Size = new System.Drawing.Size(185, 28);
-            this.iTalk_TextBox_Small7.TabIndex = 0;
-            this.iTalk_TextBox_Small7.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small7.UseSystemPasswordChar = false;
+            this.txtTorque.BackColor = System.Drawing.Color.Transparent;
+            this.txtTorque.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtTorque.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTorque.Location = new System.Drawing.Point(754, 221);
+            this.txtTorque.MaxLength = 32767;
+            this.txtTorque.Multiline = false;
+            this.txtTorque.Name = "txtTorque";
+            this.txtTorque.ReadOnly = false;
+            this.txtTorque.Size = new System.Drawing.Size(185, 28);
+            this.txtTorque.TabIndex = 0;
+            this.txtTorque.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTorque.UseSystemPasswordChar = false;
             // 
-            // iTalk_TextBox_Small6
+            // txtPotencia
             // 
-            this.iTalk_TextBox_Small6.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small6.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small6.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small6.Location = new System.Drawing.Point(754, 174);
-            this.iTalk_TextBox_Small6.MaxLength = 32767;
-            this.iTalk_TextBox_Small6.Multiline = false;
-            this.iTalk_TextBox_Small6.Name = "iTalk_TextBox_Small6";
-            this.iTalk_TextBox_Small6.ReadOnly = false;
-            this.iTalk_TextBox_Small6.Size = new System.Drawing.Size(185, 28);
-            this.iTalk_TextBox_Small6.TabIndex = 0;
-            this.iTalk_TextBox_Small6.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small6.UseSystemPasswordChar = false;
+            this.txtPotencia.BackColor = System.Drawing.Color.Transparent;
+            this.txtPotencia.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPotencia.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPotencia.Location = new System.Drawing.Point(754, 174);
+            this.txtPotencia.MaxLength = 32767;
+            this.txtPotencia.Multiline = false;
+            this.txtPotencia.Name = "txtPotencia";
+            this.txtPotencia.ReadOnly = false;
+            this.txtPotencia.Size = new System.Drawing.Size(185, 28);
+            this.txtPotencia.TabIndex = 0;
+            this.txtPotencia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPotencia.UseSystemPasswordChar = false;
             // 
             // txtModelo
             // 
@@ -292,20 +292,20 @@
             this.iTalk_Label3.TabIndex = 1;
             this.iTalk_Label3.Text = "Fabricante";
             // 
-            // iTalk_TextBox_Small5
+            // txtPeso
             // 
-            this.iTalk_TextBox_Small5.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small5.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small5.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small5.Location = new System.Drawing.Point(754, 127);
-            this.iTalk_TextBox_Small5.MaxLength = 32767;
-            this.iTalk_TextBox_Small5.Multiline = false;
-            this.iTalk_TextBox_Small5.Name = "iTalk_TextBox_Small5";
-            this.iTalk_TextBox_Small5.ReadOnly = false;
-            this.iTalk_TextBox_Small5.Size = new System.Drawing.Size(185, 28);
-            this.iTalk_TextBox_Small5.TabIndex = 0;
-            this.iTalk_TextBox_Small5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small5.UseSystemPasswordChar = false;
+            this.txtPeso.BackColor = System.Drawing.Color.Transparent;
+            this.txtPeso.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPeso.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPeso.Location = new System.Drawing.Point(754, 127);
+            this.txtPeso.MaxLength = 32767;
+            this.txtPeso.Multiline = false;
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.ReadOnly = false;
+            this.txtPeso.Size = new System.Drawing.Size(185, 28);
+            this.txtPeso.TabIndex = 0;
+            this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPeso.UseSystemPasswordChar = false;
             // 
             // iTalk_Label9
             // 
@@ -367,65 +367,65 @@
             this.iTalk_Label1.TabIndex = 1;
             this.iTalk_Label1.Text = "Cod";
             // 
-            // iTalk_TextBox_Small2
+            // txtTipo
             // 
-            this.iTalk_TextBox_Small2.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small2.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small2.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small2.Location = new System.Drawing.Point(215, 256);
-            this.iTalk_TextBox_Small2.MaxLength = 32767;
-            this.iTalk_TextBox_Small2.Multiline = false;
-            this.iTalk_TextBox_Small2.Name = "iTalk_TextBox_Small2";
-            this.iTalk_TextBox_Small2.ReadOnly = false;
-            this.iTalk_TextBox_Small2.Size = new System.Drawing.Size(232, 28);
-            this.iTalk_TextBox_Small2.TabIndex = 0;
-            this.iTalk_TextBox_Small2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small2.UseSystemPasswordChar = false;
+            this.txtTipo.BackColor = System.Drawing.Color.Transparent;
+            this.txtTipo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtTipo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTipo.Location = new System.Drawing.Point(215, 256);
+            this.txtTipo.MaxLength = 32767;
+            this.txtTipo.Multiline = false;
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.ReadOnly = false;
+            this.txtTipo.Size = new System.Drawing.Size(232, 28);
+            this.txtTipo.TabIndex = 0;
+            this.txtTipo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTipo.UseSystemPasswordChar = false;
             // 
-            // txtTelefone
+            // txtFabri
             // 
-            this.txtTelefone.BackColor = System.Drawing.Color.Transparent;
-            this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtTelefone.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefone.Location = new System.Drawing.Point(215, 155);
-            this.txtTelefone.MaxLength = 32767;
-            this.txtTelefone.Multiline = false;
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.ReadOnly = false;
-            this.txtTelefone.Size = new System.Drawing.Size(232, 28);
-            this.txtTelefone.TabIndex = 0;
-            this.txtTelefone.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTelefone.UseSystemPasswordChar = false;
+            this.txtFabri.BackColor = System.Drawing.Color.Transparent;
+            this.txtFabri.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtFabri.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFabri.Location = new System.Drawing.Point(215, 155);
+            this.txtFabri.MaxLength = 32767;
+            this.txtFabri.Multiline = false;
+            this.txtFabri.Name = "txtFabri";
+            this.txtFabri.ReadOnly = false;
+            this.txtFabri.Size = new System.Drawing.Size(232, 28);
+            this.txtFabri.TabIndex = 0;
+            this.txtFabri.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtFabri.UseSystemPasswordChar = false;
             // 
-            // iTalk_TextBox_Small1
+            // txtPreco
             // 
-            this.iTalk_TextBox_Small1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small1.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small1.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small1.Location = new System.Drawing.Point(215, 208);
-            this.iTalk_TextBox_Small1.MaxLength = 32767;
-            this.iTalk_TextBox_Small1.Multiline = false;
-            this.iTalk_TextBox_Small1.Name = "iTalk_TextBox_Small1";
-            this.iTalk_TextBox_Small1.ReadOnly = false;
-            this.iTalk_TextBox_Small1.Size = new System.Drawing.Size(232, 28);
-            this.iTalk_TextBox_Small1.TabIndex = 0;
-            this.iTalk_TextBox_Small1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small1.UseSystemPasswordChar = false;
+            this.txtPreco.BackColor = System.Drawing.Color.Transparent;
+            this.txtPreco.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPreco.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPreco.Location = new System.Drawing.Point(215, 208);
+            this.txtPreco.MaxLength = 32767;
+            this.txtPreco.Multiline = false;
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.ReadOnly = false;
+            this.txtPreco.Size = new System.Drawing.Size(232, 28);
+            this.txtPreco.TabIndex = 0;
+            this.txtPreco.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPreco.UseSystemPasswordChar = false;
             // 
-            // txtNome
+            // txtDescri
             // 
-            this.txtNome.BackColor = System.Drawing.Color.Transparent;
-            this.txtNome.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtNome.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNome.Location = new System.Drawing.Point(215, 107);
-            this.txtNome.MaxLength = 32767;
-            this.txtNome.Multiline = false;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.ReadOnly = false;
-            this.txtNome.Size = new System.Drawing.Size(232, 28);
-            this.txtNome.TabIndex = 0;
-            this.txtNome.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtNome.UseSystemPasswordChar = false;
+            this.txtDescri.BackColor = System.Drawing.Color.Transparent;
+            this.txtDescri.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtDescri.ForeColor = System.Drawing.Color.DimGray;
+            this.txtDescri.Location = new System.Drawing.Point(215, 107);
+            this.txtDescri.MaxLength = 32767;
+            this.txtDescri.Multiline = false;
+            this.txtDescri.Name = "txtDescri";
+            this.txtDescri.ReadOnly = false;
+            this.txtDescri.Size = new System.Drawing.Size(232, 28);
+            this.txtDescri.TabIndex = 0;
+            this.txtDescri.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDescri.UseSystemPasswordChar = false;
             // 
             // iTalk_TextBox_Small4
             // 
@@ -442,20 +442,20 @@
             this.iTalk_TextBox_Small4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.iTalk_TextBox_Small4.UseSystemPasswordChar = false;
             // 
-            // txtCpf
+            // txtCodigo
             // 
-            this.txtCpf.BackColor = System.Drawing.Color.Transparent;
-            this.txtCpf.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtCpf.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCpf.Location = new System.Drawing.Point(215, 58);
-            this.txtCpf.MaxLength = 32767;
-            this.txtCpf.Multiline = false;
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.ReadOnly = false;
-            this.txtCpf.Size = new System.Drawing.Size(232, 28);
-            this.txtCpf.TabIndex = 0;
-            this.txtCpf.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCpf.UseSystemPasswordChar = false;
+            this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.txtCodigo.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtCodigo.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCodigo.Location = new System.Drawing.Point(215, 58);
+            this.txtCodigo.MaxLength = 32767;
+            this.txtCodigo.Multiline = false;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = false;
+            this.txtCodigo.Size = new System.Drawing.Size(232, 28);
+            this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCodigo.UseSystemPasswordChar = false;
             // 
             // btPesquisar
             // 
@@ -544,6 +544,7 @@
             this.btExcluir.TabIndex = 8;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // FormPecas
             // 
@@ -565,7 +566,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPecas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -573,33 +574,33 @@
         #endregion
 
         private iTalk.iTalk_GroupBox iTalk_GroupBox1;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small7;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small6;
+        private iTalk.iTalk_TextBox_Small txtTorque;
+        private iTalk.iTalk_TextBox_Small txtPotencia;
         private iTalk.iTalk_ComboBox txtModelo;
         private iTalk.iTalk_Label iTalk_Label7;
         private iTalk.iTalk_Label iTalk_Label8;
         private iTalk.iTalk_Label iTalk_Label6;
         private iTalk.iTalk_Label iTalk_Label4;
         private iTalk.iTalk_Label iTalk_Label3;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small5;
+        private iTalk.iTalk_TextBox_Small txtPeso;
         private iTalk.iTalk_Label iTalk_Label9;
         private iTalk.iTalk_Label iTalk_Label2;
         private iTalk.iTalk_Label iTalk_Label5;
         private iTalk.iTalk_Label iTalk_Label11;
         private iTalk.iTalk_Label iTalk_Label1;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small2;
-        private iTalk.iTalk_TextBox_Small txtTelefone;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small1;
-        private iTalk.iTalk_TextBox_Small txtNome;
+        private iTalk.iTalk_TextBox_Small txtTipo;
+        private iTalk.iTalk_TextBox_Small txtFabri;
+        private iTalk.iTalk_TextBox_Small txtPreco;
+        private iTalk.iTalk_TextBox_Small txtDescri;
         private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small4;
-        private iTalk.iTalk_TextBox_Small txtCpf;
+        private iTalk.iTalk_TextBox_Small txtCodigo;
         private iTalk.iTalk_Button_2 btPesquisar;
         private iTalk.iTalk_Button_2 btNovo;
         private iTalk.iTalk_Button_2 btSalvar;
         private iTalk.iTalk_Button_2 btLimpar;
         private iTalk.iTalk_Button_2 btEditar;
         private iTalk.iTalk_Button_2 btExcluir;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvPecas;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

@@ -49,13 +49,13 @@ namespace car_tuning.DAO
             {
                 co.Modelo = dr["modelo"].ToString();
                 co.Marca = dr["marca"].ToString();
-                co.Peso = Int32.Parse(dr["peso"].ToString());
-                co.VelocidadeMax = Int32.Parse(dr["velocidade_max"].ToString());
-                co.Potencia = Int32.Parse(dr["potencia"].ToString());
-                co.Aceleracao = Int32.Parse(dr["aceleracao"].ToString());
-                co.Torque = Int32.Parse(dr["torque"].ToString());
-                co.Consumo = Int32.Parse(dr["consumo"].ToString());
-                co.RotacaoMax = Int32.Parse(dr["rotacao_max"].ToString());
+                co.Peso = Double.Parse(dr["peso"].ToString());
+                co.VelocidadeMax = Double.Parse(dr["velocidade_max"].ToString());
+                co.Potencia = Double.Parse(dr["potencia"].ToString());
+                co.Aceleracao = Double.Parse(dr["aceleracao"].ToString());
+                co.Torque = Double.Parse(dr["torque"].ToString());
+                co.Consumo = Double.Parse(dr["consumo"].ToString());
+                co.RotacaoMax = Double.Parse(dr["rotacao_max"].ToString());
 
                 lista.Add(new CarroOriginal(co.Modelo,co.Marca,co.Peso,co.Aceleracao, co.Torque,co.Potencia, co.VelocidadeMax,co.Consumo,co.RotacaoMax));
             }

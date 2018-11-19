@@ -1,4 +1,5 @@
-﻿using System;
+﻿using car_tuning.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace car_tuning
 {
     public partial class FormPecas : Form
     {
+        PecasDAO p = new PecasDAO();
         public FormPecas()
         {
             InitializeComponent();
@@ -36,6 +38,19 @@ namespace car_tuning
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
+            PecasDAO pecasDAO = new PecasDAO();
+            Pecas pecas = GetDTO();
+
+            if (txtCodigo.Text != "")
+            {
+                pecasDAO.Salvar(pecas);
+                dgvPecas.DataSource = p.Carregar();
+
+            }
+            else
+            {
+                MessageBox.Show(this, "Favor preencheros campos ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
         }
 
@@ -43,6 +58,10 @@ namespace car_tuning
         {
             ControlaBotoes(true);
             limparCampos();
+
+        }
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -53,6 +72,32 @@ namespace car_tuning
             btSalvar.Enabled = false;
         }
 
+        private Pecas GetDTO()
+        {
+            Pecas p = new Pecas();
+            p.AddPeso = Double.Parse(txtPeso.Text);
+            p.AddPotencia = Double.Parse(txtPotencia.Text);
+            p.AddTorque = Double.Parse(txtTorque.Text);
+            p.Codigo = Int32.Parse(txtCodigo.Text);
+            //p.Compatibilidade = txt
+            p.Descricao = txtDescri.Text;
+            p.Fabricante = txtFabri.Text;
+            p.Preco = Double.Parse(txtPreco.Text);
+            p.Tipo = txtTipo.Text;
+            return p;
+        }
+        private void SetDTO(Pecas p)
+        {
+            txtPeso.Text = p.AddPeso.ToString() ;
+            txtPotencia.Text = p.AddPotencia.ToString();
+            txtTorque.Text = p.AddTorque.ToString();
+            txtCodigo.Text = p.Codigo.ToString();
+            //p.Compatibilidade = txt
+            txtDescri.Text = p.Descricao;
+            txtFabri.Text = p.Fabricante;
+            txtPreco.Text = p.Preco.ToString();
+            txtTipo.Text = p.Tipo;
+        }
 
         
 
@@ -94,12 +139,13 @@ namespace car_tuning
 
         public void limparCampos()
         {
-            txtCpf.Text = "";
+            txtCodigo.Text = "";
             txtModelo.Text = "";
-            txtNome.Text = "";
-            txtTelefone.Text = "";
+            txtDescri.Text = "";
+            txtFabri.Text = "";
 
         }
 
+        
     }
 }

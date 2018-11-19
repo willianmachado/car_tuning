@@ -143,14 +143,13 @@ namespace car_tuning
             funcionario.Telefone = txtTelefone.Text.Trim();
             return funcionario;
         }
-        private Funcionario setDTO()
+        private void setDTO(Funcionario f)
         {
-            Funcionario f = new Funcionario();
+            
             txtCPF.Text = f.Cpf;
             txtNome.Text = f.Nome;
             txtTelefone.Text = f.Telefone;
-
-            return f;
+            
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using car_tuning.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -149,6 +150,18 @@ namespace car_tuning
         }
 
 
+        private Servico getDTO()
+        {
+            Servico servico = new Servico();
+            servico.CodCarro1 = Int32.Parse(txtCarro.Text);
+
+            return servico;
+        }
+
+        private void setDTO(Servico s)
+        {
+
+        }
 
         
 

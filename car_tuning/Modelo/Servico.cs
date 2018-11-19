@@ -22,6 +22,10 @@ namespace car_tuning.Modelo
             CodFuncionario = codFuncionario;
             this.valorTotal = valorTotal;
         }
+        public Servico()
+        {
+
+        }
 
         public int Codigo
         {

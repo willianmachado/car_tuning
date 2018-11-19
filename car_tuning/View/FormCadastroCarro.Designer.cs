@@ -100,6 +100,7 @@
             this.btNovo.TabIndex = 10;
             this.btNovo.Text = "Novo";
             this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
             // 
             // btSalvar
             // 
@@ -114,6 +115,7 @@
             this.btSalvar.TabIndex = 11;
             this.btSalvar.Text = "Salvar";
             this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // btLimpar
             // 
@@ -128,6 +130,7 @@
             this.btLimpar.TabIndex = 12;
             this.btLimpar.Text = "Cancelar";
             this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
             // btEditar
             // 
@@ -142,6 +145,7 @@
             this.btEditar.TabIndex = 13;
             this.btEditar.Text = "Editar";
             this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
             // btExcluir
             // 
@@ -156,6 +160,7 @@
             this.btExcluir.TabIndex = 14;
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // iTalk_GroupBox1
             // 
