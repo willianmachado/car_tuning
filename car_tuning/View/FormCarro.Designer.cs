@@ -188,7 +188,6 @@
             this.pbPeso.Name = "pbPeso";
             this.pbPeso.Size = new System.Drawing.Size(219, 23);
             this.pbPeso.TabIndex = 39;
-            this.pbPeso.Validated += new System.EventHandler(this.pbPeso_Validated);
             // 
             // iTalk_GroupBox1
             // 
@@ -351,7 +350,7 @@
             this.txtPeso.TabIndex = 42;
             this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPeso.UseSystemPasswordChar = false;
-            this.txtPeso.TextChanged += new System.EventHandler(this.pbPeso_Validated);
+            this.txtPeso.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
             // 
             // txtConsumo
             // 

@@ -16,22 +16,22 @@ namespace car_tuning.View
 
         CarroDAO c = new CarroDAO();
 
-        public FormCarro() 
+        public FormCarro()
         {
             InitializeComponent();
         }
-        
+
 
         private void txtAno_TextChanged_1(object sender, EventArgs e)
         {
 
         }
-        
+
         private void txtMarca_TextChanged(object sender, EventArgs e)
         {
 
             lbMarca.Text = txtMarca.Text;
-        }    
+        }
 
 
         private void txtModelo_TextChanged(object sender, EventArgs e)
@@ -55,14 +55,14 @@ namespace car_tuning.View
         private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Designar apenas numeros para o txtAno
-                if (!char.IsDigit(e.KeyChar))
+            if (!char.IsDigit(e.KeyChar))
 
-                {
+            {
 
-                    e.Handled = true;
+                e.Handled = true;
 
-                }
             }
+        }
 
 
         private void btNovo_Click(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace car_tuning.View
 
         }
 
-        
+
 
         private void btPesquisar_Click(object sender, EventArgs e)
         {
@@ -202,42 +202,49 @@ namespace car_tuning.View
 
         }
 
-        private void pbPeso_Validated(object sender, EventArgs e)
-        {
-           int valor = 0;
+        private void pbFill() {
 
-            if (txtPeso.Text != "" && valor < 2801)
-                       
-            try
-            {
-                valor = int.Parse(txtPeso.Text);
-                pbPeso.Value = valor;
-            }
-            catch
-            {
-                MessageBox.Show("O peso deve ser até 2800 kg");
-                txtPeso.Text = "";
-                valor = 1;
-            }
-        }
+            int peso = 0;
+            int consumo = 0;
 
-        private void txtConsumo_TextChanged(object sender, EventArgs e)
-        {
-            int valor = 0;
-
-            if (txtConsumo.Text != "" && valor < 51)
+            if (txtPeso.Text != "" && peso < 2801)
 
                 try
                 {
-                    valor = int.Parse(txtConsumo.Text);
-                    pbConsumo.Value = valor;
+                    peso = int.Parse(txtPeso.Text);
+                    pbPeso.Value = peso;
+                }
+                catch
+                {
+                    MessageBox.Show("O peso deve ser até 2800 kg");
+                    txtPeso.Text = "";
+                    peso = 1;
+                }
+
+            if (txtConsumo.Text != "" && consumo < 51)
+
+                try
+                {
+                    consumo = int.Parse(txtConsumo.Text);
+                    pbConsumo.Value = consumo;
                 }
                 catch
                 {
                     MessageBox.Show("O consumo deve ser até 50 km/L");
                     txtConsumo.Text = "";
-                    valor = 1;
+                    consumo = 1;
                 }
+        }
+
+        private void txtPeso_TextChanged(object sender, EventArgs e)
+        {
+            pbFill();
+        }
+
+        private void txtConsumo_TextChanged(object sender, EventArgs e)
+        {
+            pbFill();
         }
     }
 }
+    
