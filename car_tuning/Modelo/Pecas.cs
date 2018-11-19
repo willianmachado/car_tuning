@@ -18,31 +18,140 @@ namespace car_tuning.Modelo
         private Double addPeso;
         private Double addPotencia;
 
+        public int Codigo
+        {
+            get
+            {
+                return codigo;
+            }
+
+            set
+            {
+                codigo = value;
+            }
+        }
+
+        public string Fabricante
+        {
+            get
+            {
+                return fabricante;
+            }
+
+            set
+            {
+                fabricante = value;
+            }
+        }
+
+        public double Preco
+        {
+            get
+            {
+                return preco;
+            }
+
+            set
+            {
+                preco = value;
+            }
+        }
+
+        public string Compatibilidade
+        {
+            get
+            {
+                return compatibilidade;
+            }
+
+            set
+            {
+                compatibilidade = value;
+            }
+        }
+
+        public string Tipo
+        {
+            get
+            {
+                return tipo;
+            }
+
+            set
+            {
+                tipo = value;
+            }
+        }
+
+        public string Descricao
+        {
+            get
+            {
+                return descricao;
+            }
+
+            set
+            {
+                descricao = value;
+            }
+        }
+
+        public double AddTorque
+        {
+            get
+            {
+                return addTorque;
+            }
+
+            set
+            {
+                addTorque = value;
+            }
+        }
+
+        public double AddPeso
+        {
+            get
+            {
+                return addPeso;
+            }
+
+            set
+            {
+                addPeso = value;
+            }
+        }
+
+        public double AddPotencia
+        {
+            get
+            {
+                return addPotencia;
+            }
+
+            set
+            {
+                addPotencia = value;
+            }
+        }
+
         public Pecas(int codigo, string fabricante, double preco, string compatibilidade, string tipo, string descricao, double addTorque, double addPeso, double addPotencia)
         {
-            this.codigo = codigo;
-            this.fabricante = fabricante;
-            this.preco = preco;
-            this.compatibilidade = compatibilidade;
-            this.tipo = tipo;
-            this.descricao = descricao;
-            this.addTorque = addTorque;
-            this.addPeso = addPeso;
-            this.addPotencia = addPotencia;
+            this.Codigo = codigo;
+            this.Fabricante = fabricante;
+            this.Preco = preco;
+            this.Compatibilidade = compatibilidade;
+            this.Tipo = tipo;
+            this.Descricao = descricao;
+            this.AddTorque = addTorque;
+            this.AddPeso = addPeso;
+            this.AddPotencia = addPotencia;
         }
         public Pecas()
         {
 
         }
-        public int Codigo { get => codigo; set => codigo = value; }
-        public string Fabricante { get => fabricante; set => fabricante = value; }
-        public double Preco { get => preco; set => preco = value; }
-        public string Compatibilidade { get => compatibilidade; set => compatibilidade = value; }
-        public string Tipo { get => tipo; set => tipo = value; }
-        public string Descricao { get => descricao; set => descricao = value; }
-        public double AddTorque { get => addTorque; set => addTorque = value; }
-        public double AddPeso { get => addPeso; set => addPeso = value; }
-        public double AddPotencia { get => addPotencia; set => addPotencia = value; }
+        
     }
 
 }

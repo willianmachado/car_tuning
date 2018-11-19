@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
+            this.progressBar7 = new System.Windows.Forms.ProgressBar();
+            this.progressBar6 = new System.Windows.Forms.ProgressBar();
+            this.progressBar5 = new System.Windows.Forms.ProgressBar();
+            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.pbPeso = new System.Windows.Forms.ProgressBar();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
             this.btnCadVeiNovo = new iTalk.iTalk_Button_2();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
@@ -44,7 +51,6 @@
             this.txtTorque = new iTalk.iTalk_TextBox_Small();
             this.txtVelMaxima = new iTalk.iTalk_TextBox_Small();
             this.txtPotencia = new iTalk.iTalk_TextBox_Small();
-            this.txtPeso = new iTalk.iTalk_TextBox_Small();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -56,13 +62,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMarca = new System.Windows.Forms.ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
-            this.mephProgressBar7 = new CS_ClassLibraryTester.MephProgressBar();
-            this.mephProgressBar6 = new CS_ClassLibraryTester.MephProgressBar();
-            this.mephProgressBar4 = new CS_ClassLibraryTester.MephProgressBar();
-            this.mephProgressBar3 = new CS_ClassLibraryTester.MephProgressBar();
-            this.mephProgressBar2 = new CS_ClassLibraryTester.MephProgressBar();
-            this.mephProgressBar5 = new CS_ClassLibraryTester.MephProgressBar();
-            this.mephProgressBar1 = new CS_ClassLibraryTester.MephProgressBar();
             this.iTalk_Label20 = new iTalk.iTalk_Label();
             this.imgCarro = new System.Windows.Forms.PictureBox();
             this.iTalk_Label18 = new iTalk.iTalk_Label();
@@ -87,6 +86,7 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
+            this.txtPeso = new System.Windows.Forms.TextBox();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
@@ -99,14 +99,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox2.Controls.Add(this.progressBar7);
+            this.iTalk_GroupBox2.Controls.Add(this.progressBar6);
+            this.iTalk_GroupBox2.Controls.Add(this.progressBar5);
+            this.iTalk_GroupBox2.Controls.Add(this.progressBar4);
+            this.iTalk_GroupBox2.Controls.Add(this.progressBar3);
+            this.iTalk_GroupBox2.Controls.Add(this.progressBar2);
+            this.iTalk_GroupBox2.Controls.Add(this.pbPeso);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_GroupBox1);
-            this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar7);
-            this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar6);
-            this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar4);
-            this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar3);
-            this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar2);
-            this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar5);
-            this.iTalk_GroupBox2.Controls.Add(this.mephProgressBar1);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label20);
             this.iTalk_GroupBox2.Controls.Add(this.imgCarro);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label18);
@@ -132,9 +132,61 @@
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(1180, 703);
             this.iTalk_GroupBox2.TabIndex = 9;
             // 
+            // progressBar7
+            // 
+            this.progressBar7.Location = new System.Drawing.Point(826, 562);
+            this.progressBar7.Name = "progressBar7";
+            this.progressBar7.Size = new System.Drawing.Size(219, 23);
+            this.progressBar7.TabIndex = 39;
+            // 
+            // progressBar6
+            // 
+            this.progressBar6.Location = new System.Drawing.Point(826, 533);
+            this.progressBar6.Name = "progressBar6";
+            this.progressBar6.Size = new System.Drawing.Size(219, 23);
+            this.progressBar6.TabIndex = 39;
+            // 
+            // progressBar5
+            // 
+            this.progressBar5.Location = new System.Drawing.Point(826, 502);
+            this.progressBar5.Name = "progressBar5";
+            this.progressBar5.Size = new System.Drawing.Size(219, 23);
+            this.progressBar5.TabIndex = 39;
+            // 
+            // progressBar4
+            // 
+            this.progressBar4.Location = new System.Drawing.Point(826, 473);
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.Size = new System.Drawing.Size(219, 23);
+            this.progressBar4.TabIndex = 39;
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(826, 443);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(219, 23);
+            this.progressBar3.TabIndex = 39;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(826, 414);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(219, 23);
+            this.progressBar2.TabIndex = 39;
+            // 
+            // pbPeso
+            // 
+            this.pbPeso.Location = new System.Drawing.Point(826, 384);
+            this.pbPeso.Maximum = 2800;
+            this.pbPeso.Name = "pbPeso";
+            this.pbPeso.Size = new System.Drawing.Size(219, 23);
+            this.pbPeso.TabIndex = 39;
+            this.pbPeso.Validated += new System.EventHandler(this.pbPeso_Validated);
+            // 
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.txtPeso);
             this.iTalk_GroupBox1.Controls.Add(this.btnCadVeiNovo);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
@@ -149,7 +201,6 @@
             this.iTalk_GroupBox1.Controls.Add(this.txtTorque);
             this.iTalk_GroupBox1.Controls.Add(this.txtVelMaxima);
             this.iTalk_GroupBox1.Controls.Add(this.txtPotencia);
-            this.iTalk_GroupBox1.Controls.Add(this.txtPeso);
             this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
             this.iTalk_GroupBox1.Controls.Add(this.textBox1);
@@ -354,21 +405,6 @@
             this.txtPotencia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPotencia.UseSystemPasswordChar = false;
             // 
-            // txtPeso
-            // 
-            this.txtPeso.BackColor = System.Drawing.Color.Transparent;
-            this.txtPeso.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtPeso.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPeso.Location = new System.Drawing.Point(93, 194);
-            this.txtPeso.MaxLength = 32767;
-            this.txtPeso.Multiline = false;
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.ReadOnly = false;
-            this.txtPeso.Size = new System.Drawing.Size(140, 28);
-            this.txtPeso.TabIndex = 47;
-            this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPeso.UseSystemPasswordChar = false;
-            // 
             // txtCpf
             // 
             this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -481,90 +517,6 @@
             this.iTalk_Label7.Size = new System.Drawing.Size(56, 21);
             this.iTalk_Label7.TabIndex = 6;
             this.iTalk_Label7.Text = "Carros";
-            // 
-            // mephProgressBar7
-            // 
-            this.mephProgressBar7.BackColor = System.Drawing.Color.Transparent;
-            this.mephProgressBar7.Location = new System.Drawing.Point(837, 561);
-            this.mephProgressBar7.Maximum = 100;
-            this.mephProgressBar7.Name = "mephProgressBar7";
-            this.mephProgressBar7.ShowPercentage = false;
-            this.mephProgressBar7.Size = new System.Drawing.Size(208, 23);
-            this.mephProgressBar7.TabIndex = 2;
-            this.mephProgressBar7.Text = "Rotação Maxima";
-            this.mephProgressBar7.Value = 0;
-            // 
-            // mephProgressBar6
-            // 
-            this.mephProgressBar6.BackColor = System.Drawing.Color.Transparent;
-            this.mephProgressBar6.Location = new System.Drawing.Point(837, 532);
-            this.mephProgressBar6.Maximum = 100;
-            this.mephProgressBar6.Name = "mephProgressBar6";
-            this.mephProgressBar6.ShowPercentage = false;
-            this.mephProgressBar6.Size = new System.Drawing.Size(208, 23);
-            this.mephProgressBar6.TabIndex = 2;
-            this.mephProgressBar6.Text = "mephProgressBar1";
-            this.mephProgressBar6.Value = 0;
-            // 
-            // mephProgressBar4
-            // 
-            this.mephProgressBar4.BackColor = System.Drawing.Color.Transparent;
-            this.mephProgressBar4.Location = new System.Drawing.Point(837, 503);
-            this.mephProgressBar4.Maximum = 100;
-            this.mephProgressBar4.Name = "mephProgressBar4";
-            this.mephProgressBar4.ShowPercentage = false;
-            this.mephProgressBar4.Size = new System.Drawing.Size(208, 23);
-            this.mephProgressBar4.TabIndex = 2;
-            this.mephProgressBar4.Text = "mephProgressBar1";
-            this.mephProgressBar4.Value = 0;
-            // 
-            // mephProgressBar3
-            // 
-            this.mephProgressBar3.BackColor = System.Drawing.Color.Transparent;
-            this.mephProgressBar3.Location = new System.Drawing.Point(837, 474);
-            this.mephProgressBar3.Maximum = 100;
-            this.mephProgressBar3.Name = "mephProgressBar3";
-            this.mephProgressBar3.ShowPercentage = false;
-            this.mephProgressBar3.Size = new System.Drawing.Size(208, 23);
-            this.mephProgressBar3.TabIndex = 2;
-            this.mephProgressBar3.Text = "mephProgressBar1";
-            this.mephProgressBar3.Value = 0;
-            // 
-            // mephProgressBar2
-            // 
-            this.mephProgressBar2.BackColor = System.Drawing.Color.Transparent;
-            this.mephProgressBar2.Location = new System.Drawing.Point(837, 445);
-            this.mephProgressBar2.Maximum = 100;
-            this.mephProgressBar2.Name = "mephProgressBar2";
-            this.mephProgressBar2.ShowPercentage = false;
-            this.mephProgressBar2.Size = new System.Drawing.Size(208, 23);
-            this.mephProgressBar2.TabIndex = 2;
-            this.mephProgressBar2.Text = "mephProgressBar1";
-            this.mephProgressBar2.Value = 0;
-            // 
-            // mephProgressBar5
-            // 
-            this.mephProgressBar5.BackColor = System.Drawing.Color.Transparent;
-            this.mephProgressBar5.Location = new System.Drawing.Point(837, 416);
-            this.mephProgressBar5.Maximum = 100;
-            this.mephProgressBar5.Name = "mephProgressBar5";
-            this.mephProgressBar5.ShowPercentage = false;
-            this.mephProgressBar5.Size = new System.Drawing.Size(208, 23);
-            this.mephProgressBar5.TabIndex = 2;
-            this.mephProgressBar5.Text = "mephProgressBar1";
-            this.mephProgressBar5.Value = 0;
-            // 
-            // mephProgressBar1
-            // 
-            this.mephProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.mephProgressBar1.Location = new System.Drawing.Point(837, 387);
-            this.mephProgressBar1.Maximum = 200;
-            this.mephProgressBar1.Name = "mephProgressBar1";
-            this.mephProgressBar1.ShowPercentage = false;
-            this.mephProgressBar1.Size = new System.Drawing.Size(208, 23);
-            this.mephProgressBar1.TabIndex = 2;
-            this.mephProgressBar1.Text = "mephProgressBar1";
-            this.mephProgressBar1.Value = 0;
             // 
             // iTalk_Label20
             // 
@@ -875,6 +827,14 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
+            // txtPeso
+            // 
+            this.txtPeso.Location = new System.Drawing.Point(84, 194);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(149, 20);
+            this.txtPeso.TabIndex = 56;
+            this.txtPeso.TextChanged += new System.EventHandler(this.pbPeso_Validated);
+            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -914,13 +874,6 @@
         private iTalk.iTalk_Button_2 btEditar;
         private iTalk.iTalk_Button_2 btExcluir;
         private iTalk.iTalk_GroupBox iTalk_GroupBox2;
-        private CS_ClassLibraryTester.MephProgressBar mephProgressBar7;
-        private CS_ClassLibraryTester.MephProgressBar mephProgressBar6;
-        private CS_ClassLibraryTester.MephProgressBar mephProgressBar4;
-        private CS_ClassLibraryTester.MephProgressBar mephProgressBar3;
-        private CS_ClassLibraryTester.MephProgressBar mephProgressBar2;
-        private CS_ClassLibraryTester.MephProgressBar mephProgressBar5;
-        private CS_ClassLibraryTester.MephProgressBar mephProgressBar1;
         private iTalk.iTalk_Label iTalk_Label20;
         private System.Windows.Forms.PictureBox imgCarro;
         private iTalk.iTalk_Label iTalk_Label18;
@@ -964,7 +917,14 @@
         private iTalk.iTalk_TextBox_Small txtTorque;
         private iTalk.iTalk_TextBox_Small txtVelMaxima;
         private iTalk.iTalk_TextBox_Small txtPotencia;
-        private iTalk.iTalk_TextBox_Small txtPeso;
         private iTalk.iTalk_Button_2 btnCadVeiNovo;
+        private System.Windows.Forms.ProgressBar progressBar7;
+        private System.Windows.Forms.ProgressBar progressBar6;
+        private System.Windows.Forms.ProgressBar progressBar5;
+        private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar pbPeso;
+        private System.Windows.Forms.TextBox txtPeso;
     }
 }

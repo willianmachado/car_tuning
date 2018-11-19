@@ -31,10 +31,10 @@ namespace car_tuning.Modelo
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
-        /*
+        
         public List<CarroOriginal> Carregar()
         {
-            List<Carro> lista = new List<Carro>();
+            List<CarroOriginal> lista = new List<CarroOriginal>();
             Carro c = new Carro();
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
@@ -60,7 +60,7 @@ namespace car_tuning.Modelo
             return lista;
 
         }
-        */
+        
         public List<Cliente> BuscaNome(string cpf)
         {
             List<Cliente> lista = new List<Cliente>();

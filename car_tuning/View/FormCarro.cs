@@ -201,5 +201,24 @@ namespace car_tuning.View
             txtVelMaxima.Text = "";
 
         }
+
+        private void pbPeso_Validated(object sender, EventArgs e)
+        {
+            
+            int peso = 0;
+            peso = int.Parse(txtPeso.Text);
+
+            if (peso != 0 && peso < 2801)
+            {
+                pbPeso.Value = peso;
+            }
+
+            if (peso > 2800)
+            {
+                MessageBox.Show("O peso deve ser inferior a 2800 kg");
+                txtPeso.Text = "0";
+                peso = 1;
+            }
+        }
     }
 }
