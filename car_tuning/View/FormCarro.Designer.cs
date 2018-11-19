@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
-            this.progressBar7 = new System.Windows.Forms.ProgressBar();
-            this.progressBar6 = new System.Windows.Forms.ProgressBar();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.pbRotacao = new System.Windows.Forms.ProgressBar();
+            this.pbConsumo = new System.Windows.Forms.ProgressBar();
+            this.pbAceleracao = new System.Windows.Forms.ProgressBar();
+            this.pbTorque = new System.Windows.Forms.ProgressBar();
+            this.pbVelocidadeMax = new System.Windows.Forms.ProgressBar();
+            this.pbPotencia = new System.Windows.Forms.ProgressBar();
             this.pbPeso = new System.Windows.Forms.ProgressBar();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
             this.btnCadVeiNovo = new iTalk.iTalk_Button_2();
@@ -46,6 +48,7 @@
             this.iTalk_Label22 = new iTalk.iTalk_Label();
             this.iTalk_Label23 = new iTalk.iTalk_Label();
             this.txtRotacaoMax = new iTalk.iTalk_TextBox_Small();
+            this.txtPeso = new iTalk.iTalk_TextBox_Small();
             this.txtConsumo = new iTalk.iTalk_TextBox_Small();
             this.txtAceleracao = new iTalk.iTalk_TextBox_Small();
             this.txtTorque = new iTalk.iTalk_TextBox_Small();
@@ -86,12 +89,16 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.txtPeso = new System.Windows.Forms.TextBox();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.SuspendLayout();
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // iTalk_GroupBox2
             // 
@@ -99,12 +106,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox2.Controls.Add(this.progressBar7);
-            this.iTalk_GroupBox2.Controls.Add(this.progressBar6);
-            this.iTalk_GroupBox2.Controls.Add(this.progressBar5);
-            this.iTalk_GroupBox2.Controls.Add(this.progressBar4);
-            this.iTalk_GroupBox2.Controls.Add(this.progressBar3);
-            this.iTalk_GroupBox2.Controls.Add(this.progressBar2);
+            this.iTalk_GroupBox2.Controls.Add(this.pbRotacao);
+            this.iTalk_GroupBox2.Controls.Add(this.pbConsumo);
+            this.iTalk_GroupBox2.Controls.Add(this.pbAceleracao);
+            this.iTalk_GroupBox2.Controls.Add(this.pbTorque);
+            this.iTalk_GroupBox2.Controls.Add(this.pbVelocidadeMax);
+            this.iTalk_GroupBox2.Controls.Add(this.pbPotencia);
             this.iTalk_GroupBox2.Controls.Add(this.pbPeso);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_GroupBox1);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label20);
@@ -132,47 +139,47 @@
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(1180, 703);
             this.iTalk_GroupBox2.TabIndex = 9;
             // 
-            // progressBar7
+            // pbRotacao
             // 
-            this.progressBar7.Location = new System.Drawing.Point(826, 562);
-            this.progressBar7.Name = "progressBar7";
-            this.progressBar7.Size = new System.Drawing.Size(219, 23);
-            this.progressBar7.TabIndex = 39;
+            this.pbRotacao.Location = new System.Drawing.Point(826, 562);
+            this.pbRotacao.Name = "pbRotacao";
+            this.pbRotacao.Size = new System.Drawing.Size(219, 23);
+            this.pbRotacao.TabIndex = 39;
             // 
-            // progressBar6
+            // pbConsumo
             // 
-            this.progressBar6.Location = new System.Drawing.Point(826, 533);
-            this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(219, 23);
-            this.progressBar6.TabIndex = 39;
+            this.pbConsumo.Location = new System.Drawing.Point(826, 533);
+            this.pbConsumo.Name = "pbConsumo";
+            this.pbConsumo.Size = new System.Drawing.Size(219, 23);
+            this.pbConsumo.TabIndex = 39;
             // 
-            // progressBar5
+            // pbAceleracao
             // 
-            this.progressBar5.Location = new System.Drawing.Point(826, 502);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(219, 23);
-            this.progressBar5.TabIndex = 39;
+            this.pbAceleracao.Location = new System.Drawing.Point(826, 502);
+            this.pbAceleracao.Name = "pbAceleracao";
+            this.pbAceleracao.Size = new System.Drawing.Size(219, 23);
+            this.pbAceleracao.TabIndex = 39;
             // 
-            // progressBar4
+            // pbTorque
             // 
-            this.progressBar4.Location = new System.Drawing.Point(826, 473);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(219, 23);
-            this.progressBar4.TabIndex = 39;
+            this.pbTorque.Location = new System.Drawing.Point(826, 473);
+            this.pbTorque.Name = "pbTorque";
+            this.pbTorque.Size = new System.Drawing.Size(219, 23);
+            this.pbTorque.TabIndex = 39;
             // 
-            // progressBar3
+            // pbVelocidadeMax
             // 
-            this.progressBar3.Location = new System.Drawing.Point(826, 443);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(219, 23);
-            this.progressBar3.TabIndex = 39;
+            this.pbVelocidadeMax.Location = new System.Drawing.Point(826, 443);
+            this.pbVelocidadeMax.Name = "pbVelocidadeMax";
+            this.pbVelocidadeMax.Size = new System.Drawing.Size(219, 23);
+            this.pbVelocidadeMax.TabIndex = 39;
             // 
-            // progressBar2
+            // pbPotencia
             // 
-            this.progressBar2.Location = new System.Drawing.Point(826, 414);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(219, 23);
-            this.progressBar2.TabIndex = 39;
+            this.pbPotencia.Location = new System.Drawing.Point(826, 414);
+            this.pbPotencia.Name = "pbPotencia";
+            this.pbPotencia.Size = new System.Drawing.Size(219, 23);
+            this.pbPotencia.TabIndex = 39;
             // 
             // pbPeso
             // 
@@ -186,7 +193,6 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox1.Controls.Add(this.txtPeso);
             this.iTalk_GroupBox1.Controls.Add(this.btnCadVeiNovo);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
@@ -196,6 +202,7 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label22);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label23);
             this.iTalk_GroupBox1.Controls.Add(this.txtRotacaoMax);
+            this.iTalk_GroupBox1.Controls.Add(this.txtPeso);
             this.iTalk_GroupBox1.Controls.Add(this.txtConsumo);
             this.iTalk_GroupBox1.Controls.Add(this.txtAceleracao);
             this.iTalk_GroupBox1.Controls.Add(this.txtTorque);
@@ -330,6 +337,22 @@
             this.txtRotacaoMax.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRotacaoMax.UseSystemPasswordChar = false;
             // 
+            // txtPeso
+            // 
+            this.txtPeso.BackColor = System.Drawing.Color.Transparent;
+            this.txtPeso.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPeso.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPeso.Location = new System.Drawing.Point(93, 191);
+            this.txtPeso.MaxLength = 32767;
+            this.txtPeso.Multiline = false;
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.ReadOnly = false;
+            this.txtPeso.Size = new System.Drawing.Size(140, 28);
+            this.txtPeso.TabIndex = 42;
+            this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPeso.UseSystemPasswordChar = false;
+            this.txtPeso.TextChanged += new System.EventHandler(this.pbPeso_Validated);
+            // 
             // txtConsumo
             // 
             this.txtConsumo.BackColor = System.Drawing.Color.Transparent;
@@ -344,6 +367,7 @@
             this.txtConsumo.TabIndex = 42;
             this.txtConsumo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtConsumo.UseSystemPasswordChar = false;
+            this.txtConsumo.TextChanged += new System.EventHandler(this.txtConsumo_TextChanged);
             // 
             // txtAceleracao
             // 
@@ -827,14 +851,6 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // txtPeso
-            // 
-            this.txtPeso.Location = new System.Drawing.Point(84, 194);
-            this.txtPeso.Name = "txtPeso";
-            this.txtPeso.Size = new System.Drawing.Size(149, 20);
-            this.txtPeso.TabIndex = 56;
-            this.txtPeso.TextChanged += new System.EventHandler(this.pbPeso_Validated);
-            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -918,13 +934,14 @@
         private iTalk.iTalk_TextBox_Small txtVelMaxima;
         private iTalk.iTalk_TextBox_Small txtPotencia;
         private iTalk.iTalk_Button_2 btnCadVeiNovo;
-        private System.Windows.Forms.ProgressBar progressBar7;
-        private System.Windows.Forms.ProgressBar progressBar6;
-        private System.Windows.Forms.ProgressBar progressBar5;
-        private System.Windows.Forms.ProgressBar progressBar4;
-        private System.Windows.Forms.ProgressBar progressBar3;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar pbRotacao;
+        private System.Windows.Forms.ProgressBar pbConsumo;
+        private System.Windows.Forms.ProgressBar pbAceleracao;
+        private System.Windows.Forms.ProgressBar pbTorque;
+        private System.Windows.Forms.ProgressBar pbVelocidadeMax;
+        private System.Windows.Forms.ProgressBar pbPotencia;
         private System.Windows.Forms.ProgressBar pbPeso;
-        private System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private iTalk.iTalk_TextBox_Small txtPeso;
     }
 }
