@@ -13,10 +13,20 @@ namespace car_tuning.Modelo
         private const string Data = "Data Source = car.db";
         public void Salvar(Carro carro)
         {
-            String sql = string.Format("INSERT INTO CARRO (modelo,marca,peso,velocidade_max,potencia,aceleracao,torque,consumo,rotacao_max) VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}','{7}','{8}')",
-                carro.Modelo, carro.Marca, carro.Peso, carro.VelocidadeMax, carro.Potencia, carro.Aceleracao, carro.Torque, carro.Consumo, carro.RotacaoMax);
-            DataBase bd = DataBase.GetInstance();
-            bd.GetConnection();
+            //Salvar CarroDAO
+                DataBase bd = DataBase.GetInstance();
+                bd.GetConnection();
+
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            string qry = string.Format("INSERT INTO CARRO (peso,velocidade_max,potencia,aceleracao,torque,consumo,rotacao_max) VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}')",
+                carro.Peso, carro.VelocidadeMax, carro.Potencia, carro.Aceleracao, carro.Torque, carro.Consumo, carro.RotacaoMax);
+
+            bd.ExecuteSQL(qry);
+            conn.Close();
+
         }
 
         public void Deletar(int index)
@@ -55,7 +65,7 @@ namespace car_tuning.Modelo
                 c.Consumo = Int32.Parse(dr["consumo"].ToString());
                 c.RotacaoMax = Int32.Parse(dr["rotacao_max"].ToString());
 
-                 lista.Add(new Carro(c.Modelo, c.Marca, c.Peso, c.Aceleracao, c.Torque, c.Potencia, c.VelocidadeMax, c.Consumo, c.RotacaoMax));
+                 lista.Add(new Carro(c.Cod, c.Modelo, c.Marca, c.Peso, c.Aceleracao, c.Torque, c.Potencia, c.VelocidadeMax, c.Consumo, c.RotacaoMax));
             }
             return lista;
 

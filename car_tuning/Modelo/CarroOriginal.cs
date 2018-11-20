@@ -12,8 +12,9 @@ namespace car_tuning.Modelo
         private string modelo, marca;
         private double cod, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax;
 
-        public CarroOriginal(string modelo, string marca, double peso, double aceleracao, double torque, double potencia, double velocidadeMax, double consumo, double rotacaoMax)
+        public CarroOriginal(double cod, string modelo, string marca, double peso, double aceleracao, double torque, double potencia, double velocidadeMax, double consumo, double rotacaoMax)
         {
+            this.cod = cod;
             this.modelo = modelo;
             this.marca = marca;
             this.peso = peso;

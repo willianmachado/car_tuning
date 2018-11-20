@@ -74,15 +74,20 @@ namespace car_tuning.View
         private void btSalvar_Click(object sender, EventArgs e)
         {
             CarroDAO carroDAO = new CarroDAO();
-            Carro carro = new Carro();
-            if (txtCpf.Text != "")
+            Carro carro = GetDTO();
+            carroDAO.Salvar(carro);
+            //dgvCarro.DataSource = c.carregar();
+
+            try
+
             {
-                carroDAO.Salvar(carro);
-                //dgvCarro.DataSource = c.carregar();
+                MessageBox.Show("Cadastrado com sucesso!");
+                ControlaBotoes(true);
+                limparCampos();
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show(this, "Favor preencher os campos ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("DEU RUIM");
 
             }
         }
@@ -199,7 +204,15 @@ namespace car_tuning.View
             txtRotacaoMax.Text = "";
             txtTorque.Text = "";
             txtVelMaxima.Text = "";
-
+            txtConsumo.Text = "";
+            pbAceleracao.Value = 0;
+            pbConsumo.Value = 0;
+            pbPeso.Value = 0;
+            pbPotencia.Value = 0;
+            pbRotacao.Value = 0;
+            pbTorque.Value = 0;
+            pbVelocidadeMax.Value = 0;
+            
         }
 
         private void pbFill() {
@@ -336,6 +349,9 @@ namespace car_tuning.View
         {
             pbFill();
         }
+
+       
     }
+    
 }
     

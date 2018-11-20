@@ -7,25 +7,18 @@ using System.Threading.Tasks;
 namespace car_tuning.Modelo
 {
     class Carro : CarroOriginal
-
     {
-        
+        public Carro(double cod, string modelo, string marca, double peso, double aceleracao, double torque, double potencia, double velocidadeMax, double consumo, double rotacaoMax) : base(cod, modelo, marca, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax)
+        {
+
+        }
+   
+
         private string ano;
         private string placa;
-        private int codigo;
+        private int cod;
         private string cpfClinte;
         private double peso;
-        
-        
-        
-        public Carro()
-        {
-
-        }
-
-        public Carro(string modelo, string marca, double peso, double aceleracao, double torque, double potencia, double velocidadeMax, double consumo, double rotacaoMax) : base(modelo, marca, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax)
-        {
-        }
 
         public string Ano
         {
@@ -53,16 +46,16 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Codigo
+        public int Cod1
         {
             get
             {
-                return codigo;
+                return cod;
             }
 
             set
             {
-                codigo = value;
+                cod = value;
             }
         }
 
@@ -79,7 +72,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public double Peso
+        public double Peso1
         {
             get
             {
@@ -90,6 +83,19 @@ namespace car_tuning.Modelo
             {
                 peso = value;
             }
+        }
+
+        public Carro(string ano, string placa, int cod, string cpfClinte, double peso)
+        {
+            this.Ano = ano;
+            this.Placa = placa;
+            this.Cod1 = cod;
+            this.CpfClinte = cpfClinte;
+            this.Peso1 = peso;
+        }
+
+        public Carro()
+        {
         }
     }
 }

@@ -43,15 +43,7 @@
             this.iTalk_Label10 = new iTalk.iTalk_Label();
             this.iTalk_Label13 = new iTalk.iTalk_Label();
             this.iTalk_Label14 = new iTalk.iTalk_Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colVelocidadeMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAceleracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgCarroOriginal = new System.Windows.Forms.DataGridView();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label11 = new iTalk.iTalk_Label();
@@ -70,7 +62,7 @@
             this.btVoltar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCarroOriginal)).BeginInit();
             this.SuspendLayout();
             // 
             // btPesquisar
@@ -174,7 +166,7 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label10);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label13);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label14);
-            this.iTalk_GroupBox1.Controls.Add(this.dataGridView2);
+            this.iTalk_GroupBox1.Controls.Add(this.dgCarroOriginal);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label11);
@@ -290,83 +282,18 @@
             this.iTalk_Label14.TabIndex = 21;
             this.iTalk_Label14.Text = "Peso";
             // 
-            // dataGridView2
+            // dgCarroOriginal
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCod,
-            this.colMarca,
-            this.colModelo,
-            this.colPeso,
-            this.colPotencia,
-            this.colVelocidadeMax,
-            this.colTorque,
-            this.colAceleracao});
-            this.dataGridView2.Location = new System.Drawing.Point(22, 361);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1144, 330);
-            this.dataGridView2.TabIndex = 14;
-            // 
-            // colCod
-            // 
-            this.colCod.HeaderText = "Codigo";
-            this.colCod.Name = "colCod";
-            this.colCod.ReadOnly = true;
-            this.colCod.Width = 80;
-            // 
-            // colMarca
-            // 
-            this.colMarca.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colMarca.HeaderText = "Marca";
-            this.colMarca.Name = "colMarca";
-            this.colMarca.ReadOnly = true;
-            // 
-            // colModelo
-            // 
-            this.colModelo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colModelo.HeaderText = "Modelo";
-            this.colModelo.Name = "colModelo";
-            this.colModelo.ReadOnly = true;
-            // 
-            // colPeso
-            // 
-            this.colPeso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPeso.HeaderText = "Peso";
-            this.colPeso.Name = "colPeso";
-            this.colPeso.ReadOnly = true;
-            // 
-            // colPotencia
-            // 
-            this.colPotencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPotencia.HeaderText = "Potencia";
-            this.colPotencia.Name = "colPotencia";
-            this.colPotencia.ReadOnly = true;
-            // 
-            // colVelocidadeMax
-            // 
-            this.colVelocidadeMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colVelocidadeMax.HeaderText = "Velocidad Max";
-            this.colVelocidadeMax.Name = "colVelocidadeMax";
-            this.colVelocidadeMax.ReadOnly = true;
-            // 
-            // colTorque
-            // 
-            this.colTorque.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTorque.HeaderText = "Torque";
-            this.colTorque.Name = "colTorque";
-            this.colTorque.ReadOnly = true;
-            // 
-            // colAceleracao
-            // 
-            this.colAceleracao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAceleracao.HeaderText = "Aceleração";
-            this.colAceleracao.Name = "colAceleracao";
-            this.colAceleracao.ReadOnly = true;
+            this.dgCarroOriginal.AllowUserToAddRows = false;
+            this.dgCarroOriginal.AllowUserToDeleteRows = false;
+            this.dgCarroOriginal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCarroOriginal.Location = new System.Drawing.Point(22, 361);
+            this.dgCarroOriginal.Margin = new System.Windows.Forms.Padding(2);
+            this.dgCarroOriginal.Name = "dgCarroOriginal";
+            this.dgCarroOriginal.ReadOnly = true;
+            this.dgCarroOriginal.RowTemplate.Height = 24;
+            this.dgCarroOriginal.Size = new System.Drawing.Size(1144, 330);
+            this.dgCarroOriginal.TabIndex = 14;
             // 
             // iTalk_Label3
             // 
@@ -569,6 +496,7 @@
             // txtCod
             // 
             this.txtCod.BackColor = System.Drawing.Color.Transparent;
+            this.txtCod.Enabled = false;
             this.txtCod.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtCod.ForeColor = System.Drawing.Color.DimGray;
             this.txtCod.Location = new System.Drawing.Point(112, 91);
@@ -616,7 +544,7 @@
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCarroOriginal)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,7 +558,7 @@
         private iTalk.iTalk_Button_2 btEditar;
         private iTalk.iTalk_Button_2 btExcluir;
         private iTalk.iTalk_GroupBox iTalk_GroupBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgCarroOriginal;
         private iTalk.iTalk_Label iTalk_Label3;
         private iTalk.iTalk_Label iTalk_Label2;
         private iTalk.iTalk_Label iTalk_Label11;
@@ -654,14 +582,6 @@
         private iTalk.iTalk_TextBox_Small txtTorque;
         private iTalk.iTalk_TextBox_Small txtVelMaxima;
         private iTalk.iTalk_TextBox_Small txtPotencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colVelocidadeMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAceleracao;
         private iTalk.iTalk_Button_2 btVoltar;
     }
 }

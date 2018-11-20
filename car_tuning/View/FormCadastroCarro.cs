@@ -1,4 +1,6 @@
-﻿using System;
+﻿using car_tuning.DAO;
+using car_tuning.Modelo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace car_tuning.View
 {
     public partial class FormCadastroCarro : Form
     {
+        CarroOriginalDAO c = new CarroOriginalDAO();
+
         public FormCadastroCarro()
         {
             InitializeComponent();
@@ -24,7 +28,24 @@ namespace car_tuning.View
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
+            CarroOriginalDAO carroDAO = new CarroOriginalDAO();
+            CarroOriginal carro = GetDTO();
+            carroDAO.Salvar(carro);
+            //dgvCarro.DataSource = c.carregar();
 
+            dgCarroOriginal.DataSource = c.Carregar();
+            try
+
+            {
+                MessageBox.Show("Cadastrado com sucesso!");
+                ControlaBotoes(true);
+                limparCampos();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("DEU RUIM");
+
+            }
         }
 
         private void btLimpar_Click(object sender, EventArgs e)
@@ -44,6 +65,7 @@ namespace car_tuning.View
         private void FormCadastroCarro_Load(object sender, EventArgs e)
         {
 
+            dgCarroOriginal.DataSource = c.Carregar();
         }
 
 
@@ -102,6 +124,36 @@ namespace car_tuning.View
             txtVelMaxima.Text = "";
         }
 
-        
+        private CarroOriginal GetDTO()
+        {
+            CarroOriginal carro = new CarroOriginal();
+            carro.Aceleracao = Double.Parse(txtAceleracao.Text);
+            carro.Consumo = Double.Parse(txtPeso.Text);
+            carro.Peso = Double.Parse(txtPeso.Text);
+            carro.Potencia = Double.Parse(txtPotencia.Text);
+            carro.VelocidadeMax = Double.Parse(txtVelMaxima.Text);
+            carro.Torque = Double.Parse(txtTorque.Text);
+            carro.Aceleracao = Double.Parse(txtAceleracao.Text);
+            carro.RotacaoMax = Double.Parse(txtRotacaoMax.Text);
+            carro.Marca = txtMarca.Text;
+            carro.Modelo = txtModelo.Text;
+
+            return carro;
+        }
+
+        private void setDTO(CarroOriginal carro)
+        {
+            txtAceleracao.Text = carro.Aceleracao.ToString();
+            txtPeso.Text = carro.Consumo.ToString();
+            txtPeso.Text = carro.Peso.ToString();
+            txtPotencia.Text = carro.Potencia.ToString();
+            txtVelMaxima.Text = carro.VelocidadeMax.ToString();
+            txtTorque.Text = carro.Torque.ToString();
+            txtAceleracao.Text = carro.Aceleracao.ToString();
+            txtRotacaoMax.Text = carro.RotacaoMax.ToString();
+            txtMarca.Text = carro.Marca.ToString();
+            txtModelo.Text = carro.Modelo.ToString();
+        }
+
     }
 }
