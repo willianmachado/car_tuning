@@ -206,6 +206,26 @@ namespace car_tuning.View
 
             int peso = 0;
             int consumo = 0;
+            int aceleracao = 0;
+            int velocidade = 0;
+            int rotacao = 0;
+            int torque = 0;
+            int potencia = 0;
+
+            if (txtConsumo.Text != "" && consumo < 41)
+
+                try
+                {
+                    consumo = int.Parse(txtConsumo.Text);
+                    pbConsumo.Value = consumo;
+                }
+                catch
+                {
+                    MessageBox.Show("O consumo deve ser até 40 km/L");
+                    txtConsumo.Text = "";
+                    consumo = 1;
+                    pbConsumo.Value = consumo;
+                }
 
             if (txtPeso.Text != "" && peso < 2801)
 
@@ -219,21 +239,92 @@ namespace car_tuning.View
                     MessageBox.Show("O peso deve ser até 2800 kg");
                     txtPeso.Text = "";
                     peso = 1;
+                    pbPeso.Value = peso;
                 }
 
-            if (txtConsumo.Text != "" && consumo < 51)
+           
+
+            if (txtAceleracao.Text != "" && aceleracao < 31)
 
                 try
                 {
-                    consumo = int.Parse(txtConsumo.Text);
-                    pbConsumo.Value = consumo;
+                    aceleracao = int.Parse(txtAceleracao.Text);
+                    pbAceleracao.Value = aceleracao;
                 }
                 catch
                 {
-                    MessageBox.Show("O consumo deve ser até 50 km/L");
-                    txtConsumo.Text = "";
-                    consumo = 1;
+                    MessageBox.Show("A aceleração deve ser entre 1 e 30 seg");
+                    txtAceleracao.Text = "";
+                    aceleracao = 1;
+                    pbAceleracao.Value = aceleracao;
                 }
+
+            if (txtVelMaxima.Text != "" && velocidade < 401)
+
+                try
+                {
+                    velocidade = int.Parse(txtVelMaxima.Text);
+                    pbVelocidadeMax.Value = velocidade;
+                }
+                catch
+                {
+                    MessageBox.Show("A velocidade máxima registrada é 400km/h");
+                    txtVelMaxima.Text = "";
+                    velocidade = 1;
+                }
+
+            if (txtRotacaoMax.Text != "" && rotacao < 10001)
+
+                try
+                {
+                    rotacao = int.Parse(txtRotacaoMax.Text);
+                    pbRotacao.Value = rotacao;
+                }
+                catch
+                {
+                    MessageBox.Show("Rotação max = 10000");
+                    txtRotacaoMax.Text = "";
+                    rotacao = 1;
+                }
+
+            if (txtTorque.Text != "" && torque < 101)
+
+                try
+                {
+                    torque = int.Parse(txtTorque.Text);
+                    pbTorque.Value = torque;
+                }
+                catch
+                {
+                    MessageBox.Show("O torque deve ser até 101 kg");
+                    txtTorque.Text = "";
+                    torque = 1;
+                
+                }
+
+            if (txtPotencia.Text != "" && potencia < 1201)
+
+                try
+                {
+                    potencia = int.Parse(txtPotencia.Text);
+                    pbPotencia.Value = potencia;
+                }
+                catch
+                {
+                    MessageBox.Show("A potencia maxima registrada é 1200cv");
+                    txtPotencia.Text = "";
+                    potencia = 1;
+                }
+
+            lbAceleracao.Text = aceleracao.ToString();
+            lbConsumo.Text = consumo.ToString();
+            lbPeso.Text = peso.ToString();
+            lbPotencia.Text = potencia.ToString();
+            lbRotacao.Text = rotacao.ToString();
+            lbTorque.Text = torque.ToString();
+            lbVelocidade.Text = velocidade.ToString();
+            
+
         }
 
         private void txtPeso_TextChanged(object sender, EventArgs e)
