@@ -1,4 +1,5 @@
-﻿using System;
+﻿using car_tuning.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,12 @@ namespace car_tuning
 {
     public partial class FormPesquisa : Form
     {
+        ClienteDAO cliente = new ClienteDAO();
+
         public FormPesquisa()
         {
             InitializeComponent();
-            
+            dgCliente.DataSource = cliente.Carregar();
 
         }
 
@@ -104,6 +107,25 @@ namespace car_tuning
             if (txtPesquisaServ.Text == "Digite o Codigo do Serviço, Placa do Carro ou CPF do Cliente")
             {
                 txtPesquisaServ.Text = "";
+            }
+        }
+
+        private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgCliente_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                FormCliente form = new FormCliente();
+                
+                string cpf= dgCliente.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nome = dgCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string telefone = dgCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string email = dgCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
+
             }
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using car_tuning.Modelo;
+using car_tuning.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +37,7 @@ namespace car_tuning
 
         private void btLimpar_Click(object sender, EventArgs e)
         {
+            btSalvar.Text = "Salvar";
             ControlaBotoes(true);
             limparCampos();
         }
@@ -47,9 +50,28 @@ namespace car_tuning
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            ControlaBotoes(true);
-            btEditar.Enabled = true;
-            btSalvar.Enabled = false;
+            {
+                if (txtNome.Text != "")
+                {
+                    btSalvar.Text = "Atualizar";
+
+                    ControlaBotoes(false);
+
+                    txtCpf.Enabled = false;
+                    txtNome.Enabled = true;
+                    txtEmail.Enabled = true;
+                    txtTelefone.Enabled = true;
+                    txtAno.Enabled = true;
+                    txtMarca.Enabled = true;
+                    txtModelo.Enabled = true;
+                }
+
+                else
+                {
+                    MessageBox.Show("Clique duplo para editar");
+                    
+                }
+             }
         }
 
 
@@ -94,18 +116,25 @@ namespace car_tuning
 
             ClienteDAO clienteDAO = new ClienteDAO();
             Cliente cliente = getDTO();
-            txtCpf.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            
 
-            if (txtCpf.Text != "" && txtEmail.Text!="")
+            if (txtCpf.Text != "")
             {
-
-                clienteDAO.Salvar(cliente);
-                dgvCliente.DataSource = c.Carregar();
-
-
+                if (btSalvar.Text == "Salvar")
+                {
+                    clienteDAO.Salvar(cliente);
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                else 
+                {
+                    clienteDAO.Atualizar(cliente);
+                    MessageBox.Show("Atualizado com Sucesso!");
+                    btSalvar.Text = "Salvar";
+                }
+                
                 try
                 {
-                    MessageBox.Show("Cadastrado com Sucesso!");
+                    dgvCliente.DataSource = c.Carregar();
                     ControlaBotoes(true);
                     limparCampos();
                 }
@@ -113,7 +142,7 @@ namespace car_tuning
                 catch (Exception)
                 {
                     MessageBox.Show("CPF Já cadastrado! ");
-                }
+                } 
             }
 
             else
@@ -127,40 +156,37 @@ namespace car_tuning
         private void btExcluir_Click(object sender, EventArgs e)
         {
 
-            if (txtCpf.Text != "")
-
-                if (MessageBox.Show(" Deseja excluir o cadastro selecionado? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtCpf.Text == "")
             {
-                
-                ClienteDAO clienteDAO = new ClienteDAO();
-                string index = (dgvCliente.CurrentRow.Cells[0].Value.ToString());
-
-
-                Cliente cliente = getDTO();
-                clienteDAO.Deletar(index);
-
-                dgvCliente.DataSource = c.Carregar();
-                MessageBox.Show("Cadastro excluido");
-                limparCampos();
+                MessageBox.Show(this, "Clique duplo para excluir", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
             else
+
+            if (MessageBox.Show(" Deseja excluir o cadastro selecionado? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
-                    MessageBox.Show(this, "Selecione um cadastro para excluir", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            
+                    ClienteDAO clienteDAO = new ClienteDAO();
+                    string index = (dgvCliente.CurrentRow.Cells[0].Value.ToString());
+
+
+                    Cliente cliente = getDTO();
+                    clienteDAO.Deletar(index);
+
+                    dgvCliente.DataSource = c.Carregar();
+                    MessageBox.Show("Cadastro excluido");
+                    limparCampos();
+                }    
         }
 
         private void dgvCliente_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-
                 txtCpf.Text = dgvCliente.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtNome.Text = dgvCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtTelefone.Text = dgvCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtEmail.Text = dgvCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
-
             }
         }
 

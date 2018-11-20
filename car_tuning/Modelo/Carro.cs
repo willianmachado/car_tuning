@@ -12,12 +12,11 @@ namespace car_tuning.Modelo
         {
 
         }
-   
 
         private string ano;
         private string placa;
         private int cod;
-        private string cpfClinte;
+        private string cpfCliente;
         private double peso;
 
         public string Ano
@@ -46,7 +45,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public int Cod1
+        public int Cod
         {
             get
             {
@@ -59,20 +58,20 @@ namespace car_tuning.Modelo
             }
         }
 
-        public string CpfClinte
+        public string CpfCliente
         {
             get
             {
-                return cpfClinte;
+                return cpfCliente;
             }
 
             set
             {
-                cpfClinte = value;
+                cpfCliente = value;
             }
         }
 
-        public double Peso1
+        public double Peso
         {
             get
             {
@@ -85,13 +84,13 @@ namespace car_tuning.Modelo
             }
         }
 
-        public Carro(string ano, string placa, int cod, string cpfClinte, double peso)
+        public Carro(string ano, string placa, int cod, string cpfCliente, double peso)
         {
             this.Ano = ano;
             this.Placa = placa;
-            this.Cod1 = cod;
-            this.CpfClinte = cpfClinte;
-            this.Peso1 = peso;
+            this.Cod = cod;
+            this.CpfCliente = cpfCliente;
+            this.Peso = peso;
         }
 
         public Carro()

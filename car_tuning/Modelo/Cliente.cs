@@ -14,7 +14,22 @@ namespace car_tuning
         private string nome;
         private string telefone;
         private string email;
-        private List<Carro> cachorros = new List<Carro>();
+        // private List<Carro> carros = new List<Carro>();
+
+
+        public Cliente(string cpf, string nome, string telefone, string email)
+        {
+            this.cpf = cpf;
+            this.nome = nome;
+            this.telefone = telefone;
+            this.email = email;
+        }
+        
+        public Cliente()
+        {
+
+        }
+
 
         public string Cpf
         {
@@ -70,19 +85,6 @@ namespace car_tuning
 
        
 
-        public Cliente(string cpf, string nome, string telefone, string email)
-        {
-            this.cpf = cpf;
-            this.nome = nome;
-            this.telefone = telefone;
-            this.email = email;
-        }
-
-        // private Carro carro;
-        public Cliente()
-        {
-            
-        }
 
     }
 }

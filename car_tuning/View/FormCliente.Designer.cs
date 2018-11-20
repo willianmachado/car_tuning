@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.imgCarro = new System.Windows.Forms.PictureBox();
@@ -61,8 +63,6 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.clienteDAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
@@ -105,6 +105,26 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1184, 726);
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Cliente";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(493, 195);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(61, 17);
+            this.checkBox1.TabIndex = 50;
+            this.checkBox1.Text = "Original";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(689, 138);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(110, 13);
+            this.linkLabel1.TabIndex = 43;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Adicionar nova marca";
             // 
             // txtEmail
             // 
@@ -288,7 +308,7 @@
             this.txtPlaca.ForeColor = System.Drawing.Color.Black;
             this.txtPlaca.Location = new System.Drawing.Point(493, 63);
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPlaca.Mask = "aaa-0000";
+            this.txtPlaca.Mask = "AAA0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(101, 27);
             this.txtPlaca.TabIndex = 4;
@@ -352,8 +372,10 @@
             this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
             this.txtCpf.Mask = "000,000,000-00";
             this.txtCpf.Name = "txtCpf";
+            this.txtCpf.PromptChar = ' ';
             this.txtCpf.Size = new System.Drawing.Size(138, 27);
             this.txtCpf.TabIndex = 0;
+            this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtTelefone
             // 
@@ -495,26 +517,6 @@
             // clienteDAOBindingSource
             // 
             this.clienteDAOBindingSource.DataSource = typeof(car_tuning.ClienteDAO);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(689, 138);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(110, 13);
-            this.linkLabel1.TabIndex = 43;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Adicionar nova marca";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(493, 195);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(61, 17);
-            this.checkBox1.TabIndex = 50;
-            this.checkBox1.Text = "Original";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // FormCliente
             // 

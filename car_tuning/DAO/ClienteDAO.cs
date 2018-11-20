@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
+using car_tuning.Modelo;
 
 namespace car_tuning
 {
@@ -17,15 +18,12 @@ namespace car_tuning
             
                 DataBase bd = DataBase.GetInstance();
                 bd.GetConnection();
-
-            SQLiteConnection conn = new SQLiteConnection(Data);
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
+            
             
             string qry = string.Format("INSERT INTO CLIENTE(CPF, NOME, TEL, EMAIL) VALUES ('{0}', '{1}', '{2}', '{3}')", c.Cpf, c.Nome, c.Telefone, c.Email);
-
+            
             bd.ExecuteSQL(qry);
-            conn.Close();
+           
         }
 
 
@@ -34,19 +32,21 @@ namespace car_tuning
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
-            SQLiteConnection conn = new SQLiteConnection(Data);
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
 
             string qry = string.Format("DELETE FROM CLIENTE WHERE CPF = '" + index + "';");
 
             bd.ExecuteSQL(qry);
-            conn.Close();
         }
 
-        public void Atualizar(Cliente cliente)
+        public void Atualizar(Cliente c)
         {
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
 
+
+            string qry = string.Format("UPDATE CLIENTE SET NOME = '{0}', TEL = '{1}', EMAIL = '{2}' WHERE CPF = '{3}'", c.Nome, c.Telefone, c.Email, c.Cpf);
+
+            bd.ExecuteSQL(qry);
         }
                 
         public List<Cliente> BuscaNome(string cpf)

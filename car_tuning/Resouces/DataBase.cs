@@ -211,7 +211,7 @@ namespace car_tuning
                 //cria tabela Veiculo
                 sql.Clear();
                 sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO` ( " +
-                    " `placa` TEXT NOT NULL PRIMARY KEY UNIQUE," +
+                    " `placa` TEXT NOT NULL PRIMARY KEY," +
                     " `ano` TEXT," +
                     " `modelo` TEXT," +
                     " `marca` TEXT," +

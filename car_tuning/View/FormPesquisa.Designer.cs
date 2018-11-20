@@ -29,15 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPesquisa));
-            this.tabCliente = new Ambiance.Ambiance_TabControl();
-            this.Cliente = new System.Windows.Forms.TabPage();
-            this.txtPesquisaCli = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.dgCliente = new System.Windows.Forms.DataGridView();
-            this.colCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabCliente = new Ambiance.Ambiance_TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.txtPesquisaCarro = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
@@ -77,9 +70,10 @@
             this.iTalk_Label5 = new iTalk.iTalk_Label();
             this.btSelecionar = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
-            this.tabCliente.SuspendLayout();
-            this.Cliente.SuspendLayout();
+            this.txtPesquisaCli = new iTalk.iTalk_TextBox_Small();
+            this.iTalk_Label1 = new iTalk.iTalk_Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).BeginInit();
+            this.tabCliente.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -90,12 +84,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
+            // dgCliente
+            // 
+            this.dgCliente.AllowUserToAddRows = false;
+            this.dgCliente.AllowUserToDeleteRows = false;
+            this.dgCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCliente.Location = new System.Drawing.Point(6, 62);
+            this.dgCliente.Name = "dgCliente";
+            this.dgCliente.ReadOnly = true;
+            this.dgCliente.Size = new System.Drawing.Size(1311, 568);
+            this.dgCliente.TabIndex = 6;
+            this.dgCliente.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgCliente_CellContentDoubleClick);
+            // 
             // tabCliente
             // 
             this.tabCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabCliente.Controls.Add(this.Cliente);
             this.tabCliente.Controls.Add(this.tabPage2);
             this.tabCliente.Controls.Add(this.tabPage1);
             this.tabCliente.Controls.Add(this.tabPage3);
@@ -106,99 +114,6 @@
             this.tabCliente.SelectedIndex = 0;
             this.tabCliente.Size = new System.Drawing.Size(1331, 665);
             this.tabCliente.TabIndex = 6;
-            // 
-            // Cliente
-            // 
-            this.Cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.Cliente.Controls.Add(this.txtPesquisaCli);
-            this.Cliente.Controls.Add(this.iTalk_Label1);
-            this.Cliente.Controls.Add(this.dgCliente);
-            this.Cliente.Location = new System.Drawing.Point(4, 28);
-            this.Cliente.Name = "Cliente";
-            this.Cliente.Padding = new System.Windows.Forms.Padding(3);
-            this.Cliente.Size = new System.Drawing.Size(1323, 633);
-            this.Cliente.TabIndex = 0;
-            this.Cliente.Text = "Cliente";
-            // 
-            // txtPesquisaCli
-            // 
-            this.txtPesquisaCli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPesquisaCli.BackColor = System.Drawing.Color.Transparent;
-            this.txtPesquisaCli.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtPesquisaCli.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPesquisaCli.Location = new System.Drawing.Point(93, 15);
-            this.txtPesquisaCli.MaxLength = 32767;
-            this.txtPesquisaCli.Multiline = false;
-            this.txtPesquisaCli.Name = "txtPesquisaCli";
-            this.txtPesquisaCli.ReadOnly = false;
-            this.txtPesquisaCli.Size = new System.Drawing.Size(1149, 28);
-            this.txtPesquisaCli.TabIndex = 8;
-            this.txtPesquisaCli.Tag = "";
-            this.txtPesquisaCli.Text = "Digite o CPF, Nome ou Email";
-            this.txtPesquisaCli.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtPesquisaCli.UseSystemPasswordChar = false;
-            this.txtPesquisaCli.Enter += new System.EventHandler(this.txtPesquisa_Enter);
-            this.txtPesquisaCli.Leave += new System.EventHandler(this.txtPesquisa_Leave);
-            // 
-            // iTalk_Label1
-            // 
-            this.iTalk_Label1.AutoSize = true;
-            this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label1.Location = new System.Drawing.Point(16, 15);
-            this.iTalk_Label1.Name = "iTalk_Label1";
-            this.iTalk_Label1.Size = new System.Drawing.Size(71, 25);
-            this.iTalk_Label1.TabIndex = 7;
-            this.iTalk_Label1.Text = "Buscar";
-            // 
-            // dgCliente
-            // 
-            this.dgCliente.AllowUserToAddRows = false;
-            this.dgCliente.AllowUserToDeleteRows = false;
-            this.dgCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCpf,
-            this.colNome,
-            this.colTelefone,
-            this.colEmail});
-            this.dgCliente.Location = new System.Drawing.Point(6, 62);
-            this.dgCliente.Name = "dgCliente";
-            this.dgCliente.ReadOnly = true;
-            this.dgCliente.Size = new System.Drawing.Size(1311, 568);
-            this.dgCliente.TabIndex = 6;
-            // 
-            // colCpf
-            // 
-            this.colCpf.HeaderText = "CPF";
-            this.colCpf.Name = "colCpf";
-            this.colCpf.ReadOnly = true;
-            // 
-            // colNome
-            // 
-            this.colNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colNome.HeaderText = "Nome";
-            this.colNome.Name = "colNome";
-            this.colNome.ReadOnly = true;
-            // 
-            // colTelefone
-            // 
-            this.colTelefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTelefone.HeaderText = "Telefone";
-            this.colTelefone.Name = "colTelefone";
-            this.colTelefone.ReadOnly = true;
-            // 
-            // colEmail
-            // 
-            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
             // 
             // tabPage2
             // 
@@ -631,6 +546,40 @@
             this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
+            // txtPesquisaCli
+            // 
+            this.txtPesquisaCli.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPesquisaCli.BackColor = System.Drawing.Color.Transparent;
+            this.txtPesquisaCli.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtPesquisaCli.ForeColor = System.Drawing.Color.DimGray;
+            this.txtPesquisaCli.Location = new System.Drawing.Point(93, 15);
+            this.txtPesquisaCli.MaxLength = 32767;
+            this.txtPesquisaCli.Multiline = false;
+            this.txtPesquisaCli.Name = "txtPesquisaCli";
+            this.txtPesquisaCli.ReadOnly = false;
+            this.txtPesquisaCli.Size = new System.Drawing.Size(1149, 28);
+            this.txtPesquisaCli.TabIndex = 8;
+            this.txtPesquisaCli.Tag = "";
+            this.txtPesquisaCli.Text = "Digite o CPF, Nome ou Email";
+            this.txtPesquisaCli.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPesquisaCli.UseSystemPasswordChar = false;
+            this.txtPesquisaCli.Enter += new System.EventHandler(this.txtPesquisa_Enter);
+            this.txtPesquisaCli.Leave += new System.EventHandler(this.txtPesquisa_Leave);
+            // 
+            // iTalk_Label1
+            // 
+            this.iTalk_Label1.AutoSize = true;
+            this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label1.Location = new System.Drawing.Point(16, 15);
+            this.iTalk_Label1.Name = "iTalk_Label1";
+            this.iTalk_Label1.Size = new System.Drawing.Size(71, 25);
+            this.iTalk_Label1.TabIndex = 7;
+            this.iTalk_Label1.Text = "Buscar";
+            // 
             // FormPesquisa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -643,10 +592,8 @@
             this.Name = "FormPesquisa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar";
-            this.tabCliente.ResumeLayout(false);
-            this.Cliente.ResumeLayout(false);
-            this.Cliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCliente)).EndInit();
+            this.tabCliente.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -691,10 +638,6 @@
         private System.Windows.Forms.DataGridView dataGridView4;
         private iTalk.iTalk_TextBox_Small txtPesquisaServ;
         private iTalk.iTalk_Label iTalk_Label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTelefone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
