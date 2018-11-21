@@ -28,12 +28,21 @@ namespace car_tuning
             txtEmail.Enabled = false;
             txtTelefone.Enabled = false;
             txtAno.Enabled = false;
+            Fill();
             
-            dgvCliente.DataSource = c.Carregar();
         }
 
+        private void Fill()
+        {
+            ClienteDAO uDAO = new ClienteDAO();
+            List<Cliente> usuarios;
+            usuarios = uDAO.Carregar();
+            dgvCliente.Rows.Clear();
 
-        
+            foreach (Cliente u in usuarios)
+                dgvCliente.Rows.Add(u.Cpf, u.Nome, u.Email, u.Telefone);
+        }
+
 
         private void btLimpar_Click(object sender, EventArgs e)
         {
@@ -134,7 +143,7 @@ namespace car_tuning
                 
                 try
                 {
-                    dgvCliente.DataSource = c.Carregar();
+                    Fill();
                     ControlaBotoes(true);
                     limparCampos();
                 }
@@ -173,8 +182,8 @@ namespace car_tuning
                     Cliente cliente = getDTO();
                     clienteDAO.Deletar(index);
 
-                    dgvCliente.DataSource = c.Carregar();
-                    MessageBox.Show("Cadastro excluido");
+                   Fill();
+                   MessageBox.Show("Cadastro excluido");
                     limparCampos();
                 }    
         }

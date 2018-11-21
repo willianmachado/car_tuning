@@ -1,4 +1,5 @@
-﻿using car_tuning.View;
+﻿using car_tuning.Modelo;
+using car_tuning.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,10 +19,18 @@ namespace car_tuning
         public FormPesquisa()
         {
             InitializeComponent();
-            dgCliente.DataSource = cliente.Carregar();
+            Fill();
 
         }
-
+        private void Fill()
+        {
+            FuncionarioDAO fDAO = new FuncionarioDAO();
+            List<Funcionario> funcionarios;
+            funcionarios = fDAO.Carregar();
+            dgvFuncP.Rows.Clear();
+            foreach (Funcionario f in funcionarios)
+                dgvFuncP.Rows.Add(f.Cpf, f.Nome, f.Telefone);
+        }
         private void btVoltar_Click(object sender, EventArgs e)
         {
             this.Close();

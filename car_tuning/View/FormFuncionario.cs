@@ -17,9 +17,17 @@ namespace car_tuning
         public FormFuncionario()
         {
             InitializeComponent();
-            dgvFunc.DataSource = f.Carregar();
+            Fill();
         }
-
+        private void Fill()
+        {
+            FuncionarioDAO fDAO = new FuncionarioDAO();
+            List<Funcionario> funcionarios;
+            funcionarios = fDAO.Carregar();
+            dgvFunc.Rows.Clear();
+            foreach (Funcionario f in funcionarios)
+                dgvFunc.Rows.Add(f.Cpf, f.Nome, f.Telefone);
+        }
 
 
         private void btPesquisar_Click(object sender, EventArgs e)
@@ -53,7 +61,7 @@ namespace car_tuning
             if (txtCPF.Text != "" || txtNome.Text != "")
             {
                 funcionarioDAO.Salvar(funcionario);
-                dgvFunc.DataSource = f.Carregar();
+                Fill();
                 try
                 {
                     MessageBox.Show("Cadastrado com Sucesso!");

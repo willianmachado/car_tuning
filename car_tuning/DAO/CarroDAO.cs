@@ -70,14 +70,31 @@ namespace car_tuning.Modelo
             return lista;
 
         }
-        
-        public List<Cliente> BuscaNome(string cpf)
+
+        public Carro BuscaPlaca(string placa)
         {
-            List<Cliente> lista = new List<Cliente>();
-            Cliente cliente = null;
+            string qry = "select * CARRO where placa=" + placa;
+            DataBase bd = DataBase.GetInstance();
+            DataSet ds = bd.ExecuteQuery(qry);
+            Carro carro = new Carro();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                carro.Aceleracao = Double.Parse(dr[""].ToString());
+                carro.Peso = Double.Parse(dr[""].ToString());
+                carro.Torque = Double.Parse(dr[""].ToString());
+                carro.RotacaoMax = Double.Parse(dr[""].ToString());
+                carro.Potencia = Double.Parse(dr[""].ToString());
+                //carro.Cod = Double.Parse(dr[""].ToString());
+                //carro.Codigo
+                carro.Ano = dr[""].ToString();
+                carro.Modelo = dr[""].ToString();
+                carro.Placa = dr[""].ToString();
+                carro.Marca = dr[""].ToString();
+            }
 
 
-            return lista;
+            return carro;
         }
     }
 }
