@@ -82,23 +82,39 @@ namespace car_tuning
         }
         private void btEditar_Click(object sender, EventArgs e)
         {
-            ControlaBotoes(true);
-            btEditar.Enabled = true;
-            btSalvar.Enabled = false;
+            if (txtNome.Text != "")
+            {
+                btSalvar.Text = "Atualizar";
+                ControlaBotoes(false);
+                txtCpf.Enabled = false;
+                txtNome.Enabled = true;
+                txtTelefone.Enabled = true;
+                
+            }
+
+            else
+            {
+                MessageBox.Show("Clique duplo para editar");
+
+            }
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
         {
-            if (dgvFunc.CurrentRow != null)
+            
+            if (txtCpf.Text =="")
             {
-                String key = dgvFunc.CurrentRow.Cells[0].Value.ToString();
-                FuncionarioDAO dao = new FuncionarioDAO();
-                dao.Deletar(key);
-                
+
+                MessageBox.Show(this, "Clique duplo para excluir", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Selecione uma linha para remover.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                String key = dgvFunc.CurrentRow.Cells[0].Value.ToString();
+                FuncionarioDAO dao = new FuncionarioDAO();
+                Funcionario funcionario = getDTO();
+                dao.Deletar(key);
+                Fill();
+                limparCampos();
             }
         }
 
@@ -160,6 +176,15 @@ namespace car_tuning
             
         }
 
-        
+        private void dgvFunc_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtCpf.Text = dgvFunc.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtNome.Text = dgvFunc.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtTelefone.Text = dgvFunc.Rows[e.RowIndex].Cells[2].Value.ToString();
+
+            }
+        }
     }
 }

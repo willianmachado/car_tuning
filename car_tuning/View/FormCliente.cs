@@ -59,7 +59,7 @@ namespace car_tuning
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            {
+            
                 if (txtNome.Text != "")
                 {
                     btSalvar.Text = "Atualizar";
@@ -80,7 +80,7 @@ namespace car_tuning
                     MessageBox.Show("Clique duplo para editar");
                     
                 }
-             }
+             
         }
 
 
