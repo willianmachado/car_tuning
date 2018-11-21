@@ -49,13 +49,21 @@ namespace car_tuning
             bd.ExecuteSQL(qry);
         }
                 
-        public List<Cliente> BuscaNome(string cpf)
+        public Cliente BuscaCPF(string cpf)
         {
-            List<Cliente> lista = new List<Cliente>();
-            Cliente cliente = null;
-
-            //
-            return lista;
+            string qry = "select * from CLIENTE where cpf= " + cpf;
+            Cliente cliente = new Cliente();
+            DataBase bd = DataBase.GetInstance();
+            DataSet ds = bd.ExecuteQuery(qry);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                cliente.Cpf = dr["cpf"].ToString();
+                cliente.Nome = dr["nome"].ToString();
+                cliente.Telefone = dr["tel"].ToString();
+                cliente.Email = dr["email"].ToString();
+            }
+            return cliente;
         }
 
         public List<Cliente> Carregar()

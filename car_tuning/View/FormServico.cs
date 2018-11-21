@@ -153,7 +153,7 @@ namespace car_tuning
         private Servico getDTO()
         {
             Servico servico = new Servico();
-            servico.CodCarro1 = Int32.Parse(txtCarro.Text);
+            servico.PlacaCarro1 = Int32.Parse(txtCarro.Text);
 
             return servico;
         }

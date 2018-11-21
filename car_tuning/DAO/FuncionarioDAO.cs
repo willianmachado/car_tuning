@@ -71,10 +71,10 @@ namespace car_tuning.Modelo
             return lista;
 
         }
-        public List<Funcionario> BuscaNome(string cpf)
+        public List<Funcionario> BuscaCPF(string cpf)
         {
             string qry = "SELECT * FROM funcionario";
-            qry += cpf == null || cpf == null ? "" : " WHERE nome LIKE '%" + cpf + "%'";
+            qry += cpf == null || cpf == null ? "" : " WHERE cpf LIKE '%" + cpf + "%'";
             List<Funcionario> lista = new List<Funcionario>();
             Funcionario f = new Funcionario();
 

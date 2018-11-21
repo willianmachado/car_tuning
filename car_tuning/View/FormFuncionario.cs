@@ -56,9 +56,9 @@ namespace car_tuning
         {
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
             Funcionario funcionario = getDTO();
-            txtCPF.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            
 
-            if (txtCPF.Text != "" || txtNome.Text != "")
+            if (txtCpf.Text != "" || txtNome.Text != "")
             {
                 funcionarioDAO.Salvar(funcionario);
                 Fill();
@@ -139,14 +139,14 @@ namespace car_tuning
         }
         public void limparCampos()
         {
-            txtCPF.Text = "";
+            txtCpf.Text = "";
             txtNome.Text = "";
             txtTelefone.Text = "";
         }
         private Funcionario getDTO()
         {
             Funcionario funcionario = new Funcionario();
-            funcionario.Cpf = txtCPF.Text.Trim();
+            funcionario.Cpf = txtCpf.Text.Trim();
             funcionario.Nome = txtNome.Text.Trim();
             funcionario.Telefone = txtTelefone.Text.Trim();
             return funcionario;
@@ -154,10 +154,12 @@ namespace car_tuning
         private void setDTO(Funcionario f)
         {
             
-            txtCPF.Text = f.Cpf;
+            txtCpf.Text = f.Cpf;
             txtNome.Text = f.Nome;
             txtTelefone.Text = f.Telefone;
             
         }
+
+        
     }
 }

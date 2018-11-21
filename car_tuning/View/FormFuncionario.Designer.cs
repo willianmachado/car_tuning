@@ -30,14 +30,16 @@
         {
             this.btNovo = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
-            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.dgvFunc = new System.Windows.Forms.DataGridView();
+            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_TextBox_Small1 = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
-            this.txtTelefone = new iTalk.iTalk_TextBox_Small();
             this.txtNome = new iTalk.iTalk_TextBox_Small();
             this.btPesquisar = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
@@ -45,9 +47,7 @@
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
-            this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFunc)).BeginInit();
             this.SuspendLayout();
@@ -70,14 +70,14 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox1.Controls.Add(this.txtCPF);
+            this.iTalk_GroupBox1.Controls.Add(this.txtTelefone);
+            this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox1.Controls.Add(this.dgvFunc);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small1);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
-            this.iTalk_GroupBox1.Controls.Add(this.txtTelefone);
             this.iTalk_GroupBox1.Controls.Add(this.txtNome);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(149, 3);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
@@ -87,16 +87,18 @@
             this.iTalk_GroupBox1.TabIndex = 10;
             this.iTalk_GroupBox1.Text = "Funcionario";
             // 
-            // txtCPF
+            // txtCpf
             // 
-            this.txtCPF.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCPF.Location = new System.Drawing.Point(97, 57);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCPF.Mask = "000,000,000-00";
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(138, 27);
-            this.txtCPF.TabIndex = 10;
+            this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.ForeColor = System.Drawing.Color.DimGray;
+            this.txtCpf.Location = new System.Drawing.Point(97, 57);
+            this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCpf.Mask = "000,000,000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.PromptChar = ' ';
+            this.txtCpf.Size = new System.Drawing.Size(138, 27);
+            this.txtCpf.TabIndex = 10;
+            this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // iTalk_Label4
             // 
@@ -124,6 +126,27 @@
             this.dgvFunc.ReadOnly = true;
             this.dgvFunc.Size = new System.Drawing.Size(571, 465);
             this.dgvFunc.TabIndex = 7;
+            // 
+            // cpf
+            // 
+            this.cpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cpf.HeaderText = "Cpf";
+            this.cpf.Name = "cpf";
+            this.cpf.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // telefone
+            // 
+            this.telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.telefone.HeaderText = "Telefone";
+            this.telefone.Name = "telefone";
+            this.telefone.ReadOnly = true;
             // 
             // iTalk_TextBox_Small1
             // 
@@ -175,21 +198,6 @@
             this.iTalk_Label1.Size = new System.Drawing.Size(37, 21);
             this.iTalk_Label1.TabIndex = 1;
             this.iTalk_Label1.Text = "CPF";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.Transparent;
-            this.txtTelefone.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtTelefone.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTelefone.Location = new System.Drawing.Point(97, 150);
-            this.txtTelefone.MaxLength = 32767;
-            this.txtTelefone.Multiline = false;
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.ReadOnly = false;
-            this.txtTelefone.Size = new System.Drawing.Size(232, 28);
-            this.txtTelefone.TabIndex = 0;
-            this.txtTelefone.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTelefone.UseSystemPasswordChar = false;
             // 
             // txtNome
             // 
@@ -296,26 +304,17 @@
             this.btVoltar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
-            // cpf
+            // txtTelefone
             // 
-            this.cpf.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cpf.HeaderText = "Cpf";
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
-            // 
-            // nome
-            // 
-            this.nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            // 
-            // telefone
-            // 
-            this.telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.telefone.HeaderText = "Telefone";
-            this.telefone.Name = "telefone";
-            this.telefone.ReadOnly = true;
+            this.txtTelefone.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.ForeColor = System.Drawing.Color.DimGray;
+            this.txtTelefone.Location = new System.Drawing.Point(97, 150);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefone.Mask = "(00) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(148, 27);
+            this.txtTelefone.TabIndex = 11;
+            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // FormFuncionario
             // 
@@ -351,7 +350,6 @@
         private iTalk.iTalk_Label iTalk_Label3;
         private iTalk.iTalk_Label iTalk_Label2;
         private iTalk.iTalk_Label iTalk_Label1;
-        private iTalk.iTalk_TextBox_Small txtTelefone;
         private iTalk.iTalk_TextBox_Small txtNome;
         private iTalk.iTalk_Button_2 btPesquisar;
         private iTalk.iTalk_Button_2 btSalvar;
@@ -363,9 +361,10 @@
         private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small1;
         private iTalk.iTalk_Label iTalk_Label4;
         private iTalk.iTalk_Button_2 btNovo;
-        private System.Windows.Forms.MaskedTextBox txtCPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
     }
 }

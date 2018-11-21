@@ -137,6 +137,20 @@ namespace car_tuning
                     "`valorTotal` INTEGER NOT NULL," +
                     "`cpfFuncionario` TEXT NOT NULL, " +
                     "`cpfCliente` TEXT NOT NULL, " +
+                    " 'pesoIni' INTEGER," +
+                    " 'velocidade_maxIni' INTEGER," +
+                    " 'potenciaIni' INTEGER," +
+                    " 'aceleracaoIni' INTEGER," +
+                    " 'torqueIni' INTEGER," +
+                    " 'consumoIni' INTEGER," +
+                    " 'rotacao_maxIni' INTEGER," +
+                    " 'pesoFin' INTEGER," +
+                    " 'velocidade_maxFin' INTEGER," +
+                    " 'potenciaFin' INTEGER," +
+                    " 'aceleracaoFin' INTEGER," +
+                    " 'torqueFin' INTEGER," +
+                    " 'consumoFin' INTEGER," +
+                    " 'rotacao_maxFin' INTEGER," +
                     "FOREIGN KEY(`placaCarro`) REFERENCES `CARRO`(`placa`), " +
                     "FOREIGN KEY('cpfFuncionario') REFERENCES 'FUNCIONARIO'('cpf'), " +
                     "FOREIGN KEY('cpfCliente') REFERENCES 'CLIENTE'('cpf') );");
@@ -194,7 +208,8 @@ namespace car_tuning
                     " 'aceleracao' INTEGER," +
                     " 'torque' INTEGER," +
                     " 'consumo' INTEGER," +
-                    " 'rotacao_max' INTEGER );" );
+                    " 'rotacao_max' INTEGER," +
+                    " FOREIGN KEY(`marca`) REFERENCES `MARCA`(`Nome`));");
 
 
                 cmd = new SQLiteCommand(sql.ToString(), conn);
@@ -243,7 +258,21 @@ namespace car_tuning
                 {
                     MessageBox.Show("Erro ao criar banco de dados TABELA CARRO: " + ex.Message);
                 }
+                //cria tabela marca
 
+                sql.Clear();
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `MARCA` (`Nome` TEXT NOT NULL PRIMARY KEY UNIQUE);"
+                   );
+
+                cmd = new SQLiteCommand(sql.ToString(), conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao criar banco de dados TABELA MARCA: " + ex.Message);
+                }
 
             }
         }

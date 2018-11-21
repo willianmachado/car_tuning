@@ -31,6 +31,20 @@ namespace car_tuning
             foreach (Funcionario f in funcionarios)
                 dgvFuncP.Rows.Add(f.Cpf, f.Nome, f.Telefone);
         }
+        private void txtPesquisaFunc_TextChanged(object sender, EventArgs e)
+        {
+            buscaCPF(txtPesquisaCarro.Text);
+        }
+        private void buscaCPF(string cpf)
+        {
+            FuncionarioDAO fDAO = new FuncionarioDAO();
+            List<Funcionario> funcionarios;
+            funcionarios = fDAO.BuscaCPF(cpf);
+            dgvFuncP.Rows.Clear();
+            foreach(Funcionario f in funcionarios)
+                 dgvFuncP.Rows.Add(f.Cpf, f.Nome, f.Telefone);
+        }
+
         private void btVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -137,5 +151,7 @@ namespace car_tuning
 
             }
         }
+
+        
     }
 }

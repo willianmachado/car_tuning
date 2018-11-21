@@ -363,6 +363,7 @@
             this.txtPesquisaFunc.Text = "Digite o CPF ou Nome ";
             this.txtPesquisaFunc.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPesquisaFunc.UseSystemPasswordChar = false;
+            this.txtPesquisaFunc.TextChanged += new System.EventHandler(this.txtPesquisaFunc_TextChanged);
             this.txtPesquisaFunc.Enter += new System.EventHandler(this.txtPesquisaFunc_Enter);
             this.txtPesquisaFunc.Leave += new System.EventHandler(this.txtPesquisaFunc_Leave);
             // 
