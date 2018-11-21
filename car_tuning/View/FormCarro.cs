@@ -20,7 +20,15 @@ namespace car_tuning.View
         {
             InitializeComponent();
         }
-
+        private void Fill()
+        {
+            CarroDAO carroDAO = new CarroDAO();
+            List<Carro> carros;
+            //carros = carroDAO.Carregar();
+            dgvCarro.Rows.Clear();
+            //foreach (Carro c in carros)
+            //    dgvCarro.Rows.Add();
+        }
 
         private void txtAno_TextChanged_1(object sender, EventArgs e)
         {

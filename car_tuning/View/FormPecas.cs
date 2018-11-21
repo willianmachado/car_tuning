@@ -17,6 +17,16 @@ namespace car_tuning
         public FormPecas()
         {
             InitializeComponent();
+            Fill();
+        }
+        private void Fill()
+        {
+            PecasDAO pecasDAO = new PecasDAO();
+            List<Pecas> pecas;
+            pecas = pecasDAO.Carregar();
+            dgvPecas.Rows.Clear();
+            foreach (Pecas p in pecas)
+                dgvPecas.Rows.Add(p.Codigo,p.Descricao,p.Fabricante,p.Tipo,p.Tipo,p.Compatibilidade,p.AddPeso,p.AddPotencia,p.AddTorque);
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
@@ -44,7 +54,7 @@ namespace car_tuning
             if (txtCodigo.Text != "")
             {
                 pecasDAO.Salvar(pecas);
-                dgvPecas.DataSource = p.Carregar();
+                Fill();
 
             }
             else
