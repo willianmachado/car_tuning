@@ -52,8 +52,7 @@ namespace car_tuning.Modelo
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-
-               
+                
                 c.CpfCliente = dr["cpfCliente"].ToString();
                 c.Placa = dr["placa"].ToString();
                 c.Ano = dr["ano"].ToString();

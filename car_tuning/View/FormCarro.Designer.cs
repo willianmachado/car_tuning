@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
             this.lbConsumo = new System.Windows.Forms.Label();
             this.pbConsumo = new System.Windows.Forms.ProgressBar();
@@ -106,28 +104,15 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.colCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colVelocidadeMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAceleracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConsumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRotacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // iTalk_GroupBox2
             // 
@@ -822,26 +807,19 @@
             // 
             this.dgvCarro.AllowUserToAddRows = false;
             this.dgvCarro.AllowUserToDeleteRows = false;
+            this.dgvCarro.AllowUserToOrderColumns = true;
             this.dgvCarro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCpf,
-            this.colPlaca,
-            this.colAno,
-            this.colMarca,
-            this.colModelo,
-            this.colPeso,
-            this.colPotencia,
-            this.colVelocidadeMax,
-            this.colTorque,
-            this.colAceleracao,
-            this.colConsumo,
-            this.colRotacao});
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgvCarro.Location = new System.Drawing.Point(14, 398);
             this.dgvCarro.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCarro.Name = "dgvCarro";
             this.dgvCarro.ReadOnly = true;
             this.dgvCarro.RowTemplate.Height = 24;
-            this.dgvCarro.Size = new System.Drawing.Size(573, 259);
+            this.dgvCarro.Size = new System.Drawing.Size(573, 245);
             this.dgvCarro.TabIndex = 28;
             // 
             // iTalk_Label20
@@ -910,7 +888,7 @@
             this.lbAno.BackColor = System.Drawing.Color.Transparent;
             this.lbAno.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.lbAno.Location = new System.Drawing.Point(700, 146);
+            this.lbAno.Location = new System.Drawing.Point(728, 142);
             this.lbAno.Name = "lbAno";
             this.lbAno.Size = new System.Drawing.Size(38, 21);
             this.lbAno.TabIndex = 0;
@@ -923,7 +901,7 @@
             this.lbMarca.BackColor = System.Drawing.Color.Transparent;
             this.lbMarca.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.lbMarca.Location = new System.Drawing.Point(683, 91);
+            this.lbMarca.Location = new System.Drawing.Point(711, 87);
             this.lbMarca.Name = "lbMarca";
             this.lbMarca.Size = new System.Drawing.Size(76, 25);
             this.lbMarca.TabIndex = 0;
@@ -936,7 +914,7 @@
             this.lbModelo.BackColor = System.Drawing.Color.Transparent;
             this.lbModelo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.lbModelo.Location = new System.Drawing.Point(674, 121);
+            this.lbModelo.Location = new System.Drawing.Point(702, 117);
             this.lbModelo.Name = "lbModelo";
             this.lbModelo.Size = new System.Drawing.Size(96, 25);
             this.lbModelo.TabIndex = 0;
@@ -1129,85 +1107,29 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // colCpf
+            // Column1
             // 
-            this.colCpf.HeaderText = "CPF";
-            this.colCpf.Name = "colCpf";
-            this.colCpf.ReadOnly = true;
-            this.colCpf.Visible = false;
+            this.Column1.HeaderText = "Placa";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // colPlaca
+            // Column2
             // 
-            this.colPlaca.HeaderText = "Placa";
-            this.colPlaca.Name = "colPlaca";
-            this.colPlaca.ReadOnly = true;
+            this.Column2.HeaderText = "Ano";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // colAno
+            // Column3
             // 
-            this.colAno.HeaderText = "Ano";
-            this.colAno.Name = "colAno";
-            this.colAno.ReadOnly = true;
+            this.Column3.HeaderText = "Marca";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // colMarca
+            // Column4
             // 
-            this.colMarca.HeaderText = "Marca";
-            this.colMarca.Name = "colMarca";
-            this.colMarca.ReadOnly = true;
-            // 
-            // colModelo
-            // 
-            this.colModelo.HeaderText = "Modelo";
-            this.colModelo.Name = "colModelo";
-            this.colModelo.ReadOnly = true;
-            // 
-            // colPeso
-            // 
-            this.colPeso.HeaderText = "Peso";
-            this.colPeso.Name = "colPeso";
-            this.colPeso.ReadOnly = true;
-            this.colPeso.Visible = false;
-            // 
-            // colPotencia
-            // 
-            this.colPotencia.HeaderText = "Potencia";
-            this.colPotencia.Name = "colPotencia";
-            this.colPotencia.ReadOnly = true;
-            this.colPotencia.Visible = false;
-            // 
-            // colVelocidadeMax
-            // 
-            this.colVelocidadeMax.HeaderText = "Vel Max";
-            this.colVelocidadeMax.Name = "colVelocidadeMax";
-            this.colVelocidadeMax.ReadOnly = true;
-            this.colVelocidadeMax.Visible = false;
-            // 
-            // colTorque
-            // 
-            this.colTorque.HeaderText = "Torque";
-            this.colTorque.Name = "colTorque";
-            this.colTorque.ReadOnly = true;
-            this.colTorque.Visible = false;
-            // 
-            // colAceleracao
-            // 
-            this.colAceleracao.HeaderText = "Aceleracao";
-            this.colAceleracao.Name = "colAceleracao";
-            this.colAceleracao.ReadOnly = true;
-            this.colAceleracao.Visible = false;
-            // 
-            // colConsumo
-            // 
-            this.colConsumo.HeaderText = "Consumo";
-            this.colConsumo.Name = "colConsumo";
-            this.colConsumo.ReadOnly = true;
-            this.colConsumo.Visible = false;
-            // 
-            // colRotacao
-            // 
-            this.colRotacao.HeaderText = "Rotacao Max";
-            this.colRotacao.Name = "colRotacao";
-            this.colRotacao.ReadOnly = true;
-            this.colRotacao.Visible = false;
+            this.Column4.HeaderText = "Modelo";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // FormCarro
             // 
@@ -1272,7 +1194,6 @@
         private System.Windows.Forms.ProgressBar pbVelocidadeMax;
         private System.Windows.Forms.ProgressBar pbPotencia;
         private System.Windows.Forms.ProgressBar pbPeso;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label lbTorque;
         private System.Windows.Forms.Label lbRotacao;
         private System.Windows.Forms.Label lbAceleracao;
@@ -1318,17 +1239,9 @@
         private iTalk.iTalk_Label iTalk_Label42;
         private System.Windows.Forms.TextBox textBox1;
         private Ambiance.Ambiance_Button_2 btBuscarCarro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colVelocidadeMax;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAceleracao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colConsumo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRotacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

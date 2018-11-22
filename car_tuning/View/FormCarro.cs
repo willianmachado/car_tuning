@@ -30,7 +30,7 @@ namespace car_tuning.View
             dgvCarro.Rows.Clear();
 
             foreach (Carro c in cars)
-                dgvCarro.Rows.Add(c.CpfCliente, c.Placa, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
+            dgvCarro.Rows.Add(c.Placa, c.Ano, c.Marca, c.Modelo);
             
         }
         
@@ -106,9 +106,9 @@ namespace car_tuning.View
 
             carro.CpfCliente = txtCpf.Text;
             carro.Placa = txtPlaca.Text;
+            carro.Ano = txtAno.Text;
             carro.Marca = txtMarca.Text;
             carro.Modelo = txtModelo.Text;
-            carro.Ano = txtAno.Text;
 
 
             carro.Aceleracao = Double.Parse(txtAceleracao.Text);
@@ -125,7 +125,12 @@ namespace car_tuning.View
         private void setDTO(Carro carro)
         {
             txtAceleracao.Text = carro.Aceleracao.ToString();
-            txtPeso.Text = carro.Consumo.ToString();
+            txtAno.Text = carro.Ano.ToString();
+            txtPlaca.Text = carro.Placa.ToString();
+            txtMarca.Text = carro.Marca.ToString();
+            txtModelo.Text = carro.Modelo.ToString();
+            txtCpf.Text = carro.CpfCliente.ToString();
+            txtConsumo.Text = carro.Consumo.ToString();
             txtPeso.Text = carro.Peso.ToString();
             txtPotencia.Text = carro.Potencia.ToString();
             txtVelocidadeMax.Text = carro.VelocidadeMax.ToString();
