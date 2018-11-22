@@ -18,9 +18,9 @@ namespace car_tuning.Modelo
                 bd.GetConnection();
 
             
-            string qry = string.Format("INSERT INTO CARRO (cpfCliente, modelo, marca, placa, ano, peso, velocidade_max, potencia, aceleracao, torque, consumo, rotacao_max)" +
+            string qry = string.Format("INSERT INTO CARRO (cpfCliente, modelo, marca, placa, ano,)" +
                 " VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}', '{7}', '{8}', '{9}', '{10}','{11}')",
-               c.CpfCliente, c.Modelo, c.Marca, c.Placa, c.Ano, c.Peso, c.VelocidadeMax, c.Potencia, c.Aceleracao, c.Torque, c.Consumo, c.RotacaoMax);
+               c.CpfCliente, c.Placa, c.Ano);
 
             bd.ExecuteSQL(qry);
 
@@ -34,7 +34,7 @@ namespace car_tuning.Modelo
         }
         public void Atualizar(Carro carro)
         {
-            String sql = string.Format("UPDATE CARRO SET modelo='{0}',marca='{1}',peso='{2}',velocidade_max='{3}',potencia='{4}',aceleracao='{5}',torque='{6}',consumo='{7}',rotacao_max='{8}'", carro.Modelo, carro.Marca, carro.Peso, carro.VelocidadeMax, carro.Potencia, carro.Aceleracao, carro.Torque, carro.Consumo, carro.RotacaoMax);
+            String sql = string.Format("UPDATE CARRO SET modelo='{0}',marca='{1}',peso='{2}',velocidade_max='{3}',potencia='{4}',aceleracao='{5}',torque='{6}',consumo='{7}',rotacao_max='{8}'",carro.Molelo);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
@@ -56,17 +56,9 @@ namespace car_tuning.Modelo
                 c.CpfCliente = dr["cpfCliente"].ToString();
                 c.Placa = dr["placa"].ToString();
                 c.Ano = dr["ano"].ToString();
-                c.Marca = dr["marca"].ToString();
-                c.Modelo = dr["modelo"].ToString();
-                c.Peso = Double.Parse(dr["peso"].ToString());
-                c.Potencia = Int32.Parse(dr["potencia"].ToString());
-                c.VelocidadeMax = Int32.Parse(dr["velocidade_max"].ToString());
-                c.Torque = Int32.Parse(dr["torque"].ToString());
-                c.Aceleracao = Int32.Parse(dr["aceleracao"].ToString());
-                c.Consumo = Int32.Parse(dr["consumo"].ToString());
-                c.RotacaoMax = Int32.Parse(dr["rotacao_max"].ToString());
+                
 
-                   lista.Add(new Carro(c.CpfCliente, c.Placa, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
+                   //lista.Add(new Carro(c.CpfCliente, c.Placa, c.Ano, c.Marca, c.Modelo));
             }
             return lista;
 
@@ -81,17 +73,11 @@ namespace car_tuning.Modelo
             if (ds.Tables[0].Rows.Count > 0)
             {
                 DataRow dr = ds.Tables[0].Rows[0];
-                carro.Aceleracao = Double.Parse(dr[""].ToString());
-                carro.Peso = Double.Parse(dr[""].ToString());
-                carro.Torque = Double.Parse(dr[""].ToString());
-                carro.RotacaoMax = Double.Parse(dr[""].ToString());
-                carro.Potencia = Double.Parse(dr[""].ToString());
+                
                 //carro.Cod = Double.Parse(dr[""].ToString());
                 //carro.Codigo
                 carro.Ano = dr[""].ToString();
-                carro.Modelo = dr[""].ToString();
-                carro.Placa = dr[""].ToString();
-                carro.Marca = dr[""].ToString();
+                
             }
 
 

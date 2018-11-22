@@ -126,34 +126,54 @@ namespace car_tuning
                     {
                         MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
                     }
+                //criar tabela marca
+                sql.Clear();
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `Marca` ( " +
+                    "`codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
+                    " `Nome` TEXT )");
 
+                cmd = new SQLiteCommand(sql.ToString(), conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao criar banco de dados TABELA Marca: " + ex.Message);
+                }
+                //cria tabela Carro
+                sql.Clear();
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO`(" +
+                    " `placa` TEXT NOT NULL UNIQUE, " +
+                    "`modelo` TEXT, `ano` TEXT, " +
+                    "`codMarca` INTEGER, " +
+                    "`cpfCli` TEXT," +
+                    " FOREIGN KEY(`codMarca`) REFERENCES `Marca`(`codigo`)," +
+                    " FOREIGN KEY(`cpfCli`) REFERENCES `Cliente`(`cpf`)," +
+                    " PRIMARY KEY(`placa`) );");
+
+                cmd = new SQLiteCommand(sql.ToString(), conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao criar banco de dados TABELA CARRO: " + ex.Message);
+                }
 
                 //cria tabela serviço
                 sql.Clear();
-                sql.AppendLine("CREATE TABLE 'SERVICO' ( " +
-                    "`cod` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, " +
-                    "`placaCarro` TEXT NOT NULL, " +
-                    "`codPeca` INTEGER NOT NULL, " +
-                    "`valorTotal` INTEGER NOT NULL," +
-                    "`cpfFuncionario` TEXT NOT NULL, " +
-                    "`cpfCliente` TEXT NOT NULL, " +
-                    " 'pesoIni' INTEGER," +
-                    " 'velocidade_maxIni' INTEGER," +
-                    " 'potenciaIni' INTEGER," +
-                    " 'aceleracaoIni' INTEGER," +
-                    " 'torqueIni' INTEGER," +
-                    " 'consumoIni' INTEGER," +
-                    " 'rotacao_maxIni' INTEGER," +
-                    " 'pesoFin' INTEGER," +
-                    " 'velocidade_maxFin' INTEGER," +
-                    " 'potenciaFin' INTEGER," +
-                    " 'aceleracaoFin' INTEGER," +
-                    " 'torqueFin' INTEGER," +
-                    " 'consumoFin' INTEGER," +
-                    " 'rotacao_maxFin' INTEGER," +
-                    "FOREIGN KEY(`placaCarro`) REFERENCES `CARRO`(`placa`), " +
-                    "FOREIGN KEY('cpfFuncionario') REFERENCES 'FUNCIONARIO'('cpf'), " +
-                    "FOREIGN KEY('cpfCliente') REFERENCES 'CLIENTE'('cpf') );");
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `Servico` (" +
+                    " `codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
+                    " `cpfcliente` TEXT," +
+                    " `placaCarro` TEXT," +
+                    " `cpfFunc` TEXT," +
+                    " `codStage` INTEGER," +
+                    " `valorTotal` REAL," +
+                    " FOREIGN KEY(`cpfcliente`) REFERENCES `Cliente`(`cpf`)," +
+                    " FOREIGN KEY(`cpfFunc`) REFERENCES `Funcionario`(`cpf`)," +
+                    " FOREIGN KEY(`placaCarro`) REFERENCES `Carro`(`placa`) );");
 
 
                 cmd = new SQLiteCommand(sql.ToString(), conn);
@@ -171,14 +191,15 @@ namespace car_tuning
 
                 sql.Clear();
                     sql.AppendLine("CREATE TABLE IF NOT EXISTS `PECA` ( " +
-                        " `codigo` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
-                        " `descricao` TEXT NOT NULL, " +
-                        " `tipo` TEXT NOT NULL, `valor` NUMERIC NOT NULL, " +
-                        " `compatibilidade` TEXT," +
-                        " `addTorque` INTEGER, " +
-                        " `fabricante` TEXT," +
-                        " `addPeso` INTEGER, " +
-                        " `addPotencia` INTEGER); ");
+                        "`codigo` INTEGER NOT NULL UNIQUE, " +
+                        "`fabricante` TEXT, " +
+                        "`preco` REAL, " +
+                        "`compatibilidade` TEXT, " +
+                        "`tipo` TEXT, `descricao` TEXT, " +
+                        "`addTorque` REAL, " +
+                        "`addPeso` REAL, " +
+                        "`addPotencia` REAL," +
+                        " PRIMARY KEY(`codigo`) );");
 
 
                     cmd = new SQLiteCommand(sql.ToString(), conn);
@@ -190,24 +211,49 @@ namespace car_tuning
                     {
                         MessageBox.Show("Erro ao criar banco de dados tabela PECA: " + ex.Message);
                     }
+                //cria tabela ServPeca
 
-
-                
-                
-                //cria tabela CARRO ORIGINAL
                 sql.Clear();
-                sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO_ORIGINAL` ( " +
-                    
-                    " 'modelo' TEXT," +
-                    " 'marca' TEXT," +
-                    " 'peso' INTEGER," +
-                    " 'velocidade_max' INTEGER," +
-                    " 'potencia' INTEGER," +
-                    " 'aceleracao' INTEGER," +
-                    " 'torque' INTEGER," +
-                    " 'consumo' INTEGER," +
-                    " 'rotacao_max' INTEGER," +
-                    " FOREIGN KEY(`marca`) REFERENCES `MARCA`(`Nome`));");
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `SERVPECA`(" +
+                    " `cadSev` INTEGER," +
+                    " `codPeca` INTEGER," +
+                    " `quantidade` INTEGER, " +
+                    "FOREIGN KEY(`cadSev`) REFERENCES `Servico`(`codigo`), " +
+                    "FOREIGN KEY(`codPeca`) REFERENCES `pecas`(`codigo`) );");
+
+
+                cmd = new SQLiteCommand(sql.ToString(), conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao criar banco de dados tabela ServPeca: " + ex.Message);
+                }
+
+
+
+                //cria tabela Stage
+                sql.Clear();
+                sql.AppendLine("CREATE TABLE IF NOT EXISTS `STAGE`("+
+                            	"`cod`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,"+
+	                            "`pesoIni`	INTEGER,"+
+	                            "`velocidade_maxIni`	INTEGER,"+
+	                            "`potenciaIni`	INTEGER,"+
+	                            "`aceleracaoIni`	INTEGER,"+
+	                            "`torqueIni`	INTEGER,"+
+	                            "`consumoIni`	INTEGER,"+
+	                            "`rotacao_maxIni`	INTEGER,"+
+	                            "`pesoFin`	INTEGER,"+
+	                            "`velocidade_maxFin`	INTEGER,"+
+	                            "`potenciaFin`	INTEGER,"+
+	                            "`aceleracaoFin`	INTEGER,"+
+	                            "`torqueFin`	INTEGER,"+
+	                            "`consumoFin`	INTEGER,"+
+	                            "`rotacao_maxFin`	INTEGER, " +
+                                "`codServ`	INTEGER,"+
+                                "FOREIGN KEY(`codServ`) REFERENCES `Servico`(`codigo`));");
 
 
                 cmd = new SQLiteCommand(sql.ToString(), conn);
@@ -217,60 +263,12 @@ namespace car_tuning
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Erro ao criar banco de dados TABELA CARRO ORIGINAL: " + ex.Message);
+                        MessageBox.Show("Erro ao criar banco de dados TABELA : STAGE" + ex.Message);
                     }
 
 
-                //cria tabela Veiculo
-                sql.Clear();
-                sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO` ( " +
-                    " `placa` TEXT NOT NULL PRIMARY KEY," +
-                    " `ano` TEXT," +
-                    " `modelo` TEXT," +
-                    " `marca` TEXT," +
-                    " 'peso' INTEGER," +
-                    " 'velocidade_max' INTEGER," +
-                    " 'potencia' INTEGER," +
-                    " 'aceleracao' INTEGER," +
-                    " 'torque' INTEGER," +
-                    " 'consumo' INTEGER," +
-                    " 'rotacao_max' INTEGER, " +
-                    " `cpfCliente` TEXT NOT NULL ," +
-                    "FOREIGN KEY('marca') REFERENCES 'CARRO_ORIGINAL'('marca'), " +
-                    "FOREIGN KEY('modelo') REFERENCES 'CARRO_ORIGINAL'('modelo'), " +
-                    "FOREIGN KEY('peso') REFERENCES 'CARRO_ORIGINAL'('peso'), " +
-                    "FOREIGN KEY('velocidade_max') REFERENCES 'CARRO_ORIGINAL'('velocidade_max'), " +
-                    "FOREIGN KEY('potencia') REFERENCES 'CARRO_ORIGINAL'('potencia'), " +
-                    "FOREIGN KEY('aceleracao') REFERENCES 'CARRO_ORIGINAL'('aceleracao'), " +
-                    "FOREIGN KEY('torque') REFERENCES 'CARRO_ORIGINAL'('torque'), " +
-                    "FOREIGN KEY('consumo') REFERENCES 'CARRO_ORIGINAL'('consumo'), " +
-                    "FOREIGN KEY('rotacao_max') REFERENCES 'CARRO_ORIGINAL'('rotacao_max'), " +
-                    "FOREIGN KEY('cpfCliente') REFERENCES 'CLIENTE'('cpf'));");
-
-                cmd = new SQLiteCommand(sql.ToString(), conn);
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao criar banco de dados TABELA CARRO: " + ex.Message);
-                }
-                //cria tabela marca
-
-                sql.Clear();
-                sql.AppendLine("CREATE TABLE IF NOT EXISTS `MARCA` (`Nome` TEXT NOT NULL PRIMARY KEY UNIQUE);"
-                   );
-
-                cmd = new SQLiteCommand(sql.ToString(), conn);
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao criar banco de dados TABELA MARCA: " + ex.Message);
-                }
+                
+                
 
             }
         }

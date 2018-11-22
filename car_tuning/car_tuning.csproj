@@ -67,13 +67,11 @@
     <Compile Include="Ambiance Theme.cs" />
     <Compile Include="Controle\ValidaCPF.cs" />
     <Compile Include="DAO\CarroDAO.cs" />
-    <Compile Include="DAO\CarroOriginalDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\PecasDAO.cs" />
     <Compile Include="DAO\ServicoDAO.cs" />
     <Compile Include="DAO\TesteDAO.cs" />
-    <Compile Include="Modelo\CarroOriginal.cs" />
     <Compile Include="View\FormCadastroCarro.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -29,8 +29,8 @@ namespace car_tuning.View
             cars = c.Carregar();
             dgvCarro.Rows.Clear();
 
-            foreach (Carro c in cars)
-            dgvCarro.Rows.Add(c.Placa, c.Ano, c.Marca, c.Modelo);
+            //foreach (Carro c in cars)
+            //dgvCarro.Rows.Add(c.Placa, c.Ano, c.Marca, c.Modelo);
             
         }
         
@@ -107,36 +107,24 @@ namespace car_tuning.View
             carro.CpfCliente = txtCpf.Text;
             carro.Placa = txtPlaca.Text;
             carro.Ano = txtAno.Text;
-            carro.Marca = txtMarca.Text;
-            carro.Modelo = txtModelo.Text;
+            //carro.CodMarca1 = txtMarca.Text;
+            //carro.Modelo = txtModelo.Text;
 
 
-            carro.Aceleracao = Double.Parse(txtAceleracao.Text);
-            carro.Consumo = Double.Parse(txtPeso.Text);
-            carro.Peso = Double.Parse(txtPeso.Text);
-            carro.Potencia = Double.Parse(txtPotencia.Text);
-            carro.VelocidadeMax = Double.Parse(txtVelocidadeMax.Text);
-            carro.Torque = Double.Parse(txtTorque.Text);
-            carro.Aceleracao = Double.Parse(txtAceleracao.Text);
-            carro.RotacaoMax = Double.Parse(txtRotacaoMax.Text);
+            
             return carro;
         }
 
         private void setDTO(Carro carro)
         {
-            txtAceleracao.Text = carro.Aceleracao.ToString();
+            
             txtAno.Text = carro.Ano.ToString();
             txtPlaca.Text = carro.Placa.ToString();
-            txtMarca.Text = carro.Marca.ToString();
-            txtModelo.Text = carro.Modelo.ToString();
+            //txtMarca.Text = carro.Marca.ToString();
+           // txtModelo.Text = carro.Modelo.ToString();
             txtCpf.Text = carro.CpfCliente.ToString();
-            txtConsumo.Text = carro.Consumo.ToString();
-            txtPeso.Text = carro.Peso.ToString();
-            txtPotencia.Text = carro.Potencia.ToString();
-            txtVelocidadeMax.Text = carro.VelocidadeMax.ToString();
-            txtTorque.Text = carro.Torque.ToString();
-            txtAceleracao.Text = carro.Aceleracao.ToString();
-            txtRotacaoMax.Text = carro.RotacaoMax.ToString();
+            
+            
         }
 
         public void ControlaBotoes(bool statusBtNovo)
@@ -371,6 +359,16 @@ namespace car_tuning.View
             }
         }
 
+        private void btnBuscaIMG_Click(object sender, EventArgs e)
+        {
+            if (SfdCarro.ShowDialog() == DialogResult.OK)
+            {
+                
+                imgCarro.Image = Image.FromFile(SfdCarro.FileName);
+                imgCarro.Show();
+                
+            }
+        }
     }
     
 }

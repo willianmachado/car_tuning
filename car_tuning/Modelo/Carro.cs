@@ -6,32 +6,35 @@ using System.Threading.Tasks;
 
 namespace car_tuning.Modelo
 {
-    class Carro : CarroOriginal
+    class Carro 
     {
         private string ano;
         private string placa;
+        private string molelo;
         private string cpfCliente;
-
-        public Carro(string ano, string placa, string cpfCliente)
-        {
-            this.Ano = ano;
-            this.Placa = placa;
-            this.CpfCliente = cpfCliente;
-        }
-
-        public Carro (string cpfCliente, string placa, string ano, string marca, string modelo, double peso, double potencia, double aceleracao, double velocidadeMax, double torque, double consumo, double rotacaoMax) : base (modelo, marca, peso, potencia, aceleracao, velocidadeMax, torque, consumo, rotacaoMax)
-        {
-
-        }
+        private int CodMarca;
+        
 
         public Carro()
         {
 
 
-        }        
+        }
+
+        public Carro(string ano, string placa, string molelo, string cpfCliente, int codMarca)
+        {
+            this.ano = ano;
+            this.placa = placa;
+            this.molelo = molelo;
+            this.cpfCliente = cpfCliente;
+            CodMarca = codMarca;
+        }
 
         public string Ano { get => ano; set => ano = value; }
         public string Placa { get => placa; set => placa = value; }
+        public string Molelo { get => molelo; set => molelo = value; }
         public string CpfCliente { get => cpfCliente; set => cpfCliente = value; }
+        public int CodMarca1 { get => CodMarca; set => CodMarca = value; }
+
     }
 }

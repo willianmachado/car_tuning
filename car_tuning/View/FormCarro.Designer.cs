@@ -82,6 +82,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btBuscarCarro = new Ambiance.Ambiance_Button_2();
             this.dgvCarro = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_Label20 = new iTalk.iTalk_Label();
             this.imgCarro = new System.Windows.Forms.PictureBox();
             this.iTalk_Label12 = new iTalk.iTalk_Label();
@@ -104,10 +108,8 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscaIMG = new Ambiance.Ambiance_Button_1();
+            this.SfdCarro = new System.Windows.Forms.SaveFileDialog();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
@@ -120,6 +122,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox2.Controls.Add(this.btnBuscaIMG);
             this.iTalk_GroupBox2.Controls.Add(this.lbConsumo);
             this.iTalk_GroupBox2.Controls.Add(this.pbConsumo);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label18);
@@ -822,6 +825,30 @@
             this.dgvCarro.Size = new System.Drawing.Size(573, 245);
             this.dgvCarro.TabIndex = 28;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Placa";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ano";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Marca";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Modelo";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // iTalk_Label20
             // 
             this.iTalk_Label20.AutoSize = true;
@@ -1107,29 +1134,19 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // Column1
+            // btnBuscaIMG
             // 
-            this.Column1.HeaderText = "Placa";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ano";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Marca";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Modelo";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
+            this.btnBuscaIMG.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscaIMG.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnBuscaIMG.Image = null;
+            this.btnBuscaIMG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscaIMG.Location = new System.Drawing.Point(922, 229);
+            this.btnBuscaIMG.Name = "btnBuscaIMG";
+            this.btnBuscaIMG.Size = new System.Drawing.Size(185, 35);
+            this.btnBuscaIMG.TabIndex = 45;
+            this.btnBuscaIMG.Text = "Buscar Imagem";
+            this.btnBuscaIMG.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnBuscaIMG.Click += new System.EventHandler(this.btnBuscaIMG_Click);
             // 
             // FormCarro
             // 
@@ -1243,5 +1260,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private Ambiance.Ambiance_Button_1 btnBuscaIMG;
+        private System.Windows.Forms.SaveFileDialog SfdCarro;
     }
 }
