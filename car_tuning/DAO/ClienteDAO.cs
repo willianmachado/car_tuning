@@ -15,15 +15,15 @@ namespace car_tuning
         public void Salvar(Cliente c)
         {
             //Salvar um Cliente DAO
-            
-                DataBase bd = DataBase.GetInstance();
-                bd.GetConnection();
-            
-            
+
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+
+
             string qry = string.Format("INSERT INTO CLIENTE(CPF, NOME, TEL, EMAIL) VALUES ('{0}', '{1}', '{2}', '{3}')", c.Cpf, c.Nome, c.Telefone, c.Email);
-            
+
             bd.ExecuteSQL(qry);
-           
+
         }
 
 
@@ -48,13 +48,14 @@ namespace car_tuning
 
             bd.ExecuteSQL(qry);
         }
-                
+
         public Cliente BuscaCPF(string cpf)
         {
-            string qry = "select * from CLIENTE where cpf= " + cpf;
+            string qry = "select * from CLIENTE where cpf = " + cpf;
             Cliente cliente = new Cliente();
             DataBase bd = DataBase.GetInstance();
             DataSet ds = bd.ExecuteQuery(qry);
+
             if (ds.Tables[0].Rows.Count > 0)
             {
                 DataRow dr = ds.Tables[0].Rows[0];
@@ -70,6 +71,7 @@ namespace car_tuning
         {
             List<Cliente> lista = new List<Cliente>();
             Cliente c = new Cliente();
+
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
@@ -78,7 +80,7 @@ namespace car_tuning
                 conn.Open();
             SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM CLIENTE", conn);
             SQLiteDataReader dr = cmd.ExecuteReader();
-           
+
 
             while (dr.Read())
             {
@@ -87,12 +89,41 @@ namespace car_tuning
                 c.Email = dr["EMAIL"].ToString();
                 c.Telefone = dr["TEL"].ToString();
 
-               lista.Add(new Cliente(c.Cpf, c.Nome, c.Telefone, c.Email));
+                lista.Add(new Cliente(c.Cpf, c.Nome, c.Telefone, c.Email));
             }
 
             return lista;
         }
 
-       
+        public List<Cliente> Listar(string busca)
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente c = new Cliente();
+
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM CLIENTE WHERE nome like '%" + busca + "%' OR cpf LIKE'%" + busca + "%'", conn);
+
+            SQLiteDataReader dr = cmd.ExecuteReader();
+
+
+            while (dr.Read())
+            {
+                c.Cpf = (dr["CPF"].ToString());
+                c.Nome = dr["NOME"].ToString();
+                c.Email = dr["EMAIL"].ToString();
+                c.Telefone = dr["TEL"].ToString();
+
+                lista.Add(new Cliente(c.Cpf, c.Nome, c.Telefone, c.Email));
+            }
+
+            return lista;
+
+        }
     }
 }

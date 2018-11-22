@@ -35,30 +35,10 @@ namespace car_tuning.View
 
         }
 
-        private void txtMarca_TextChanged(object sender, EventArgs e)
-        {
-
-            lbMarca.Text = txtMarca.Text;
-        }
+        
 
 
-        private void txtModelo_TextChanged(object sender, EventArgs e)
-        {
-            if (txtMarca.Text == "")
-            {
-                MessageBox.Show("Selecione a Marca do carro");
-                lbModelo.Text = txtMarca.Text;
-            }
-
-            else
-            {
-
-                lbMarca.Visible = true;
-                lbModelo.Visible = true;
-                imgCarro.Visible = true;
-                lbAno.Visible = true;
-            }
-        }
+       
 
         private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -147,7 +127,7 @@ namespace car_tuning.View
             carro.Consumo = Double.Parse(txtPeso.Text);
             carro.Peso = Double.Parse(txtPeso.Text);
             carro.Potencia = Double.Parse(txtPotencia.Text);
-            carro.VelocidadeMax = Double.Parse(txtVelMaxima.Text);
+            carro.VelocidadeMax = Double.Parse(txtVelocidadeMax.Text);
             carro.Torque = Double.Parse(txtTorque.Text);
             carro.Aceleracao = Double.Parse(txtAceleracao.Text);
             carro.RotacaoMax = Double.Parse(txtRotacaoMax.Text);
@@ -160,7 +140,7 @@ namespace car_tuning.View
             txtPeso.Text = carro.Consumo.ToString();
             txtPeso.Text = carro.Peso.ToString();
             txtPotencia.Text = carro.Potencia.ToString();
-            txtVelMaxima.Text = carro.VelocidadeMax.ToString();
+            txtVelocidadeMax.Text = carro.VelocidadeMax.ToString();
             txtTorque.Text = carro.Torque.ToString();
             txtAceleracao.Text = carro.Aceleracao.ToString();
             txtRotacaoMax.Text = carro.RotacaoMax.ToString();
@@ -211,7 +191,7 @@ namespace car_tuning.View
             txtPotencia.Text = "";
             txtRotacaoMax.Text = "";
             txtTorque.Text = "";
-            txtVelMaxima.Text = "";
+            txtVelocidadeMax.Text = "";
             txtConsumo.Text = "";
             pbAceleracao.Value = 0;
             pbConsumo.Value = 0;
@@ -280,17 +260,17 @@ namespace car_tuning.View
                     pbAceleracao.Value = aceleracao;
                 }
 
-            if (txtVelMaxima.Text != "" && velocidade < 401)
+            if (txtVelocidadeMax.Text != "" && velocidade < 401)
 
                 try
                 {
-                    velocidade = int.Parse(txtVelMaxima.Text);
+                    velocidade = int.Parse(txtVelocidadeMax.Text);
                     pbVelocidadeMax.Value = velocidade;
                 }
                 catch
                 {
                     MessageBox.Show("A velocidade máxima registrada é 400km/h");
-                    txtVelMaxima.Text = "";
+                    txtVelocidadeMax.Text = "";
                     velocidade = 1;
                 }
 

@@ -20,41 +20,60 @@ namespace car_tuning
 
         public FormCliente()
         {
-            
-
             InitializeComponent();
             ControlaBotoes(true);
             txtNome.Enabled = false;
             txtEmail.Enabled = false;
             txtTelefone.Enabled = false;
-            txtAno.Enabled = false;
             Fill();
-            
         }
-
-        private void Fill()
-        {
-            ClienteDAO uDAO = new ClienteDAO();
-            List<Cliente> usuarios;
-            usuarios = uDAO.Carregar();
-            dgvCliente.Rows.Clear();
-
-            foreach (Cliente u in usuarios)
-                dgvCliente.Rows.Add(u.Cpf, u.Nome, u.Email, u.Telefone);
-        }
-
-
-        private void btLimpar_Click(object sender, EventArgs e)
-        {
-            btSalvar.Text = "Salvar";
-            ControlaBotoes(true);
-            limparCampos();
-        }
-
+       
         private void btNovo_Click(object sender, EventArgs e)
         {
             ControlaBotoes(false);
             limparCampos();
+        }
+
+        private void btSalvar_Click(object sender, EventArgs e)
+        {
+
+            ClienteDAO clienteDAO = new ClienteDAO();
+            Cliente cliente = getDTO();
+
+
+            if (txtCpf.Text != "")
+            {
+                if (btSalvar.Text == "Salvar")
+                {
+                    clienteDAO.Salvar(cliente);
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                else
+                {
+                    clienteDAO.Atualizar(cliente);
+                    MessageBox.Show("Atualizado com Sucesso!");
+                    btSalvar.Text = "Salvar";
+                }
+
+                try
+                {
+                    Fill();
+                    ControlaBotoes(true);
+                    limparCampos();
+                }
+
+                catch (Exception)
+                {
+                    MessageBox.Show("CPF Já cadastrado! ");
+                }
+            }
+
+            else
+            {
+                MessageBox.Show(this, "Favor preencher: CPF/EMAIL ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
         }
 
         private void btEditar_Click(object sender, EventArgs e)
@@ -70,48 +89,20 @@ namespace car_tuning
                     txtNome.Enabled = true;
                     txtEmail.Enabled = true;
                     txtTelefone.Enabled = true;
-                    txtAno.Enabled = true;
-                    txtMarca.Enabled = true;
-                    txtModelo.Enabled = true;
                 }
 
                 else
                 {
                     MessageBox.Show("Clique duplo para editar");
                     
-                }
-             
+                }             
         }
 
-
-        private void txtAno_TextChanged(object sender, EventArgs e)
+        private void btLimpar_Click(object sender, EventArgs e)
         {
-            lbAno.Text = txtAno.Text;
-        }
-
-        private void txtMarca_TextChanged(object sender, EventArgs e)
-        {
-            lbMarca.Text = txtMarca.Text;
-        }
-
-        private void txtModelo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            if (txtMarca.Text == "")
-            {
-                MessageBox.Show("Selecione a Marca do carro");
-                lbModelo.Text = txtModelo.Text;
-            }
-
-            else
-            {
-
-                lbMarca.Visible = true;
-                lbModelo.Text = txtModelo.Text;
-                lbModelo.Visible = true;
-                imgCarro.Visible = true;
-                lbAno.Visible = true;
-            }
+            btSalvar.Text = "Salvar";
+            ControlaBotoes(true);
+            limparCampos();
         }
 
         private void btPesquisar_Click(object sender, EventArgs e)
@@ -119,49 +110,7 @@ namespace car_tuning
             FormPesquisa pesquisa = new FormPesquisa();
             pesquisa.Show();
         }
-
-        private void btSalvar_Click(object sender, EventArgs e)
-        {
-
-            ClienteDAO clienteDAO = new ClienteDAO();
-            Cliente cliente = getDTO();
-            
-
-            if (txtCpf.Text != "")
-            {
-                if (btSalvar.Text == "Salvar")
-                {
-                    clienteDAO.Salvar(cliente);
-                    MessageBox.Show("Cadastrado com Sucesso!");
-                }
-                else 
-                {
-                    clienteDAO.Atualizar(cliente);
-                    MessageBox.Show("Atualizado com Sucesso!");
-                    btSalvar.Text = "Salvar";
-                }
-                
-                try
-                {
-                    Fill();
-                    ControlaBotoes(true);
-                    limparCampos();
-                }
-
-                catch (Exception)
-                {
-                    MessageBox.Show("CPF Já cadastrado! ");
-                } 
-            }
-
-            else
-            {
-                MessageBox.Show(this, "Favor preencher: CPF/EMAIL ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-
-        }
-
+        
         private void btExcluir_Click(object sender, EventArgs e)
         {
 
@@ -200,6 +149,16 @@ namespace car_tuning
         }
 
         //CONTROLES
+        private void Fill()
+        { 
+            List<Cliente> usuarios;
+            usuarios = c.Carregar();
+            dgvCliente.Rows.Clear();
+
+            foreach (Cliente u in usuarios)
+                dgvCliente.Rows.Add(u.Cpf, u.Nome, u.Email, u.Telefone);
+        }
+
         public void ControlaBotoes(bool statusBtNovo)
         {
             //Habilita e desabilita os botoes de acordo com a atual situação do cadastro
@@ -218,12 +177,10 @@ namespace car_tuning
                 this.btPesquisar.Enabled = true;
                 this.btPesquisar.ForeColor = Color.White;
 
+                this.txtCpf.Enabled = false;
                 this.txtNome.Enabled = false;
                 this.txtEmail.Enabled = false;
                 this.txtTelefone.Enabled = false;
-                this.txtAno.Enabled = false;
-                this.txtMarca.Enabled = false;
-                this.txtModelo.Enabled = false;
 
             }
             else
@@ -245,9 +202,6 @@ namespace car_tuning
                 this.txtNome.Enabled = true;
                 this.txtEmail.Enabled = true;
                 this.txtTelefone.Enabled = true;
-                this.txtAno.Enabled = true;
-                this.txtMarca.Enabled = true;
-                this.txtModelo.Enabled = true;
             }
         }
 
@@ -259,23 +213,30 @@ namespace car_tuning
             txtCpf.Text = "";
             txtTelefone.Text = "";
             txtEmail.Text = "";
-            txtAno.Text = "";
-            txtModelo.Text = " ";
-            txtPlaca.Text = "";
-            txtMarca.Text = " ";
             
+        }
+        
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            List<Cliente> usuarios;
+
+            usuarios = c.Listar(txtBusca.Text);
+            dgvCliente.Rows.Clear();
+
+            foreach (Cliente u in usuarios)
+                dgvCliente.Rows.Add(u.Cpf, u.Nome, u.Email, u.Telefone);
         }
 
         //Obter dados da Classe/Visao
         private Cliente getDTO()
         {
             Cliente cliente = new Cliente();
-            
+
             cliente.Cpf = txtCpf.Text.Trim();
             cliente.Nome = txtNome.Text.Trim();
             cliente.Telefone = txtTelefone.Text.Trim();
             cliente.Email = txtEmail.Text.Trim();
-            
+
 
             return cliente;
         }
@@ -288,13 +249,8 @@ namespace car_tuning
             txtNome.Text = c.Nome;
             txtTelefone.Text = c.Telefone;
             txtEmail.Text = c.Email;
-            
+
             return c;
-        }
-
-        private void FormCliente_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
