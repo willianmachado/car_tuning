@@ -17,6 +17,7 @@ namespace car_tuning
         public FormFuncionario()
         {
             InitializeComponent();
+            ControlaBotoes(true);
             Fill();
         }
         private void Fill()
@@ -38,6 +39,7 @@ namespace car_tuning
 
         private void btLimpar_Click( object sender, EventArgs e)
         {
+            btSalvar.Text = "Salvar";
             ControlaBotoes(true);
             limparCampos();
         }
@@ -60,11 +62,22 @@ namespace car_tuning
 
             if (txtCpf.Text != "" || txtNome.Text != "")
             {
-                funcionarioDAO.Salvar(funcionario);
+                
                 Fill();
+                if (btSalvar.Text == "Salvar")
+                {
+                    funcionarioDAO.Salvar(funcionario);
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                else
+                {
+                    funcionarioDAO.atualizar(funcionario);
+                    MessageBox.Show("Atualizado com Sucesso!");
+                    btSalvar.Text = "Salvar";
+                }
                 try
                 {
-                    MessageBox.Show("Cadastrado com Sucesso!");
+                    Fill();
                     ControlaBotoes(true);
                     limparCampos();
                 }
@@ -175,6 +188,7 @@ namespace car_tuning
             txtTelefone.Text = f.Telefone;
             
         }
+        
 
         private void dgvFunc_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -185,6 +199,16 @@ namespace car_tuning
                 txtTelefone.Text = dgvFunc.Rows[e.RowIndex].Cells[2].Value.ToString();
 
             }
+        }
+
+        private void txtBuscaFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            List<Funcionario> funcionarios;
+            funcionarios = f.Listar(txtBuscaFunc.Text);
+            dgvFunc.Rows.Clear();
+
+            foreach (Funcionario f in funcionarios)
+                dgvFunc.Rows.Add(f.Codigo, f.Cpf, f.Telefone);
         }
     }
 }

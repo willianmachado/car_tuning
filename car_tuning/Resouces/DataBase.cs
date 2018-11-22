@@ -238,20 +238,20 @@ namespace car_tuning
                 sql.Clear();
                 sql.AppendLine("CREATE TABLE IF NOT EXISTS `STAGE`("+
                             	"`cod`	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,"+
-	                            "`pesoIni`	INTEGER,"+
-	                            "`velocidade_maxIni`	INTEGER,"+
-	                            "`potenciaIni`	INTEGER,"+
-	                            "`aceleracaoIni`	INTEGER,"+
-	                            "`torqueIni`	INTEGER,"+
-	                            "`consumoIni`	INTEGER,"+
-	                            "`rotacao_maxIni`	INTEGER,"+
-	                            "`pesoFin`	INTEGER,"+
-	                            "`velocidade_maxFin`	INTEGER,"+
-	                            "`potenciaFin`	INTEGER,"+
-	                            "`aceleracaoFin`	INTEGER,"+
-	                            "`torqueFin`	INTEGER,"+
-	                            "`consumoFin`	INTEGER,"+
-	                            "`rotacao_maxFin`	INTEGER, " +
+                                "`pesoIni`	REAL," +
+                                "`velocidade_maxIni`	REAL," +
+                                "`potenciaIni`	REAL," +
+                                "`aceleracaoIni`	REAL," +
+                                "`torqueIni`	REAL," +
+                                "`consumoIni`	REAL," +
+                                "`rotacao_maxIni`	REAL," +
+                                "`pesoFin`	REAL," +
+                                "`velocidade_maxFin`	REAL," +
+                                "`potenciaFin`	REAL," +
+                                "`aceleracaoFin`	REAL," +
+                                "`torqueFin`	REAL," +
+                                "`consumoFin`	REAL," +
+                                "`rotacao_maxFin`	REAL, " +
                                 "`codServ`	INTEGER,"+
                                 "FOREIGN KEY(`codServ`) REFERENCES `Servico`(`codigo`));");
 

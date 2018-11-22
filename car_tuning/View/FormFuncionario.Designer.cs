@@ -37,7 +37,7 @@
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iTalk_TextBox_Small1 = new iTalk.iTalk_TextBox_Small();
+            this.txtBuscaFunc = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
@@ -74,7 +74,7 @@
             this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox1.Controls.Add(this.dgvFunc);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small1);
+            this.iTalk_GroupBox1.Controls.Add(this.txtBuscaFunc);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
@@ -161,20 +161,21 @@
             this.telefone.Name = "telefone";
             this.telefone.ReadOnly = true;
             // 
-            // iTalk_TextBox_Small1
+            // txtBuscaFunc
             // 
-            this.iTalk_TextBox_Small1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small1.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small1.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small1.Location = new System.Drawing.Point(479, 42);
-            this.iTalk_TextBox_Small1.MaxLength = 32767;
-            this.iTalk_TextBox_Small1.Multiline = false;
-            this.iTalk_TextBox_Small1.Name = "iTalk_TextBox_Small1";
-            this.iTalk_TextBox_Small1.ReadOnly = false;
-            this.iTalk_TextBox_Small1.Size = new System.Drawing.Size(493, 28);
-            this.iTalk_TextBox_Small1.TabIndex = 6;
-            this.iTalk_TextBox_Small1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small1.UseSystemPasswordChar = false;
+            this.txtBuscaFunc.BackColor = System.Drawing.Color.Transparent;
+            this.txtBuscaFunc.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtBuscaFunc.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBuscaFunc.Location = new System.Drawing.Point(479, 42);
+            this.txtBuscaFunc.MaxLength = 32767;
+            this.txtBuscaFunc.Multiline = false;
+            this.txtBuscaFunc.Name = "txtBuscaFunc";
+            this.txtBuscaFunc.ReadOnly = false;
+            this.txtBuscaFunc.Size = new System.Drawing.Size(493, 28);
+            this.txtBuscaFunc.TabIndex = 6;
+            this.txtBuscaFunc.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscaFunc.UseSystemPasswordChar = false;
+            this.txtBuscaFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscaFunc_KeyPress);
             // 
             // iTalk_Label3
             // 
@@ -359,7 +360,7 @@
         private iTalk.iTalk_Button_2 btExcluir;
         private iTalk.iTalk_Button_2 btVoltar;
         private System.Windows.Forms.DataGridView dgvFunc;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small1;
+        private iTalk.iTalk_TextBox_Small txtBuscaFunc;
         private iTalk.iTalk_Label iTalk_Label4;
         private iTalk.iTalk_Button_2 btNovo;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf;

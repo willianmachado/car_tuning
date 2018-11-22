@@ -33,6 +33,7 @@ namespace car_tuning
         private void btNovo_Click(object sender, EventArgs e)
         {
             ControlaBotoes(false);
+            
             limparCampos();
         }
 

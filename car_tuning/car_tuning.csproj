@@ -69,9 +69,14 @@
     <Compile Include="DAO\CarroDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
+    <Compile Include="DAO\MarcaDAO.cs" />
     <Compile Include="DAO\PecasDAO.cs" />
     <Compile Include="DAO\ServicoDAO.cs" />
-    <Compile Include="DAO\TesteDAO.cs" />
+    <Compile Include="DAO\StageDAO.cs" />
+    <Compile Include="DAO\ServPecaDAO.cs" />
+    <Compile Include="Modelo\Marca.cs" />
+    <Compile Include="Modelo\ServPeca.cs" />
+    <Compile Include="Modelo\Stage.cs" />
     <Compile Include="View\FormCadastroCarro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,7 +136,6 @@
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Pecas.cs" />
     <Compile Include="Modelo\Servico.cs" />
-    <Compile Include="Modelo\Teste.cs" />
     <Compile Include="View\FormRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>

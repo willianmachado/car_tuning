@@ -71,20 +71,22 @@ namespace car_tuning.Modelo
             return lista;
 
         }
-        public List<Funcionario> BuscaCPF(string cpf)
+        public List<Funcionario> Listar(string busca)
         {
-            string qry = "SELECT * FROM funcionario";
-            qry += cpf == null || cpf == null ? "" : " WHERE cpf LIKE '%" + cpf + "%'";
+            
             List<Funcionario> lista = new List<Funcionario>();
             Funcionario f = new Funcionario();
-
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM FUNCINARIO WHERE nome like'%" + busca + "%' OR cpf LIKE'%" + busca + "%'", conn);
 
-            DataSet ds = bd.ExecuteQuery(qry);
 
+            SQLiteDataReader dr = cmd.ExecuteReader();
 
-            foreach (DataRow dr in ds.Tables[0].Rows)
+            while (dr.Read())
             {
                 f.Cpf = (dr["cpf"].ToString());
                 f.Nome = dr["nome"].ToString();
