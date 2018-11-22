@@ -19,27 +19,21 @@ namespace car_tuning.View
         public FormCarro()
         {
             InitializeComponent();
+            ControlaBotoes(true);
+            Fill();
         }
+        
         private void Fill()
         {
-            CarroDAO carroDAO = new CarroDAO();
-            List<Carro> carros;
-            //carros = carroDAO.Carregar();
+            List<Carro> cars;
+            cars = c.Carregar();
             dgvCarro.Rows.Clear();
-            //foreach (Carro c in carros)
-            //    dgvCarro.Rows.Add();
+
+            foreach (Carro c in cars)
+                dgvCarro.Rows.Add(c.CpfCliente, c.Placa, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
+            
         }
-
-        private void txtAno_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         
-
-
-       
-
         private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
         {
             //Designar apenas numeros para o txtAno
@@ -56,6 +50,7 @@ namespace car_tuning.View
         private void btNovo_Click(object sender, EventArgs e)
         {
             ControlaBotoes(false);
+            txtEnable(true);
             limparCampos();
         }
 
@@ -64,7 +59,7 @@ namespace car_tuning.View
             CarroDAO carroDAO = new CarroDAO();
             Carro carro = GetDTO();
             carroDAO.Salvar(carro);
-            //dgvCarro.DataSource = c.carregar();
+            Fill();
 
             try
 
@@ -98,31 +93,24 @@ namespace car_tuning.View
         {
 
         }
-
-
-
+        
         private void btPesquisar_Click(object sender, EventArgs e)
         {
             FormPesquisa pesquisa = new FormPesquisa();
             pesquisa.Show();
         }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            FormCadastroCarro form = new FormCadastroCarro();
-            form.Show();
-        }
-
-        private void btnCadVeiNovo_Click(object sender, EventArgs e)
-        {
-            FormCadastroCarro formCadCarro = new FormCadastroCarro();
-            formCadCarro.ShowDialog(this);
-            formCadCarro.StartPosition = FormStartPosition.CenterParent;
-        }
-
+        
         private Carro GetDTO()
         {
             Carro carro = new Carro();
+
+            carro.CpfCliente = txtCpf.Text;
+            carro.Placa = txtPlaca.Text;
+            carro.Marca = txtMarca.Text;
+            carro.Modelo = txtModelo.Text;
+            carro.Ano = txtAno.Text;
+
+
             carro.Aceleracao = Double.Parse(txtAceleracao.Text);
             carro.Consumo = Double.Parse(txtPeso.Text);
             carro.Peso = Double.Parse(txtPeso.Text);
@@ -151,6 +139,7 @@ namespace car_tuning.View
             //Habilita e desabilita os botoes de acordo com a atual situação do cadastro
             if (statusBtNovo == true)
             {
+                
                 this.btNovo.Enabled = true;
                 this.btNovo.ForeColor = Color.White;
                 this.btExcluir.Enabled = true;
@@ -163,6 +152,7 @@ namespace car_tuning.View
                 this.btLimpar.ForeColor = Color.Gray;
                 this.btPesquisar.Enabled = true;
                 this.btPesquisar.ForeColor = Color.White;
+                txtEnable(false);
 
             }
             else
@@ -179,8 +169,10 @@ namespace car_tuning.View
                 this.btLimpar.ForeColor = Color.White;
                 this.btPesquisar.Enabled = false;
                 this.btPesquisar.ForeColor = Color.Gray;
+                txtEnable(true);
             }
         }
+
         public void limparCampos()
         {
             txtAceleracao.Text = "";
@@ -193,6 +185,7 @@ namespace car_tuning.View
             txtTorque.Text = "";
             txtVelocidadeMax.Text = "";
             txtConsumo.Text = "";
+            txtAno.Text = "";
             pbAceleracao.Value = 0;
             pbConsumo.Value = 0;
             pbPeso.Value = 0;
@@ -203,7 +196,18 @@ namespace car_tuning.View
             
         }
 
-        private void pbFill() {
+        private void txtPeso_TextChanged(object sender, EventArgs e)
+        {
+            pbFill();
+        }
+
+        private void txtConsumo_TextChanged(object sender, EventArgs e)
+        {
+            pbFill();
+        }
+
+        private void pbFill()
+        {
 
             int peso = 0;
             int consumo = 0;
@@ -243,7 +247,7 @@ namespace car_tuning.View
                     pbPeso.Value = peso;
                 }
 
-           
+
 
             if (txtAceleracao.Text != "" && aceleracao < 31)
 
@@ -300,7 +304,7 @@ namespace car_tuning.View
                     MessageBox.Show("O torque deve ser até 101 kg");
                     txtTorque.Text = "";
                     torque = 1;
-                
+
                 }
 
             if (txtPotencia.Text != "" && potencia < 1201)
@@ -324,21 +328,44 @@ namespace car_tuning.View
             lbRotacao.Text = rotacao.ToString();
             lbTorque.Text = torque.ToString();
             lbVelocidade.Text = velocidade.ToString();
-            
+
 
         }
 
-        private void txtPeso_TextChanged(object sender, EventArgs e)
+        private void txtEnable(bool status)
         {
-            pbFill();
+            if (status == true)
+            {
+                txtAceleracao.Enabled = true;
+                txtAno.Enabled = true;
+                txtConsumo.Enabled = true;
+                txtCpf.Enabled = true;
+                txtMarca.Enabled = true;
+                txtModelo.Enabled = true;
+                txtPeso.Enabled = true;
+                txtPlaca.Enabled = true;
+                txtPotencia.Enabled = true;
+                txtRotacaoMax.Enabled = true;
+                txtTorque.Enabled = true;
+                txtVelocidadeMax.Enabled = true;
+            }
+            else
+            {
+                txtAceleracao.Enabled = false;
+                txtAno.Enabled = false;
+                txtConsumo.Enabled = false;
+                txtCpf.Enabled = false;
+                txtMarca.Enabled = false;
+                txtModelo.Enabled = false;
+                txtPeso.Enabled = false;
+                txtPlaca.Enabled = false;
+                txtPotencia.Enabled = false;
+                txtRotacaoMax.Enabled = false;
+                txtTorque.Enabled = false;
+                txtVelocidadeMax.Enabled = false;
+            }
         }
 
-        private void txtConsumo_TextChanged(object sender, EventArgs e)
-        {
-            pbFill();
-        }
-
-       
     }
     
 }

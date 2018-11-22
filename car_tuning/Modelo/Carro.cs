@@ -8,14 +8,19 @@ namespace car_tuning.Modelo
 {
     class Carro : CarroOriginal
     {
-        public Carro(double cod, string modelo, string marca, double peso, double aceleracao, double torque, double potencia, double velocidadeMax, double consumo, double rotacaoMax) : base(cod, modelo, marca, peso, aceleracao, torque, potencia, velocidadeMax, consumo, rotacaoMax)
+
+        public Carro()
+        {
+
+        }
+
+        public Carro (string cpfCliente, string placa, string ano, string marca, string modelo, double peso, double potencia, double aceleracao, double velocidadeMax, double torque, double consumo, double rotacaoMax) : base (modelo, marca, peso, potencia, aceleracao, velocidadeMax, torque, consumo, rotacaoMax)
         {
 
         }
 
         private string ano;
         private string placa;
-        private int cod;
         private string cpfCliente;
         private double peso;
 
@@ -44,19 +49,7 @@ namespace car_tuning.Modelo
                 placa = value;
             }
         }
-
-        public int Cod
-        {
-            get
-            {
-                return cod;
-            }
-
-            set
-            {
-                cod = value;
-            }
-        }
+        
 
         public string CpfCliente
         {
@@ -84,17 +77,6 @@ namespace car_tuning.Modelo
             }
         }
 
-        public Carro(string ano, string placa, int cod, string cpfCliente, double peso)
-        {
-            this.Ano = ano;
-            this.Placa = placa;
-            this.Cod = cod;
-            this.CpfCliente = cpfCliente;
-            this.Peso = peso;
-        }
-
-        public Carro()
-        {
-        }
+       
     }
 }

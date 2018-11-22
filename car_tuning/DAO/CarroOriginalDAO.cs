@@ -55,7 +55,7 @@ namespace car_tuning.DAO
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                co.Cod = Double.Parse(dr["codigo"].ToString());
+                
                 co.Modelo = dr["modelo"].ToString();
                 co.Marca = dr["marca"].ToString();
                 co.Peso = Double.Parse(dr["peso"].ToString());
@@ -66,7 +66,7 @@ namespace car_tuning.DAO
                 co.Consumo = Double.Parse(dr["consumo"].ToString());
                 co.RotacaoMax = Double.Parse(dr["rotacao_max"].ToString());
 
-                lista.Add(new CarroOriginal(co.Cod, co.Modelo,co.Marca,co.Peso,co.Aceleracao, co.Torque,co.Potencia, co.VelocidadeMax,co.Consumo,co.RotacaoMax));
+                lista.Add(new CarroOriginal( co.Modelo,co.Marca,co.Peso,co.Aceleracao, co.Torque,co.Potencia, co.VelocidadeMax,co.Consumo,co.RotacaoMax));
             }
             return lista;
             

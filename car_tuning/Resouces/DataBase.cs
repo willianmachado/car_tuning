@@ -197,9 +197,7 @@ namespace car_tuning
                 //cria tabela CARRO ORIGINAL
                 sql.Clear();
                 sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO_ORIGINAL` ( " +
-
-
-                    " 'codigo' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE," +
+                    
                     " 'modelo' TEXT," +
                     " 'marca' TEXT," +
                     " 'peso' INTEGER," +

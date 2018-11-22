@@ -22,9 +22,11 @@ namespace car_tuning
         {
             InitializeComponent();
             ControlaBotoes(true);
+
             txtNome.Enabled = false;
             txtEmail.Enabled = false;
             txtTelefone.Enabled = false;
+
             Fill();
         }
        
