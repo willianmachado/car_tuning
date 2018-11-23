@@ -18,9 +18,9 @@ namespace car_tuning.Modelo
                 bd.GetConnection();
 
             
-            string qry = string.Format("INSERT INTO CARRO (cpfCliente, modelo, marca, placa, ano,)" +
-                " VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}', '{7}', '{8}', '{9}', '{10}','{11}')",
-               c.CpfCliente, c.Placa, c.Ano);
+            string qry = string.Format("INSERT INTO CARRO (placa, modelo, ano, codMarca, cpfCli)" +
+                " VALUES('{0}', '{1}', '{2}', '{3}','{4}')",
+                c.Placa,c.Molelo,c.Ano, c.CodMarca1,c.CpfCliente);
 
             bd.ExecuteSQL(qry);
 
@@ -32,9 +32,9 @@ namespace car_tuning.Modelo
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
-        public void Atualizar(Carro carro)
+        public void Atualizar(Carro c)
         {
-            String sql = string.Format("UPDATE CARRO SET modelo='{0}',marca='{1}',peso='{2}',velocidade_max='{3}',potencia='{4}',aceleracao='{5}',torque='{6}',consumo='{7}',rotacao_max='{8}'",carro.Molelo);
+            String sql = string.Format("UPDATE CARRO SET modelo = '{0}', ano = '{1}', codMarca = '{2}', cpfCli = '{3}' WHERE placa = '{4}' ", c.Molelo, c.Molelo, c.Ano, c.CodMarca1, c.CpfCliente, c.Placa);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
