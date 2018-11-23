@@ -16,22 +16,28 @@ namespace car_tuning.DAO
                 "pesoFin, aceleracaoFin, torqueFin, potenciaFin, velocidade_MaxFin, consumoFin, rotacao_MaxFin) " +
                 "VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}'," +
                 "'{7}', '{8}', '{9}', '{10}','{11}','{12}','{13}','{14}'," +
-                "'{15}', '{16}', '{17}', '{18}','{19}','{20}')", s.Codigo);
+                ")", s.Codigo,s.PesoIni,s.AceleracaoIni,s.TorqueIni,s.PotenciaIni,s.Velocidade_maxIni,s.ConsumoIni,s.Rotacao_maxIni,s.AceleracaoFin,s.TorqueFin,s.PotenciaFin,s.Velocidade_maxFin,s.ConsumoFin,s.Rotacao_maxFin);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
 
         public void Deletar(int id)
         {
-            String sql = string.Format("");
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            String sql = string.Format("DELETE FROM STAGE WHERE CPF = '" + id + "';");
+            bd.ExecuteSQL(sql);
+
         }
-        public void atualizar(Cliente cliente)
+        public void atualizar(Stage s)
         {
-            String sql = string.Format("");
+            
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            String sql = string.Format("UPDATE STAGE SET " +
+                "pesoIni = '{0}', aceleracaoIni = '{1}', torqueIni = '{2}', potenciaIni = '{3}', velocidade_MaxIni = '{4}', consumoIni = '{5}', rotacao_MaxIni = '{6}'," +
+                "pesoFin = '{7}', aceleracaoFin = '{8}', torqueFin = '{9}', potenciaFin = '{10}', velocidade_MaxFin = '{11}', consumoFin = '{12}', rotacao_MaxFin = '{13}' WHERE Codigo = '{14}') ", s.PesoIni, s.AceleracaoIni, s.TorqueIni, s.PotenciaIni, s.Velocidade_maxIni, s.ConsumoIni, s.Rotacao_maxIni, s.AceleracaoFin, s.TorqueFin, s.PotenciaFin, s.Velocidade_maxFin, s.ConsumoFin, s.Rotacao_maxFin, s.Codigo);
+           
         }
 
     }
