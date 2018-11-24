@@ -199,3 +199,4 @@ C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.pdb
 C:\Git\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormCadastroCarro.resources
 C:\Git\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormLoading.resources
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormMarca.resources
+D:\ADS\git\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormMarca.resources

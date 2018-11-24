@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.ambiance_Label1 = new Ambiance.Ambiance_Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btLimpar = new iTalk.iTalk_Button_2();
-            this.ambiance_Label1 = new Ambiance.Ambiance_Label();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
@@ -76,13 +76,25 @@
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Clientes";
             // 
+            // ambiance_Label1
+            // 
+            this.ambiance_Label1.AutoSize = true;
+            this.ambiance_Label1.BackColor = System.Drawing.Color.Transparent;
+            this.ambiance_Label1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ambiance_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
+            this.ambiance_Label1.Location = new System.Drawing.Point(431, 43);
+            this.ambiance_Label1.Name = "ambiance_Label1";
+            this.ambiance_Label1.Size = new System.Drawing.Size(70, 20);
+            this.ambiance_Label1.TabIndex = 51;
+            this.ambiance_Label1.Text = "Pesquisar";
+            // 
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusca.Location = new System.Drawing.Point(507, 43);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(504, 23);
-            this.txtBusca.TabIndex = 50;
+            this.txtBusca.TabIndex = 4;
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             // 
             // txtEmail
@@ -91,7 +103,7 @@
             this.txtEmail.Location = new System.Drawing.Point(135, 197);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(231, 27);
-            this.txtEmail.TabIndex = 49;
+            this.txtEmail.TabIndex = 2;
             // 
             // txtNome
             // 
@@ -99,7 +111,7 @@
             this.txtNome.Location = new System.Drawing.Point(135, 151);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(231, 27);
-            this.txtNome.TabIndex = 49;
+            this.txtNome.TabIndex = 1;
             // 
             // dgvCliente
             // 
@@ -310,18 +322,6 @@
             this.btLimpar.Text = "Cancelar";
             this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
-            // 
-            // ambiance_Label1
-            // 
-            this.ambiance_Label1.AutoSize = true;
-            this.ambiance_Label1.BackColor = System.Drawing.Color.Transparent;
-            this.ambiance_Label1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.ambiance_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(77)))));
-            this.ambiance_Label1.Location = new System.Drawing.Point(431, 43);
-            this.ambiance_Label1.Name = "ambiance_Label1";
-            this.ambiance_Label1.Size = new System.Drawing.Size(70, 20);
-            this.ambiance_Label1.TabIndex = 51;
-            this.ambiance_Label1.Text = "Pesquisar";
             // 
             // FormCliente
             // 

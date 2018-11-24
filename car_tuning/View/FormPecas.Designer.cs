@@ -198,7 +198,7 @@
             this.txtTorque.Name = "txtTorque";
             this.txtTorque.ReadOnly = false;
             this.txtTorque.Size = new System.Drawing.Size(185, 28);
-            this.txtTorque.TabIndex = 0;
+            this.txtTorque.TabIndex = 8;
             this.txtTorque.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTorque.UseSystemPasswordChar = false;
             // 
@@ -213,7 +213,7 @@
             this.txtPotencia.Name = "txtPotencia";
             this.txtPotencia.ReadOnly = false;
             this.txtPotencia.Size = new System.Drawing.Size(185, 28);
-            this.txtPotencia.TabIndex = 0;
+            this.txtPotencia.TabIndex = 7;
             this.txtPotencia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPotencia.UseSystemPasswordChar = false;
             // 
@@ -238,7 +238,7 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(185, 26);
             this.txtMarca.StartIndex = 0;
-            this.txtMarca.TabIndex = 2;
+            this.txtMarca.TabIndex = 5;
             // 
             // iTalk_Label7
             // 
@@ -311,7 +311,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.ReadOnly = false;
             this.txtPeso.Size = new System.Drawing.Size(185, 28);
-            this.txtPeso.TabIndex = 0;
+            this.txtPeso.TabIndex = 6;
             this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPeso.UseSystemPasswordChar = false;
             // 
@@ -386,7 +386,7 @@
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.ReadOnly = false;
             this.txtTipo.Size = new System.Drawing.Size(232, 28);
-            this.txtTipo.TabIndex = 0;
+            this.txtTipo.TabIndex = 4;
             this.txtTipo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTipo.UseSystemPasswordChar = false;
             // 
@@ -401,7 +401,7 @@
             this.txtFabri.Name = "txtFabri";
             this.txtFabri.ReadOnly = false;
             this.txtFabri.Size = new System.Drawing.Size(232, 28);
-            this.txtFabri.TabIndex = 0;
+            this.txtFabri.TabIndex = 2;
             this.txtFabri.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtFabri.UseSystemPasswordChar = false;
             // 
@@ -416,7 +416,7 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.ReadOnly = false;
             this.txtPreco.Size = new System.Drawing.Size(232, 28);
-            this.txtPreco.TabIndex = 0;
+            this.txtPreco.TabIndex = 3;
             this.txtPreco.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPreco.UseSystemPasswordChar = false;
             // 
@@ -431,7 +431,7 @@
             this.txtDescri.Name = "txtDescri";
             this.txtDescri.ReadOnly = false;
             this.txtDescri.Size = new System.Drawing.Size(232, 28);
-            this.txtDescri.TabIndex = 0;
+            this.txtDescri.TabIndex = 1;
             this.txtDescri.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDescri.UseSystemPasswordChar = false;
             // 
@@ -446,7 +446,7 @@
             this.iTalk_TextBox_Small4.Name = "iTalk_TextBox_Small4";
             this.iTalk_TextBox_Small4.ReadOnly = false;
             this.iTalk_TextBox_Small4.Size = new System.Drawing.Size(1086, 28);
-            this.iTalk_TextBox_Small4.TabIndex = 0;
+            this.iTalk_TextBox_Small4.TabIndex = 9;
             this.iTalk_TextBox_Small4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.iTalk_TextBox_Small4.UseSystemPasswordChar = false;
             // 

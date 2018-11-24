@@ -123,7 +123,7 @@ namespace car_tuning.View
             carro.CpfCliente = txtCpf.Text;
             carro.Placa = txtPlaca.Text;
             carro.Ano = txtAno.Text;
-            carro.CodMarca1 = m.BuscaCodMarca(txtMarca.Text);
+            carro.CodMarca1 = txtMarca.Text.Trim();
             carro.Molelo = txtModelo.Text;
 
 

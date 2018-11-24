@@ -18,7 +18,7 @@ namespace car_tuning.Modelo
                 bd.GetConnection();
 
             
-            string qry = string.Format("INSERT INTO CARRO (placa, modelo, ano, codMarca, cpfCli)" +
+            string qry = string.Format("INSERT INTO CARRO (placa, modelo, ano, marca, cpfCli)" +
                 " VALUES('{0}', '{1}', '{2}', '{3}','{4}')",c.Placa,c.Molelo,c.Ano, c.CodMarca1,c.CpfCliente);
 
             bd.ExecuteSQL(qry);
@@ -51,13 +51,17 @@ namespace car_tuning.Modelo
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                
-                c.CpfCliente = dr["cpfCliente"].ToString();
+
+
+                c.CpfCliente = dr["cpfCli"].ToString();
                 c.Placa = dr["placa"].ToString();
                 c.Ano = dr["ano"].ToString();
-                
+                c.Molelo = dr["modelo"].ToString();
+                c.CodMarca1 = dr["marca"].ToString();
 
-                   //lista.Add(new Carro(c.CpfCliente, c.Placa, c.Ano, c.Marca, c.Modelo));
+
+
+                   lista.Add(new Carro(c.Ano, c.Placa, c.Molelo, c.CpfCliente, c.CodMarca1));
             }
             return lista;
 

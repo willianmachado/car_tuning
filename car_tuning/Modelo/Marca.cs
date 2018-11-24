@@ -16,6 +16,11 @@ namespace car_tuning.Modelo
 
         }
 
+        public Marca(int codigo)
+        {
+            this.codigo = codigo;
+        }
+
         public Marca(int codigo,string nome)
         {
             this.nome = nome;

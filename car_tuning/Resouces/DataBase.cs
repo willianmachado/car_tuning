@@ -146,9 +146,9 @@ namespace car_tuning
                 sql.AppendLine("CREATE TABLE IF NOT EXISTS `CARRO`(" +
                     " `placa` TEXT NOT NULL UNIQUE, " +
                     "`modelo` TEXT, `ano` TEXT, " +
-                    "`codMarca` INTEGER, " +
+                    "`marca` TEXT, " +
                     "`cpfCli` TEXT," +
-                    " FOREIGN KEY(`codMarca`) REFERENCES `Marca`(`codigo`)," +
+                    " FOREIGN KEY(`marca`) REFERENCES `Marca`(`nome`)," +
                     " FOREIGN KEY(`cpfCli`) REFERENCES `Cliente`(`cpf`)," +
                     " PRIMARY KEY(`placa`) );");
 

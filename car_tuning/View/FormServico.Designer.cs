@@ -59,7 +59,6 @@
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.txtCod = new iTalk.iTalk_TextBox_Small();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
-            this.iTalk_GroupBox3 = new iTalk.iTalk_GroupBox();
             this.lbConsumo = new System.Windows.Forms.Label();
             this.pbConsumo = new System.Windows.Forms.ProgressBar();
             this.iTalk_Label18 = new iTalk.iTalk_Label();
@@ -88,6 +87,7 @@
             this.iTalk_Label14 = new iTalk.iTalk_Label();
             this.iTalk_Label13 = new iTalk.iTalk_Label();
             this.iTalk_Label5 = new iTalk.iTalk_Label();
+            this.iTalk_GroupBox3 = new iTalk.iTalk_GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.iTalk_Label8 = new iTalk.iTalk_Label();
@@ -323,7 +323,7 @@
             this.txtCodFuncionario.Name = "txtCodFuncionario";
             this.txtCodFuncionario.ReadOnly = false;
             this.txtCodFuncionario.Size = new System.Drawing.Size(128, 28);
-            this.txtCodFuncionario.TabIndex = 11;
+            this.txtCodFuncionario.TabIndex = 0;
             this.txtCodFuncionario.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCodFuncionario.UseSystemPasswordChar = false;
             // 
@@ -494,7 +494,7 @@
             this.txtCliente.Name = "txtCliente";
             this.txtCliente.Size = new System.Drawing.Size(232, 26);
             this.txtCliente.StartIndex = 0;
-            this.txtCliente.TabIndex = 3;
+            this.txtCliente.TabIndex = 2;
             // 
             // iTalk_Label3
             // 
@@ -543,7 +543,7 @@
             this.txtCod.Name = "txtCod";
             this.txtCod.ReadOnly = false;
             this.txtCod.Size = new System.Drawing.Size(128, 28);
-            this.txtCod.TabIndex = 0;
+            this.txtCod.TabIndex = 1;
             this.txtCod.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCod.UseSystemPasswordChar = false;
             // 
@@ -585,45 +585,6 @@
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(599, 268);
             this.iTalk_GroupBox2.TabIndex = 6;
             this.iTalk_GroupBox2.Text = "Original";
-            // 
-            // iTalk_GroupBox3
-            // 
-            this.iTalk_GroupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox3.Controls.Add(this.label1);
-            this.iTalk_GroupBox3.Controls.Add(this.progressBar1);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label8);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label22);
-            this.iTalk_GroupBox3.Controls.Add(this.label2);
-            this.iTalk_GroupBox3.Controls.Add(this.label3);
-            this.iTalk_GroupBox3.Controls.Add(this.label4);
-            this.iTalk_GroupBox3.Controls.Add(this.label5);
-            this.iTalk_GroupBox3.Controls.Add(this.label6);
-            this.iTalk_GroupBox3.Controls.Add(this.label7);
-            this.iTalk_GroupBox3.Controls.Add(this.progressBar2);
-            this.iTalk_GroupBox3.Controls.Add(this.progressBar3);
-            this.iTalk_GroupBox3.Controls.Add(this.progressBar4);
-            this.iTalk_GroupBox3.Controls.Add(this.progressBar5);
-            this.iTalk_GroupBox3.Controls.Add(this.progressBar6);
-            this.iTalk_GroupBox3.Controls.Add(this.progressBar7);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label23);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label24);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label25);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label26);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label27);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label28);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label29);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label30);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label31);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label32);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label33);
-            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label34);
-            this.iTalk_GroupBox3.Location = new System.Drawing.Point(571, 308);
-            this.iTalk_GroupBox3.MinimumSize = new System.Drawing.Size(136, 50);
-            this.iTalk_GroupBox3.Name = "iTalk_GroupBox3";
-            this.iTalk_GroupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox3.Size = new System.Drawing.Size(599, 268);
-            this.iTalk_GroupBox3.TabIndex = 9;
-            this.iTalk_GroupBox3.Text = "Alterado";
             // 
             // lbConsumo
             // 
@@ -917,6 +878,45 @@
             this.iTalk_Label5.Size = new System.Drawing.Size(116, 21);
             this.iTalk_Label5.TabIndex = 45;
             this.iTalk_Label5.Text = "Peso de Fabrica";
+            // 
+            // iTalk_GroupBox3
+            // 
+            this.iTalk_GroupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox3.Controls.Add(this.label1);
+            this.iTalk_GroupBox3.Controls.Add(this.progressBar1);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label8);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label22);
+            this.iTalk_GroupBox3.Controls.Add(this.label2);
+            this.iTalk_GroupBox3.Controls.Add(this.label3);
+            this.iTalk_GroupBox3.Controls.Add(this.label4);
+            this.iTalk_GroupBox3.Controls.Add(this.label5);
+            this.iTalk_GroupBox3.Controls.Add(this.label6);
+            this.iTalk_GroupBox3.Controls.Add(this.label7);
+            this.iTalk_GroupBox3.Controls.Add(this.progressBar2);
+            this.iTalk_GroupBox3.Controls.Add(this.progressBar3);
+            this.iTalk_GroupBox3.Controls.Add(this.progressBar4);
+            this.iTalk_GroupBox3.Controls.Add(this.progressBar5);
+            this.iTalk_GroupBox3.Controls.Add(this.progressBar6);
+            this.iTalk_GroupBox3.Controls.Add(this.progressBar7);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label23);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label24);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label25);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label26);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label27);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label28);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label29);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label30);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label31);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label32);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label33);
+            this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label34);
+            this.iTalk_GroupBox3.Location = new System.Drawing.Point(571, 308);
+            this.iTalk_GroupBox3.MinimumSize = new System.Drawing.Size(136, 50);
+            this.iTalk_GroupBox3.Name = "iTalk_GroupBox3";
+            this.iTalk_GroupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.iTalk_GroupBox3.Size = new System.Drawing.Size(599, 268);
+            this.iTalk_GroupBox3.TabIndex = 9;
+            this.iTalk_GroupBox3.Text = "Alterado";
             // 
             // label1
             // 

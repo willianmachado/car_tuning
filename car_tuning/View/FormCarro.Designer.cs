@@ -381,7 +381,7 @@
             this.txtModelo.MaxLength = 4;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(146, 27);
-            this.txtModelo.TabIndex = 144;
+            this.txtModelo.TabIndex = 4;
             // 
             // checkBox1
             // 
@@ -412,7 +412,7 @@
             this.txtMarca.Location = new System.Drawing.Point(76, 189);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(147, 26);
-            this.txtMarca.TabIndex = 136;
+            this.txtMarca.TabIndex = 3;
             this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
             // 
             // iTalk_Label24
@@ -446,7 +446,7 @@
             this.txtAno.MaxLength = 4;
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(146, 27);
-            this.txtAno.TabIndex = 135;
+            this.txtAno.TabIndex = 2;
             // 
             // iTalk_Label26
             // 
@@ -469,7 +469,7 @@
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(101, 27);
-            this.txtPlaca.TabIndex = 134;
+            this.txtPlaca.TabIndex = 1;
             // 
             // iTalk_Label27
             // 
@@ -578,7 +578,7 @@
             this.txtRotacaoMax.Name = "txtRotacaoMax";
             this.txtRotacaoMax.ReadOnly = false;
             this.txtRotacaoMax.Size = new System.Drawing.Size(81, 28);
-            this.txtRotacaoMax.TabIndex = 120;
+            this.txtRotacaoMax.TabIndex = 11;
             this.txtRotacaoMax.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRotacaoMax.UseSystemPasswordChar = false;
             this.txtRotacaoMax.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -606,7 +606,7 @@
             this.txtConsumo.Name = "txtConsumo";
             this.txtConsumo.ReadOnly = false;
             this.txtConsumo.Size = new System.Drawing.Size(81, 28);
-            this.txtConsumo.TabIndex = 121;
+            this.txtConsumo.TabIndex = 10;
             this.txtConsumo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtConsumo.UseSystemPasswordChar = false;
             this.txtConsumo.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -634,7 +634,7 @@
             this.txtAceleracao.Name = "txtAceleracao";
             this.txtAceleracao.ReadOnly = false;
             this.txtAceleracao.Size = new System.Drawing.Size(81, 28);
-            this.txtAceleracao.TabIndex = 122;
+            this.txtAceleracao.TabIndex = 9;
             this.txtAceleracao.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAceleracao.UseSystemPasswordChar = false;
             this.txtAceleracao.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -662,7 +662,7 @@
             this.txtTorque.Name = "txtTorque";
             this.txtTorque.ReadOnly = false;
             this.txtTorque.Size = new System.Drawing.Size(81, 28);
-            this.txtTorque.TabIndex = 123;
+            this.txtTorque.TabIndex = 8;
             this.txtTorque.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTorque.UseSystemPasswordChar = false;
             this.txtTorque.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -690,7 +690,7 @@
             this.txtVelocidadeMax.Name = "txtVelocidadeMax";
             this.txtVelocidadeMax.ReadOnly = false;
             this.txtVelocidadeMax.Size = new System.Drawing.Size(81, 28);
-            this.txtVelocidadeMax.TabIndex = 124;
+            this.txtVelocidadeMax.TabIndex = 7;
             this.txtVelocidadeMax.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtVelocidadeMax.UseSystemPasswordChar = false;
             this.txtVelocidadeMax.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -718,7 +718,7 @@
             this.txtPotencia.Name = "txtPotencia";
             this.txtPotencia.ReadOnly = false;
             this.txtPotencia.Size = new System.Drawing.Size(81, 28);
-            this.txtPotencia.TabIndex = 125;
+            this.txtPotencia.TabIndex = 6;
             this.txtPotencia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPotencia.UseSystemPasswordChar = false;
             this.txtPotencia.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -758,7 +758,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.ReadOnly = false;
             this.txtPeso.Size = new System.Drawing.Size(81, 28);
-            this.txtPeso.TabIndex = 126;
+            this.txtPeso.TabIndex = 5;
             this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPeso.UseSystemPasswordChar = false;
             this.txtPeso.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -774,7 +774,7 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.PromptChar = ' ';
             this.txtCpf.Size = new System.Drawing.Size(155, 27);
-            this.txtCpf.TabIndex = 116;
+            this.txtCpf.TabIndex = 0;
             // 
             // iTalk_Label42
             // 
@@ -794,7 +794,7 @@
             this.textBox1.Location = new System.Drawing.Point(104, 370);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(483, 23);
-            this.textBox1.TabIndex = 9;
+            this.textBox1.TabIndex = 12;
             // 
             // btBuscarCarro
             // 

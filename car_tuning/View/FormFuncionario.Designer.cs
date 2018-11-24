@@ -96,7 +96,7 @@
             this.txtTelefone.Mask = "(00) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(148, 27);
-            this.txtTelefone.TabIndex = 11;
+            this.txtTelefone.TabIndex = 2;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtCpf
@@ -109,7 +109,7 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.PromptChar = ' ';
             this.txtCpf.Size = new System.Drawing.Size(138, 27);
-            this.txtCpf.TabIndex = 10;
+            this.txtCpf.TabIndex = 0;
             this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // iTalk_Label4
@@ -172,7 +172,7 @@
             this.txtBuscaFunc.Name = "txtBuscaFunc";
             this.txtBuscaFunc.ReadOnly = false;
             this.txtBuscaFunc.Size = new System.Drawing.Size(493, 28);
-            this.txtBuscaFunc.TabIndex = 6;
+            this.txtBuscaFunc.TabIndex = 3;
             this.txtBuscaFunc.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscaFunc.UseSystemPasswordChar = false;
             this.txtBuscaFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscaFunc_KeyPress);
@@ -224,7 +224,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.ReadOnly = false;
             this.txtNome.Size = new System.Drawing.Size(232, 28);
-            this.txtNome.TabIndex = 0;
+            this.txtNome.TabIndex = 1;
             this.txtNome.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNome.UseSystemPasswordChar = false;
             // 

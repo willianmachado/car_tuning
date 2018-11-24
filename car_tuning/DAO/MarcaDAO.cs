@@ -33,6 +33,7 @@ namespace car_tuning.DAO
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
+        
         public int BuscaCodMarca(string nome)
         {
             int marca;
@@ -44,7 +45,7 @@ namespace car_tuning.DAO
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
 
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Marca WHERE Nome like " + nome, conn);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Marca WHERE Nome like '%" + nome+ "%;", conn);
             SQLiteDataReader dr = cmd.ExecuteReader();
             
                 m.Codigo = Int32.Parse((dr["codigo"].ToString()));
@@ -55,6 +56,7 @@ namespace car_tuning.DAO
 
             return marca;
         }
+
         public List<Marca> Carregar()
         {
             List<Marca> lista = new List<Marca>();

@@ -12,7 +12,7 @@ namespace car_tuning.Modelo
         private string placa;
         private string modelo;
         private string cpfCliente;
-        private int CodMarca;
+        private string CodMarca;
         
 
         public Carro()
@@ -21,7 +21,7 @@ namespace car_tuning.Modelo
 
         }
 
-        public Carro(string ano, string placa, string modelo, string cpfCliente, int codMarca)
+        public Carro(string ano, string placa, string modelo, string cpfCliente, string codMarca)
         {
             this.ano = ano;
             this.placa = placa;
@@ -34,7 +34,7 @@ namespace car_tuning.Modelo
         public string Placa { get => placa; set => placa = value; }
         public string Molelo { get => modelo; set => modelo = value; }
         public string CpfCliente { get => cpfCliente; set => cpfCliente = value; }
-        public int CodMarca1 { get => CodMarca; set => CodMarca = value; }
+        public string CodMarca1 { get => CodMarca; set => CodMarca = value; }
 
     }
 }
