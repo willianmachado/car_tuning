@@ -60,13 +60,13 @@ namespace car_tuning.Modelo
                 c.Ano = dr["ano"].ToString();
                 c.Modelo = dr["modelo"].ToString();
                 c.Marca = dr["marca"].ToString();
-                c.Marca = dr["peso"].ToString();
-                c.Marca = dr["potencia"].ToString();
-                c.Marca = dr["velocidadeMax"].ToString();
-                c.Marca = dr["torque"].ToString();
-                c.Marca = dr["aceleracao"].ToString();
-                c.Marca = dr["consumo"].ToString();
-                c.Marca = dr["rotacao"].ToString();
+                c.Peso = int.Parse(dr["peso"].ToString());
+                c.Potencia = int.Parse(dr["potencia"].ToString());
+                c.VelocidadeMax = int.Parse(dr["velocidadeMax"].ToString());
+                c.Torque = int.Parse(dr["torque"].ToString());
+                c.Aceleracao = int.Parse(dr["aceleracao"].ToString());
+                c.Consumo = int.Parse(dr["consumo"].ToString());
+                c.RotacaoMax = int.Parse(dr["rotacao"].ToString());
                 
 
                 lista.Add(new Carro(c.Ano, c.Placa, c.Modelo, c.CpfCliente, c.Marca, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
@@ -94,5 +94,6 @@ namespace car_tuning.Modelo
 
             return carro;
         }
+
     }
 }

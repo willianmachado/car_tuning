@@ -32,7 +32,7 @@ namespace car_tuning.View
 
             foreach (Carro c in cars)
             {
-                dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo);
+                dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c. VelocidadeMax, c. Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
 
                 
             }
@@ -404,6 +404,30 @@ namespace car_tuning.View
         private void txtMarca_Click(object sender, EventArgs e)
         {
             Fill();
+        }
+
+        private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void dgvCarro_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtPlaca.Text = dgvCarro.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtCpf.Text = dgvCarro.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtAno.Text = dgvCarro.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtMarca.Text = dgvCarro.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtModelo.Text = dgvCarro.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtPeso.Text = dgvCarro.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtPotencia.Text = dgvCarro.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtTorque.Text = dgvCarro.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtVelocidadeMax.Text = dgvCarro.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtAceleracao.Text = dgvCarro.Rows[e.RowIndex].Cells[9].Value.ToString();
+                txtConsumo.Text = dgvCarro.Rows[e.RowIndex].Cells[10].Value.ToString();
+                txtRotacaoMax.Text = dgvCarro.Rows[e.RowIndex].Cells[11].Value.ToString();
+            }
         }
     }
     
