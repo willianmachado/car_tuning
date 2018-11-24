@@ -113,6 +113,12 @@
     <Compile Include="View\FormLoading.Designer.cs">
       <DependentUpon>FormLoading.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMarca.Designer.cs">
+      <DependentUpon>FormMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormPecas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLoading.resx">
       <DependentUpon>FormLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMarca.resx">
+      <DependentUpon>FormMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormPecas.resx">
       <DependentUpon>FormPecas.cs</DependentUpon>

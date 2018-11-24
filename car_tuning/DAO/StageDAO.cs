@@ -11,7 +11,7 @@ namespace car_tuning.DAO
     {
         public void Salvar(Stage s)
         {
-            String sql = string.Format("INSERT INTO Stage (cod," +
+            String sql = string.Format("INSERT INTO STAGE (cod," +
                 "pesoIni, aceleracaoIni, torqueIni, potenciaIni, velocidade_MaxIni, consumoIni, rotacao_MaxIni," +
                 "pesoFin, aceleracaoFin, torqueFin, potenciaFin, velocidade_MaxFin, consumoFin, rotacao_MaxFin) " +
                 "VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}'," +

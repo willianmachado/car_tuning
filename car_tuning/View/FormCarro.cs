@@ -1,4 +1,5 @@
-﻿using car_tuning.Modelo;
+﻿using car_tuning.DAO;
+using car_tuning.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,7 @@ namespace car_tuning.View
     {
 
         CarroDAO c = new CarroDAO();
-
+        MarcaDAO m = new MarcaDAO();
         public FormCarro()
         {
             InitializeComponent();
@@ -23,15 +24,30 @@ namespace car_tuning.View
             Fill();
         }
         
-        private void Fill()
+        public void Fill()
         {
             List<Carro> cars;
             cars = c.Carregar();
             dgvCarro.Rows.Clear();
 
-            //foreach (Carro c in cars)
-            //dgvCarro.Rows.Add(c.Placa, c.Ano, c.Marca, c.Modelo);
+            foreach (Carro c in cars)
+            {
+                dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.CodMarca1, c.Molelo);
+
+                
+            }
+
+
+            List<Marca> marcas;
+            MarcaDAO marca = new MarcaDAO();
+            txtMarca.Items.Clear();
             
+            marcas = marca.Carregar();
+            
+            foreach (Marca m in marcas)
+                txtMarca.Items.Add(m.Nome);
+
+
         }
         
         private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
@@ -107,8 +123,8 @@ namespace car_tuning.View
             carro.CpfCliente = txtCpf.Text;
             carro.Placa = txtPlaca.Text;
             carro.Ano = txtAno.Text;
-            //carro.CodMarca1 = txtMarca.Text;
-            //carro.Modelo = txtModelo.Text;
+            carro.CodMarca1 = m.BuscaCodMarca(txtMarca.Text);
+            carro.Molelo = txtModelo.Text;
 
 
             
@@ -368,6 +384,14 @@ namespace car_tuning.View
                 imgCarro.Show();
                 
             }
+        }
+
+        private void NovaMarca_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormMarca formMarca = new FormMarca();
+            formMarca.Show(this);
+            formMarca.StartPosition = FormStartPosition.CenterScreen;
+            Fill();
         }
     }
     

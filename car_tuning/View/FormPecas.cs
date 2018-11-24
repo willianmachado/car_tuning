@@ -1,4 +1,5 @@
-﻿using car_tuning.Modelo;
+﻿using car_tuning.DAO;
+using car_tuning.Modelo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace car_tuning
         {
             InitializeComponent();
             Fill();
+            FillMarca();
         }
         private void Fill()
         {
@@ -27,6 +29,17 @@ namespace car_tuning
             dgvPecas.Rows.Clear();
             foreach (Pecas p in pecas)
                 dgvPecas.Rows.Add(p.Codigo,p.Descricao,p.Fabricante,p.Tipo,p.Tipo,p.Compatibilidade,p.AddPeso,p.AddPotencia,p.AddTorque);
+        }
+        private void FillMarca()
+        {
+            List<Marca> marcas;
+            MarcaDAO marca = new MarcaDAO();
+            txtMarca.Items.Clear();
+
+            marcas = marca.Carregar();
+
+            foreach (Marca m in marcas)
+                txtMarca.Items.Add(m.Nome);
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
@@ -150,7 +163,7 @@ namespace car_tuning
         public void limparCampos()
         {
             txtCodigo.Text = "";
-            txtModelo.Text = "";
+            txtMarca.Text = "";
             txtDescri.Text = "";
             txtFabri.Text = "";
 

@@ -41,7 +41,7 @@
             this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTorque = new iTalk.iTalk_TextBox_Small();
             this.txtPotencia = new iTalk.iTalk_TextBox_Small();
-            this.txtModelo = new iTalk.iTalk_ComboBox();
+            this.txtMarca = new iTalk.iTalk_ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.iTalk_Label8 = new iTalk.iTalk_Label();
             this.iTalk_Label6 = new iTalk.iTalk_Label();
@@ -75,7 +75,7 @@
             this.iTalk_GroupBox1.Controls.Add(this.dgvPecas);
             this.iTalk_GroupBox1.Controls.Add(this.txtTorque);
             this.iTalk_GroupBox1.Controls.Add(this.txtPotencia);
-            this.iTalk_GroupBox1.Controls.Add(this.txtModelo);
+            this.iTalk_GroupBox1.Controls.Add(this.txtMarca);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label8);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label6);
@@ -209,28 +209,28 @@
             this.txtPotencia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPotencia.UseSystemPasswordChar = false;
             // 
-            // txtModelo
+            // txtMarca
             // 
-            this.txtModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.txtModelo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtModelo.DropDownHeight = 100;
-            this.txtModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtModelo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.txtModelo.FormattingEnabled = true;
-            this.txtModelo.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.txtModelo.IntegralHeight = false;
-            this.txtModelo.ItemHeight = 20;
-            this.txtModelo.Items.AddRange(new object[] {
+            this.txtMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtMarca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtMarca.DropDownHeight = 100;
+            this.txtMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.txtMarca.FormattingEnabled = true;
+            this.txtMarca.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.txtMarca.IntegralHeight = false;
+            this.txtMarca.ItemHeight = 20;
+            this.txtMarca.Items.AddRange(new object[] {
             "FIAT",
             "MERCEDEZ",
             "BMW",
             "VOLKSWAGEM"});
-            this.txtModelo.Location = new System.Drawing.Point(754, 82);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(185, 26);
-            this.txtModelo.StartIndex = 0;
-            this.txtModelo.TabIndex = 2;
+            this.txtMarca.Location = new System.Drawing.Point(754, 82);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(185, 26);
+            this.txtMarca.StartIndex = 0;
+            this.txtMarca.TabIndex = 2;
             // 
             // iTalk_Label7
             // 
@@ -576,7 +576,7 @@
         private iTalk.iTalk_GroupBox iTalk_GroupBox1;
         private iTalk.iTalk_TextBox_Small txtTorque;
         private iTalk.iTalk_TextBox_Small txtPotencia;
-        private iTalk.iTalk_ComboBox txtModelo;
+        private iTalk.iTalk_ComboBox txtMarca;
         private iTalk.iTalk_Label iTalk_Label7;
         private iTalk.iTalk_Label iTalk_Label8;
         private iTalk.iTalk_Label iTalk_Label6;

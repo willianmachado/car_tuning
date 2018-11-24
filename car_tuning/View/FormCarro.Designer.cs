@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.SfdCarro = new System.Windows.Forms.SaveFileDialog();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
+            this.btnBuscaIMG = new Ambiance.Ambiance_Button_1();
             this.lbConsumo = new System.Windows.Forms.Label();
             this.pbConsumo = new System.Windows.Forms.ProgressBar();
             this.iTalk_Label18 = new iTalk.iTalk_Label();
@@ -46,11 +48,11 @@
             this.pbPotencia = new System.Windows.Forms.ProgressBar();
             this.pbPeso = new System.Windows.Forms.ProgressBar();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.txtModelo = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.NovaMarca = new System.Windows.Forms.LinkLabel();
             this.txtMarca = new System.Windows.Forms.ComboBox();
             this.iTalk_Label24 = new iTalk.iTalk_Label();
-            this.txtModelo = new System.Windows.Forms.ComboBox();
             this.iTalk_Label25 = new iTalk.iTalk_Label();
             this.txtAno = new System.Windows.Forms.TextBox();
             this.iTalk_Label26 = new iTalk.iTalk_Label();
@@ -83,6 +85,7 @@
             this.btBuscarCarro = new Ambiance.Ambiance_Button_2();
             this.dgvCarro = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,8 +111,6 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.btnBuscaIMG = new Ambiance.Ambiance_Button_1();
-            this.SfdCarro = new System.Windows.Forms.SaveFileDialog();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
@@ -162,6 +163,20 @@
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(1180, 703);
             this.iTalk_GroupBox2.TabIndex = 9;
+            // 
+            // btnBuscaIMG
+            // 
+            this.btnBuscaIMG.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscaIMG.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnBuscaIMG.Image = null;
+            this.btnBuscaIMG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscaIMG.Location = new System.Drawing.Point(922, 229);
+            this.btnBuscaIMG.Name = "btnBuscaIMG";
+            this.btnBuscaIMG.Size = new System.Drawing.Size(185, 35);
+            this.btnBuscaIMG.TabIndex = 45;
+            this.btnBuscaIMG.Text = "Buscar Imagem";
+            this.btnBuscaIMG.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnBuscaIMG.Click += new System.EventHandler(this.btnBuscaIMG_Click);
             // 
             // lbConsumo
             // 
@@ -315,11 +330,11 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.txtModelo);
             this.iTalk_GroupBox1.Controls.Add(this.checkBox1);
-            this.iTalk_GroupBox1.Controls.Add(this.linkLabel1);
+            this.iTalk_GroupBox1.Controls.Add(this.NovaMarca);
             this.iTalk_GroupBox1.Controls.Add(this.txtMarca);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label24);
-            this.iTalk_GroupBox1.Controls.Add(this.txtModelo);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label25);
             this.iTalk_GroupBox1.Controls.Add(this.txtAno);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label26);
@@ -359,6 +374,15 @@
             this.iTalk_GroupBox1.TabIndex = 38;
             this.iTalk_GroupBox1.Text = "Carro";
             // 
+            // txtModelo
+            // 
+            this.txtModelo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.Location = new System.Drawing.Point(76, 221);
+            this.txtModelo.MaxLength = 4;
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(146, 27);
+            this.txtModelo.TabIndex = 144;
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -369,27 +393,22 @@
             this.checkBox1.Text = "Original";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // NovaMarca
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(96, 254);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(110, 13);
-            this.linkLabel1.TabIndex = 142;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Adicionar nova marca";
+            this.NovaMarca.AutoSize = true;
+            this.NovaMarca.Location = new System.Drawing.Point(96, 254);
+            this.NovaMarca.Name = "NovaMarca";
+            this.NovaMarca.Size = new System.Drawing.Size(110, 13);
+            this.NovaMarca.TabIndex = 142;
+            this.NovaMarca.TabStop = true;
+            this.NovaMarca.Text = "Adicionar nova marca";
+            this.NovaMarca.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NovaMarca_LinkClicked);
             // 
             // txtMarca
             // 
             this.txtMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMarca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.FormattingEnabled = true;
-            this.txtMarca.Items.AddRange(new object[] {
-            "",
-            "FIAT",
-            "MERCEDEZ",
-            "BMW",
-            "VOLKSWAGEM"});
             this.txtMarca.Location = new System.Drawing.Point(76, 189);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(147, 26);
@@ -406,22 +425,6 @@
             this.iTalk_Label24.Size = new System.Drawing.Size(38, 21);
             this.iTalk_Label24.TabIndex = 141;
             this.iTalk_Label24.Text = "Ano";
-            // 
-            // txtModelo
-            // 
-            this.txtModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtModelo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.FormattingEnabled = true;
-            this.txtModelo.Items.AddRange(new object[] {
-            "UNO",
-            "M3",
-            "GOL",
-            "CLX",
-            "UP!"});
-            this.txtModelo.Location = new System.Drawing.Point(76, 221);
-            this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(147, 26);
-            this.txtModelo.TabIndex = 137;
             // 
             // iTalk_Label25
             // 
@@ -814,6 +817,7 @@
             this.dgvCarro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.CPF_Cliente,
             this.Column2,
             this.Column3,
             this.Column4});
@@ -831,6 +835,12 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // CPF_Cliente
+            // 
+            this.CPF_Cliente.HeaderText = "CPF_Cliente";
+            this.CPF_Cliente.Name = "CPF_Cliente";
+            this.CPF_Cliente.ReadOnly = true;
+            // 
             // Column2
             // 
             this.Column2.HeaderText = "Ano";
@@ -839,12 +849,14 @@
             // 
             // Column3
             // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "Marca";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column4.HeaderText = "Modelo";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -1134,20 +1146,6 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // btnBuscaIMG
-            // 
-            this.btnBuscaIMG.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscaIMG.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnBuscaIMG.Image = null;
-            this.btnBuscaIMG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscaIMG.Location = new System.Drawing.Point(922, 229);
-            this.btnBuscaIMG.Name = "btnBuscaIMG";
-            this.btnBuscaIMG.Size = new System.Drawing.Size(185, 35);
-            this.btnBuscaIMG.TabIndex = 45;
-            this.btnBuscaIMG.Text = "Buscar Imagem";
-            this.btnBuscaIMG.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btnBuscaIMG.Click += new System.EventHandler(this.btnBuscaIMG_Click);
-            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1222,10 +1220,9 @@
         private iTalk.iTalk_Label iTalk_Label18;
         private iTalk.iTalk_Label iTalk_Label19;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel NovaMarca;
         private System.Windows.Forms.ComboBox txtMarca;
         private iTalk.iTalk_Label iTalk_Label24;
-        private System.Windows.Forms.ComboBox txtModelo;
         private iTalk.iTalk_Label iTalk_Label25;
         private System.Windows.Forms.TextBox txtAno;
         private iTalk.iTalk_Label iTalk_Label26;
@@ -1256,11 +1253,13 @@
         private iTalk.iTalk_Label iTalk_Label42;
         private System.Windows.Forms.TextBox textBox1;
         private Ambiance.Ambiance_Button_2 btBuscarCarro;
+        private Ambiance.Ambiance_Button_1 btnBuscaIMG;
+        private System.Windows.Forms.SaveFileDialog SfdCarro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF_Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private Ambiance.Ambiance_Button_1 btnBuscaIMG;
-        private System.Windows.Forms.SaveFileDialog SfdCarro;
+        private System.Windows.Forms.TextBox txtModelo;
     }
 }

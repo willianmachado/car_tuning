@@ -19,8 +19,7 @@ namespace car_tuning.Modelo
 
             
             string qry = string.Format("INSERT INTO CARRO (placa, modelo, ano, codMarca, cpfCli)" +
-                " VALUES('{0}', '{1}', '{2}', '{3}','{4}')",
-                c.Placa,c.Molelo,c.Ano, c.CodMarca1,c.CpfCliente);
+                " VALUES('{0}', '{1}', '{2}', '{3}','{4}')",c.Placa,c.Molelo,c.Ano, c.CodMarca1,c.CpfCliente);
 
             bd.ExecuteSQL(qry);
 
