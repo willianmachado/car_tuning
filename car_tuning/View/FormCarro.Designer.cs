@@ -172,7 +172,7 @@
             this.btnBuscaIMG.Location = new System.Drawing.Point(922, 229);
             this.btnBuscaIMG.Name = "btnBuscaIMG";
             this.btnBuscaIMG.Size = new System.Drawing.Size(185, 35);
-            this.btnBuscaIMG.TabIndex = 45;
+            this.btnBuscaIMG.TabIndex = 0;
             this.btnBuscaIMG.Text = "Buscar Imagem";
             this.btnBuscaIMG.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnBuscaIMG.Click += new System.EventHandler(this.btnBuscaIMG_Click);
@@ -201,7 +201,7 @@
             this.iTalk_Label18.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.iTalk_Label18.Location = new System.Drawing.Point(742, 412);
+            this.iTalk_Label18.Location = new System.Drawing.Point(742, 413);
             this.iTalk_Label18.Name = "iTalk_Label18";
             this.iTalk_Label18.Size = new System.Drawing.Size(77, 21);
             this.iTalk_Label18.TabIndex = 41;
@@ -223,7 +223,7 @@
             // 
             this.lbTorque.AutoSize = true;
             this.lbTorque.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbTorque.Location = new System.Drawing.Point(928, 524);
+            this.lbTorque.Location = new System.Drawing.Point(928, 585);
             this.lbTorque.Name = "lbTorque";
             this.lbTorque.Size = new System.Drawing.Size(13, 13);
             this.lbTorque.TabIndex = 40;
@@ -233,7 +233,7 @@
             // 
             this.lbRotacao.AutoSize = true;
             this.lbRotacao.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbRotacao.Location = new System.Drawing.Point(928, 582);
+            this.lbRotacao.Location = new System.Drawing.Point(928, 614);
             this.lbRotacao.Name = "lbRotacao";
             this.lbRotacao.Size = new System.Drawing.Size(13, 13);
             this.lbRotacao.TabIndex = 40;
@@ -243,7 +243,7 @@
             // 
             this.lbAceleracao.AutoSize = true;
             this.lbAceleracao.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbAceleracao.Location = new System.Drawing.Point(928, 553);
+            this.lbAceleracao.Location = new System.Drawing.Point(928, 447);
             this.lbAceleracao.Name = "lbAceleracao";
             this.lbAceleracao.Size = new System.Drawing.Size(13, 13);
             this.lbAceleracao.TabIndex = 40;
@@ -253,7 +253,7 @@
             // 
             this.lbVelocidade.AutoSize = true;
             this.lbVelocidade.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbVelocidade.Location = new System.Drawing.Point(928, 494);
+            this.lbVelocidade.Location = new System.Drawing.Point(928, 555);
             this.lbVelocidade.Name = "lbVelocidade";
             this.lbVelocidade.Size = new System.Drawing.Size(13, 13);
             this.lbVelocidade.TabIndex = 40;
@@ -263,7 +263,7 @@
             // 
             this.lbPotencia.AutoSize = true;
             this.lbPotencia.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lbPotencia.Location = new System.Drawing.Point(928, 465);
+            this.lbPotencia.Location = new System.Drawing.Point(928, 526);
             this.lbPotencia.Name = "lbPotencia";
             this.lbPotencia.Size = new System.Drawing.Size(13, 13);
             this.lbPotencia.TabIndex = 40;
@@ -281,7 +281,7 @@
             // 
             // pbRotacao
             // 
-            this.pbRotacao.Location = new System.Drawing.Point(826, 577);
+            this.pbRotacao.Location = new System.Drawing.Point(826, 609);
             this.pbRotacao.Maximum = 10000;
             this.pbRotacao.Name = "pbRotacao";
             this.pbRotacao.Size = new System.Drawing.Size(219, 23);
@@ -289,7 +289,7 @@
             // 
             // pbAceleracao
             // 
-            this.pbAceleracao.Location = new System.Drawing.Point(826, 548);
+            this.pbAceleracao.Location = new System.Drawing.Point(826, 442);
             this.pbAceleracao.Maximum = 30;
             this.pbAceleracao.Name = "pbAceleracao";
             this.pbAceleracao.Size = new System.Drawing.Size(219, 23);
@@ -297,14 +297,14 @@
             // 
             // pbTorque
             // 
-            this.pbTorque.Location = new System.Drawing.Point(826, 519);
+            this.pbTorque.Location = new System.Drawing.Point(826, 580);
             this.pbTorque.Name = "pbTorque";
             this.pbTorque.Size = new System.Drawing.Size(219, 23);
             this.pbTorque.TabIndex = 39;
             // 
             // pbVelocidadeMax
             // 
-            this.pbVelocidadeMax.Location = new System.Drawing.Point(826, 489);
+            this.pbVelocidadeMax.Location = new System.Drawing.Point(826, 550);
             this.pbVelocidadeMax.Maximum = 400;
             this.pbVelocidadeMax.Name = "pbVelocidadeMax";
             this.pbVelocidadeMax.Size = new System.Drawing.Size(219, 23);
@@ -312,7 +312,7 @@
             // 
             // pbPotencia
             // 
-            this.pbPotencia.Location = new System.Drawing.Point(826, 460);
+            this.pbPotencia.Location = new System.Drawing.Point(826, 521);
             this.pbPotencia.Maximum = 1200;
             this.pbPotencia.Name = "pbPotencia";
             this.pbPotencia.Size = new System.Drawing.Size(219, 23);
@@ -379,7 +379,7 @@
             this.txtModelo.MaxLength = 4;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(146, 27);
-            this.txtModelo.TabIndex = 18;
+            this.txtModelo.TabIndex = 4;
             // 
             // NovaMarca
             // 
@@ -401,7 +401,7 @@
             this.txtMarca.Location = new System.Drawing.Point(76, 189);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(147, 26);
-            this.txtMarca.TabIndex = 17;
+            this.txtMarca.TabIndex = 3;
             this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
             // 
             // iTalk_Label24
@@ -435,7 +435,7 @@
             this.txtAno.MaxLength = 4;
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(146, 27);
-            this.txtAno.TabIndex = 16;
+            this.txtAno.TabIndex = 2;
             // 
             // iTalk_Label26
             // 
@@ -458,7 +458,7 @@
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(101, 27);
-            this.txtPlaca.TabIndex = 15;
+            this.txtPlaca.TabIndex = 1;
             // 
             // iTalk_Label27
             // 
@@ -567,7 +567,7 @@
             this.txtRotacaoMax.Name = "txtRotacaoMax";
             this.txtRotacaoMax.ReadOnly = false;
             this.txtRotacaoMax.Size = new System.Drawing.Size(81, 28);
-            this.txtRotacaoMax.TabIndex = 25;
+            this.txtRotacaoMax.TabIndex = 11;
             this.txtRotacaoMax.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRotacaoMax.UseSystemPasswordChar = false;
             this.txtRotacaoMax.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -595,7 +595,7 @@
             this.txtConsumo.Name = "txtConsumo";
             this.txtConsumo.ReadOnly = false;
             this.txtConsumo.Size = new System.Drawing.Size(81, 28);
-            this.txtConsumo.TabIndex = 24;
+            this.txtConsumo.TabIndex = 6;
             this.txtConsumo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtConsumo.UseSystemPasswordChar = false;
             this.txtConsumo.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -623,7 +623,7 @@
             this.txtAceleracao.Name = "txtAceleracao";
             this.txtAceleracao.ReadOnly = false;
             this.txtAceleracao.Size = new System.Drawing.Size(81, 28);
-            this.txtAceleracao.TabIndex = 23;
+            this.txtAceleracao.TabIndex = 10;
             this.txtAceleracao.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAceleracao.UseSystemPasswordChar = false;
             this.txtAceleracao.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -651,7 +651,7 @@
             this.txtTorque.Name = "txtTorque";
             this.txtTorque.ReadOnly = false;
             this.txtTorque.Size = new System.Drawing.Size(81, 28);
-            this.txtTorque.TabIndex = 22;
+            this.txtTorque.TabIndex = 9;
             this.txtTorque.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTorque.UseSystemPasswordChar = false;
             this.txtTorque.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -679,7 +679,7 @@
             this.txtVelocidadeMax.Name = "txtVelocidadeMax";
             this.txtVelocidadeMax.ReadOnly = false;
             this.txtVelocidadeMax.Size = new System.Drawing.Size(81, 28);
-            this.txtVelocidadeMax.TabIndex = 21;
+            this.txtVelocidadeMax.TabIndex = 8;
             this.txtVelocidadeMax.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtVelocidadeMax.UseSystemPasswordChar = false;
             this.txtVelocidadeMax.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -707,7 +707,7 @@
             this.txtPotencia.Name = "txtPotencia";
             this.txtPotencia.ReadOnly = false;
             this.txtPotencia.Size = new System.Drawing.Size(81, 28);
-            this.txtPotencia.TabIndex = 20;
+            this.txtPotencia.TabIndex = 7;
             this.txtPotencia.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPotencia.UseSystemPasswordChar = false;
             this.txtPotencia.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -747,7 +747,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.ReadOnly = false;
             this.txtPeso.Size = new System.Drawing.Size(81, 28);
-            this.txtPeso.TabIndex = 19;
+            this.txtPeso.TabIndex = 5;
             this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPeso.UseSystemPasswordChar = false;
             this.txtPeso.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
@@ -763,7 +763,7 @@
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.PromptChar = ' ';
             this.txtCpf.Size = new System.Drawing.Size(155, 27);
-            this.txtCpf.TabIndex = 14;
+            this.txtCpf.TabIndex = 0;
             // 
             // iTalk_Label42
             // 
@@ -783,7 +783,7 @@
             this.textBox1.Location = new System.Drawing.Point(104, 370);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(483, 23);
-            this.textBox1.TabIndex = 26;
+            this.textBox1.TabIndex = 12;
             // 
             // btBuscarCarro
             // 
@@ -857,7 +857,7 @@
             this.iTalk_Label20.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label20.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label20.Location = new System.Drawing.Point(700, 578);
+            this.iTalk_Label20.Location = new System.Drawing.Point(700, 610);
             this.iTalk_Label20.Name = "iTalk_Label20";
             this.iTalk_Label20.Size = new System.Drawing.Size(125, 21);
             this.iTalk_Label20.TabIndex = 0;
@@ -881,7 +881,7 @@
             this.iTalk_Label12.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label12.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label12.Location = new System.Drawing.Point(762, 520);
+            this.iTalk_Label12.Location = new System.Drawing.Point(762, 581);
             this.iTalk_Label12.Name = "iTalk_Label12";
             this.iTalk_Label12.Size = new System.Drawing.Size(57, 21);
             this.iTalk_Label12.TabIndex = 0;
@@ -892,8 +892,8 @@
             this.iTalk_Label11.AutoSize = true;
             this.iTalk_Label11.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label11.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label11.Location = new System.Drawing.Point(684, 549);
+            this.iTalk_Label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iTalk_Label11.Location = new System.Drawing.Point(684, 441);
             this.iTalk_Label11.Name = "iTalk_Label11";
             this.iTalk_Label11.Size = new System.Drawing.Size(141, 21);
             this.iTalk_Label11.TabIndex = 0;
@@ -905,7 +905,7 @@
             this.iTalk_Label9.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label9.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label9.Location = new System.Drawing.Point(675, 491);
+            this.iTalk_Label9.Location = new System.Drawing.Point(675, 552);
             this.iTalk_Label9.Name = "iTalk_Label9";
             this.iTalk_Label9.Size = new System.Drawing.Size(144, 21);
             this.iTalk_Label9.TabIndex = 0;
@@ -956,7 +956,7 @@
             this.iTalk_Label10.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label10.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label10.Location = new System.Drawing.Point(751, 462);
+            this.iTalk_Label10.Location = new System.Drawing.Point(751, 523);
             this.iTalk_Label10.Name = "iTalk_Label10";
             this.iTalk_Label10.Size = new System.Drawing.Size(68, 21);
             this.iTalk_Label10.TabIndex = 0;
@@ -968,7 +968,7 @@
             this.iTalk_Label21.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label21.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label21.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label21.Location = new System.Drawing.Point(1052, 578);
+            this.iTalk_Label21.Location = new System.Drawing.Point(1052, 610);
             this.iTalk_Label21.Name = "iTalk_Label21";
             this.iTalk_Label21.Size = new System.Drawing.Size(39, 21);
             this.iTalk_Label21.TabIndex = 0;
@@ -979,8 +979,8 @@
             this.iTalk_Label17.AutoSize = true;
             this.iTalk_Label17.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label17.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label17.Location = new System.Drawing.Point(1051, 549);
+            this.iTalk_Label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.iTalk_Label17.Location = new System.Drawing.Point(1051, 443);
             this.iTalk_Label17.Name = "iTalk_Label17";
             this.iTalk_Label17.Size = new System.Drawing.Size(34, 21);
             this.iTalk_Label17.TabIndex = 0;
@@ -992,7 +992,7 @@
             this.iTalk_Label16.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label16.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label16.Location = new System.Drawing.Point(1051, 520);
+            this.iTalk_Label16.Location = new System.Drawing.Point(1051, 581);
             this.iTalk_Label16.Name = "iTalk_Label16";
             this.iTalk_Label16.Size = new System.Drawing.Size(46, 21);
             this.iTalk_Label16.TabIndex = 0;
@@ -1004,7 +1004,7 @@
             this.iTalk_Label15.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label15.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label15.Location = new System.Drawing.Point(1051, 491);
+            this.iTalk_Label15.Location = new System.Drawing.Point(1051, 552);
             this.iTalk_Label15.Name = "iTalk_Label15";
             this.iTalk_Label15.Size = new System.Drawing.Size(47, 21);
             this.iTalk_Label15.TabIndex = 0;
@@ -1016,7 +1016,7 @@
             this.iTalk_Label14.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label14.ForeColor = System.Drawing.Color.Teal;
-            this.iTalk_Label14.Location = new System.Drawing.Point(1051, 464);
+            this.iTalk_Label14.Location = new System.Drawing.Point(1051, 525);
             this.iTalk_Label14.Name = "iTalk_Label14";
             this.iTalk_Label14.Size = new System.Drawing.Size(25, 21);
             this.iTalk_Label14.TabIndex = 0;

@@ -19,7 +19,8 @@ namespace car_tuning.Modelo
 
             
             string qry = string.Format("INSERT INTO CARRO (placa, modelo, ano, marca, cpfCli, peso, potencia, velocidadeMax, torque, aceleracao, consumo, rotacao)" +
-                " VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", c.Placa,c.Modelo,c.Ano, c.Marca, c.CpfCliente, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
+                " VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')",
+                c.Placa,c.Modelo,c.Ano, c.Marca, c.CpfCliente, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
 
             bd.ExecuteSQL(qry);
 
@@ -33,7 +34,10 @@ namespace car_tuning.Modelo
         }
         public void Atualizar(Carro c)
         {
-            String sql = string.Format("UPDATE CARRO SET modelo = '{0}', ano = '{1}', marca = '{2}' WHERE placa = '{3}' ", c.Modelo, c.Ano, c.Marca, c.Placa);
+            String sql = string.Format("UPDATE CARRO SET modelo = '{0}', ano = '{1}', marca = '{2}', peso = '{3}', potencia = '{4}'" +
+                ", velocidadeMax = '{5}', torque = '{6}', aceleracao = '{7}', consumo = '{8}', rotacao = '{9}'' WHERE placa = '{10}' ",
+                 c.Modelo, c.Ano, c.Marca, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax, c.Placa); 
+
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
@@ -63,9 +67,7 @@ namespace car_tuning.Modelo
                 c.Marca = dr["aceleracao"].ToString();
                 c.Marca = dr["consumo"].ToString();
                 c.Marca = dr["rotacao"].ToString();
-
-
-
+                
 
                 lista.Add(new Carro(c.Ano, c.Placa, c.Modelo, c.CpfCliente, c.Marca, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
             }
