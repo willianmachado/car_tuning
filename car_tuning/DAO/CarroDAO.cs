@@ -28,11 +28,9 @@ namespace car_tuning.Modelo
 
         public void Deletar(string index)
         {
+            String qry = string.Format("DELETE FROM CARRO WHERE placa='" + index + "';");
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
-
-            String qry = string.Format("DELETE FROM CARRO WHERE placa='" + index + "';");
-
             bd.ExecuteSQL(qry);
         }
         public void Atualizar(Carro c)
@@ -43,6 +41,7 @@ namespace car_tuning.Modelo
 
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            bd.ExecuteSQL(sql);
         }
         
         public List<Carro> Carregar()

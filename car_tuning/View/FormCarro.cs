@@ -74,21 +74,35 @@ namespace car_tuning.View
         {
             CarroDAO carroDAO = new CarroDAO();
             Carro carro = GetDTO();
-            carroDAO.Salvar(carro);
+            
             Fill();
 
-            try
-
+            if (txtCpf.Text != "")
             {
-                MessageBox.Show("Cadastrado com sucesso!");
-                ControlaBotoes(true);
-                limparCampos();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("DEU RUIM");
+                if (btSalvar.Text == "Salvar")
+                {
+                    carroDAO.Salvar(carro);
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                else
+                {
+                    carroDAO.Atualizar(carro);
+                    MessageBox.Show("Atualizado com Sucesso!");
+                    btSalvar.Text = "Salvar";
+                }
 
+              
+                    Fill();
+                    ControlaBotoes(true);
+                    limparCampos();
+               
             }
+
+            else
+            {
+                MessageBox.Show(this, "Favor preencher os dados ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void btLimpar_Click(object sender, EventArgs e)
@@ -100,9 +114,20 @@ namespace car_tuning.View
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            ControlaBotoes(true);
-            btEditar.Enabled = true;
-            btSalvar.Enabled = false;
+            if (txtCpf.Text != "")
+            {
+                btSalvar.Text = "Atualizar";
+
+                ControlaBotoes(false);
+                txtCpf.Enabled = false;
+
+            }
+
+            else
+            {
+                MessageBox.Show("Clique duplo para editar");
+
+            }
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
