@@ -18,8 +18,8 @@ namespace car_tuning.Modelo
                 bd.GetConnection();
 
             
-            string qry = string.Format("INSERT INTO CARRO (placa, modelo, ano, marca, cpfCli)" +
-                " VALUES('{0}', '{1}', '{2}', '{3}','{4}')",c.Placa,c.Molelo,c.Ano, c.Marca, c.CpfCliente);
+            string qry = string.Format("INSERT INTO CARRO (placa, modelo, ano, marca, cpfCli, peso, potencia, velocidadeMax, torque, aceleracao, consumo, rotacao)" +
+                " VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')", c.Placa,c.Modelo,c.Ano, c.Marca, c.CpfCliente, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
 
             bd.ExecuteSQL(qry);
 
@@ -33,7 +33,7 @@ namespace car_tuning.Modelo
         }
         public void Atualizar(Carro c)
         {
-            String sql = string.Format("UPDATE CARRO SET modelo = '{0}', ano = '{1}', codMarca = '{2}', cpfCli = '{3}' WHERE placa = '{4}' ", c.Molelo, c.Molelo, c.Ano, c.Marca, c.CpfCliente, c.Placa);
+            String sql = string.Format("UPDATE CARRO SET modelo = '{0}', ano = '{1}', marca = '{2}' WHERE placa = '{3}' ", c.Modelo, c.Ano, c.Marca, c.Placa);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
@@ -51,17 +51,23 @@ namespace car_tuning.Modelo
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-
-
                 c.CpfCliente = dr["cpfCli"].ToString();
                 c.Placa = dr["placa"].ToString();
                 c.Ano = dr["ano"].ToString();
-                c.Molelo = dr["modelo"].ToString();
+                c.Modelo = dr["modelo"].ToString();
                 c.Marca = dr["marca"].ToString();
+                c.Marca = dr["peso"].ToString();
+                c.Marca = dr["potencia"].ToString();
+                c.Marca = dr["velocidadeMax"].ToString();
+                c.Marca = dr["torque"].ToString();
+                c.Marca = dr["aceleracao"].ToString();
+                c.Marca = dr["consumo"].ToString();
+                c.Marca = dr["rotacao"].ToString();
 
 
 
-                   lista.Add(new Carro(c.Ano, c.Placa, c.Molelo, c.CpfCliente, c.Marca));
+
+                lista.Add(new Carro(c.Ano, c.Placa, c.Modelo, c.CpfCliente, c.Marca, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
             }
             return lista;
 

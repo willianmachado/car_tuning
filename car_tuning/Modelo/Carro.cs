@@ -8,12 +8,8 @@ namespace car_tuning.Modelo
 {
     class Carro 
     {
-        private string ano;
-        private string placa;
-        private string modelo;
-        private string cpfCliente;
-        private string marca;
-        
+        private string ano, placa, modelo, cpfCliente, marca;
+        private int peso, potencia, velocidadeMax, torque, aceleracao, consumo, rotacaoMax;
 
         public Carro()
         {
@@ -21,20 +17,33 @@ namespace car_tuning.Modelo
 
         }
 
-        public Carro(string ano, string placa, string modelo, string cpfCliente, string marca)
+        public Carro(string ano, string placa, string modelo, string cpfCliente, string marca, int peso, int potencia, int velocidadeMax, int torque, int aceleracao, int consumo, int rotacaoMax)
         {
-            this.ano = ano;
-            this.placa = placa;
-            this.modelo = modelo;
-            this.cpfCliente = cpfCliente;
-            this.marca = marca;
+            this.Ano = ano;
+            this.Placa = placa;
+            this.Modelo = modelo;
+            this.CpfCliente = cpfCliente;
+            this.Marca = marca;
+            this.Peso = peso;
+            this.Potencia = potencia;
+            this.VelocidadeMax = velocidadeMax;
+            this.Torque = torque;
+            this.Aceleracao = aceleracao;
+            this.Consumo = consumo;
+            this.RotacaoMax = rotacaoMax;
         }
 
         public string Ano { get => ano; set => ano = value; }
         public string Placa { get => placa; set => placa = value; }
-        public string Molelo { get => modelo; set => modelo = value; }
+        public string Modelo { get => modelo; set => modelo = value; }
         public string CpfCliente { get => cpfCliente; set => cpfCliente = value; }
         public string Marca { get => marca; set => marca = value; }
-
+        public int Peso { get => peso; set => peso = value; }
+        public int Potencia { get => potencia; set => potencia = value; }
+        public int VelocidadeMax { get => velocidadeMax; set => velocidadeMax = value; }
+        public int Torque { get => torque; set => torque = value; }
+        public int Aceleracao { get => aceleracao; set => aceleracao = value; }
+        public int Consumo { get => consumo; set => consumo = value; }
+        public int RotacaoMax { get => rotacaoMax; set => rotacaoMax = value; }
     }
 }

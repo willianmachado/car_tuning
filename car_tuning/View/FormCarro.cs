@@ -32,7 +32,7 @@ namespace car_tuning.View
 
             foreach (Carro c in cars)
             {
-                dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Molelo);
+                dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo);
 
                 
             }
@@ -124,10 +124,17 @@ namespace car_tuning.View
             carro.Placa = txtPlaca.Text;
             carro.Ano = txtAno.Text;
             carro.Marca = txtMarca.Text.Trim();
-            carro.Molelo = txtModelo.Text;
+            carro.Modelo = txtModelo.Text;
+            carro.Peso = int.Parse(txtPeso.Text);
+            carro.Potencia = int.Parse(txtPotencia.Text);
+            carro.VelocidadeMax = int.Parse(txtVelocidadeMax.Text);
+            carro.Torque = int.Parse(txtTorque.Text);
+            carro.Aceleracao = int.Parse(txtAceleracao.Text);
+            carro.Consumo = int.Parse(txtConsumo.Text);
+            carro.RotacaoMax = int.Parse(txtRotacaoMax.Text);
 
 
-            
+
             return carro;
         }
 
