@@ -33,6 +33,7 @@
             this.dgvPecas = new System.Windows.Forms.DataGridView();
             this.colPeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCompativel = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,13 +66,16 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.dataGridView1);
             this.iTalk_GroupBox1.Controls.Add(this.dgvPecas);
             this.iTalk_GroupBox1.Controls.Add(this.txtTorque);
             this.iTalk_GroupBox1.Controls.Add(this.txtPotencia);
@@ -109,6 +113,7 @@
             this.dgvPecas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colPeca,
             this.colDescricao,
+            this.Column1,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.colCompativel,
@@ -136,6 +141,12 @@
             this.colDescricao.HeaderText = "Descricao";
             this.colDescricao.Name = "colDescricao";
             this.colDescricao.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Preco";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -546,6 +557,14 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(517, 172);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(586, 321);
+            this.dataGridView1.TabIndex = 15;
+            // 
             // FormPecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,6 +586,7 @@
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -603,11 +623,13 @@
         private System.Windows.Forms.DataGridView dgvPecas;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCompativel;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

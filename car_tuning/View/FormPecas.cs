@@ -28,7 +28,12 @@ namespace car_tuning
             pecas = pecasDAO.Carregar();
             dgvPecas.Rows.Clear();
             foreach (Pecas p in pecas)
-                dgvPecas.Rows.Add(p.Codigo,p.Descricao,p.Fabricante,p.Tipo,p.Tipo,p.Compatibilidade,p.AddPeso,p.AddPotencia,p.AddTorque);
+            {
+                dataGridView1.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
+                dgvPecas.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
+
+            }
+            
         }
         private void FillMarca()
         {
@@ -57,6 +62,7 @@ namespace car_tuning
         {
             ControlaBotoes(false);
             limparCampos();
+            Fill();
         }
 
         private void btSalvar_Click(object sender, EventArgs e)
@@ -102,7 +108,7 @@ namespace car_tuning
             p.AddPotencia = Double.Parse(txtPotencia.Text);
             p.AddTorque = Double.Parse(txtTorque.Text);
             p.Codigo = Int32.Parse(txtCodigo.Text);
-            //p.Compatibilidade = txt
+            p.Compatibilidade = txtMarca.Text;
             p.Descricao = txtDescri.Text;
             p.Fabricante = txtFabri.Text;
             p.Preco = Double.Parse(txtPreco.Text);
@@ -115,7 +121,7 @@ namespace car_tuning
             txtPotencia.Text = p.AddPotencia.ToString();
             txtTorque.Text = p.AddTorque.ToString();
             txtCodigo.Text = p.Codigo.ToString();
-            //p.Compatibilidade = txt
+            p.Compatibilidade = txtMarca.Text;
             txtDescri.Text = p.Descricao;
             txtFabri.Text = p.Fabricante;
             txtPreco.Text = p.Preco.ToString();
