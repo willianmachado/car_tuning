@@ -389,8 +389,8 @@ namespace car_tuning.View
         private void NovaMarca_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormMarca formMarca = new FormMarca();
-            formMarca.Show(this);
             formMarca.StartPosition = FormStartPosition.CenterScreen;
+            formMarca.Show(this);
             Fill();
         }
 

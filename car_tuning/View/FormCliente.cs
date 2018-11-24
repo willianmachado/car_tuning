@@ -146,8 +146,8 @@ namespace car_tuning
             {
                 txtCpf.Text = dgvCliente.Rows[e.RowIndex].Cells[0].Value.ToString();
                 txtNome.Text = dgvCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
-                txtTelefone.Text = dgvCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
-                txtEmail.Text = dgvCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtEmail.Text = dgvCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtTelefone.Text = dgvCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
         }
 

@@ -12,6 +12,7 @@ namespace car_tuning.DAO
     class MarcaDAO
     {
         private const string Data = "Data Source = car.db";
+
         public void Salvar(Marca m)
         {
             
@@ -21,19 +22,15 @@ namespace car_tuning.DAO
             bd.ExecuteSQL(sql);
         }
 
-        public void Deletar(int id)
+        public void Deletar(string id)
         {
-            String sql = string.Format("");
+            String sql = string.Format("DELETE FROM MARCA WHERE CODIGO = " + id);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            bd.ExecuteSQL(sql);
+
         }
-        public void atualizar(Cliente cliente)
-        {
-            String sql = string.Format("");
-            DataBase bd = DataBase.GetInstance();
-            bd.GetConnection();
-        }
-        
+               
         public int BuscaCodMarca(string nome)
         {
             int marca;

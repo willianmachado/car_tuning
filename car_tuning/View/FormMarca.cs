@@ -41,16 +41,35 @@ namespace car_tuning.View
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            MarcaDAO marcaDAO = new MarcaDAO();
-            Marca marca = getDTO();
-            marcaDAO.Salvar(marca);
-            MessageBox.Show("Cadastrado com Sucesso!");
-            FormCarro formCarro = new FormCarro();
-            
-            formCarro.Refresh();
-            formCarro.Fill();
+            if (txtNomeMarca.Text != "" )
+            {
+                MarcaDAO marcaDAO = new MarcaDAO();
+                Marca marca = getDTO();
+                marcaDAO.Salvar(marca);
+                MessageBox.Show("Cadastrado com Sucesso!");
+                FormCarro formCarro = new FormCarro();
 
-            this.Close();
+                formCarro.Refresh();
+                formCarro.Fill();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Insira o nome da marca");
+            }
+            
+        }
+
+        private void btRemover_Click(object sender, EventArgs e)
+        {
+            MarcaDAO marcaDAO = new MarcaDAO();
+            string index = (dgvMarca.CurrentRow.Cells[0].Value.ToString());
+
+            getDTO();
+            marcaDAO.Deletar(index);
+
+            Fill();
+            MessageBox.Show("Marca excluida");
         }
 
         private Marca getDTO()
@@ -59,5 +78,7 @@ namespace car_tuning.View
             marca.Nome = txtNomeMarca.Text.Trim();
             return marca;
         }
+
+        
     }
 }

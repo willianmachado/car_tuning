@@ -35,6 +35,7 @@
             this.dgvMarca = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btRemover = new iTalk.iTalk_Button_2();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
             this.btnSalvar.Image = null;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(211, 113);
+            this.btnSalvar.Location = new System.Drawing.Point(28, 113);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(85, 25);
             this.btnSalvar.TabIndex = 3;
@@ -76,7 +77,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnCancelar.Image = null;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(107, 113);
+            this.btnCancelar.Location = new System.Drawing.Point(211, 113);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(85, 25);
             this.btnCancelar.TabIndex = 4;
@@ -106,6 +107,21 @@
             this.Column3.HeaderText = "Nome";
             this.Column3.Name = "Column3";
             // 
+            // btRemover
+            // 
+            this.btRemover.BackColor = System.Drawing.Color.Transparent;
+            this.btRemover.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btRemover.ForeColor = System.Drawing.Color.White;
+            this.btRemover.Image = null;
+            this.btRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btRemover.Location = new System.Drawing.Point(119, 113);
+            this.btRemover.Name = "btRemover";
+            this.btRemover.Size = new System.Drawing.Size(85, 25);
+            this.btRemover.TabIndex = 3;
+            this.btRemover.Text = "Remover";
+            this.btRemover.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btRemover.Click += new System.EventHandler(this.btRemover_Click);
+            // 
             // FormMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +130,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.dgvMarca);
             this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btRemover);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtNomeMarca);
             this.Controls.Add(this.label1);
@@ -133,5 +150,6 @@
         private System.Windows.Forms.DataGridView dgvMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private iTalk.iTalk_Button_2 btRemover;
     }
 }
