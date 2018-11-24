@@ -20,6 +20,7 @@ namespace car_tuning
             InitializeComponent();
             Fill();
             FillMarca();
+            ControlaBotoes(true);
         }
         private void Fill()
         {
@@ -29,7 +30,6 @@ namespace car_tuning
             dgvPecas.Rows.Clear();
             foreach (Pecas p in pecas)
             {
-                dataGridView1.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
                 dgvPecas.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
 
             }
@@ -44,7 +44,11 @@ namespace car_tuning
             marcas = marca.Carregar();
 
             foreach (Marca m in marcas)
+            {
                 txtMarca.Items.Add(m.Nome);
+            }
+                
+
         }
 
         private void btVoltar_Click(object sender, EventArgs e)

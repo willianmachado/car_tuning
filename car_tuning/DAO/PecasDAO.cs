@@ -14,10 +14,11 @@ namespace car_tuning.Modelo
         private const string Data = "Data Source = car.db";
         public void Salvar(Pecas peca)
         {
-            String sql = string.Format("INSERT INTO PECA(codigo,fabricante,preco,tipo,compatibilidade,descricao,addTorque,addPeso,addPotencia) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
-                peca.Codigo,peca.Fabricante,peca.Preco,peca.Tipo, peca.Compatibilidade, peca.Descricao, peca.AddTorque,peca.AddPeso,peca.AddPotencia);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            String sql = string.Format("INSERT INTO PECA(codigo,fabricante,preco,tipo,compatibilidade,descricao,addTorque,addPeso,addPotencia) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
+                peca.Codigo,peca.Fabricante,peca.Preco,peca.Tipo, peca.Compatibilidade, peca.Descricao, peca.AddTorque,peca.AddPeso,peca.AddPotencia);
+            
             bd.ExecuteSQL(sql);
         }
 
@@ -56,8 +57,42 @@ namespace car_tuning.Modelo
                 p.AddTorque = double.Parse(dr["addTorque"].ToString());
                 p.AddPeso = double.Parse(dr["addPeso"].ToString());
                 p.AddPotencia = double.Parse(dr["addPotencia"].ToString());
+
+                lista.Add(new Pecas(p.Codigo, p.Fabricante, p.Preco, p.Compatibilidade, p.Tipo, p.Descricao, p.AddTorque, p.AddPeso, p.AddPotencia));
             }
                 return lista;
+        }
+        public List<Pecas> Listar(string busca)
+        {
+            List<Pecas> lista = new List<Pecas>();
+            Pecas p = new Pecas();
+
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM PECA WHERE tipo like '%" + busca + "%' OR codigo like'%" + busca + "%' OR compatibilidade like' % " + busca + "%'", conn);
+
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                p.Codigo = Int32.Parse(dr["codigo"].ToString());
+                p.Fabricante = dr["fabricante"].ToString();
+                p.Preco = double.Parse(dr["preco"].ToString());
+                p.Compatibilidade = dr["compatibilidade"].ToString();
+                p.Tipo = dr["tipo"].ToString();
+                p.Descricao = dr["descricao"].ToString();
+                p.AddTorque = double.Parse(dr["addTorque"].ToString());
+                p.AddPeso = double.Parse(dr["addPeso"].ToString());
+                p.AddPotencia = double.Parse(dr["addPotencia"].ToString());
+
+                lista.Add(new Pecas(p.Codigo, p.Fabricante, p.Preco, p.Compatibilidade, p.Tipo, p.Descricao, p.AddTorque, p.AddPeso, p.AddPotencia));
+
+            }
+            return lista;
         }
     }
 }

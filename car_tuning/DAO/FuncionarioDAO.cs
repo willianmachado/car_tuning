@@ -81,7 +81,7 @@ namespace car_tuning.Modelo
             SQLiteConnection conn = new SQLiteConnection(Data);
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM FUNCINARIO WHERE nome like'%" + busca + "%' OR cpf LIKE'%" + busca + "%'", conn);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM FUNCIONARIO WHERE nome like'%" + busca + "%' OR cpf LIKE'%" + busca + "%'", conn);
 
 
             SQLiteDataReader dr = cmd.ExecuteReader();

@@ -17,13 +17,28 @@ namespace car_tuning.View
         public FormMarca()
         {
             InitializeComponent();
+            Fill();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+        private void Fill()
+        {
+            List<Marca> marcas;
+            MarcaDAO marca = new MarcaDAO();
+            dgvMarca.Rows.Clear();
 
+            marcas = marca.Carregar();
+
+            foreach (Marca m in marcas)
+            {
+                dgvMarca.Rows.Add(m.Codigo, m.Nome);
+            }
+
+
+        }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             MarcaDAO marcaDAO = new MarcaDAO();

@@ -413,6 +413,7 @@
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(147, 26);
             this.txtMarca.TabIndex = 136;
+            this.txtMarca.Click += new System.EventHandler(this.txtMarca_Click);
             // 
             // iTalk_Label24
             // 

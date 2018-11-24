@@ -66,16 +66,13 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox1.Controls.Add(this.dataGridView1);
             this.iTalk_GroupBox1.Controls.Add(this.dgvPecas);
             this.iTalk_GroupBox1.Controls.Add(this.txtTorque);
             this.iTalk_GroupBox1.Controls.Add(this.txtPotencia);
@@ -557,14 +554,6 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(517, 172);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(586, 321);
-            this.dataGridView1.TabIndex = 15;
-            // 
             // FormPecas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -586,7 +575,6 @@
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -630,6 +618,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

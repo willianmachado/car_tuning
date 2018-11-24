@@ -70,8 +70,9 @@ namespace car_tuning.DAO
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
+                m.Codigo = Int32.Parse(dr["CODIGO"].ToString());
                 m.Nome = dr["NOME"].ToString();
-                lista.Add(new Marca(m.Nome));
+                lista.Add(new Marca(m.Codigo, m.Nome));
             }
             return lista;
         }

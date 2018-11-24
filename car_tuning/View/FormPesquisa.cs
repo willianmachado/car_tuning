@@ -19,10 +19,11 @@ namespace car_tuning
         public FormPesquisa()
         {
             InitializeComponent();
-            Fill();
+            FillFunc();
+            FillPeca();
 
         }
-        private void Fill()
+        private void FillFunc()
         {
             FuncionarioDAO fDAO = new FuncionarioDAO();
             List<Funcionario> funcionarios;
@@ -31,9 +32,46 @@ namespace car_tuning
             foreach (Funcionario f in funcionarios)
                 dgvFuncP.Rows.Add(f.Cpf, f.Nome, f.Telefone);
         }
-        
-        
 
+        private void FillPeca()
+        {
+            PecasDAO pecasDAO = new PecasDAO();
+            List<Pecas> pecas;
+            pecas = pecasDAO.Carregar();
+            dgvPecasP.Rows.Clear();
+            foreach (Pecas p in pecas)
+            {
+                dgvPecasP.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
+
+            }
+
+        }
+
+        private void dgCliente_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                FormCliente form = new FormCliente();
+
+                string cpf = dgCliente.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nome = dgCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string telefone = dgCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string email = dgCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+            }
+        }
+
+        private void txtPesquisaFunc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FuncionarioDAO fDAO = new FuncionarioDAO();
+            List<Funcionario> funcionarios;
+            funcionarios = fDAO.Listar(txtPesquisaFunc.Text);
+            dgvFuncP.Rows.Clear();
+            foreach (Funcionario f in funcionarios)
+                dgvFuncP.Rows.Add(f.Cpf, f.Nome, f.Telefone);
+        }
+        
+        
         private void btVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -127,21 +165,21 @@ namespace car_tuning
 
         }
 
-        private void dgCliente_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void txtPesquisaPecas_TextChanged(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
+            PecasDAO pecasDAO = new PecasDAO();
+            List<Pecas> pecas;
+            pecas = pecasDAO.Listar(txtPesquisaPecas.Text);
+            dgvPecasP.Rows.Clear();
+            foreach (Pecas p in pecas)
             {
-                FormCliente form = new FormCliente();
-                
-                string cpf= dgCliente.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string nome = dgCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string telefone = dgCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string email = dgCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
+                dgvPecasP.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
 
             }
         }
 
-        private void txtPesquisaFunc_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPesquisaFunc_TextChanged(object sender, EventArgs e)
         {
             FuncionarioDAO fDAO = new FuncionarioDAO();
             List<Funcionario> funcionarios;
@@ -149,6 +187,11 @@ namespace car_tuning
             dgvFuncP.Rows.Clear();
             foreach (Funcionario f in funcionarios)
                 dgvFuncP.Rows.Add(f.Cpf, f.Nome, f.Telefone);
+        }
+
+        private void txtPesquisaPecas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

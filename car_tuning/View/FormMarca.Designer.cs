@@ -32,6 +32,10 @@
             this.txtNomeMarca = new System.Windows.Forms.TextBox();
             this.btnSalvar = new iTalk.iTalk_Button_2();
             this.btnCancelar = new iTalk.iTalk_Button_1();
+            this.dgvMarca = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -80,17 +84,41 @@
             this.btnCancelar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // dgvMarca
+            // 
+            this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3});
+            this.dgvMarca.Location = new System.Drawing.Point(1, 161);
+            this.dgvMarca.Name = "dgvMarca";
+            this.dgvMarca.Size = new System.Drawing.Size(315, 301);
+            this.dgvMarca.TabIndex = 16;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Codigo";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Nome";
+            this.Column3.Name = "Column3";
+            // 
             // FormMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 150);
+            this.ClientSize = new System.Drawing.Size(318, 462);
             this.ControlBox = false;
+            this.Controls.Add(this.dgvMarca);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtNomeMarca);
             this.Controls.Add(this.label1);
             this.Name = "FormMarca";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +130,8 @@
         private System.Windows.Forms.TextBox txtNomeMarca;
         private iTalk.iTalk_Button_2 btnSalvar;
         private iTalk.iTalk_Button_1 btnCancelar;
+        private System.Windows.Forms.DataGridView dgvMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

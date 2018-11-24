@@ -393,6 +393,11 @@ namespace car_tuning.View
             formMarca.StartPosition = FormStartPosition.CenterScreen;
             Fill();
         }
+
+        private void txtMarca_Click(object sender, EventArgs e)
+        {
+            Fill();
+        }
     }
     
 }
