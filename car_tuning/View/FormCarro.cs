@@ -108,6 +108,27 @@ namespace car_tuning.View
         private void btExcluir_Click(object sender, EventArgs e)
         {
 
+            if (txtCpf.Text == "")
+            {
+                MessageBox.Show(this, "Clique duplo para excluir", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            else
+
+            if (MessageBox.Show(" Deseja excluir o carro selecionado? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+                ClienteDAO clienteDAO = new ClienteDAO();
+                string index = (dgvCarro.CurrentRow.Cells[0].Value.ToString());
+
+
+                Carro carro = GetDTO();
+                c.Deletar(index);
+
+                Fill();
+                MessageBox.Show("Carro excluido");
+                limparCampos();
+            }
         }
         
         private void btPesquisar_Click(object sender, EventArgs e)
@@ -202,6 +223,8 @@ namespace car_tuning.View
             txtVelocidadeMax.Text = "";
             txtConsumo.Text = "";
             txtAno.Text = "";
+            txtPlaca.Text = "";
+            txtModelo.Text = "";
             pbAceleracao.Value = 0;
             pbConsumo.Value = 0;
             pbPeso.Value = 0;

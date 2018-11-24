@@ -83,6 +83,18 @@
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btBuscarCarro = new Ambiance.Ambiance_Button_2();
             this.dgvCarro = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.velocidadeMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.torque = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aceleracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.consumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rotacaoMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_Label20 = new iTalk.iTalk_Label();
             this.imgCarro = new System.Windows.Forms.PictureBox();
             this.iTalk_Label12 = new iTalk.iTalk_Label();
@@ -105,18 +117,6 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.velocidadeMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.torque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aceleracao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.consumo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rotacaoMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
@@ -422,7 +422,7 @@
             // 
             this.txtModelo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtModelo.Location = new System.Drawing.Point(76, 221);
-            this.txtModelo.MaxLength = 4;
+            this.txtModelo.MaxLength = 20;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(155, 27);
             this.txtModelo.TabIndex = 4;
@@ -834,6 +834,87 @@
             this.dgvCarro.TabIndex = 28;
             this.dgvCarro.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarro_CellContentDoubleClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Placa";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // CPF_Cliente
+            // 
+            this.CPF_Cliente.HeaderText = "CPF_Cliente";
+            this.CPF_Cliente.Name = "CPF_Cliente";
+            this.CPF_Cliente.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ano";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Marca";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Modelo";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // peso
+            // 
+            this.peso.HeaderText = "Peso";
+            this.peso.Name = "peso";
+            this.peso.ReadOnly = true;
+            this.peso.Visible = false;
+            // 
+            // potencia
+            // 
+            this.potencia.HeaderText = "Potencia";
+            this.potencia.Name = "potencia";
+            this.potencia.ReadOnly = true;
+            this.potencia.Visible = false;
+            // 
+            // velocidadeMax
+            // 
+            this.velocidadeMax.HeaderText = "VelocidadeMax";
+            this.velocidadeMax.Name = "velocidadeMax";
+            this.velocidadeMax.ReadOnly = true;
+            this.velocidadeMax.Visible = false;
+            // 
+            // torque
+            // 
+            this.torque.HeaderText = "Torque";
+            this.torque.Name = "torque";
+            this.torque.ReadOnly = true;
+            this.torque.Visible = false;
+            // 
+            // aceleracao
+            // 
+            this.aceleracao.HeaderText = "Aceleracao";
+            this.aceleracao.Name = "aceleracao";
+            this.aceleracao.ReadOnly = true;
+            this.aceleracao.Visible = false;
+            // 
+            // consumo
+            // 
+            this.consumo.HeaderText = "Consumo";
+            this.consumo.Name = "consumo";
+            this.consumo.ReadOnly = true;
+            this.consumo.Visible = false;
+            // 
+            // rotacaoMax
+            // 
+            this.rotacaoMax.HeaderText = "RotacaoMax";
+            this.rotacaoMax.Name = "rotacaoMax";
+            this.rotacaoMax.ReadOnly = true;
+            this.rotacaoMax.Visible = false;
+            // 
             // iTalk_Label20
             // 
             this.iTalk_Label20.AutoSize = true;
@@ -1118,87 +1199,6 @@
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Placa";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // CPF_Cliente
-            // 
-            this.CPF_Cliente.HeaderText = "CPF_Cliente";
-            this.CPF_Cliente.Name = "CPF_Cliente";
-            this.CPF_Cliente.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ano";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Marca";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Modelo";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // peso
-            // 
-            this.peso.HeaderText = "Peso";
-            this.peso.Name = "peso";
-            this.peso.ReadOnly = true;
-            this.peso.Visible = false;
-            // 
-            // potencia
-            // 
-            this.potencia.HeaderText = "Potencia";
-            this.potencia.Name = "potencia";
-            this.potencia.ReadOnly = true;
-            this.potencia.Visible = false;
-            // 
-            // velocidadeMax
-            // 
-            this.velocidadeMax.HeaderText = "VelocidadeMax";
-            this.velocidadeMax.Name = "velocidadeMax";
-            this.velocidadeMax.ReadOnly = true;
-            this.velocidadeMax.Visible = false;
-            // 
-            // torque
-            // 
-            this.torque.HeaderText = "Torque";
-            this.torque.Name = "torque";
-            this.torque.ReadOnly = true;
-            this.torque.Visible = false;
-            // 
-            // aceleracao
-            // 
-            this.aceleracao.HeaderText = "Aceleracao";
-            this.aceleracao.Name = "aceleracao";
-            this.aceleracao.ReadOnly = true;
-            this.aceleracao.Visible = false;
-            // 
-            // consumo
-            // 
-            this.consumo.HeaderText = "Consumo";
-            this.consumo.Name = "consumo";
-            this.consumo.ReadOnly = true;
-            this.consumo.Visible = false;
-            // 
-            // rotacaoMax
-            // 
-            this.rotacaoMax.HeaderText = "RotacaoMax";
-            this.rotacaoMax.Name = "rotacaoMax";
-            this.rotacaoMax.ReadOnly = true;
-            this.rotacaoMax.Visible = false;
             // 
             // FormCarro
             // 
