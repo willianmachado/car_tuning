@@ -17,6 +17,7 @@ namespace car_tuning.View
 
         CarroDAO c = new CarroDAO();
         MarcaDAO m = new MarcaDAO();
+
         public FormCarro()
         {
             InitializeComponent();
@@ -33,14 +34,9 @@ namespace car_tuning.View
             foreach (Carro c in cars)
             {
                 dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c. VelocidadeMax, c. Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
-
-                
+              
             }
-
-
             
-
-
         }
 
         public void fillMarca()
@@ -77,21 +73,19 @@ namespace car_tuning.View
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            CarroDAO carroDAO = new CarroDAO();
+           
             Carro carro = GetDTO();
-            
-            Fill();
 
             if (txtCpf.Text != "")
             {
                 if (btSalvar.Text == "Salvar")
                 {
-                    carroDAO.Salvar(carro);
+                    c.Salvar(carro);
                     MessageBox.Show("Cadastrado com Sucesso!");
                 }
                 else
                 {
-                    carroDAO.Atualizar(carro);
+                    c.Atualizar(carro);
                     MessageBox.Show("Atualizado com Sucesso!");
                     btSalvar.Text = "Salvar";
                 }
@@ -171,8 +165,8 @@ namespace car_tuning.View
         {
             Carro carro = new Carro();
 
-            carro.CpfCliente = txtCpf.Text;
             carro.Placa = txtPlaca.Text;
+            carro.CpfCliente = txtCpf.Text;
             carro.Ano = txtAno.Text;
             carro.Marca = txtMarca.Text.Trim();
             carro.Modelo = txtModelo.Text;
@@ -194,11 +188,20 @@ namespace car_tuning.View
             
             txtAno.Text = carro.Ano.ToString();
             txtPlaca.Text = carro.Placa.ToString();
-            //txtMarca.Text = carro.Marca.ToString();
-           // txtModelo.Text = carro.Modelo.ToString();
+            txtMarca.Text = carro.Marca.ToString();
+            txtModelo.Text = carro.Modelo.ToString();
             txtCpf.Text = carro.CpfCliente.ToString();
-            
-            
+            txtAceleracao.Text = carro.Aceleracao.ToString();
+            txtPeso.Text = carro.Peso.ToString();
+            txtPotencia.Text = carro.Potencia.ToString();
+            txtRotacaoMax.Text = carro.RotacaoMax.ToString();
+            txtTorque.Text = carro.Torque.ToString();
+            txtVelocidadeMax.Text = carro.VelocidadeMax.ToString();
+            txtConsumo.Text = carro.Consumo.ToString();
+
+
+
+
         }
 
         public void ControlaBotoes(bool statusBtNovo)
@@ -441,6 +444,8 @@ namespace car_tuning.View
             {
                 
                 imgCarro.Image = Image.FromFile(SfdCarro.FileName);
+                byte[] pic = c.ImageToByte(imgCarro.Image, System.Drawing.Imaging.ImageFormat.Jpeg);
+                c.SaveImage(pic, txtPlaca.Text);
                 imgCarro.Show();
                 
             }
@@ -462,6 +467,13 @@ namespace car_tuning.View
 
         private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
         {
+           
+            List<Carro> carros;
+            carros = c.Listar(txtPesquisa.Text);
+            dgvCarro.Rows.Clear();
+
+            foreach (Carro c in carros)
+                dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
 
         }
 

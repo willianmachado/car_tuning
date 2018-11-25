@@ -17,13 +17,14 @@ namespace car_tuning.Modelo
 
         }
 
-        public Carro(string ano, string placa, string modelo, string cpfCliente, string marca, int peso, int potencia, int velocidadeMax, int torque, int aceleracao, int consumo, int rotacaoMax)
+        public Carro(string placa, string cpfCliente, string ano, string marca, string modelo, int peso, int potencia, int velocidadeMax, int torque, int aceleracao, int consumo, int rotacaoMax)
         {
-            this.Ano = ano;
+           
             this.Placa = placa;
-            this.Modelo = modelo;
             this.CpfCliente = cpfCliente;
+            this.Ano = ano;
             this.Marca = marca;
+            this.Modelo = modelo;
             this.Peso = peso;
             this.Potencia = potencia;
             this.VelocidadeMax = velocidadeMax;

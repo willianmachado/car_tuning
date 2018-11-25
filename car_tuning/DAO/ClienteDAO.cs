@@ -43,7 +43,6 @@ namespace car_tuning
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
 
-
             string qry = string.Format("UPDATE CLIENTE SET NOME = '{0}', TEL = '{1}', EMAIL = '{2}' WHERE CPF = '{3}'", c.Nome, c.Telefone, c.Email, c.Cpf);
 
             bd.ExecuteSQL(qry);
