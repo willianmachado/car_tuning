@@ -11,14 +11,15 @@ namespace car_tuning.DAO
     {
         public void Salvar(Stage s)
         {
-            String sql = string.Format("INSERT INTO STAGE (cod," +
-                "pesoIni, aceleracaoIni, torqueIni, potenciaIni, velocidade_MaxIni, consumoIni, rotacao_MaxIni," +
-                "pesoFin, aceleracaoFin, torqueFin, potenciaFin, velocidade_MaxFin, consumoFin, rotacao_MaxFin) " +
-                "VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}'," +
-                "'{7}', '{8}', '{9}', '{10}','{11}','{12}','{13}','{14}'," +
-                ")", s.Codigo,s.PesoIni,s.AceleracaoIni,s.TorqueIni,s.PotenciaIni,s.Velocidade_maxIni,s.ConsumoIni,s.Rotacao_maxIni,s.AceleracaoFin,s.TorqueFin,s.PotenciaFin,s.Velocidade_maxFin,s.ConsumoFin,s.Rotacao_maxFin);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            String sql = string.Format("INSERT INTO STAGE (pesoIni, aceleracaoIni, torqueIni, potenciaIni, velocidade_MaxIni, consumoIni, rotacao_MaxIni," +
+            "pesoFin, aceleracaoFin, torqueFin, potenciaFin, velocidade_MaxFin, consumoFin, rotacao_MaxFin,codServ) " +
+            "VALUES('{0}', '{1}', '{2}', '{3}','{4}','{5}','{6}'," +
+            "'{7}', '{8}', '{9}', '{10}','{11}','{12}','{13}','{14}'" +
+            ")", s.PesoIni, s.AceleracaoIni, s.TorqueIni, s.PotenciaIni, s.Velocidade_maxIni, s.ConsumoIni, s.Rotacao_maxIni,s.PesoFin, s.AceleracaoFin,s.TorqueFin,s.PotenciaFin,s.Velocidade_maxFin,s.ConsumoFin,s.Rotacao_maxFin,s.CodServ1);
+            
+            bd.ExecuteSQL(sql);
         }
 
         public void Deletar(int id)

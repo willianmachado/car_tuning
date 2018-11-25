@@ -177,7 +177,7 @@ namespace car_tuning
                     " `cpfcliente` TEXT," +
                     " `placaCarro` TEXT," +
                     " `cpfFunc` TEXT," +
-                    " `codStage` INTEGER," +
+                    
                     " `valorTotal` REAL," +
                     " FOREIGN KEY(`cpfcliente`) REFERENCES `Cliente`(`cpf`)," +
                     " FOREIGN KEY(`cpfFunc`) REFERENCES `Funcionario`(`cpf`)," +

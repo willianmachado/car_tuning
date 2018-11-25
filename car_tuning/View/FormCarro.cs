@@ -38,16 +38,21 @@ namespace car_tuning.View
             }
 
 
+            
+
+
+        }
+
+        public void fillMarca()
+        {
             List<Marca> marcas;
             MarcaDAO marca = new MarcaDAO();
             txtMarca.Items.Clear();
-            
+
             marcas = marca.Carregar();
-            
+
             foreach (Marca m in marcas)
                 txtMarca.Items.Add(m.Nome);
-
-
         }
         
         private void txtAno_KeyPress(object sender, KeyPressEventArgs e)
@@ -447,11 +452,12 @@ namespace car_tuning.View
             formMarca.StartPosition = FormStartPosition.CenterScreen;
             formMarca.Show(this);
             Fill();
+            fillMarca();
         }
 
         private void txtMarca_Click(object sender, EventArgs e)
         {
-            Fill();
+            fillMarca();
         }
 
         private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
