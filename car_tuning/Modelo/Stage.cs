@@ -17,7 +17,24 @@ namespace car_tuning.Modelo
         {
 
         }
-
+        public Stage(double pesoIni, double velocidade_maxIni, double potenciaIni, double aceleracaoIni, double torqueIni, double consumoIni, double rotacao_maxIni, double pesoFin, double velocidade_maxFin, double potenciaFin, double aceleracaoFin, double torqueFin, double consumoFin, double rotacao_maxFin, int codServ)
+        {
+            CodServ = codServ;
+            this.pesoIni = pesoIni;
+            this.velocidade_maxIni = velocidade_maxIni;
+            this.potenciaIni = potenciaIni;
+            this.aceleracaoIni = aceleracaoIni;
+            this.torqueIni = torqueIni;
+            this.consumoIni = consumoIni;
+            this.rotacao_maxIni = rotacao_maxIni;
+            this.pesoFin = pesoFin;
+            this.velocidade_maxFin = velocidade_maxFin;
+            this.potenciaFin = potenciaFin;
+            this.aceleracaoFin = aceleracaoFin;
+            this.torqueFin = torqueFin;
+            this.consumoFin = consumoFin;
+            this.rotacao_maxFin = rotacao_maxFin;
+        }
         public int Codigo { get => codigo; set => codigo = value; }
         public int CodServ1 { get => CodServ; set => CodServ = value; }
         public double PesoIni { get => pesoIni; set => pesoIni = value; }
