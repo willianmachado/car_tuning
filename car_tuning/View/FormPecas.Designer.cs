@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPecas));
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.txtBusca = new iTalk.iTalk_TextBox_Small();
             this.dgvPecas = new System.Windows.Forms.DataGridView();
             this.colPeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,6 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.txtBusca = new iTalk.iTalk_TextBox_Small();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecas)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +101,23 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 726);
             this.iTalk_GroupBox1.TabIndex = 10;
             this.iTalk_GroupBox1.Text = "Peças";
+            // 
+            // txtBusca
+            // 
+            this.txtBusca.BackColor = System.Drawing.Color.Transparent;
+            this.txtBusca.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtBusca.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBusca.Location = new System.Drawing.Point(80, 328);
+            this.txtBusca.MaxLength = 32767;
+            this.txtBusca.Multiline = false;
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.ReadOnly = false;
+            this.txtBusca.Size = new System.Drawing.Size(1086, 28);
+            this.txtBusca.TabIndex = 15;
+            this.txtBusca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBusca.UseSystemPasswordChar = false;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
+            this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             // 
             // dgvPecas
             // 
@@ -540,22 +557,6 @@
             this.btExcluir.Text = "Excluir";
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
-            // 
-            // txtBusca
-            // 
-            this.txtBusca.BackColor = System.Drawing.Color.Transparent;
-            this.txtBusca.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtBusca.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBusca.Location = new System.Drawing.Point(80, 328);
-            this.txtBusca.MaxLength = 32767;
-            this.txtBusca.Multiline = false;
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.ReadOnly = false;
-            this.txtBusca.Size = new System.Drawing.Size(1086, 28);
-            this.txtBusca.TabIndex = 15;
-            this.txtBusca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBusca.UseSystemPasswordChar = false;
-            this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             // 
             // FormPecas
             // 

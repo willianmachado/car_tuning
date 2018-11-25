@@ -22,17 +22,24 @@ namespace car_tuning.Modelo
             bd.ExecuteSQL(sql);
         }
 
-        public void Deletar(int index)
+        public void Deletar(string index)
         {
-            String sql = string.Format("DELETE FROM PECA where codigo = '" + index + "");
+            String sql = string.Format("DELETE FROM PECA where codigo ="+ index +";");
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            bd.ExecuteSQL(sql);
         }
-        public void atualizar(Pecas peca)
+
+        public void Atualizar(Pecas peca)
         {
-            String sql = string.Format("codigo='{0}',descricao='{1}',tipo='{2}',compatibilidade='{3}',addTorque='{4}',fabricante='{5}',addPeso='{6}',addPotencia='{7}'", peca.Codigo, peca.Descricao, peca.Tipo, peca.Compatibilidade, peca.AddTorque, peca.Fabricante, peca.AddPeso, peca.AddPotencia);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+
+            String sql = string.Format("UPDATE PECA SET fabricante='{0}',preco='{1}',tipo='{2}',compatibilidade='{3}',descricao='{4}',addtorque='{5}',addPeso='{6}',addPotencia='{7}' where codigo ='{8}'",
+                peca.Fabricante, peca.Preco, peca.Tipo, peca.Compatibilidade, peca.Descricao, peca.AddTorque, peca.AddPeso, peca.AddPotencia, peca.Codigo);
+
+            bd.ExecuteSQL(sql);
+           
         }
         
         public List<Pecas> Carregar()
@@ -58,7 +65,7 @@ namespace car_tuning.Modelo
                 p.AddPeso = double.Parse(dr["addPeso"].ToString());
                 p.AddPotencia = double.Parse(dr["addPotencia"].ToString());
 
-                lista.Add(new Pecas(p.Codigo, p.Fabricante, p.Preco, p.Compatibilidade, p.Tipo, p.Descricao, p.AddTorque, p.AddPeso, p.AddPotencia));
+                lista.Add(new Pecas(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque));
             }
                 return lista;
         }
@@ -77,16 +84,16 @@ namespace car_tuning.Modelo
             while (dr.Read())
             {
                 p.Codigo = Int32.Parse(dr["codigo"].ToString());
-                p.Fabricante = dr["fabricante"].ToString();
-                p.Preco = double.Parse(dr["preco"].ToString());
-                p.Compatibilidade = dr["compatibilidade"].ToString();
-                p.Tipo = dr["tipo"].ToString();
                 p.Descricao = dr["descricao"].ToString();
-                p.AddTorque = double.Parse(dr["addTorque"].ToString());
+                p.Preco = double.Parse(dr["preco"].ToString());
+                p.Fabricante = dr["fabricante"].ToString();
+                p.Tipo = dr["tipo"].ToString();
+                p.Compatibilidade = dr["compatibilidade"].ToString();
                 p.AddPeso = double.Parse(dr["addPeso"].ToString());
+                p.AddTorque = double.Parse(dr["addTorque"].ToString());
                 p.AddPotencia = double.Parse(dr["addPotencia"].ToString());
 
-                lista.Add(new Pecas(p.Codigo, p.Fabricante, p.Preco, p.Compatibilidade, p.Tipo, p.Descricao, p.AddTorque, p.AddPeso, p.AddPotencia));
+                lista.Add(new Pecas(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque));
 
             }
             return lista;

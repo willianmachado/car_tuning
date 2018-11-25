@@ -69,19 +69,26 @@ namespace car_tuning
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            
-            Pecas pecas = GetDTO();
+                Pecas pecas = GetDTO();
 
             if (txtTipo.Text != "")
             {
-                p.Salvar(pecas);
+                if (btSalvar.Text == "Salvar")
+                {
+                    p.Salvar(pecas);
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                else
+                {
+                    Pecas peca = GetDTOcod();
+                    p.Atualizar(peca);
+                    MessageBox.Show("Atualizado com Sucesso!");
+                    btSalvar.Text = "Salvar";
+                }
                 Fill();
-
-            }
-            else
-            {
-                MessageBox.Show(this, "Favor preencheros campos ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                ControlaBotoes(true);
+                limparCampos();
+            }           
 
         }
 
@@ -94,20 +101,61 @@ namespace car_tuning
         }
         private void btExcluir_Click(object sender, EventArgs e)
         {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show(this, "Clique duplo para excluir", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
+            else
+
+           if (MessageBox.Show(" Deseja excluir a peça selecionada? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                
+                string index = (dgvPecas.CurrentRow.Cells[0].Value.ToString());
+                Pecas peca = GetDTO();
+                p.Deletar(index);
+
+                Fill();
+                MessageBox.Show("Peça excluida");
+                limparCampos();
+            }
         }
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            ControlaBotoes(false);
+            if (txtCodigo.Text != "")
+            {
+                ControlaBotoes(false);
 
-            btEditar.Enabled = false;
-            btSalvar.Text = "Atualizar";
+                btEditar.Enabled = false;
+                btSalvar.Text = "Atualizar";
+            }
+            else
+            {
+                MessageBox.Show("Clique duplo para editar");
+
+            }
+
         }
-
+        private Pecas GetDTOcod()
+        {
+            Pecas p = new Pecas();
+            p.Codigo = int.Parse(txtCodigo.Text);
+           
+            p.AddPeso = Double.Parse(txtPeso.Text);
+            p.AddPotencia = Double.Parse(txtPotencia.Text);
+            p.AddTorque = Double.Parse(txtTorque.Text);
+            p.Compatibilidade = txtMarca.Text;
+            p.Descricao = txtDescri.Text;
+            p.Fabricante = txtFabri.Text;
+            p.Preco = Double.Parse(txtPreco.Text);
+            p.Tipo = txtTipo.Text;
+            return p;
+        }
         private Pecas GetDTO()
         {
             Pecas p = new Pecas();
+            
             p.AddPeso = Double.Parse(txtPeso.Text);
             p.AddPotencia = Double.Parse(txtPotencia.Text);
             p.AddTorque = Double.Parse(txtTorque.Text);
@@ -200,12 +248,7 @@ namespace car_tuning
         
           private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
         {
-            List<Pecas> pecas;
-            pecas = p.Listar(txtBusca.Text);
-            dgvPecas.Rows.Clear();
-
-            foreach (Pecas p in pecas)
-                dgvPecas.Rows.Add(p.Codigo, p.Fabricante, p.Preco, p.Compatibilidade, p.Tipo, p.Descricao, p.AddTorque, p.AddPeso, p.AddPotencia);
+            
         }
 
         private void dgvPecas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -223,6 +266,17 @@ namespace car_tuning
                 txtTorque.Text = dgvPecas.Rows[e.RowIndex].Cells[8].Value.ToString();
                
             }
+        }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+            List<Pecas> pecas;
+            pecas = p.Listar(txtBusca.Text);
+            dgvPecas.Rows.Clear();
+
+            foreach (Pecas p in pecas)
+                dgvPecas.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
+            
         }
     }
 }
