@@ -248,8 +248,137 @@ namespace car_tuning
             formItens.ShowDialog();
             formItens.StartPosition = FormStartPosition.CenterParent;
         }
+
+        /*
+        private void pbFill()
+        {
+
+            int peso = 0;
+            int consumo = 0;
+            int aceleracao = 0;
+            int velocidade = 0;
+            int rotacao = 0;
+            int torque = 0;
+            int potencia = 0;
+
+            if ((txtConsumoIni.Text != "" && consumo < 41)||(txtConsumoFin.Text != "" && consumo < 41))
+
+                try
+                {
+                    consumo = int.Parse(txtConsumoIni.Text);
+                    pbConsumoIni.Value = consumo;
+                }
+                catch
+                {
+                    MessageBox.Show("O consumo deve ser até 40 km/L");
+                    txtConsumo.Text = "";
+                    consumo = 1;
+                    pbConsumoIni.Value = consumo;
+                }
+
+            if (txtPeso.Text != "" && peso < 2801)
+
+                try
+                {
+                    peso = int.Parse(txtPeso.Text);
+                    pbPesoIni.Value = peso;
+                }
+                catch
+                {
+                    MessageBox.Show("O peso deve ser até 2800 kg");
+                    txtPeso.Text = "";
+                    peso = 1;
+                    pbPesoIni.Value = peso;
+                }
+
+
+
+            if (txtAceleracao.Text != "" && aceleracao < 31)
+
+                try
+                {
+                    aceleracao = int.Parse(txtAceleracao.Text);
+                    pbAceleracaoIni.Value = aceleracao;
+                }
+                catch
+                {
+                    MessageBox.Show("A aceleração deve ser entre 1 e 30 seg");
+                    txtAceleracao.Text = "";
+                    aceleracao = 1;
+                    pbAceleracaoIni.Value = aceleracao;
+                }
+
+            if (txtVelocidadeMax.Text != "" && velocidade < 401)
+
+                try
+                {
+                    velocidade = int.Parse(txtVelocidadeMax.Text);
+                    pbVelocidadeMaxIni.Value = velocidade;
+                }
+                catch
+                {
+                    MessageBox.Show("A velocidade máxima registrada é 400km/h");
+                    txtVelocidadeMax.Text = "";
+                    velocidade = 1;
+                }
+
+            if (txtRotacaoMax.Text != "" && rotacao < 10001)
+
+                try
+                {
+                    rotacao = int.Parse(txtRotacaoMax.Text);
+                    pbRotacaoIni.Value = rotacao;
+                }
+                catch
+                {
+                    MessageBox.Show("Rotação max = 10000");
+                    txtRotacaoMax.Text = "";
+                    rotacao = 1;
+                }
+
+            if (txtTorque.Text != "" && torque < 101)
+
+                try
+                {
+                    torque = int.Parse(txtTorque.Text);
+                    pbTorqueIni.Value = torque;
+                }
+                catch
+                {
+                    MessageBox.Show("O torque deve ser até 101 kg");
+                    txtTorque.Text = "";
+                    torque = 1;
+
+                }
+
+            if (txtPotencia.Text != "" && potencia < 1201)
+
+                try
+                {
+                    potencia = int.Parse(txtPotencia.Text);
+                    pbPotenciaIni.Value = potencia;
+                }
+                catch
+                {
+                    MessageBox.Show("A potencia maxima registrada é 1200cv");
+                    txtPotencia.Text = "";
+                    potencia = 1;
+                }
+
+            lbAceleracao.Text = aceleracao.ToString();
+            lbConsumo.Text = consumo.ToString();
+            lbPeso.Text = peso.ToString();
+            lbPotencia.Text = potencia.ToString();
+            lbRotacao.Text = rotacao.ToString();
+            lbTorque.Text = torque.ToString();
+            lbVelocidade.Text = velocidade.ToString();
+
+
+        }
+
+        */
     }
 
-    
+
 }
 
