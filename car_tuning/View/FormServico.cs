@@ -1,4 +1,6 @@
-﻿using car_tuning.Modelo;
+﻿using car_tuning.DAO;
+using car_tuning.Modelo;
+using car_tuning.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +22,7 @@ namespace car_tuning
         {
             InitializeComponent();
             ControlaBotoes(true);
-            FillPecas();
+            
         }
         private void FillPecas()
         {
@@ -33,6 +35,10 @@ namespace car_tuning
                 dgvPecasServ.Rows.Add(p.Codigo,p.Compatibilidade,p.Tipo,p.Fabricante,p.Preco,p.Descricao,p.AddTorque,p.AddPotencia,p.AddPeso);
 
             }
+
+        }
+        public void addItens()
+        {
 
         }
         private void Loading()
@@ -84,7 +90,9 @@ namespace car_tuning
         }
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            
+            StageDAO stageDAO = new StageDAO();
+            Stage stage = getDTO();
+            stageDAO.Salvar(stage);
             
         }
         private void btExcluir_Click(object sender, EventArgs e)
@@ -100,6 +108,15 @@ namespace car_tuning
             clientes = clienteDAO.Carregar();
             foreach (Cliente c in clientes)
                 txtCliente.Items.Add(c.Cpf);
+        }
+        public void fillCarro()
+        {
+            List<Carro> carros;
+            CarroDAO cDAO = new CarroDAO();
+            txtCarro.Items.Clear();
+            carros = cDAO.Carregar();
+            foreach (Carro ca in carros)
+                txtCarro.Items.Add(ca.Placa);
         }
         public void fillFuncionario()
         {
@@ -181,12 +198,27 @@ namespace car_tuning
         }
 
 
-        private Servico getDTO()
+        private Stage getDTO()
         {
-            Servico servico = new Servico();
-            servico.PlacaCarro1 = Int32.Parse(txtCarro.Text);
+            Stage stage = new Stage();
+            stage.CodServ1 = int.Parse(txtCod.Text);
+            stage.PesoIni = double.Parse(txtPesoIni.Text);
+            stage.PotenciaIni = double.Parse(txtPotenciaIni.Text);
+            stage.Velocidade_maxIni = double.Parse(txtVeloMaxIni.Text);
+            stage.TorqueIni = double.Parse(txtTorqueIni.Text);
+            stage.AceleracaoIni = double.Parse(txtAceleIni.Text);
+            stage.ConsumoIni = double.Parse(txtConsumoIni.Text);
+            stage.Rotacao_maxIni = double.Parse(txtRotMaxIni.Text);
 
-            return servico;
+            stage.PesoFin = double.Parse(txtPesoFin.Text);
+            stage.PotenciaFin = double.Parse(txtPotenciaFin.Text);
+            stage.Velocidade_maxFin = double.Parse(txtVelocMaxFin.Text);
+            stage.TorqueFin = double.Parse(txtTorqueFin.Text);
+            stage.AceleracaoFin = double.Parse(txtAceleFin.Text);
+            stage.ConsumoFin = double.Parse(txtConsumoFin.Text);
+            stage.Rotacao_maxFin = double.Parse(txtRotaMaxFin.Text);
+
+            return stage;
         }
 
         private void setDTO(Servico s)
@@ -202,6 +234,19 @@ namespace car_tuning
         private void txtFunc_Click(object sender, EventArgs e)
         {
             fillFuncionario();
+        }
+
+        private void txtCarro_Click(object sender, EventArgs e)
+        {
+            fillCarro();
+        }
+
+        private void btnBuscarPeca_Click(object sender, EventArgs e)
+        {
+            FillPecas();
+            FormItens formItens = new FormItens();
+            formItens.ShowDialog();
+            formItens.StartPosition = FormStartPosition.CenterParent;
         }
     }
 

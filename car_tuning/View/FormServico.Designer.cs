@@ -36,6 +36,7 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.txtFunc = new iTalk.iTalk_ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.rtValor = new iTalk.iTalk_Label();
             this.btExecutar = new iTalk.iTalk_Button_2();
@@ -67,13 +68,13 @@
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.txtCod = new iTalk.iTalk_TextBox_Small();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
-            this.maskedTextBox11 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtRotMaxIni = new System.Windows.Forms.MaskedTextBox();
+            this.txtAceleIni = new System.Windows.Forms.MaskedTextBox();
+            this.txtTorqueIni = new System.Windows.Forms.MaskedTextBox();
+            this.txtVeloMaxIni = new System.Windows.Forms.MaskedTextBox();
+            this.txtPotenciaIni = new System.Windows.Forms.MaskedTextBox();
+            this.txtPesoIni = new System.Windows.Forms.MaskedTextBox();
+            this.txtConsumoIni = new System.Windows.Forms.MaskedTextBox();
             this.lbConsumo = new System.Windows.Forms.Label();
             this.pbConsumo = new System.Windows.Forms.ProgressBar();
             this.iTalk_Label18 = new iTalk.iTalk_Label();
@@ -103,13 +104,13 @@
             this.iTalk_Label13 = new iTalk.iTalk_Label();
             this.iTalk_Label5 = new iTalk.iTalk_Label();
             this.iTalk_GroupBox3 = new iTalk.iTalk_GroupBox();
-            this.maskedTextBox7 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox9 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox12 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox14 = new System.Windows.Forms.MaskedTextBox();
+            this.txtRotaMaxFin = new System.Windows.Forms.MaskedTextBox();
+            this.txtAceleFin = new System.Windows.Forms.MaskedTextBox();
+            this.txtTorqueFin = new System.Windows.Forms.MaskedTextBox();
+            this.txtVelocMaxFin = new System.Windows.Forms.MaskedTextBox();
+            this.txtPotenciaFin = new System.Windows.Forms.MaskedTextBox();
+            this.txtPesoFin = new System.Windows.Forms.MaskedTextBox();
+            this.txtConsumoFin = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label22 = new iTalk.iTalk_Label();
             this.iTalk_Label28 = new iTalk.iTalk_Label();
             this.iTalk_Label29 = new iTalk.iTalk_Label();
@@ -138,7 +139,6 @@
             this.iTalk_Label26 = new iTalk.iTalk_Label();
             this.iTalk_Label27 = new iTalk.iTalk_Label();
             this.iTalk_Label34 = new iTalk.iTalk_Label();
-            this.txtFunc = new iTalk.iTalk_ComboBox();
             this.iTalk_GroupBox1.SuspendLayout();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).BeginInit();
@@ -268,6 +268,25 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1178, 652);
             this.iTalk_GroupBox1.TabIndex = 8;
             this.iTalk_GroupBox1.Text = "Serviço";
+            // 
+            // txtFunc
+            // 
+            this.txtFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.txtFunc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtFunc.DropDownHeight = 100;
+            this.txtFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtFunc.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.txtFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.txtFunc.FormattingEnabled = true;
+            this.txtFunc.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.txtFunc.IntegralHeight = false;
+            this.txtFunc.ItemHeight = 20;
+            this.txtFunc.Location = new System.Drawing.Point(197, 79);
+            this.txtFunc.Name = "txtFunc";
+            this.txtFunc.Size = new System.Drawing.Size(232, 26);
+            this.txtFunc.StartIndex = 0;
+            this.txtFunc.TabIndex = 13;
+            this.txtFunc.Click += new System.EventHandler(this.txtFunc_Click);
             // 
             // iTalk_Label7
             // 
@@ -516,6 +535,7 @@
             this.btnBuscarPeca.TabIndex = 1;
             this.btnBuscarPeca.Text = "Buscar";
             this.btnBuscarPeca.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnBuscarPeca.Click += new System.EventHandler(this.btnBuscarPeca_Click);
             // 
             // iTalk_TextBox_Small1
             // 
@@ -549,6 +569,7 @@
             this.txtCarro.Size = new System.Drawing.Size(232, 26);
             this.txtCarro.StartIndex = 0;
             this.txtCarro.TabIndex = 3;
+            this.txtCarro.Click += new System.EventHandler(this.txtCarro_Click);
             // 
             // txtCliente
             // 
@@ -623,13 +644,13 @@
             // iTalk_GroupBox2
             // 
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox2.Controls.Add(this.maskedTextBox11);
-            this.iTalk_GroupBox2.Controls.Add(this.maskedTextBox5);
-            this.iTalk_GroupBox2.Controls.Add(this.maskedTextBox6);
-            this.iTalk_GroupBox2.Controls.Add(this.maskedTextBox3);
-            this.iTalk_GroupBox2.Controls.Add(this.maskedTextBox4);
-            this.iTalk_GroupBox2.Controls.Add(this.maskedTextBox2);
-            this.iTalk_GroupBox2.Controls.Add(this.maskedTextBox1);
+            this.iTalk_GroupBox2.Controls.Add(this.txtRotMaxIni);
+            this.iTalk_GroupBox2.Controls.Add(this.txtAceleIni);
+            this.iTalk_GroupBox2.Controls.Add(this.txtTorqueIni);
+            this.iTalk_GroupBox2.Controls.Add(this.txtVeloMaxIni);
+            this.iTalk_GroupBox2.Controls.Add(this.txtPotenciaIni);
+            this.iTalk_GroupBox2.Controls.Add(this.txtPesoIni);
+            this.iTalk_GroupBox2.Controls.Add(this.txtConsumoIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbConsumo);
             this.iTalk_GroupBox2.Controls.Add(this.pbConsumo);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label18);
@@ -667,75 +688,75 @@
             this.iTalk_GroupBox2.TabIndex = 6;
             this.iTalk_GroupBox2.Text = "Original";
             // 
-            // maskedTextBox11
+            // txtRotMaxIni
             // 
-            this.maskedTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox11.Location = new System.Drawing.Point(424, 223);
-            this.maskedTextBox11.Mask = "0000";
-            this.maskedTextBox11.Name = "maskedTextBox11";
-            this.maskedTextBox11.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox11.TabIndex = 79;
-            this.maskedTextBox11.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtRotMaxIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRotMaxIni.Location = new System.Drawing.Point(424, 223);
+            this.txtRotMaxIni.Mask = "0000";
+            this.txtRotMaxIni.Name = "txtRotMaxIni";
+            this.txtRotMaxIni.Size = new System.Drawing.Size(57, 26);
+            this.txtRotMaxIni.TabIndex = 79;
+            this.txtRotMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox5
+            // txtAceleIni
             // 
-            this.maskedTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox5.Location = new System.Drawing.Point(425, 194);
-            this.maskedTextBox5.Mask = "0000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox5.TabIndex = 78;
-            this.maskedTextBox5.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtAceleIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAceleIni.Location = new System.Drawing.Point(425, 194);
+            this.txtAceleIni.Mask = "0000";
+            this.txtAceleIni.Name = "txtAceleIni";
+            this.txtAceleIni.Size = new System.Drawing.Size(57, 26);
+            this.txtAceleIni.TabIndex = 78;
+            this.txtAceleIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox6
+            // txtTorqueIni
             // 
-            this.maskedTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox6.Location = new System.Drawing.Point(425, 165);
-            this.maskedTextBox6.Mask = "0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox6.TabIndex = 77;
-            this.maskedTextBox6.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtTorqueIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTorqueIni.Location = new System.Drawing.Point(425, 165);
+            this.txtTorqueIni.Mask = "0000";
+            this.txtTorqueIni.Name = "txtTorqueIni";
+            this.txtTorqueIni.Size = new System.Drawing.Size(57, 26);
+            this.txtTorqueIni.TabIndex = 77;
+            this.txtTorqueIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox3
+            // txtVeloMaxIni
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(425, 135);
-            this.maskedTextBox3.Mask = "0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox3.TabIndex = 76;
-            this.maskedTextBox3.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtVeloMaxIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVeloMaxIni.Location = new System.Drawing.Point(425, 135);
+            this.txtVeloMaxIni.Mask = "0000";
+            this.txtVeloMaxIni.Name = "txtVeloMaxIni";
+            this.txtVeloMaxIni.Size = new System.Drawing.Size(57, 26);
+            this.txtVeloMaxIni.TabIndex = 76;
+            this.txtVeloMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox4
+            // txtPotenciaIni
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(424, 106);
-            this.maskedTextBox4.Mask = "0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox4.TabIndex = 75;
-            this.maskedTextBox4.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPotenciaIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPotenciaIni.Location = new System.Drawing.Point(424, 106);
+            this.txtPotenciaIni.Mask = "0000";
+            this.txtPotenciaIni.Name = "txtPotenciaIni";
+            this.txtPotenciaIni.Size = new System.Drawing.Size(57, 26);
+            this.txtPotenciaIni.TabIndex = 75;
+            this.txtPotenciaIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox2
+            // txtPesoIni
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(425, 76);
-            this.maskedTextBox2.Mask = "0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox2.TabIndex = 74;
-            this.maskedTextBox2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPesoIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoIni.Location = new System.Drawing.Point(425, 76);
+            this.txtPesoIni.Mask = "0000";
+            this.txtPesoIni.Name = "txtPesoIni";
+            this.txtPesoIni.Size = new System.Drawing.Size(57, 26);
+            this.txtPesoIni.TabIndex = 74;
+            this.txtPesoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox1
+            // txtConsumoIni
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(425, 47);
-            this.maskedTextBox1.Mask = "0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox1.TabIndex = 73;
-            this.maskedTextBox1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtConsumoIni.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConsumoIni.Location = new System.Drawing.Point(425, 47);
+            this.txtConsumoIni.Mask = "0000";
+            this.txtConsumoIni.Name = "txtConsumoIni";
+            this.txtConsumoIni.Size = new System.Drawing.Size(57, 26);
+            this.txtConsumoIni.TabIndex = 73;
+            this.txtConsumoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbConsumo
             // 
@@ -1033,13 +1054,13 @@
             // iTalk_GroupBox3
             // 
             this.iTalk_GroupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox3.Controls.Add(this.maskedTextBox7);
-            this.iTalk_GroupBox3.Controls.Add(this.maskedTextBox8);
-            this.iTalk_GroupBox3.Controls.Add(this.maskedTextBox9);
-            this.iTalk_GroupBox3.Controls.Add(this.maskedTextBox10);
-            this.iTalk_GroupBox3.Controls.Add(this.maskedTextBox12);
-            this.iTalk_GroupBox3.Controls.Add(this.maskedTextBox13);
-            this.iTalk_GroupBox3.Controls.Add(this.maskedTextBox14);
+            this.iTalk_GroupBox3.Controls.Add(this.txtRotaMaxFin);
+            this.iTalk_GroupBox3.Controls.Add(this.txtAceleFin);
+            this.iTalk_GroupBox3.Controls.Add(this.txtTorqueFin);
+            this.iTalk_GroupBox3.Controls.Add(this.txtVelocMaxFin);
+            this.iTalk_GroupBox3.Controls.Add(this.txtPotenciaFin);
+            this.iTalk_GroupBox3.Controls.Add(this.txtPesoFin);
+            this.iTalk_GroupBox3.Controls.Add(this.txtConsumoFin);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label22);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label28);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label29);
@@ -1076,75 +1097,75 @@
             this.iTalk_GroupBox3.TabIndex = 9;
             this.iTalk_GroupBox3.Text = "Alterado";
             // 
-            // maskedTextBox7
+            // txtRotaMaxFin
             // 
-            this.maskedTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox7.Location = new System.Drawing.Point(423, 216);
-            this.maskedTextBox7.Mask = "0000";
-            this.maskedTextBox7.Name = "maskedTextBox7";
-            this.maskedTextBox7.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox7.TabIndex = 93;
-            this.maskedTextBox7.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtRotaMaxFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRotaMaxFin.Location = new System.Drawing.Point(423, 216);
+            this.txtRotaMaxFin.Mask = "0000";
+            this.txtRotaMaxFin.Name = "txtRotaMaxFin";
+            this.txtRotaMaxFin.Size = new System.Drawing.Size(57, 26);
+            this.txtRotaMaxFin.TabIndex = 93;
+            this.txtRotaMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox8
+            // txtAceleFin
             // 
-            this.maskedTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox8.Location = new System.Drawing.Point(424, 187);
-            this.maskedTextBox8.Mask = "0000";
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox8.TabIndex = 92;
-            this.maskedTextBox8.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtAceleFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAceleFin.Location = new System.Drawing.Point(424, 187);
+            this.txtAceleFin.Mask = "0000";
+            this.txtAceleFin.Name = "txtAceleFin";
+            this.txtAceleFin.Size = new System.Drawing.Size(57, 26);
+            this.txtAceleFin.TabIndex = 92;
+            this.txtAceleFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox9
+            // txtTorqueFin
             // 
-            this.maskedTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox9.Location = new System.Drawing.Point(424, 158);
-            this.maskedTextBox9.Mask = "0000";
-            this.maskedTextBox9.Name = "maskedTextBox9";
-            this.maskedTextBox9.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox9.TabIndex = 91;
-            this.maskedTextBox9.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtTorqueFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTorqueFin.Location = new System.Drawing.Point(424, 158);
+            this.txtTorqueFin.Mask = "0000";
+            this.txtTorqueFin.Name = "txtTorqueFin";
+            this.txtTorqueFin.Size = new System.Drawing.Size(57, 26);
+            this.txtTorqueFin.TabIndex = 91;
+            this.txtTorqueFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox10
+            // txtVelocMaxFin
             // 
-            this.maskedTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox10.Location = new System.Drawing.Point(424, 128);
-            this.maskedTextBox10.Mask = "0000";
-            this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox10.TabIndex = 90;
-            this.maskedTextBox10.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtVelocMaxFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVelocMaxFin.Location = new System.Drawing.Point(424, 128);
+            this.txtVelocMaxFin.Mask = "0000";
+            this.txtVelocMaxFin.Name = "txtVelocMaxFin";
+            this.txtVelocMaxFin.Size = new System.Drawing.Size(57, 26);
+            this.txtVelocMaxFin.TabIndex = 90;
+            this.txtVelocMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox12
+            // txtPotenciaFin
             // 
-            this.maskedTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox12.Location = new System.Drawing.Point(423, 99);
-            this.maskedTextBox12.Mask = "0000";
-            this.maskedTextBox12.Name = "maskedTextBox12";
-            this.maskedTextBox12.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox12.TabIndex = 89;
-            this.maskedTextBox12.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPotenciaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPotenciaFin.Location = new System.Drawing.Point(423, 99);
+            this.txtPotenciaFin.Mask = "0000";
+            this.txtPotenciaFin.Name = "txtPotenciaFin";
+            this.txtPotenciaFin.Size = new System.Drawing.Size(57, 26);
+            this.txtPotenciaFin.TabIndex = 89;
+            this.txtPotenciaFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox13
+            // txtPesoFin
             // 
-            this.maskedTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox13.Location = new System.Drawing.Point(424, 69);
-            this.maskedTextBox13.Mask = "0000";
-            this.maskedTextBox13.Name = "maskedTextBox13";
-            this.maskedTextBox13.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox13.TabIndex = 88;
-            this.maskedTextBox13.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPesoFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoFin.Location = new System.Drawing.Point(424, 69);
+            this.txtPesoFin.Mask = "0000";
+            this.txtPesoFin.Name = "txtPesoFin";
+            this.txtPesoFin.Size = new System.Drawing.Size(57, 26);
+            this.txtPesoFin.TabIndex = 88;
+            this.txtPesoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // maskedTextBox14
+            // txtConsumoFin
             // 
-            this.maskedTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox14.Location = new System.Drawing.Point(424, 40);
-            this.maskedTextBox14.Mask = "0000";
-            this.maskedTextBox14.Name = "maskedTextBox14";
-            this.maskedTextBox14.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox14.TabIndex = 87;
-            this.maskedTextBox14.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtConsumoFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConsumoFin.Location = new System.Drawing.Point(424, 40);
+            this.txtConsumoFin.Mask = "0000";
+            this.txtConsumoFin.Name = "txtConsumoFin";
+            this.txtConsumoFin.Size = new System.Drawing.Size(57, 26);
+            this.txtConsumoFin.TabIndex = 87;
+            this.txtConsumoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // iTalk_Label22
             // 
@@ -1439,25 +1460,6 @@
             this.iTalk_Label34.TabIndex = 45;
             this.iTalk_Label34.Text = "Peso de Fabrica";
             // 
-            // txtFunc
-            // 
-            this.txtFunc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.txtFunc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtFunc.DropDownHeight = 100;
-            this.txtFunc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtFunc.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.txtFunc.FormattingEnabled = true;
-            this.txtFunc.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.txtFunc.IntegralHeight = false;
-            this.txtFunc.ItemHeight = 20;
-            this.txtFunc.Location = new System.Drawing.Point(197, 79);
-            this.txtFunc.Name = "txtFunc";
-            this.txtFunc.Size = new System.Drawing.Size(232, 26);
-            this.txtFunc.StartIndex = 0;
-            this.txtFunc.TabIndex = 13;
-            this.txtFunc.Click += new System.EventHandler(this.txtFunc_Click);
-            // 
             // FormServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1578,20 +1580,20 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox12;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox13;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox14;
+        private System.Windows.Forms.MaskedTextBox txtRotMaxIni;
+        private System.Windows.Forms.MaskedTextBox txtAceleIni;
+        private System.Windows.Forms.MaskedTextBox txtTorqueIni;
+        private System.Windows.Forms.MaskedTextBox txtVeloMaxIni;
+        private System.Windows.Forms.MaskedTextBox txtPotenciaIni;
+        private System.Windows.Forms.MaskedTextBox txtPesoIni;
+        private System.Windows.Forms.MaskedTextBox txtConsumoIni;
+        private System.Windows.Forms.MaskedTextBox txtRotaMaxFin;
+        private System.Windows.Forms.MaskedTextBox txtAceleFin;
+        private System.Windows.Forms.MaskedTextBox txtTorqueFin;
+        private System.Windows.Forms.MaskedTextBox txtVelocMaxFin;
+        private System.Windows.Forms.MaskedTextBox txtPotenciaFin;
+        private System.Windows.Forms.MaskedTextBox txtPesoFin;
+        private System.Windows.Forms.MaskedTextBox txtConsumoFin;
         private iTalk.iTalk_Label iTalk_Label22;
         private iTalk.iTalk_Label iTalk_Label28;
         private iTalk.iTalk_Label iTalk_Label29;
