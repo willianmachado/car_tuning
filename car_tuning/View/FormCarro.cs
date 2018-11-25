@@ -17,6 +17,7 @@ namespace car_tuning.View
 
         CarroDAO c = new CarroDAO();
         MarcaDAO m = new MarcaDAO();
+
         public FormCarro()
         {
             InitializeComponent();
@@ -33,14 +34,9 @@ namespace car_tuning.View
             foreach (Carro c in cars)
             {
                 dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c. VelocidadeMax, c. Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
-
-                
+              
             }
-
-
             
-
-
         }
 
         public void fillMarca()
@@ -169,8 +165,8 @@ namespace car_tuning.View
         {
             Carro carro = new Carro();
 
-            carro.CpfCliente = txtCpf.Text;
             carro.Placa = txtPlaca.Text;
+            carro.CpfCliente = txtCpf.Text;
             carro.Ano = txtAno.Text;
             carro.Marca = txtMarca.Text.Trim();
             carro.Modelo = txtModelo.Text;
@@ -471,6 +467,13 @@ namespace car_tuning.View
 
         private void txtPesquisa_KeyPress(object sender, KeyPressEventArgs e)
         {
+           
+            List<Carro> carros;
+            carros = c.Listar(txtPesquisa.Text);
+            dgvCarro.Rows.Clear();
+
+            foreach (Carro c in carros)
+                dgvCarro.Rows.Add(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax);
 
         }
 

@@ -440,7 +440,8 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.txtMarca.AllowDrop = true;
+            this.txtMarca.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
             this.txtMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMarca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.FormattingEnabled = true;

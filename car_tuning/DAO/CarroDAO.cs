@@ -63,11 +63,11 @@ namespace car_tuning.Modelo
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                c.CpfCliente = dr["cpfCli"].ToString();
                 c.Placa = dr["placa"].ToString();
+                c.CpfCliente = dr["cpfCli"].ToString();
                 c.Ano = dr["ano"].ToString();
-                c.Modelo = dr["modelo"].ToString();
                 c.Marca = dr["marca"].ToString();
+                c.Modelo = dr["modelo"].ToString();
                 c.Peso = int.Parse(dr["peso"].ToString());
                 c.Potencia = int.Parse(dr["potencia"].ToString());
                 c.VelocidadeMax = int.Parse(dr["velocidadeMax"].ToString());
@@ -77,28 +77,50 @@ namespace car_tuning.Modelo
                 c.RotacaoMax = int.Parse(dr["rotacao"].ToString());
 
 
-                lista.Add(new Carro(c.Ano, c.Placa, c.Modelo, c.CpfCliente, c.Marca, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
+                  lista.Add(new Carro(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
             }
             return lista;
 
         }
 
-        public Carro BuscaPlaca(string placa)
+        public List<Carro> Listar(string busca)
         {
-            string qry = "select * CARRO where placa=" + placa;
-            DataBase bd = DataBase.GetInstance();
-            DataSet ds = bd.ExecuteQuery(qry);
-            Carro carro = new Carro();
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                DataRow dr = ds.Tables[0].Rows[0];
+            List<Carro> lista = new List<Carro>();
+            Carro c = new Carro();
 
-                //carro.Cod = Double.Parse(dr[""].ToString());
-                //carro.Codigo
-                carro.Ano = dr[""].ToString();
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM CARRO WHERE cpfCli like '%" + busca + "%' OR placa LIKE'%" + busca + "%'", conn);
+
+            SQLiteDataReader dr = cmd.ExecuteReader();
+
+
+            while (dr.Read())
+            {
+                c.Placa = dr["placa"].ToString();
+                c.CpfCliente = dr["cpfCli"].ToString();
+                c.Ano = dr["ano"].ToString();
+                c.Marca = dr["marca"].ToString();
+                c.Modelo = dr["modelo"].ToString();
+                c.Peso = int.Parse(dr["peso"].ToString());
+                c.Potencia = int.Parse(dr["potencia"].ToString());
+                c.VelocidadeMax = int.Parse(dr["velocidadeMax"].ToString());
+                c.Torque = int.Parse(dr["torque"].ToString());
+                c.Aceleracao = int.Parse(dr["aceleracao"].ToString());
+                c.Consumo = int.Parse(dr["consumo"].ToString());
+                c.RotacaoMax = int.Parse(dr["rotacao"].ToString());
+
+                lista.Add(new Carro(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
 
             }
-            return carro;
+
+            return lista;
+
         }
 
         public byte[] ImageToByte(Image image, System.Drawing.Imaging.ImageFormat format)
@@ -129,7 +151,7 @@ namespace car_tuning.Modelo
             SQLiteConnection con = new SQLiteConnection(Data);
             SQLiteCommand cmd = con.CreateCommand();
 
-            cmd.CommandText = String.Format("INSERT INTO CARRO (foto) VALUES ('{0}') where placa ='" + placa + "';'", );
+            cmd.CommandText = String.Format("INSERT INTO CARRO (foto) VALUES ('{0}') where placa ='" + placa + "';'");
             SQLiteParameter param = new SQLiteParameter("@0", System.Data.DbType.Binary);
             param.Value = imagem;
             cmd.Parameters.Add(param);
@@ -145,8 +167,7 @@ namespace car_tuning.Modelo
             }
             con.Close();
         }
-
-
+        
         void LoadImage()
         {
             Carro c = new Carro();
