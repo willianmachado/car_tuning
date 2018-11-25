@@ -77,21 +77,19 @@ namespace car_tuning.View
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            CarroDAO carroDAO = new CarroDAO();
+           
             Carro carro = GetDTO();
-            
-            Fill();
 
             if (txtCpf.Text != "")
             {
                 if (btSalvar.Text == "Salvar")
                 {
-                    carroDAO.Salvar(carro);
+                    c.Salvar(carro);
                     MessageBox.Show("Cadastrado com Sucesso!");
                 }
                 else
                 {
-                    carroDAO.Atualizar(carro);
+                    c.Atualizar(carro);
                     MessageBox.Show("Atualizado com Sucesso!");
                     btSalvar.Text = "Salvar";
                 }
@@ -194,11 +192,20 @@ namespace car_tuning.View
             
             txtAno.Text = carro.Ano.ToString();
             txtPlaca.Text = carro.Placa.ToString();
-            //txtMarca.Text = carro.Marca.ToString();
-           // txtModelo.Text = carro.Modelo.ToString();
+            txtMarca.Text = carro.Marca.ToString();
+            txtModelo.Text = carro.Modelo.ToString();
             txtCpf.Text = carro.CpfCliente.ToString();
-            
-            
+            txtAceleracao.Text = carro.Aceleracao.ToString();
+            txtPeso.Text = carro.Peso.ToString();
+            txtPotencia.Text = carro.Potencia.ToString();
+            txtRotacaoMax.Text = carro.RotacaoMax.ToString();
+            txtTorque.Text = carro.Torque.ToString();
+            txtVelocidadeMax.Text = carro.VelocidadeMax.ToString();
+            txtConsumo.Text = carro.Consumo.ToString();
+
+
+
+
         }
 
         public void ControlaBotoes(bool statusBtNovo)
@@ -441,6 +448,8 @@ namespace car_tuning.View
             {
                 
                 imgCarro.Image = Image.FromFile(SfdCarro.FileName);
+                byte[] pic = c.ImageToByte(imgCarro.Image, System.Drawing.Imaging.ImageFormat.Jpeg);
+                c.SaveImage(pic, txtPlaca.Text);
                 imgCarro.Show();
                 
             }

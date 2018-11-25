@@ -43,7 +43,6 @@ namespace car_tuning
             ClienteDAO clienteDAO = new ClienteDAO();
             Cliente cliente = getDTO();
 
-
             if (txtCpf.Text != "")
             {
                 if (btSalvar.Text == "Salvar")

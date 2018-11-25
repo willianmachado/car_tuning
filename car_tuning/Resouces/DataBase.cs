@@ -156,6 +156,7 @@ namespace car_tuning
                     "`aceleracao` INTEGER, " +
                     "`consumo` INTEGER, " +
                     "`rotacao` INTEGER, " +
+                    " 'foto' TEXT," +
                     " FOREIGN KEY(`marca`) REFERENCES `Marca`(`nome`)," +
                     " FOREIGN KEY(`cpfCli`) REFERENCES `Cliente`(`cpf`)," +
                     " PRIMARY KEY(`placa`) );");
@@ -177,7 +178,6 @@ namespace car_tuning
                     " `cpfcliente` TEXT," +
                     " `placaCarro` TEXT," +
                     " `cpfFunc` TEXT," +
-                    
                     " `valorTotal` REAL," +
                     " FOREIGN KEY(`cpfcliente`) REFERENCES `Cliente`(`cpf`)," +
                     " FOREIGN KEY(`cpfFunc`) REFERENCES `Funcionario`(`cpf`)," +

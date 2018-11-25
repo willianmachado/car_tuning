@@ -1241,7 +1241,6 @@
         private iTalk.iTalk_Button_2 btExcluir;
         private iTalk.iTalk_GroupBox iTalk_GroupBox2;
         private iTalk.iTalk_Label iTalk_Label20;
-        private System.Windows.Forms.PictureBox imgCarro;
         private iTalk.iTalk_Label iTalk_Label12;
         private iTalk.iTalk_Label iTalk_Label11;
         private iTalk.iTalk_Label iTalk_Label9;
@@ -1322,5 +1321,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn aceleracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn consumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn rotacaoMax;
+        public System.Windows.Forms.PictureBox imgCarro;
     }
 }
