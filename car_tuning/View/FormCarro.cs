@@ -142,7 +142,7 @@ namespace car_tuning.View
             if (MessageBox.Show(" Deseja excluir o carro selecionado? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                ClienteDAO clienteDAO = new ClienteDAO();
+               
                 string index = (dgvCarro.CurrentRow.Cells[0].Value.ToString());
 
 

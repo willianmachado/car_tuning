@@ -199,7 +199,7 @@ namespace car_tuning
 
                 sql.Clear();
                     sql.AppendLine("CREATE TABLE IF NOT EXISTS `PECA` ( " +
-                        "`codigo` INTEGER NOT NULL UNIQUE, " +
+                        "`codigo` INTEGER NOT NULL AUTOINCREMENT UNIQUE, " +
                         "`fabricante` TEXT, " +
                         "`preco` REAL, " +
                         "`compatibilidade` TEXT, " +

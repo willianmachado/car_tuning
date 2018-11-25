@@ -98,8 +98,7 @@ namespace car_tuning.Modelo
             SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM CARRO WHERE cpfCli like '%" + busca + "%' OR placa LIKE'%" + busca + "%'", conn);
 
             SQLiteDataReader dr = cmd.ExecuteReader();
-
-
+            
             while (dr.Read())
             {
                 c.Placa = dr["placa"].ToString();
@@ -118,7 +117,6 @@ namespace car_tuning.Modelo
                 lista.Add(new Carro(c.Placa, c.CpfCliente, c.Ano, c.Marca, c.Modelo, c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax));
 
             }
-
             return lista;
 
         }

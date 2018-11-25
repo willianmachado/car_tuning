@@ -135,7 +135,7 @@ namespace car_tuning.Modelo
             }
         }
 
-        public Pecas(int codigo, string fabricante, double preco, string compatibilidade, string tipo, string descricao, double addTorque, double addPeso, double addPotencia)
+        public Pecas(int codigo, string descricao, double preco,  string fabricante, string tipo, string compatibilidade,  double addPeso, double addPotencia, double addTorque)
         {
             this.Codigo = codigo;
             this.Fabricante = fabricante;

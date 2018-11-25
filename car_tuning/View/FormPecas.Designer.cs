@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPecas));
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.txtBusca = new iTalk.iTalk_TextBox_Small();
             this.dgvPecas = new System.Windows.Forms.DataGridView();
             this.colPeca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +59,6 @@
             this.txtFabri = new iTalk.iTalk_TextBox_Small();
             this.txtPreco = new iTalk.iTalk_TextBox_Small();
             this.txtDescri = new iTalk.iTalk_TextBox_Small();
-            this.iTalk_TextBox_Small4 = new iTalk.iTalk_TextBox_Small();
             this.txtCodigo = new iTalk.iTalk_TextBox_Small();
             this.btPesquisar = new iTalk.iTalk_Button_2();
             this.btNovo = new iTalk.iTalk_Button_2();
@@ -73,6 +73,7 @@
             // iTalk_GroupBox1
             // 
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.txtBusca);
             this.iTalk_GroupBox1.Controls.Add(this.dgvPecas);
             this.iTalk_GroupBox1.Controls.Add(this.txtTorque);
             this.iTalk_GroupBox1.Controls.Add(this.txtPotencia);
@@ -92,7 +93,6 @@
             this.iTalk_GroupBox1.Controls.Add(this.txtFabri);
             this.iTalk_GroupBox1.Controls.Add(this.txtPreco);
             this.iTalk_GroupBox1.Controls.Add(this.txtDescri);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_TextBox_Small4);
             this.iTalk_GroupBox1.Controls.Add(this.txtCodigo);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(159, 21);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
@@ -101,6 +101,23 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1180, 726);
             this.iTalk_GroupBox1.TabIndex = 10;
             this.iTalk_GroupBox1.Text = "Peças";
+            // 
+            // txtBusca
+            // 
+            this.txtBusca.BackColor = System.Drawing.Color.Transparent;
+            this.txtBusca.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtBusca.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBusca.Location = new System.Drawing.Point(80, 328);
+            this.txtBusca.MaxLength = 32767;
+            this.txtBusca.Multiline = false;
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.ReadOnly = false;
+            this.txtBusca.Size = new System.Drawing.Size(1086, 28);
+            this.txtBusca.TabIndex = 15;
+            this.txtBusca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBusca.UseSystemPasswordChar = false;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
+            this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             // 
             // dgvPecas
             // 
@@ -124,6 +141,7 @@
             this.dgvPecas.RowTemplate.Height = 24;
             this.dgvPecas.Size = new System.Drawing.Size(1144, 352);
             this.dgvPecas.TabIndex = 14;
+            this.dgvPecas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPecas_CellContentDoubleClick);
             // 
             // colPeca
             // 
@@ -435,24 +453,10 @@
             this.txtDescri.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDescri.UseSystemPasswordChar = false;
             // 
-            // iTalk_TextBox_Small4
-            // 
-            this.iTalk_TextBox_Small4.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small4.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small4.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small4.Location = new System.Drawing.Point(80, 328);
-            this.iTalk_TextBox_Small4.MaxLength = 32767;
-            this.iTalk_TextBox_Small4.Multiline = false;
-            this.iTalk_TextBox_Small4.Name = "iTalk_TextBox_Small4";
-            this.iTalk_TextBox_Small4.ReadOnly = false;
-            this.iTalk_TextBox_Small4.Size = new System.Drawing.Size(1086, 28);
-            this.iTalk_TextBox_Small4.TabIndex = 9;
-            this.iTalk_TextBox_Small4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small4.UseSystemPasswordChar = false;
-            // 
             // txtCodigo
             // 
             this.txtCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Tahoma", 11F);
             this.txtCodigo.ForeColor = System.Drawing.Color.DimGray;
             this.txtCodigo.Location = new System.Drawing.Point(215, 58);
@@ -460,7 +464,7 @@
             this.txtCodigo.Multiline = false;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = false;
-            this.txtCodigo.Size = new System.Drawing.Size(232, 28);
+            this.txtCodigo.Size = new System.Drawing.Size(104, 28);
             this.txtCodigo.TabIndex = 0;
             this.txtCodigo.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCodigo.UseSystemPasswordChar = false;
@@ -600,7 +604,6 @@
         private iTalk.iTalk_TextBox_Small txtFabri;
         private iTalk.iTalk_TextBox_Small txtPreco;
         private iTalk.iTalk_TextBox_Small txtDescri;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small4;
         private iTalk.iTalk_TextBox_Small txtCodigo;
         private iTalk.iTalk_Button_2 btPesquisar;
         private iTalk.iTalk_Button_2 btNovo;
@@ -618,5 +621,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
+        private iTalk.iTalk_TextBox_Small txtBusca;
     }
 }

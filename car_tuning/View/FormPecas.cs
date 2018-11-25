@@ -24,16 +24,14 @@ namespace car_tuning
         }
         private void Fill()
         {
-            PecasDAO pecasDAO = new PecasDAO();
+            
             List<Pecas> pecas;
-            pecas = pecasDAO.Carregar();
+            pecas = p.Carregar();
             dgvPecas.Rows.Clear();
             foreach (Pecas p in pecas)
             {
                 dgvPecas.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
-
             }
-            
         }
         private void FillMarca()
         {
@@ -71,19 +69,26 @@ namespace car_tuning
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            PecasDAO pecasDAO = new PecasDAO();
-            Pecas pecas = GetDTO();
+                Pecas pecas = GetDTO();
 
-            if (txtCodigo.Text != "")
+            if (txtTipo.Text != "")
             {
-                pecasDAO.Salvar(pecas);
+                if (btSalvar.Text == "Salvar")
+                {
+                    p.Salvar(pecas);
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
+                else
+                {
+                    Pecas peca = GetDTOcod();
+                    p.Atualizar(peca);
+                    MessageBox.Show("Atualizado com Sucesso!");
+                    btSalvar.Text = "Salvar";
+                }
                 Fill();
-
-            }
-            else
-            {
-                MessageBox.Show(this, "Favor preencheros campos ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+                ControlaBotoes(true);
+                limparCampos();
+            }           
 
         }
 
@@ -91,27 +96,55 @@ namespace car_tuning
         {
             ControlaBotoes(true);
             limparCampos();
+            btSalvar.Text = "Salvar";
 
         }
         private void btExcluir_Click(object sender, EventArgs e)
         {
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show(this, "Clique duplo para excluir", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
+            else
+
+           if (MessageBox.Show(" Deseja excluir a peça selecionada? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                
+                string index = (dgvPecas.CurrentRow.Cells[0].Value.ToString());
+                Pecas peca = GetDTO();
+                p.Deletar(index);
+
+                Fill();
+                MessageBox.Show("Peça excluida");
+                limparCampos();
+            }
         }
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            ControlaBotoes(true);
-            btEditar.Enabled = true;
-            btSalvar.Enabled = false;
-        }
+            if (txtCodigo.Text != "")
+            {
+                ControlaBotoes(false);
 
-        private Pecas GetDTO()
+                btEditar.Enabled = false;
+                btSalvar.Text = "Atualizar";
+            }
+            else
+            {
+                MessageBox.Show("Clique duplo para editar");
+
+            }
+
+        }
+        private Pecas GetDTOcod()
         {
             Pecas p = new Pecas();
+            p.Codigo = int.Parse(txtCodigo.Text);
+           
             p.AddPeso = Double.Parse(txtPeso.Text);
             p.AddPotencia = Double.Parse(txtPotencia.Text);
             p.AddTorque = Double.Parse(txtTorque.Text);
-            p.Codigo = Int32.Parse(txtCodigo.Text);
             p.Compatibilidade = txtMarca.Text;
             p.Descricao = txtDescri.Text;
             p.Fabricante = txtFabri.Text;
@@ -119,6 +152,21 @@ namespace car_tuning
             p.Tipo = txtTipo.Text;
             return p;
         }
+        private Pecas GetDTO()
+        {
+            Pecas p = new Pecas();
+            
+            p.AddPeso = Double.Parse(txtPeso.Text);
+            p.AddPotencia = Double.Parse(txtPotencia.Text);
+            p.AddTorque = Double.Parse(txtTorque.Text);
+            p.Compatibilidade = txtMarca.Text;
+            p.Descricao = txtDescri.Text;
+            p.Fabricante = txtFabri.Text;
+            p.Preco = Double.Parse(txtPreco.Text);
+            p.Tipo = txtTipo.Text;
+            return p;
+        }
+
         private void SetDTO(Pecas p)
         {
             txtPeso.Text = p.AddPeso.ToString() ;
@@ -131,8 +179,6 @@ namespace car_tuning
             txtPreco.Text = p.Preco.ToString();
             txtTipo.Text = p.Tipo;
         }
-
-        
 
         public void ControlaBotoes(bool statusBtNovo)
         {
@@ -151,6 +197,14 @@ namespace car_tuning
                 this.btLimpar.ForeColor = Color.Gray;
                 this.btPesquisar.Enabled = true;
                 this.btPesquisar.ForeColor = Color.White;
+                txtMarca.Enabled = false;
+                txtDescri.Enabled = false;
+                txtFabri.Enabled = false;
+                txtPeso.Enabled = false;
+                txtPotencia.Enabled = false;
+                txtPreco.Enabled = false;
+                txtTipo.Enabled = false;
+                txtTorque.Enabled = false;
 
             }
             else
@@ -167,6 +221,14 @@ namespace car_tuning
                 this.btLimpar.ForeColor = Color.White;
                 this.btPesquisar.Enabled = false;
                 this.btPesquisar.ForeColor = Color.Gray;
+                txtMarca.Enabled = true;
+                txtDescri.Enabled = true;
+                txtFabri.Enabled = true;
+                txtPeso.Enabled = true;
+                txtPotencia.Enabled = true;
+                txtPreco.Enabled = true;
+                txtTipo.Enabled = true;
+                txtTorque.Enabled = true;
             }
         }
 
@@ -176,9 +238,45 @@ namespace car_tuning
             txtMarca.Text = "";
             txtDescri.Text = "";
             txtFabri.Text = "";
+            txtPeso.Text = "";
+            txtPotencia.Text = "";
+            txtPreco.Text = "";
+            txtTipo.Text = "";
+            txtTorque.Text = "";
 
         }
-
         
+          private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void dgvPecas_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                txtCodigo.Text = dgvPecas.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtDescri.Text = dgvPecas.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtPreco.Text = dgvPecas.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtFabri.Text = dgvPecas.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtTipo.Text = dgvPecas.Rows[e.RowIndex].Cells[4].Value.ToString();
+                txtMarca.Text = dgvPecas.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtPeso.Text = dgvPecas.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtPotencia.Text = dgvPecas.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtTorque.Text = dgvPecas.Rows[e.RowIndex].Cells[8].Value.ToString();
+               
+            }
+        }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+            List<Pecas> pecas;
+            pecas = p.Listar(txtBusca.Text);
+            dgvPecas.Rows.Clear();
+
+            foreach (Pecas p in pecas)
+                dgvPecas.Rows.Add(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque);
+            
+        }
     }
 }
