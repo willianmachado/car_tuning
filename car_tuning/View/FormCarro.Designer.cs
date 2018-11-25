@@ -497,6 +497,7 @@
             // 
             // txtPlaca
             // 
+            this.txtPlaca.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPlaca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.ForeColor = System.Drawing.Color.Black;
             this.txtPlaca.Location = new System.Drawing.Point(76, 122);

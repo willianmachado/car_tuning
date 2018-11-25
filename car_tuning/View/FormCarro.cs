@@ -476,8 +476,8 @@ namespace car_tuning.View
                 txtModelo.Text = dgvCarro.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtPeso.Text = dgvCarro.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtPotencia.Text = dgvCarro.Rows[e.RowIndex].Cells[6].Value.ToString();
-                txtTorque.Text = dgvCarro.Rows[e.RowIndex].Cells[7].Value.ToString();
-                txtVelocidadeMax.Text = dgvCarro.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtVelocidadeMax.Text = dgvCarro.Rows[e.RowIndex].Cells[7].Value.ToString();
+                txtTorque.Text = dgvCarro.Rows[e.RowIndex].Cells[8].Value.ToString();
                 txtAceleracao.Text = dgvCarro.Rows[e.RowIndex].Cells[9].Value.ToString();
                 txtConsumo.Text = dgvCarro.Rows[e.RowIndex].Cells[10].Value.ToString();
                 txtRotacaoMax.Text = dgvCarro.Rows[e.RowIndex].Cells[11].Value.ToString();
