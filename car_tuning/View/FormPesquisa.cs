@@ -1,4 +1,5 @@
-﻿using car_tuning.Modelo;
+﻿using car_tuning.DAO;
+using car_tuning.Modelo;
 using car_tuning.View;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ namespace car_tuning
             InitializeComponent();
             FillFunc();
             FillPeca();
-
+            fillStage();
         }
         private void FillFunc()
         {
@@ -46,7 +47,25 @@ namespace car_tuning
             }
 
         }
+        private void fillStage()
+        {
+            StageDAO stageDAO = new StageDAO();
+            List<Stage> stages;
+            stages = stageDAO.Carregar();
+            dgvServP.Rows.Clear();
+            foreach (Stage s in stages)
+            {
+                dgvStage.Rows.Add(s.CodServ1,
+                    s.PesoIni, s.PesoFin,
+                    s.AceleracaoIni, s.AceleracaoFin,
+                    s.TorqueIni, s.TorqueFin,
+                    s.Velocidade_maxIni, s.Velocidade_maxFin,
+                    s.PotenciaIni, s.PotenciaFin,
+                    s.ConsumoIni, s.ConsumoFin,
+                    s.Rotacao_maxIni, s.Rotacao_maxFin);
 
+            }
+        }
         private void dgCliente_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -192,6 +211,22 @@ namespace car_tuning
         private void txtPesquisaPecas_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void txtBuscaStage_Leave(object sender, EventArgs e)
+        {
+            if (txtPesquisaServ.Text == "")
+            {
+                txtPesquisaServ.Text = "Digite o Codigo do Serviço";
+            }
+        }
+
+        private void txtBuscaStage_Enter(object sender, EventArgs e)
+        {
+            if (txtPesquisaServ.Text == "Digite o Codigo do Serviço")
+            {
+                txtPesquisaServ.Text = "";
+            }
         }
     }
 }

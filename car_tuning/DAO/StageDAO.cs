@@ -53,7 +53,7 @@ namespace car_tuning.DAO
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
 
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM CARRO", conn);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM STAGE", conn);
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
@@ -74,7 +74,9 @@ namespace car_tuning.DAO
                 s.Rotacao_maxFin = double.Parse(dr["rotacao_maxFin"].ToString());
 
                 s.CodServ1 = Int32.Parse(dr["codServ"].ToString());
-                lista.Add(new Stage(s.PesoIni, s.PotenciaIni, s.Velocidade_maxIni, s.TorqueIni, s.AceleracaoIni, s.ConsumoIni, s.Rotacao_maxIni, s.PesoFin, s.PotenciaFin, s.Velocidade_maxFin, s.TorqueFin, s.AceleracaoFin, s.ConsumoFin, s.Rotacao_maxFin, s.CodServ1));
+
+                lista.Add(new Stage(s.PesoIni, s.PotenciaIni, s.Velocidade_maxIni, s.TorqueIni, s.AceleracaoIni, s.ConsumoIni, s.Rotacao_maxIni,
+                                    s.PesoFin, s.PotenciaFin, s.Velocidade_maxFin, s.TorqueFin, s.AceleracaoFin, s.ConsumoFin, s.Rotacao_maxFin, s.CodServ1));
 
             }
 
@@ -82,7 +84,7 @@ namespace car_tuning.DAO
 
         }
 
-        public List<Stage> Busca(int codServ)
+        public List<Stage> BuscaServ(int codServ)
         {
             List<Stage> lista = new List<Stage>();
             Stage st = new Stage();

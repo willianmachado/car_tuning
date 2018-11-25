@@ -72,6 +72,25 @@
             this.colValorServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPesquisaServ = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label5 = new iTalk.iTalk_Label();
+            this.Stage = new System.Windows.Forms.TabPage();
+            this.txtBuscaStage = new iTalk.iTalk_TextBox_Small();
+            this.iTalk_Label6 = new iTalk.iTalk_Label();
+            this.dgvStage = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btSelecionar = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
             this.txtPesquisaCli = new iTalk.iTalk_TextBox_Small();
@@ -86,6 +105,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFuncP)).BeginInit();
             this.tbServiço.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServP)).BeginInit();
+            this.Stage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStage)).BeginInit();
             this.SuspendLayout();
             // 
             // dgCliente
@@ -112,6 +133,7 @@
             this.tabCliente.Controls.Add(this.tabPage1);
             this.tabCliente.Controls.Add(this.tabPage3);
             this.tabCliente.Controls.Add(this.tbServiço);
+            this.tabCliente.Controls.Add(this.Stage);
             this.tabCliente.ItemSize = new System.Drawing.Size(80, 24);
             this.tabCliente.Location = new System.Drawing.Point(1, 25);
             this.tabCliente.Name = "tabCliente";
@@ -552,6 +574,183 @@
             this.iTalk_Label5.TabIndex = 15;
             this.iTalk_Label5.Text = "Buscar";
             // 
+            // Stage
+            // 
+            this.Stage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.Stage.Controls.Add(this.txtBuscaStage);
+            this.Stage.Controls.Add(this.iTalk_Label6);
+            this.Stage.Controls.Add(this.dgvStage);
+            this.Stage.Location = new System.Drawing.Point(4, 28);
+            this.Stage.Name = "Stage";
+            this.Stage.Padding = new System.Windows.Forms.Padding(3);
+            this.Stage.Size = new System.Drawing.Size(1323, 633);
+            this.Stage.TabIndex = 5;
+            this.Stage.Text = "Stage";
+            // 
+            // txtBuscaStage
+            // 
+            this.txtBuscaStage.BackColor = System.Drawing.Color.Transparent;
+            this.txtBuscaStage.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtBuscaStage.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBuscaStage.Location = new System.Drawing.Point(96, 20);
+            this.txtBuscaStage.MaxLength = 32767;
+            this.txtBuscaStage.Multiline = false;
+            this.txtBuscaStage.Name = "txtBuscaStage";
+            this.txtBuscaStage.ReadOnly = false;
+            this.txtBuscaStage.Size = new System.Drawing.Size(1134, 28);
+            this.txtBuscaStage.TabIndex = 20;
+            this.txtBuscaStage.Text = "Digite o Codigo do Serviço";
+            this.txtBuscaStage.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBuscaStage.UseSystemPasswordChar = false;
+            this.txtBuscaStage.Enter += new System.EventHandler(this.txtBuscaStage_Enter);
+            this.txtBuscaStage.Leave += new System.EventHandler(this.txtBuscaStage_Leave);
+            // 
+            // iTalk_Label6
+            // 
+            this.iTalk_Label6.AutoSize = true;
+            this.iTalk_Label6.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_Label6.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iTalk_Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.iTalk_Label6.Location = new System.Drawing.Point(19, 20);
+            this.iTalk_Label6.Name = "iTalk_Label6";
+            this.iTalk_Label6.Size = new System.Drawing.Size(71, 25);
+            this.iTalk_Label6.TabIndex = 19;
+            this.iTalk_Label6.Text = "Buscar";
+            // 
+            // dgvStage
+            // 
+            this.dgvStage.AllowUserToAddRows = false;
+            this.dgvStage.AllowUserToDeleteRows = false;
+            this.dgvStage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.Column4,
+            this.Column14,
+            this.Column8,
+            this.Column18,
+            this.Column7,
+            this.Column17,
+            this.Column6,
+            this.Column16,
+            this.Column5,
+            this.Column15,
+            this.Column12,
+            this.Column19,
+            this.Column13,
+            this.Column20});
+            this.dgvStage.Location = new System.Drawing.Point(2, 60);
+            this.dgvStage.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStage.Name = "dgvStage";
+            this.dgvStage.ReadOnly = true;
+            this.dgvStage.RowTemplate.Height = 24;
+            this.dgvStage.Size = new System.Drawing.Size(1311, 571);
+            this.dgvStage.TabIndex = 18;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo Serv";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "PesoIni";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column14.HeaderText = "Peso";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "TorIni";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column18.HeaderText = "Tor";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "AceleIni";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column17.HeaderText = "Acele";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "PotIni";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column16.HeaderText = "Pot";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "VelMaxIni";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column15.HeaderText = "Vel";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column12.HeaderText = "ConsIni";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            this.Column19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column19.HeaderText = "Cons";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column13.HeaderText = "RotMaxIni";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column20.HeaderText = "RotMax";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
             // btSelecionar
             // 
             this.btSelecionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -644,6 +843,9 @@
             this.tbServiço.ResumeLayout(false);
             this.tbServiço.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvServP)).EndInit();
+            this.Stage.ResumeLayout(false);
+            this.Stage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -698,5 +900,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private System.Windows.Forms.TabPage Stage;
+        private iTalk.iTalk_TextBox_Small txtBuscaStage;
+        private iTalk.iTalk_Label iTalk_Label6;
+        private System.Windows.Forms.DataGridView dgvStage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
     }
 }
