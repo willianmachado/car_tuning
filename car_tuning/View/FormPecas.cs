@@ -155,7 +155,7 @@ namespace car_tuning
         private Pecas GetDTO()
         {
             Pecas p = new Pecas();
-            
+            p.Codigo = int.Parse(txtCodigo.Text);
             p.AddPeso = Double.Parse(txtPeso.Text);
             p.AddPotencia = Double.Parse(txtPotencia.Text);
             p.AddTorque = Double.Parse(txtTorque.Text);
@@ -205,7 +205,7 @@ namespace car_tuning
                 txtPreco.Enabled = false;
                 txtTipo.Enabled = false;
                 txtTorque.Enabled = false;
-
+                txtCodigo.Enabled = false;
             }
             else
             {
@@ -229,6 +229,7 @@ namespace car_tuning
                 txtPreco.Enabled = true;
                 txtTipo.Enabled = true;
                 txtTorque.Enabled = true;
+                txtCodigo.Enabled = true;
             }
         }
 

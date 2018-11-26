@@ -85,9 +85,9 @@ namespace car_tuning
             {
 
                 dgvCarrinho.Rows.Add(p.Codigo, p.Tipo, p.Fabricante, p.Preco, p.Descricao);
-                dgvCarrinho.Rows[e.RowIndex].Cells[5].Value = 1;
+                
             }
-            
+            //dgvCarrinho.Rows[e.RowIndex].Cells[5].Value = 1;
             rtValor.Text = preco.ToString();
         }
         private void Loading()

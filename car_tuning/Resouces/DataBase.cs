@@ -199,7 +199,7 @@ namespace car_tuning
 
                 sql.Clear();
                     sql.AppendLine("CREATE TABLE IF NOT EXISTS `PECA` ( " +
-                        "`codigo` INTEGER NOT NULL AUTOINCREMENT UNIQUE, " +
+                        "`codigo` INTEGER NOT NULL UNIQUE, " +
                         "`fabricante` TEXT, " +
                         "`preco` REAL, " +
                         "`compatibilidade` TEXT, " +
@@ -223,10 +223,10 @@ namespace car_tuning
 
                 sql.Clear();
                 sql.AppendLine("CREATE TABLE IF NOT EXISTS `SERVPECA`(" +
-                    " `cadSev` INTEGER," +
+                    " `codSev` INTEGER," +
                     " `codPeca` INTEGER," +
                     " `quantidade` INTEGER, " +
-                    "FOREIGN KEY(`cadSev`) REFERENCES `Servico`(`codigo`), " +
+                    "FOREIGN KEY(`codSev`) REFERENCES `Servico`(`codigo`), " +
                     "FOREIGN KEY(`codPeca`) REFERENCES `pecas`(`codigo`) );");
 
 

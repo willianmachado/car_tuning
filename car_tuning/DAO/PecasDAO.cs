@@ -16,8 +16,8 @@ namespace car_tuning.Modelo
         {
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
-            String sql = string.Format("INSERT INTO PECA(fabricante,preco,tipo,compatibilidade,descricao,addTorque,addPeso,addPotencia) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}')",
-                peca.Fabricante,peca.Preco,peca.Tipo, peca.Compatibilidade, peca.Descricao, peca.AddTorque,peca.AddPeso,peca.AddPotencia);
+            String sql = string.Format("INSERT INTO PECA(codigo,fabricante,preco,tipo,compatibilidade,descricao,addTorque,addPeso,addPotencia) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",
+                peca.Codigo,peca.Fabricante,peca.Preco,peca.Tipo, peca.Compatibilidade, peca.Descricao, peca.AddTorque,peca.AddPeso,peca.AddPotencia);
             
             bd.ExecuteSQL(sql);
         }
