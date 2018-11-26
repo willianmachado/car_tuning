@@ -98,5 +98,34 @@ namespace car_tuning.Modelo
             }
             return lista;
         }
+        public List<Pecas> ListaItens(List<int> cod)
+        {
+            List<Pecas> lista = new List<Pecas>();
+            Pecas p = new Pecas();
+
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM PECA WHERE tipo like '%" + cod, conn);
+
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                p.Codigo = Int32.Parse(dr["codigo"].ToString());
+                p.Descricao = dr["descricao"].ToString();
+                p.Preco = double.Parse(dr["preco"].ToString());
+                p.Fabricante = dr["fabricante"].ToString();
+                p.Tipo = dr["tipo"].ToString();
+                p.Compatibilidade = dr["compatibilidade"].ToString();
+                p.AddPeso = double.Parse(dr["addPeso"].ToString());
+                p.AddTorque = double.Parse(dr["addTorque"].ToString());
+                p.AddPotencia = double.Parse(dr["addPotencia"].ToString());
+
+                lista.Add(new Pecas(p.Codigo, p.Descricao, p.Preco, p.Fabricante, p.Tipo, p.Compatibilidade, p.AddPeso, p.AddPotencia, p.AddTorque));
+
+            }
+            return lista;
+        }
     }
 }

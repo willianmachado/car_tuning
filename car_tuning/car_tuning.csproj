@@ -107,12 +107,6 @@
     <Compile Include="View\FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormItens.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormItens.Designer.cs">
-      <DependentUpon>FormItens.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\FormLoading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,9 +177,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormItens.resx">
-      <DependentUpon>FormItens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormLoading.resx">
       <DependentUpon>FormLoading.cs</DependentUpon>
