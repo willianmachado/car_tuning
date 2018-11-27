@@ -36,7 +36,6 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
-            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
             this.txtFunc = new iTalk.iTalk_ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.rtValor = new iTalk.iTalk_Label();
@@ -140,6 +139,7 @@
             this.iTalk_Label26 = new iTalk.iTalk_Label();
             this.iTalk_Label27 = new iTalk.iTalk_Label();
             this.iTalk_Label34 = new iTalk.iTalk_Label();
+            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -147,11 +147,11 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.SuspendLayout();
             // 
             // btNovo
@@ -277,23 +277,6 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1178, 652);
             this.iTalk_GroupBox1.TabIndex = 8;
             this.iTalk_GroupBox1.Text = "Serviço";
-            // 
-            // dgvCarrinho
-            // 
-            this.dgvCarrinho.AllowUserToAddRows = false;
-            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCarrinho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.quantidade});
-            this.dgvCarrinho.Location = new System.Drawing.Point(16, 20);
-            this.dgvCarrinho.Name = "dgvCarrinho";
-            this.dgvCarrinho.Size = new System.Drawing.Size(541, 210);
-            this.dgvCarrinho.TabIndex = 14;
-            this.dgvCarrinho.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrinho_CellMouseDoubleClick);
             // 
             // txtFunc
             // 
@@ -1500,6 +1483,23 @@
             this.iTalk_Label34.TabIndex = 45;
             this.iTalk_Label34.Text = "Peso";
             // 
+            // dgvCarrinho
+            // 
+            this.dgvCarrinho.AllowUserToAddRows = false;
+            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrinho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.quantidade});
+            this.dgvCarrinho.Location = new System.Drawing.Point(16, 31);
+            this.dgvCarrinho.Name = "dgvCarrinho";
+            this.dgvCarrinho.Size = new System.Drawing.Size(541, 199);
+            this.dgvCarrinho.TabIndex = 14;
+            this.dgvCarrinho.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrinho_CellMouseDoubleClick);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -1556,7 +1556,6 @@
             this.Text = "Serviços";
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.iTalk_GroupBox4.ResumeLayout(false);
             this.iTalk_GroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).EndInit();
@@ -1564,6 +1563,7 @@
             this.iTalk_GroupBox2.PerformLayout();
             this.iTalk_GroupBox3.ResumeLayout(false);
             this.iTalk_GroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.ResumeLayout(false);
 
         }

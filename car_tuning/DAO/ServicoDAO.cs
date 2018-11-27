@@ -13,11 +13,26 @@ namespace car_tuning.Modelo
         private const string Data = "Data Source = car.db";
         public void Salvar(Servico s)
         {
-
-            String sql = string.Format("INSERT INTO SERVICO (codigo,placaCarro,valorTotal,cpfFuncionario,cpfCliente) " +
-                "VALUES('{0}', '{1}', '{2}', '{3}','{4}')",s.Codigo,s.PlacaCarro1,s.ValorTotal,s.CpfFuncionario1,s.CpfCliente1);
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
+            String sql = string.Format("INSERT INTO SERVICO (placaCarro,valorTotal,cpfFunc,cpfcliente) " +
+                "VALUES('{0}', '{1}', '{2}', '{3}')",s.PlacaCarro1,s.ValorTotal,s.CpfFuncionario1,s.CpfCliente1);
+            bd.ExecuteSQL(sql);
+        }
+
+        public int BuscaCodigo()
+        {
+            int cod;
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            
+
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand("select max (codigo) from Servico", conn);
+            cod = Convert.ToInt32(cmd.ExecuteScalar());
+            return cod;
         }
 
         public void Deletar(int cod)

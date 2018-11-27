@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace car_tuning.Modelo
 {
-    class TesteDAO
+    class ServPecaDAO
     {
         private const string Data = "Data Source = car.db";
         public void Salvar(ServPeca sv)
         {
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
-            String sql = string.Format("INSERT INTO (codSev,codPeca,quantidade) VALUES('{0}','{1}','{2}')",sv.CodServ1,sv.CodPeca1,sv.Quantidade);
-            
+            String sql = string.Format("INSERT INTO SERVPECA(codSev,codPeca,quantidade) VALUES ('{0}','{1}','{2}')",sv.CodServ1,sv.CodPeca1,sv.Quantidade);
+            bd.ExecuteSQL(sql);
         }
 
         public void Deletar(int id)
@@ -47,12 +47,14 @@ namespace car_tuning.Modelo
                 s.CodPeca1 = int.Parse(dr["codPeca"].ToString());
                 s.CodServ1 = int.Parse(dr["codSev"].ToString());
                 s.Quantidade = int.Parse(dr["quantidade"].ToString());
+
                 lista.Add(new ServPeca(s.CodServ1,s.CodPeca1,s.Quantidade));
             }
 
             return lista;
 
         }
+        /*
         public List<Cliente> BuscaNome(string cpf)
         {
             List<Cliente> lista = new List<Cliente>();
@@ -61,5 +63,6 @@ namespace car_tuning.Modelo
 
             return lista;
         }
+        */
     }
 }

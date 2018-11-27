@@ -46,12 +46,6 @@ namespace car_tuning
             //List<int> itens = new List<int>();
 
 
-
-
-            
-
-
-
             //pecas = pecasDAO. Carregar();
             //dgvCarrinho.Rows.Clear();
             foreach (Pecas p in pecas)
@@ -220,16 +214,36 @@ namespace car_tuning
             txtCliente.Text = "";
             txtFunc.Text = "";
         }
-
+        int r=0;
         private void btExecutar_Click(object sender, EventArgs e)
         {
+            
             if (MessageBox.Show("Executar o Serviço? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                ServicoDAO servicoDAO = new ServicoDAO();
+                Servico servico = getDTOServ();
+                servicoDAO.Salvar(servico);
+                //codigo = servicoDAO.
+
+                StageDAO stageDAO = new StageDAO();
+                Stage stage = getDTO();
+                stageDAO.Salvar(stage);
+
+                for(int i = 0; i < dgvCarrinho.Rows.Count; i++)
+                {
+                    ServPecaDAO servPecaDAO = new ServPecaDAO();
+                    ServPeca servPeca = getDTOPecaServ();
+                    servPecaDAO.Salvar(servPeca);
+                    r++;
+                }
+                
+                
+                    
                 //para chamar o splash
                 Thread t = new Thread((new ThreadStart(Loading)));
                 ////inicializar a thread
                 t.Start();
-                Thread.Sleep(2000);
+                Thread.Sleep(1200);
                 t.Abort();
 
                 MessageBox.Show("Serviço encaminhado com sucesso!");
@@ -247,11 +261,30 @@ namespace car_tuning
                     this.Close();
         }
 
+        private Servico getDTOServ()
+        {
+            Servico s = new Servico();
+            s.CpfCliente1 = txtCliente.Text;
+            s.CpfFuncionario1 = txtFunc.Text;
+            s.ValorTotal = preco;
+            s.PlacaCarro1 = txtCarro.Text;
+            return s;
+        }
 
+        private ServPeca getDTOPecaServ()
+        {
+            ServicoDAO s = new ServicoDAO();
+            ServPeca sv = new ServPeca();
+            sv.CodPeca1 = int.Parse(dgvCarrinho.Rows[r].Cells[0].Value.ToString());
+            sv.CodServ1 = s.BuscaCodigo();
+            sv.Quantidade = int.Parse(dgvCarrinho.Rows[r].Cells[5].Value.ToString());
+            return sv;
+        }
         private Stage getDTO()
         {
+            ServicoDAO s = new ServicoDAO();
             Stage stage = new Stage();
-            stage.CodServ1 = int.Parse(txtCod.Text);
+            stage.CodServ1 = s.BuscaCodigo();
             stage.PesoIni = double.Parse(txtPesoIni.Text);
             stage.PotenciaIni = double.Parse(txtPotenciaIni.Text);
             stage.Velocidade_maxIni = double.Parse(txtVeloMaxIni.Text);
