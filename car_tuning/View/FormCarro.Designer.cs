@@ -507,6 +507,7 @@
             this.txtPlaca.Name = "txtPlaca";
             this.txtPlaca.Size = new System.Drawing.Size(101, 27);
             this.txtPlaca.TabIndex = 1;
+            this.txtPlaca.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // iTalk_Label27
             // 
@@ -772,6 +773,7 @@
             this.txtCpf.PromptChar = ' ';
             this.txtCpf.Size = new System.Drawing.Size(155, 27);
             this.txtCpf.TabIndex = 0;
+            this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // iTalk_Label42
             // 

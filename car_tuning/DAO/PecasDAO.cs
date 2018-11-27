@@ -78,7 +78,7 @@ namespace car_tuning.Modelo
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
 
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM PECA WHERE tipo like '%" + busca + "%' OR codigo like'%" + busca + "%' OR compatibilidade like' % " + busca + "%'", conn);
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM PECA WHERE compatibilidade like '%" + busca + "%' OR codigo like'%" + busca + "%' OR compatibilidade like' % " + busca + "%'", conn);
 
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())

@@ -24,6 +24,9 @@ namespace car_tuning
             ControlaBotoes(true);
             Carrinho(false);
 
+            ServicoDAO s = new ServicoDAO();
+            labalCodigo.Text = (s.BuscaCodigo() + 1).ToString();
+
         }
         public void Carrinho(bool estado)
         {
@@ -32,12 +35,22 @@ namespace car_tuning
                 dgvCarrinho.Visible = true;
                 txtQuant.Visible = true;
                 labalQuant.Visible = true;
+
+                labalCodigo.Visible = false;
+                txtFunc.Visible = false;
+                txtCliente.Visible = false;
+                txtCarro.Visible = false;
             }
             else if (estado == false)
             {
                 dgvCarrinho.Visible = false;
                 txtQuant.Visible = false;
                 labalQuant.Visible = false;
+
+                labalCodigo.Visible = true;
+                txtFunc.Visible = true;
+                txtCliente.Visible = true;
+                txtCarro.Visible = true;
             }
             
         }
@@ -75,10 +88,21 @@ namespace car_tuning
 
         private void dgvCarrinho_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //pecas.Remove(pecasDAO.Listar(dgvPecasServ.Rows[e.RowIndex].Cells[0].Value.ToString());
-            //= pecasDAO.Listar(dgvPecasServ.Rows[e.RowIndex].Cells[0].Value.ToString());
-            //dgvCarrinho.Rows.Remove();
-            //Cells[0].Value.ToString();
+            if (dgvCarrinho.Rows.Count > 0)
+            {
+                preco -= (double.Parse(dgvCarrinho.CurrentRow.Cells["Column5preco"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+
+                dgvCarrinho.Rows.RemoveAt(this.dgvCarrinho.CurrentRow.Index);
+
+
+                rtValor.Text = preco.ToString();
+            }
+            else
+            {
+                MessageBox.Show("digite adicione ao carrinho com o duplo click.");
+
+            }
+            
         }
 
 
@@ -101,11 +125,10 @@ namespace car_tuning
 
                     dgvCarrinho.Rows.Add(p.Codigo, p.Tipo, p.Fabricante, p.Preco, p.Descricao,txtQuant.Text);
                     preco += (double.Parse(p.Preco.ToString()) * (double.Parse(txtQuant.Text)));
-                    //dgvCarrinho.CurrentRow.Cells[4].Value = txtQuant.Text;
                 }
 
 
-                
+                txtQuant.Clear();
                 rtValor.Text = preco.ToString();
             }
             else
@@ -188,7 +211,7 @@ namespace car_tuning
             List<Carro> carros;
             CarroDAO cDAO = new CarroDAO();
             txtCarro.Items.Clear();
-            carros = cDAO.Carregar();
+            carros = cDAO.Listar(txtCliente.Text);
             foreach (Carro ca in carros)
                 txtCarro.Items.Add(ca.Placa);
         }
@@ -228,7 +251,7 @@ namespace car_tuning
                 this.btExcluir.ForeColor = Color.Gray;
                 this.btEditar.Enabled = false;
                 this.btEditar.ForeColor = Color.Gray;
-                this.txtCod.Enabled = true;
+                
                 this.btSalvar.Enabled = true;
                 this.btSalvar.ForeColor = Color.White;
                 this.btLimpar.Enabled = true;
@@ -239,7 +262,7 @@ namespace car_tuning
         }
         public void limparCampos()
         {
-            txtCod.Text = "";
+            
             txtCarro.Text = "";
             txtCliente.Text = "";
             txtFunc.Text = "";
@@ -372,6 +395,21 @@ namespace car_tuning
         {
             Carrinho(true);
         }
+
+        private void txtFiltrarPeca_TextChanged(object sender, EventArgs e)
+        {
+            PecasDAO pecasDAO = new PecasDAO();
+            List<Pecas> pecas;
+            pecas = pecasDAO.Listar(txtFiltrarPeca.Text);
+            dgvPecasServ.Rows.Clear();
+            foreach (Pecas p in pecas)
+            {
+                dgvPecasServ.Rows.Add(p.Codigo, p.Compatibilidade, p.Tipo, p.Fabricante, p.Preco, p.Descricao, p.AddTorque, p.AddPotencia, p.AddPeso);
+
+            }
+        }
+
+
 
 
         /*

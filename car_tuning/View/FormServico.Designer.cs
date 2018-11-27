@@ -36,13 +36,7 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
-            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labalCodigo = new iTalk.iTalk_Label();
             this.txtFunc = new iTalk.iTalk_ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.rtValor = new iTalk.iTalk_Label();
@@ -54,6 +48,7 @@
             this.ambiance_Label2 = new Ambiance.Ambiance_Label();
             this.lbValor = new Ambiance.Ambiance_Label();
             this.iTalk_GroupBox4 = new iTalk.iTalk_GroupBox();
+            this.labalQuant = new iTalk.iTalk_Label();
             this.txtQuant = new System.Windows.Forms.MaskedTextBox();
             this.dgvPecasServ = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,13 +63,12 @@
             this.btnRemoverPeca = new iTalk.iTalk_Button_2();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.btnBuscarPeca = new iTalk.iTalk_Button_2();
-            this.iTalk_TextBox_Small1 = new iTalk.iTalk_TextBox_Small();
+            this.txtFiltrarPeca = new iTalk.iTalk_TextBox_Small();
             this.txtCarro = new iTalk.iTalk_ComboBox();
             this.txtCliente = new iTalk.iTalk_ComboBox();
             this.iTalk_Label3 = new iTalk.iTalk_Label();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.iTalk_Label1 = new iTalk.iTalk_Label();
-            this.txtCod = new iTalk.iTalk_TextBox_Small();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
             this.txtRotMaxIni = new System.Windows.Forms.MaskedTextBox();
             this.txtAceleIni = new System.Windows.Forms.MaskedTextBox();
@@ -147,13 +141,19 @@
             this.iTalk_Label26 = new iTalk.iTalk_Label();
             this.iTalk_Label27 = new iTalk.iTalk_Label();
             this.iTalk_Label34 = new iTalk.iTalk_Label();
-            this.labalQuant = new iTalk.iTalk_Label();
+            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_GroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.SuspendLayout();
             // 
             // btNovo
@@ -252,7 +252,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox1.Controls.Add(this.dgvCarrinho);
+            this.iTalk_GroupBox1.Controls.Add(this.labalCodigo);
             this.iTalk_GroupBox1.Controls.Add(this.txtFunc);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
             this.iTalk_GroupBox1.Controls.Add(this.rtValor);
@@ -269,9 +269,9 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
-            this.iTalk_GroupBox1.Controls.Add(this.txtCod);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox3);
+            this.iTalk_GroupBox1.Controls.Add(this.dgvCarrinho);
             this.iTalk_GroupBox1.Location = new System.Drawing.Point(159, 12);
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
@@ -280,58 +280,16 @@
             this.iTalk_GroupBox1.TabIndex = 8;
             this.iTalk_GroupBox1.Text = "Serviço";
             // 
-            // dgvCarrinho
+            // labalCodigo
             // 
-            this.dgvCarrinho.AllowUserToAddRows = false;
-            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCarrinho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.quantidade});
-            this.dgvCarrinho.Location = new System.Drawing.Point(16, 31);
-            this.dgvCarrinho.Name = "dgvCarrinho";
-            this.dgvCarrinho.Size = new System.Drawing.Size(541, 199);
-            this.dgvCarrinho.TabIndex = 14;
-            this.dgvCarrinho.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrinho_CellMouseDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Fabricante";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Preco";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantidade.HeaderText = "quantidade";
-            this.quantidade.Name = "quantidade";
+            this.labalCodigo.AutoSize = true;
+            this.labalCodigo.BackColor = System.Drawing.Color.Transparent;
+            this.labalCodigo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labalCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.labalCodigo.Location = new System.Drawing.Point(201, 62);
+            this.labalCodigo.Name = "labalCodigo";
+            this.labalCodigo.Size = new System.Drawing.Size(0, 32);
+            this.labalCodigo.TabIndex = 15;
             // 
             // txtFunc
             // 
@@ -345,7 +303,7 @@
             this.txtFunc.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.txtFunc.IntegralHeight = false;
             this.txtFunc.ItemHeight = 20;
-            this.txtFunc.Location = new System.Drawing.Point(197, 79);
+            this.txtFunc.Location = new System.Drawing.Point(197, 110);
             this.txtFunc.Name = "txtFunc";
             this.txtFunc.Size = new System.Drawing.Size(232, 26);
             this.txtFunc.StartIndex = 0;
@@ -397,7 +355,7 @@
             this.iTalk_Label6.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label6.Location = new System.Drawing.Point(90, 79);
+            this.iTalk_Label6.Location = new System.Drawing.Point(90, 110);
             this.iTalk_Label6.Name = "iTalk_Label6";
             this.iTalk_Label6.Size = new System.Drawing.Size(92, 21);
             this.iTalk_Label6.TabIndex = 12;
@@ -481,7 +439,7 @@
             this.iTalk_GroupBox4.Controls.Add(this.btnRemoverPeca);
             this.iTalk_GroupBox4.Controls.Add(this.iTalk_Label4);
             this.iTalk_GroupBox4.Controls.Add(this.btnBuscarPeca);
-            this.iTalk_GroupBox4.Controls.Add(this.iTalk_TextBox_Small1);
+            this.iTalk_GroupBox4.Controls.Add(this.txtFiltrarPeca);
             this.iTalk_GroupBox4.Location = new System.Drawing.Point(8, 236);
             this.iTalk_GroupBox4.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox4.Name = "iTalk_GroupBox4";
@@ -489,6 +447,18 @@
             this.iTalk_GroupBox4.Size = new System.Drawing.Size(557, 408);
             this.iTalk_GroupBox4.TabIndex = 7;
             this.iTalk_GroupBox4.Text = "Items";
+            // 
+            // labalQuant
+            // 
+            this.labalQuant.AutoSize = true;
+            this.labalQuant.BackColor = System.Drawing.Color.Transparent;
+            this.labalQuant.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labalQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.labalQuant.Location = new System.Drawing.Point(312, 360);
+            this.labalQuant.Name = "labalQuant";
+            this.labalQuant.Size = new System.Drawing.Size(116, 25);
+            this.labalQuant.TabIndex = 15;
+            this.labalQuant.Text = "Quantidade";
             // 
             // txtQuant
             // 
@@ -629,20 +599,21 @@
             this.btnBuscarPeca.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btnBuscarPeca.Click += new System.EventHandler(this.btnBuscarPeca_Click);
             // 
-            // iTalk_TextBox_Small1
+            // txtFiltrarPeca
             // 
-            this.iTalk_TextBox_Small1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_TextBox_Small1.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.iTalk_TextBox_Small1.ForeColor = System.Drawing.Color.DimGray;
-            this.iTalk_TextBox_Small1.Location = new System.Drawing.Point(71, 34);
-            this.iTalk_TextBox_Small1.MaxLength = 32767;
-            this.iTalk_TextBox_Small1.Multiline = false;
-            this.iTalk_TextBox_Small1.Name = "iTalk_TextBox_Small1";
-            this.iTalk_TextBox_Small1.ReadOnly = false;
-            this.iTalk_TextBox_Small1.Size = new System.Drawing.Size(427, 28);
-            this.iTalk_TextBox_Small1.TabIndex = 0;
-            this.iTalk_TextBox_Small1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.iTalk_TextBox_Small1.UseSystemPasswordChar = false;
+            this.txtFiltrarPeca.BackColor = System.Drawing.Color.Transparent;
+            this.txtFiltrarPeca.Font = new System.Drawing.Font("Tahoma", 11F);
+            this.txtFiltrarPeca.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFiltrarPeca.Location = new System.Drawing.Point(71, 34);
+            this.txtFiltrarPeca.MaxLength = 32767;
+            this.txtFiltrarPeca.Multiline = false;
+            this.txtFiltrarPeca.Name = "txtFiltrarPeca";
+            this.txtFiltrarPeca.ReadOnly = false;
+            this.txtFiltrarPeca.Size = new System.Drawing.Size(427, 28);
+            this.txtFiltrarPeca.TabIndex = 0;
+            this.txtFiltrarPeca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtFiltrarPeca.UseSystemPasswordChar = false;
+            this.txtFiltrarPeca.TextChanged += new System.EventHandler(this.txtFiltrarPeca_TextChanged);
             // 
             // txtCarro
             // 
@@ -712,26 +683,11 @@
             this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label1.Location = new System.Drawing.Point(144, 113);
+            this.iTalk_Label1.Location = new System.Drawing.Point(144, 71);
             this.iTalk_Label1.Name = "iTalk_Label1";
             this.iTalk_Label1.Size = new System.Drawing.Size(38, 21);
             this.iTalk_Label1.TabIndex = 1;
             this.iTalk_Label1.Text = "Cod";
-            // 
-            // txtCod
-            // 
-            this.txtCod.BackColor = System.Drawing.Color.Transparent;
-            this.txtCod.Font = new System.Drawing.Font("Tahoma", 11F);
-            this.txtCod.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCod.Location = new System.Drawing.Point(197, 113);
-            this.txtCod.MaxLength = 32767;
-            this.txtCod.Multiline = false;
-            this.txtCod.Name = "txtCod";
-            this.txtCod.ReadOnly = false;
-            this.txtCod.Size = new System.Drawing.Size(128, 28);
-            this.txtCod.TabIndex = 1;
-            this.txtCod.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCod.UseSystemPasswordChar = false;
             // 
             // iTalk_GroupBox2
             // 
@@ -1552,17 +1508,66 @@
             this.iTalk_Label34.TabIndex = 45;
             this.iTalk_Label34.Text = "Peso";
             // 
-            // labalQuant
+            // dgvCarrinho
             // 
-            this.labalQuant.AutoSize = true;
-            this.labalQuant.BackColor = System.Drawing.Color.Transparent;
-            this.labalQuant.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labalQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.labalQuant.Location = new System.Drawing.Point(312, 360);
-            this.labalQuant.Name = "labalQuant";
-            this.labalQuant.Size = new System.Drawing.Size(116, 25);
-            this.labalQuant.TabIndex = 15;
-            this.labalQuant.Text = "Quantidade";
+            this.dgvCarrinho.AllowUserToAddRows = false;
+            this.dgvCarrinho.AllowUserToDeleteRows = false;
+            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrinho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.Column5preco,
+            this.dataGridViewTextBoxColumn6,
+            this.quantidade});
+            this.dgvCarrinho.Location = new System.Drawing.Point(16, 31);
+            this.dgvCarrinho.Name = "dgvCarrinho";
+            this.dgvCarrinho.ReadOnly = true;
+            this.dgvCarrinho.Size = new System.Drawing.Size(541, 199);
+            this.dgvCarrinho.TabIndex = 14;
+            this.dgvCarrinho.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrinho_CellMouseDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Fabricante";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Column5preco
+            // 
+            this.Column5preco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5preco.HeaderText = "Preco";
+            this.Column5preco.Name = "Column5preco";
+            this.Column5preco.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantidade.HeaderText = "quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
             // 
             // FormServico
             // 
@@ -1584,7 +1589,6 @@
             this.Text = "Serviços";
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.iTalk_GroupBox4.ResumeLayout(false);
             this.iTalk_GroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).EndInit();
@@ -1592,6 +1596,7 @@
             this.iTalk_GroupBox2.PerformLayout();
             this.iTalk_GroupBox3.ResumeLayout(false);
             this.iTalk_GroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1609,14 +1614,12 @@
         private iTalk.iTalk_Button_2 btnRemoverPeca;
         private iTalk.iTalk_Label iTalk_Label4;
         private iTalk.iTalk_Button_2 btnBuscarPeca;
-        private iTalk.iTalk_TextBox_Small iTalk_TextBox_Small1;
+        private iTalk.iTalk_TextBox_Small txtFiltrarPeca;
         private iTalk.iTalk_GroupBox iTalk_GroupBox1;
         private iTalk.iTalk_ComboBox txtCarro;
         private iTalk.iTalk_ComboBox txtCliente;
         private iTalk.iTalk_Label iTalk_Label3;
         private iTalk.iTalk_Label iTalk_Label2;
-        private iTalk.iTalk_Label iTalk_Label1;
-        private iTalk.iTalk_TextBox_Small txtCod;
         private iTalk.iTalk_Label rtValor;
         private Ambiance.Ambiance_Label lbValor;
         private Ambiance.Ambiance_Label ambiance_Label2;
@@ -1708,13 +1711,15 @@
         private iTalk.iTalk_Label iTalk_Label33;
         private iTalk.iTalk_ComboBox txtFunc;
         private System.Windows.Forms.DataGridView dgvCarrinho;
+        private System.Windows.Forms.MaskedTextBox txtQuant;
+        private iTalk.iTalk_Label labalQuant;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
-        private System.Windows.Forms.MaskedTextBox txtQuant;
-        private iTalk.iTalk_Label labalQuant;
+        private iTalk.iTalk_Label labalCodigo;
+        private iTalk.iTalk_Label iTalk_Label1;
     }
 }
