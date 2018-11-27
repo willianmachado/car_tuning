@@ -22,7 +22,23 @@ namespace car_tuning
         {
             InitializeComponent();
             ControlaBotoes(true);
-            dgvCarrinho.Visible = false;
+            Carrinho(false);
+
+        }
+        public void Carrinho(bool estado)
+        {
+            if(estado == true)
+            {
+                dgvCarrinho.Visible = true;
+                txtQuant.Visible = true;
+                labalQuant.Visible = true;
+            }
+            else if (estado == false)
+            {
+                dgvCarrinho.Visible = false;
+                txtQuant.Visible = false;
+                labalQuant.Visible = false;
+            }
             
         }
         private void FillPecas()
@@ -64,25 +80,39 @@ namespace car_tuning
             //dgvCarrinho.Rows.Remove();
             //Cells[0].Value.ToString();
         }
+
+
         PecasDAO pecasDAO = new PecasDAO();
         List<Pecas> pecas;
         List<int> itens = new List<int>();
         double preco=0; 
         private void dgvPecasServ_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            
-            pecas = pecasDAO.Listar(dgvPecasServ.Rows[e.RowIndex].Cells[0].Value.ToString());
-            itens.Add(int.Parse(dgvPecasServ.Rows[e.RowIndex].Cells["Codigo"].Value.ToString()));
-            preco += double.Parse(dgvPecasServ.Rows[e.RowIndex].Cells[4].Value.ToString());
-            dgvPecasServ.CurrentRow.Cells[0].Style.BackColor = Color.Yellow;
-            foreach (Pecas p in pecas)
+            if(txtQuant.Text != "")
             {
-
-                dgvCarrinho.Rows.Add(p.Codigo, p.Tipo, p.Fabricante, p.Preco, p.Descricao);
                 
+                pecas = pecasDAO.Listar(dgvPecasServ.Rows[e.RowIndex].Cells[0].Value.ToString());
+                itens.Add(int.Parse(dgvPecasServ.Rows[e.RowIndex].Cells["Codigo"].Value.ToString()));
+                
+                dgvPecasServ.CurrentRow.Cells[0].Style.BackColor = Color.Yellow;
+
+                foreach (Pecas p in pecas)
+                {
+
+                    dgvCarrinho.Rows.Add(p.Codigo, p.Tipo, p.Fabricante, p.Preco, p.Descricao,txtQuant.Text);
+                    preco += (double.Parse(p.Preco.ToString()) * (double.Parse(txtQuant.Text)));
+                    //dgvCarrinho.CurrentRow.Cells[4].Value = txtQuant.Text;
+                }
+
+
+                
+                rtValor.Text = preco.ToString();
             }
-            //dgvCarrinho.Rows[e.RowIndex].Cells[5].Value = 1;
-            rtValor.Text = preco.ToString();
+            else
+            {
+                MessageBox.Show("digite a quantidade.");
+            }
+            
         }
         private void Loading()
         {
@@ -326,14 +356,21 @@ namespace car_tuning
 
         private void btnBuscarPeca_Click(object sender, EventArgs e)
         {
-            dgvCarrinho.Visible = true;
+            Carrinho(true);
             FillPecas();
             
         }
 
         private void btnRemoverPeca_Click(object sender, EventArgs e)
         {
-            dgvCarrinho.Visible = false;
+            Carrinho(false);
+        }
+
+        
+
+        private void dgvPecasServ_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            Carrinho(true);
         }
 
 

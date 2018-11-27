@@ -36,6 +36,13 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btSalvar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFunc = new iTalk.iTalk_ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.rtValor = new iTalk.iTalk_Label();
@@ -47,6 +54,7 @@
             this.ambiance_Label2 = new Ambiance.Ambiance_Label();
             this.lbValor = new Ambiance.Ambiance_Label();
             this.iTalk_GroupBox4 = new iTalk.iTalk_GroupBox();
+            this.txtQuant = new System.Windows.Forms.MaskedTextBox();
             this.dgvPecasServ = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -139,19 +147,13 @@
             this.iTalk_Label26 = new iTalk.iTalk_Label();
             this.iTalk_Label27 = new iTalk.iTalk_Label();
             this.iTalk_Label34 = new iTalk.iTalk_Label();
-            this.dgvCarrinho = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labalQuant = new iTalk.iTalk_Label();
             this.iTalk_GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             this.SuspendLayout();
             // 
             // btNovo
@@ -277,6 +279,59 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1178, 652);
             this.iTalk_GroupBox1.TabIndex = 8;
             this.iTalk_GroupBox1.Text = "Serviço";
+            // 
+            // dgvCarrinho
+            // 
+            this.dgvCarrinho.AllowUserToAddRows = false;
+            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCarrinho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.quantidade});
+            this.dgvCarrinho.Location = new System.Drawing.Point(16, 31);
+            this.dgvCarrinho.Name = "dgvCarrinho";
+            this.dgvCarrinho.Size = new System.Drawing.Size(541, 199);
+            this.dgvCarrinho.TabIndex = 14;
+            this.dgvCarrinho.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrinho_CellMouseDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Fabricante";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Preco";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // quantidade
+            // 
+            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.quantidade.HeaderText = "quantidade";
+            this.quantidade.Name = "quantidade";
             // 
             // txtFunc
             // 
@@ -420,6 +475,8 @@
             // iTalk_GroupBox4
             // 
             this.iTalk_GroupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox4.Controls.Add(this.labalQuant);
+            this.iTalk_GroupBox4.Controls.Add(this.txtQuant);
             this.iTalk_GroupBox4.Controls.Add(this.dgvPecasServ);
             this.iTalk_GroupBox4.Controls.Add(this.btnRemoverPeca);
             this.iTalk_GroupBox4.Controls.Add(this.iTalk_Label4);
@@ -432,6 +489,17 @@
             this.iTalk_GroupBox4.Size = new System.Drawing.Size(557, 408);
             this.iTalk_GroupBox4.TabIndex = 7;
             this.iTalk_GroupBox4.Text = "Items";
+            // 
+            // txtQuant
+            // 
+            this.txtQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuant.Location = new System.Drawing.Point(434, 357);
+            this.txtQuant.Mask = "00000";
+            this.txtQuant.Name = "txtQuant";
+            this.txtQuant.Size = new System.Drawing.Size(100, 31);
+            this.txtQuant.TabIndex = 3;
+            this.txtQuant.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtQuant.ValidatingType = typeof(int);
             // 
             // dgvPecasServ
             // 
@@ -453,6 +521,7 @@
             this.dgvPecasServ.ReadOnly = true;
             this.dgvPecasServ.Size = new System.Drawing.Size(541, 264);
             this.dgvPecasServ.TabIndex = 2;
+            this.dgvPecasServ.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPecasServ_CellMouseClick);
             this.dgvPecasServ.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPecasServ_CellMouseDoubleClick);
             // 
             // Codigo
@@ -525,7 +594,7 @@
             this.btnRemoverPeca.ForeColor = System.Drawing.Color.White;
             this.btnRemoverPeca.Image = null;
             this.btnRemoverPeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemoverPeca.Location = new System.Drawing.Point(265, 357);
+            this.btnRemoverPeca.Location = new System.Drawing.Point(107, 357);
             this.btnRemoverPeca.Name = "btnRemoverPeca";
             this.btnRemoverPeca.Size = new System.Drawing.Size(83, 40);
             this.btnRemoverPeca.TabIndex = 1;
@@ -552,7 +621,7 @@
             this.btnBuscarPeca.ForeColor = System.Drawing.Color.White;
             this.btnBuscarPeca.Image = null;
             this.btnBuscarPeca.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarPeca.Location = new System.Drawing.Point(176, 357);
+            this.btnBuscarPeca.Location = new System.Drawing.Point(18, 357);
             this.btnBuscarPeca.Name = "btnBuscarPeca";
             this.btnBuscarPeca.Size = new System.Drawing.Size(83, 40);
             this.btnBuscarPeca.TabIndex = 1;
@@ -1483,58 +1552,17 @@
             this.iTalk_Label34.TabIndex = 45;
             this.iTalk_Label34.Text = "Peso";
             // 
-            // dgvCarrinho
+            // labalQuant
             // 
-            this.dgvCarrinho.AllowUserToAddRows = false;
-            this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCarrinho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.quantidade});
-            this.dgvCarrinho.Location = new System.Drawing.Point(16, 31);
-            this.dgvCarrinho.Name = "dgvCarrinho";
-            this.dgvCarrinho.Size = new System.Drawing.Size(541, 199);
-            this.dgvCarrinho.TabIndex = 14;
-            this.dgvCarrinho.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrinho_CellMouseDoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Fabricante";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Preco";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // quantidade
-            // 
-            this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantidade.HeaderText = "quantidade";
-            this.quantidade.Name = "quantidade";
+            this.labalQuant.AutoSize = true;
+            this.labalQuant.BackColor = System.Drawing.Color.Transparent;
+            this.labalQuant.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labalQuant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.labalQuant.Location = new System.Drawing.Point(312, 360);
+            this.labalQuant.Name = "labalQuant";
+            this.labalQuant.Size = new System.Drawing.Size(116, 25);
+            this.labalQuant.TabIndex = 15;
+            this.labalQuant.Text = "Quantidade";
             // 
             // FormServico
             // 
@@ -1556,6 +1584,7 @@
             this.Text = "Serviços";
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.iTalk_GroupBox4.ResumeLayout(false);
             this.iTalk_GroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).EndInit();
@@ -1563,7 +1592,6 @@
             this.iTalk_GroupBox2.PerformLayout();
             this.iTalk_GroupBox3.ResumeLayout(false);
             this.iTalk_GroupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1686,5 +1714,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
+        private System.Windows.Forms.MaskedTextBox txtQuant;
+        private iTalk.iTalk_Label labalQuant;
     }
 }
