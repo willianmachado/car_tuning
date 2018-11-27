@@ -40,6 +40,10 @@ namespace car_tuning
                 txtFunc.Visible = false;
                 txtCliente.Visible = false;
                 txtCarro.Visible = false;
+                labalCod.Visible = false;
+                LabelCarro.Visible = false;
+                LabelCli.Visible = false;
+                LabelFunc.Visible = false;
             }
             else if (estado == false)
             {
@@ -51,6 +55,10 @@ namespace car_tuning
                 txtFunc.Visible = true;
                 txtCliente.Visible = true;
                 txtCarro.Visible = true;
+                labalCod.Visible = true;
+                LabelCarro.Visible = true;
+                LabelCli.Visible = true;
+                LabelFunc.Visible = true;
             }
             
         }
@@ -412,7 +420,7 @@ namespace car_tuning
 
 
 
-        /*
+        
         private void pbFill()
         {
 
@@ -424,7 +432,7 @@ namespace car_tuning
             int torque = 0;
             int potencia = 0;
 
-            if ((txtConsumoIni.Text != "" && consumo < 41)||(txtConsumoFin.Text != "" && consumo < 41))
+            if ((txtConsumoIni.Text != "" && consumo < 41))
 
                 try
                 {
@@ -434,100 +442,194 @@ namespace car_tuning
                 catch
                 {
                     MessageBox.Show("O consumo deve ser até 40 km/L");
-                    txtConsumo.Text = "";
+                    txtConsumoIni.Text = "";
                     consumo = 1;
                     pbConsumoIni.Value = consumo;
                 }
-
-            if (txtPeso.Text != "" && peso < 2801)
+            if ((txtConsumoFin.Text != "" && consumo < 41))
 
                 try
                 {
-                    peso = int.Parse(txtPeso.Text);
+                    consumo = int.Parse(txtConsumoFin.Text);
+                    pbConsumoFin.Value = consumo;
+                }
+                catch
+                {
+                    MessageBox.Show("O consumo deve ser até 40 km/L");
+                    txtConsumoFin.Text = "";
+                    consumo = 1;
+                    pbConsumoFin.Value = consumo;
+                }
+
+            
+            if (txtPesoIni.Text != "" && peso < 2801)
+
+                try
+                {
+                    peso = int.Parse(txtPesoIni.Text);
                     pbPesoIni.Value = peso;
                 }
                 catch
                 {
                     MessageBox.Show("O peso deve ser até 2800 kg");
-                    txtPeso.Text = "";
+                    txtPesoIni.Text = "";
                     peso = 1;
                     pbPesoIni.Value = peso;
                 }
 
-
-
-            if (txtAceleracao.Text != "" && aceleracao < 31)
+            if (txtPesoFin.Text != "" && peso < 2801)
 
                 try
                 {
-                    aceleracao = int.Parse(txtAceleracao.Text);
+                    peso = int.Parse(txtPesoFin.Text);
+                    pbPesoFin.Value = peso;
+                }
+                catch
+                {
+                    MessageBox.Show("O peso deve ser até 2800 kg");
+                    txtPesoFin.Text = "";
+                    peso = 1;
+                    pbPesoFin.Value = peso;
+                }
+
+
+            if (txtAceleIni.Text != "" && aceleracao < 31)
+
+                try
+                {
+                    aceleracao = int.Parse(txtAceleIni.Text);
                     pbAceleracaoIni.Value = aceleracao;
                 }
                 catch
                 {
                     MessageBox.Show("A aceleração deve ser entre 1 e 30 seg");
-                    txtAceleracao.Text = "";
+                    txtAceleIni.Text = "";
                     aceleracao = 1;
                     pbAceleracaoIni.Value = aceleracao;
                 }
-
-            if (txtVelocidadeMax.Text != "" && velocidade < 401)
+            if (txtAceleFin.Text != "" && aceleracao < 31)
 
                 try
                 {
-                    velocidade = int.Parse(txtVelocidadeMax.Text);
+                    aceleracao = int.Parse(txtAceleFin.Text);
+                    pbAceleracaoFin.Value = aceleracao;
+                }
+                catch
+                {
+                    MessageBox.Show("A aceleração deve ser entre 1 e 30 seg");
+                    txtAceleFin.Text = "";
+                    aceleracao = 1;
+                    pbAceleracaoFin.Value = aceleracao;
+                }
+
+
+            if (txtVeloMaxIni.Text != "" && velocidade < 401)
+
+                try
+                {
+                    velocidade = int.Parse(txtVeloMaxIni.Text);
                     pbVelocidadeMaxIni.Value = velocidade;
                 }
                 catch
                 {
                     MessageBox.Show("A velocidade máxima registrada é 400km/h");
-                    txtVelocidadeMax.Text = "";
+                    txtVeloMaxIni.Text = "";
                     velocidade = 1;
                 }
-
-            if (txtRotacaoMax.Text != "" && rotacao < 10001)
+            if (txtVelocMaxFin.Text != "" && velocidade < 401)
 
                 try
                 {
-                    rotacao = int.Parse(txtRotacaoMax.Text);
+                    velocidade = int.Parse(txtVelocMaxFin.Text);
+                    pbVelocidadeMaxFin.Value = velocidade;
+                }
+                catch
+                {
+                    MessageBox.Show("A velocidade máxima registrada é 400km/h");
+                    txtVelocMaxFin.Text = "";
+                    velocidade = 1;
+                }
+            if (txtRotMaxIni.Text != "" && rotacao < 10001)
+
+                try
+                {
+                    rotacao = int.Parse(txtRotMaxIni.Text);
                     pbRotacaoIni.Value = rotacao;
                 }
                 catch
                 {
                     MessageBox.Show("Rotação max = 10000");
-                    txtRotacaoMax.Text = "";
+                    txtRotMaxIni.Text = "";
                     rotacao = 1;
                 }
-
-            if (txtTorque.Text != "" && torque < 101)
+            if (txtRotaMaxFin.Text != "" && rotacao < 10001)
 
                 try
                 {
-                    torque = int.Parse(txtTorque.Text);
+                    rotacao = int.Parse(txtRotaMaxFin.Text);
+                    pbRotacaoFin.Value = rotacao;
+                }
+                catch
+                {
+                    MessageBox.Show("Rotação max = 10000");
+                    txtRotaMaxFin.Text = "";
+                    rotacao = 1;
+                }
+            if (txtTorqueIni.Text != "" && torque < 101)
+
+                try
+                {
+                    torque = int.Parse(txtTorqueIni.Text);
                     pbTorqueIni.Value = torque;
                 }
                 catch
                 {
                     MessageBox.Show("O torque deve ser até 101 kg");
-                    txtTorque.Text = "";
+                    txtTorqueIni.Text = "";
                     torque = 1;
 
                 }
-
-            if (txtPotencia.Text != "" && potencia < 1201)
+            if (txtTorqueFin.Text != "" && torque < 101)
 
                 try
                 {
-                    potencia = int.Parse(txtPotencia.Text);
+                    torque = int.Parse(txtTorqueFin.Text);
+                    pbTorqueFin.Value = torque;
+                }
+                catch
+                {
+                    MessageBox.Show("O torque deve ser até 101 kg");
+                    txtTorqueFin.Text = "";
+                    torque = 1;
+
+                }
+            if (txtPotenciaIni.Text != "" && potencia < 1201)
+
+                try
+                {
+                    potencia = int.Parse(txtPotenciaIni.Text);
                     pbPotenciaIni.Value = potencia;
                 }
                 catch
                 {
                     MessageBox.Show("A potencia maxima registrada é 1200cv");
-                    txtPotencia.Text = "";
+                    txtPotenciaIni.Text = "";
                     potencia = 1;
                 }
+            if (txtPotenciaFin.Text != "" && potencia < 1201)
 
+                try
+                {
+                    potencia = int.Parse(txtPotenciaFin.Text);
+                    pbPotenciaFin.Value = potencia;
+                }
+                catch
+                {
+                    MessageBox.Show("A potencia maxima registrada é 1200cv");
+                    txtPotenciaFin.Text = "";
+                    potencia = 1;
+                }
+            
             lbAceleracao.Text = aceleracao.ToString();
             lbConsumo.Text = consumo.ToString();
             lbPeso.Text = peso.ToString();
@@ -536,10 +638,24 @@ namespace car_tuning
             lbTorque.Text = torque.ToString();
             lbVelocidade.Text = velocidade.ToString();
 
-
+            lbAceleracaoFin.Text = aceleracao.ToString();
+            lbConsumoFin.Text = consumo.ToString();
+            lbPesoFin.Text = peso.ToString();
+            lbPotenciaFin.Text = potencia.ToString();
+            lbRotacaoFin.Text = rotacao.ToString();
+            lbTorqueFin.Text = torque.ToString();
+            lbVelocidadeFin.Text = velocidade.ToString();
         }
 
-        */
+        private void txtRotMaxIni_TextChanged(object sender, EventArgs e)
+        {
+            pbFill();
+        }
+
+        private void txtRotaMaxFin_TextChanged(object sender, EventArgs e)
+        {
+            pbFill();
+        }
     }
 
 

@@ -41,7 +41,7 @@
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.rtValor = new iTalk.iTalk_Label();
             this.btExecutar = new iTalk.iTalk_Button_2();
-            this.iTalk_Label6 = new iTalk.iTalk_Label();
+            this.LabelFunc = new iTalk.iTalk_Label();
             this.btCancelar = new iTalk.iTalk_Button_2();
             this.btIniciar = new iTalk.iTalk_Button_2();
             this.btVoltar = new iTalk.iTalk_Button_2();
@@ -66,9 +66,9 @@
             this.txtFiltrarPeca = new iTalk.iTalk_TextBox_Small();
             this.txtCarro = new iTalk.iTalk_ComboBox();
             this.txtCliente = new iTalk.iTalk_ComboBox();
-            this.iTalk_Label3 = new iTalk.iTalk_Label();
-            this.iTalk_Label2 = new iTalk.iTalk_Label();
-            this.iTalk_Label1 = new iTalk.iTalk_Label();
+            this.LabelCarro = new iTalk.iTalk_Label();
+            this.LabelCli = new iTalk.iTalk_Label();
+            this.labalCod = new iTalk.iTalk_Label();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
             this.txtRotMaxIni = new System.Windows.Forms.MaskedTextBox();
             this.txtAceleIni = new System.Windows.Forms.MaskedTextBox();
@@ -120,19 +120,19 @@
             this.iTalk_Label31 = new iTalk.iTalk_Label();
             this.iTalk_Label32 = new iTalk.iTalk_Label();
             this.iTalk_Label33 = new iTalk.iTalk_Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbConsumoFin = new System.Windows.Forms.Label();
             this.pbConsumoFin = new System.Windows.Forms.ProgressBar();
             this.iTalk_Label8 = new iTalk.iTalk_Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbTorqueFin = new System.Windows.Forms.Label();
+            this.lbRotacaoFin = new System.Windows.Forms.Label();
+            this.lbAceleracaoFin = new System.Windows.Forms.Label();
+            this.lbVelocidadeFin = new System.Windows.Forms.Label();
+            this.lbPotenciaFin = new System.Windows.Forms.Label();
+            this.lbPesoFin = new System.Windows.Forms.Label();
             this.pbRotacaoFin = new System.Windows.Forms.ProgressBar();
             this.pbAceleracaoFin = new System.Windows.Forms.ProgressBar();
-            this.pbTorque = new System.Windows.Forms.ProgressBar();
-            this.pbFin = new System.Windows.Forms.ProgressBar();
+            this.pbTorqueFin = new System.Windows.Forms.ProgressBar();
+            this.pbVelocidadeMaxFin = new System.Windows.Forms.ProgressBar();
             this.pbPotenciaFin = new System.Windows.Forms.ProgressBar();
             this.pbPesoFin = new System.Windows.Forms.ProgressBar();
             this.iTalk_Label23 = new iTalk.iTalk_Label();
@@ -257,7 +257,7 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
             this.iTalk_GroupBox1.Controls.Add(this.rtValor);
             this.iTalk_GroupBox1.Controls.Add(this.btExecutar);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label6);
+            this.iTalk_GroupBox1.Controls.Add(this.LabelFunc);
             this.iTalk_GroupBox1.Controls.Add(this.btCancelar);
             this.iTalk_GroupBox1.Controls.Add(this.btIniciar);
             this.iTalk_GroupBox1.Controls.Add(this.btVoltar);
@@ -266,9 +266,9 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox4);
             this.iTalk_GroupBox1.Controls.Add(this.txtCarro);
             this.iTalk_GroupBox1.Controls.Add(this.txtCliente);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label3);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label2);
-            this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label1);
+            this.iTalk_GroupBox1.Controls.Add(this.LabelCarro);
+            this.iTalk_GroupBox1.Controls.Add(this.LabelCli);
+            this.iTalk_GroupBox1.Controls.Add(this.labalCod);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox2);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_GroupBox3);
             this.iTalk_GroupBox1.Controls.Add(this.dgvCarrinho);
@@ -349,17 +349,17 @@
             this.btExecutar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExecutar.Click += new System.EventHandler(this.btExecutar_Click);
             // 
-            // iTalk_Label6
+            // LabelFunc
             // 
-            this.iTalk_Label6.AutoSize = true;
-            this.iTalk_Label6.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label6.Location = new System.Drawing.Point(90, 110);
-            this.iTalk_Label6.Name = "iTalk_Label6";
-            this.iTalk_Label6.Size = new System.Drawing.Size(92, 21);
-            this.iTalk_Label6.TabIndex = 12;
-            this.iTalk_Label6.Text = "Funcionario";
+            this.LabelFunc.AutoSize = true;
+            this.LabelFunc.BackColor = System.Drawing.Color.Transparent;
+            this.LabelFunc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.LabelFunc.Location = new System.Drawing.Point(90, 110);
+            this.LabelFunc.Name = "LabelFunc";
+            this.LabelFunc.Size = new System.Drawing.Size(92, 21);
+            this.LabelFunc.TabIndex = 12;
+            this.LabelFunc.Text = "Funcionario";
             // 
             // btCancelar
             // 
@@ -653,41 +653,41 @@
             this.txtCliente.TabIndex = 2;
             this.txtCliente.Click += new System.EventHandler(this.txtCliente_Click);
             // 
-            // iTalk_Label3
+            // LabelCarro
             // 
-            this.iTalk_Label3.AutoSize = true;
-            this.iTalk_Label3.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label3.Location = new System.Drawing.Point(133, 181);
-            this.iTalk_Label3.Name = "iTalk_Label3";
-            this.iTalk_Label3.Size = new System.Drawing.Size(49, 21);
-            this.iTalk_Label3.TabIndex = 1;
-            this.iTalk_Label3.Text = "Carro";
+            this.LabelCarro.AutoSize = true;
+            this.LabelCarro.BackColor = System.Drawing.Color.Transparent;
+            this.LabelCarro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCarro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.LabelCarro.Location = new System.Drawing.Point(133, 181);
+            this.LabelCarro.Name = "LabelCarro";
+            this.LabelCarro.Size = new System.Drawing.Size(49, 21);
+            this.LabelCarro.TabIndex = 1;
+            this.LabelCarro.Text = "Carro";
             // 
-            // iTalk_Label2
+            // LabelCli
             // 
-            this.iTalk_Label2.AutoSize = true;
-            this.iTalk_Label2.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label2.Location = new System.Drawing.Point(124, 147);
-            this.iTalk_Label2.Name = "iTalk_Label2";
-            this.iTalk_Label2.Size = new System.Drawing.Size(58, 21);
-            this.iTalk_Label2.TabIndex = 1;
-            this.iTalk_Label2.Text = "Cliente";
+            this.LabelCli.AutoSize = true;
+            this.LabelCli.BackColor = System.Drawing.Color.Transparent;
+            this.LabelCli.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCli.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.LabelCli.Location = new System.Drawing.Point(124, 147);
+            this.LabelCli.Name = "LabelCli";
+            this.LabelCli.Size = new System.Drawing.Size(58, 21);
+            this.LabelCli.TabIndex = 1;
+            this.LabelCli.Text = "Cliente";
             // 
-            // iTalk_Label1
+            // labalCod
             // 
-            this.iTalk_Label1.AutoSize = true;
-            this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label1.Location = new System.Drawing.Point(144, 71);
-            this.iTalk_Label1.Name = "iTalk_Label1";
-            this.iTalk_Label1.Size = new System.Drawing.Size(38, 21);
-            this.iTalk_Label1.TabIndex = 1;
-            this.iTalk_Label1.Text = "Cod";
+            this.labalCod.AutoSize = true;
+            this.labalCod.BackColor = System.Drawing.Color.Transparent;
+            this.labalCod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labalCod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.labalCod.Location = new System.Drawing.Point(144, 71);
+            this.labalCod.Name = "labalCod";
+            this.labalCod.Size = new System.Drawing.Size(38, 21);
+            this.labalCod.TabIndex = 1;
+            this.labalCod.Text = "Cod";
             // 
             // iTalk_GroupBox2
             // 
@@ -745,6 +745,7 @@
             this.txtRotMaxIni.Size = new System.Drawing.Size(57, 26);
             this.txtRotMaxIni.TabIndex = 79;
             this.txtRotMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtRotMaxIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
             // txtAceleIni
             // 
@@ -755,6 +756,7 @@
             this.txtAceleIni.Size = new System.Drawing.Size(57, 26);
             this.txtAceleIni.TabIndex = 78;
             this.txtAceleIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtAceleIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
             // txtTorqueIni
             // 
@@ -765,6 +767,7 @@
             this.txtTorqueIni.Size = new System.Drawing.Size(57, 26);
             this.txtTorqueIni.TabIndex = 77;
             this.txtTorqueIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtTorqueIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
             // txtVeloMaxIni
             // 
@@ -775,6 +778,7 @@
             this.txtVeloMaxIni.Size = new System.Drawing.Size(57, 26);
             this.txtVeloMaxIni.TabIndex = 76;
             this.txtVeloMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtVeloMaxIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
             // txtPotenciaIni
             // 
@@ -785,6 +789,7 @@
             this.txtPotenciaIni.Size = new System.Drawing.Size(57, 26);
             this.txtPotenciaIni.TabIndex = 75;
             this.txtPotenciaIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPotenciaIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
             // txtPesoIni
             // 
@@ -795,6 +800,7 @@
             this.txtPesoIni.Size = new System.Drawing.Size(57, 26);
             this.txtPesoIni.TabIndex = 74;
             this.txtPesoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPesoIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
             // txtConsumoIni
             // 
@@ -805,6 +811,7 @@
             this.txtConsumoIni.Size = new System.Drawing.Size(57, 26);
             this.txtConsumoIni.TabIndex = 73;
             this.txtConsumoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtConsumoIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
             // lbConsumo
             // 
@@ -1116,19 +1123,19 @@
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label31);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label32);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label33);
-            this.iTalk_GroupBox3.Controls.Add(this.label1);
+            this.iTalk_GroupBox3.Controls.Add(this.lbConsumoFin);
             this.iTalk_GroupBox3.Controls.Add(this.pbConsumoFin);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label8);
-            this.iTalk_GroupBox3.Controls.Add(this.label2);
-            this.iTalk_GroupBox3.Controls.Add(this.label3);
-            this.iTalk_GroupBox3.Controls.Add(this.label4);
-            this.iTalk_GroupBox3.Controls.Add(this.label5);
-            this.iTalk_GroupBox3.Controls.Add(this.label6);
-            this.iTalk_GroupBox3.Controls.Add(this.label7);
+            this.iTalk_GroupBox3.Controls.Add(this.lbTorqueFin);
+            this.iTalk_GroupBox3.Controls.Add(this.lbRotacaoFin);
+            this.iTalk_GroupBox3.Controls.Add(this.lbAceleracaoFin);
+            this.iTalk_GroupBox3.Controls.Add(this.lbVelocidadeFin);
+            this.iTalk_GroupBox3.Controls.Add(this.lbPotenciaFin);
+            this.iTalk_GroupBox3.Controls.Add(this.lbPesoFin);
             this.iTalk_GroupBox3.Controls.Add(this.pbRotacaoFin);
             this.iTalk_GroupBox3.Controls.Add(this.pbAceleracaoFin);
-            this.iTalk_GroupBox3.Controls.Add(this.pbTorque);
-            this.iTalk_GroupBox3.Controls.Add(this.pbFin);
+            this.iTalk_GroupBox3.Controls.Add(this.pbTorqueFin);
+            this.iTalk_GroupBox3.Controls.Add(this.pbVelocidadeMaxFin);
             this.iTalk_GroupBox3.Controls.Add(this.pbPotenciaFin);
             this.iTalk_GroupBox3.Controls.Add(this.pbPesoFin);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label23);
@@ -1154,6 +1161,7 @@
             this.txtRotaMaxFin.Size = new System.Drawing.Size(57, 26);
             this.txtRotaMaxFin.TabIndex = 93;
             this.txtRotaMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtRotaMaxFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
             // txtAceleFin
             // 
@@ -1164,6 +1172,7 @@
             this.txtAceleFin.Size = new System.Drawing.Size(57, 26);
             this.txtAceleFin.TabIndex = 92;
             this.txtAceleFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtAceleFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
             // txtTorqueFin
             // 
@@ -1174,6 +1183,7 @@
             this.txtTorqueFin.Size = new System.Drawing.Size(57, 26);
             this.txtTorqueFin.TabIndex = 91;
             this.txtTorqueFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtTorqueFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
             // txtVelocMaxFin
             // 
@@ -1184,6 +1194,7 @@
             this.txtVelocMaxFin.Size = new System.Drawing.Size(57, 26);
             this.txtVelocMaxFin.TabIndex = 90;
             this.txtVelocMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtVelocMaxFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
             // txtPotenciaFin
             // 
@@ -1194,6 +1205,7 @@
             this.txtPotenciaFin.Size = new System.Drawing.Size(57, 26);
             this.txtPotenciaFin.TabIndex = 89;
             this.txtPotenciaFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPotenciaFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
             // txtPesoFin
             // 
@@ -1204,6 +1216,7 @@
             this.txtPesoFin.Size = new System.Drawing.Size(57, 26);
             this.txtPesoFin.TabIndex = 88;
             this.txtPesoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPesoFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
             // txtConsumoFin
             // 
@@ -1214,6 +1227,7 @@
             this.txtConsumoFin.Size = new System.Drawing.Size(57, 26);
             this.txtConsumoFin.TabIndex = 87;
             this.txtConsumoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtConsumoFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
             // iTalk_Label22
             // 
@@ -1299,15 +1313,15 @@
             this.iTalk_Label33.TabIndex = 85;
             this.iTalk_Label33.Text = "kg";
             // 
-            // label1
+            // lbConsumoFin
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(297, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "0";
+            this.lbConsumoFin.AutoSize = true;
+            this.lbConsumoFin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbConsumoFin.Location = new System.Drawing.Point(297, 48);
+            this.lbConsumoFin.Name = "lbConsumoFin";
+            this.lbConsumoFin.Size = new System.Drawing.Size(13, 13);
+            this.lbConsumoFin.TabIndex = 72;
+            this.lbConsumoFin.Text = "0";
             // 
             // pbConsumoFin
             // 
@@ -1329,65 +1343,65 @@
             this.iTalk_Label8.TabIndex = 69;
             this.iTalk_Label8.Text = "Consumo";
             // 
-            // label2
+            // lbTorqueFin
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(297, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "0";
+            this.lbTorqueFin.AutoSize = true;
+            this.lbTorqueFin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbTorqueFin.Location = new System.Drawing.Point(297, 166);
+            this.lbTorqueFin.Name = "lbTorqueFin";
+            this.lbTorqueFin.Size = new System.Drawing.Size(13, 13);
+            this.lbTorqueFin.TabIndex = 68;
+            this.lbTorqueFin.Text = "0";
             // 
-            // label3
+            // lbRotacaoFin
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(297, 224);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 13);
-            this.label3.TabIndex = 67;
-            this.label3.Text = "0";
+            this.lbRotacaoFin.AutoSize = true;
+            this.lbRotacaoFin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbRotacaoFin.Location = new System.Drawing.Point(297, 224);
+            this.lbRotacaoFin.Name = "lbRotacaoFin";
+            this.lbRotacaoFin.Size = new System.Drawing.Size(13, 13);
+            this.lbRotacaoFin.TabIndex = 67;
+            this.lbRotacaoFin.Text = "0";
             // 
-            // label4
+            // lbAceleracaoFin
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(297, 195);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 13);
-            this.label4.TabIndex = 66;
-            this.label4.Text = "0";
+            this.lbAceleracaoFin.AutoSize = true;
+            this.lbAceleracaoFin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbAceleracaoFin.Location = new System.Drawing.Point(297, 195);
+            this.lbAceleracaoFin.Name = "lbAceleracaoFin";
+            this.lbAceleracaoFin.Size = new System.Drawing.Size(13, 13);
+            this.lbAceleracaoFin.TabIndex = 66;
+            this.lbAceleracaoFin.Text = "0";
             // 
-            // label5
+            // lbVelocidadeFin
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(297, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(13, 13);
-            this.label5.TabIndex = 65;
-            this.label5.Text = "0";
+            this.lbVelocidadeFin.AutoSize = true;
+            this.lbVelocidadeFin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbVelocidadeFin.Location = new System.Drawing.Point(297, 136);
+            this.lbVelocidadeFin.Name = "lbVelocidadeFin";
+            this.lbVelocidadeFin.Size = new System.Drawing.Size(13, 13);
+            this.lbVelocidadeFin.TabIndex = 65;
+            this.lbVelocidadeFin.Text = "0";
             // 
-            // label6
+            // lbPotenciaFin
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(297, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(13, 13);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "0";
+            this.lbPotenciaFin.AutoSize = true;
+            this.lbPotenciaFin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbPotenciaFin.Location = new System.Drawing.Point(297, 107);
+            this.lbPotenciaFin.Name = "lbPotenciaFin";
+            this.lbPotenciaFin.Size = new System.Drawing.Size(13, 13);
+            this.lbPotenciaFin.TabIndex = 64;
+            this.lbPotenciaFin.Text = "0";
             // 
-            // label7
+            // lbPesoFin
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.label7.Location = new System.Drawing.Point(297, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "0";
+            this.lbPesoFin.AutoSize = true;
+            this.lbPesoFin.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbPesoFin.Location = new System.Drawing.Point(297, 77);
+            this.lbPesoFin.Name = "lbPesoFin";
+            this.lbPesoFin.Size = new System.Drawing.Size(13, 13);
+            this.lbPesoFin.TabIndex = 63;
+            this.lbPesoFin.Text = "0";
             // 
             // pbRotacaoFin
             // 
@@ -1405,20 +1419,20 @@
             this.pbAceleracaoFin.Size = new System.Drawing.Size(219, 23);
             this.pbAceleracaoFin.TabIndex = 60;
             // 
-            // pbTorque
+            // pbTorqueFin
             // 
-            this.pbTorque.Location = new System.Drawing.Point(195, 161);
-            this.pbTorque.Name = "pbTorque";
-            this.pbTorque.Size = new System.Drawing.Size(219, 23);
-            this.pbTorque.TabIndex = 62;
+            this.pbTorqueFin.Location = new System.Drawing.Point(195, 161);
+            this.pbTorqueFin.Name = "pbTorqueFin";
+            this.pbTorqueFin.Size = new System.Drawing.Size(219, 23);
+            this.pbTorqueFin.TabIndex = 62;
             // 
-            // pbFin
+            // pbVelocidadeMaxFin
             // 
-            this.pbFin.Location = new System.Drawing.Point(195, 131);
-            this.pbFin.Maximum = 400;
-            this.pbFin.Name = "pbFin";
-            this.pbFin.Size = new System.Drawing.Size(219, 23);
-            this.pbFin.TabIndex = 59;
+            this.pbVelocidadeMaxFin.Location = new System.Drawing.Point(195, 131);
+            this.pbVelocidadeMaxFin.Maximum = 400;
+            this.pbVelocidadeMaxFin.Name = "pbVelocidadeMaxFin";
+            this.pbVelocidadeMaxFin.Size = new System.Drawing.Size(219, 23);
+            this.pbVelocidadeMaxFin.TabIndex = 59;
             // 
             // pbPotenciaFin
             // 
@@ -1618,14 +1632,14 @@
         private iTalk.iTalk_GroupBox iTalk_GroupBox1;
         private iTalk.iTalk_ComboBox txtCarro;
         private iTalk.iTalk_ComboBox txtCliente;
-        private iTalk.iTalk_Label iTalk_Label3;
-        private iTalk.iTalk_Label iTalk_Label2;
+        private iTalk.iTalk_Label LabelCarro;
+        private iTalk.iTalk_Label LabelCli;
         private iTalk.iTalk_Label rtValor;
         private Ambiance.Ambiance_Label lbValor;
         private Ambiance.Ambiance_Label ambiance_Label2;
         private iTalk.iTalk_Button_2 btVoltar;
         private iTalk.iTalk_Button_2 btIniciar;
-        private iTalk.iTalk_Label iTalk_Label6;
+        private iTalk.iTalk_Label LabelFunc;
         private iTalk.iTalk_Button_2 btExecutar;
         private iTalk.iTalk_Button_2 btCancelar;
         private iTalk.iTalk_Label iTalk_Label7;
@@ -1658,19 +1672,19 @@
         private iTalk.iTalk_Label iTalk_Label14;
         private iTalk.iTalk_Label iTalk_Label13;
         private iTalk.iTalk_Label iTalk_Label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbConsumoFin;
         private System.Windows.Forms.ProgressBar pbConsumoFin;
         private iTalk.iTalk_Label iTalk_Label8;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbTorqueFin;
+        private System.Windows.Forms.Label lbRotacaoFin;
+        private System.Windows.Forms.Label lbAceleracaoFin;
+        private System.Windows.Forms.Label lbVelocidadeFin;
+        private System.Windows.Forms.Label lbPotenciaFin;
+        private System.Windows.Forms.Label lbPesoFin;
         private System.Windows.Forms.ProgressBar pbRotacaoFin;
         private System.Windows.Forms.ProgressBar pbAceleracaoFin;
-        private System.Windows.Forms.ProgressBar pbTorque;
-        private System.Windows.Forms.ProgressBar pbFin;
+        private System.Windows.Forms.ProgressBar pbTorqueFin;
+        private System.Windows.Forms.ProgressBar pbVelocidadeMaxFin;
         private System.Windows.Forms.ProgressBar pbPotenciaFin;
         private System.Windows.Forms.ProgressBar pbPesoFin;
         private iTalk.iTalk_Label iTalk_Label23;
@@ -1720,6 +1734,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private iTalk.iTalk_Label labalCodigo;
-        private iTalk.iTalk_Label iTalk_Label1;
+        private iTalk.iTalk_Label labalCod;
     }
 }

@@ -35,13 +35,10 @@
             this.txtPesquisaCarro = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label2 = new iTalk.iTalk_Label();
             this.dgvCarroP = new System.Windows.Forms.DataGridView();
-            this.colCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvPecasP = new System.Windows.Forms.DataGridView();
@@ -169,6 +166,7 @@
             this.txtPesquisaCarro.Text = "Digite a Placa ou CPF do Cliente";
             this.txtPesquisaCarro.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPesquisaCarro.UseSystemPasswordChar = false;
+            this.txtPesquisaCarro.TextChanged += new System.EventHandler(this.txtPesquisaCarro_TextChanged);
             this.txtPesquisaCarro.Enter += new System.EventHandler(this.txtPesquisaCarro_Enter);
             this.txtPesquisaCarro.Leave += new System.EventHandler(this.txtPesquisaCarro_Leave);
             // 
@@ -190,33 +188,15 @@
             this.dgvCarroP.AllowUserToDeleteRows = false;
             this.dgvCarroP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarroP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCod,
-            this.colCliente,
             this.colPlaca,
             this.colModelo,
             this.colMarca,
-            this.colPotencia,
-            this.colTorque});
+            this.Column21});
             this.dgvCarroP.Location = new System.Drawing.Point(6, 62);
             this.dgvCarroP.Name = "dgvCarroP";
             this.dgvCarroP.ReadOnly = true;
             this.dgvCarroP.Size = new System.Drawing.Size(1311, 571);
             this.dgvCarroP.TabIndex = 4;
-            // 
-            // colCod
-            // 
-            this.colCod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCod.HeaderText = "Codigo";
-            this.colCod.Name = "colCod";
-            this.colCod.ReadOnly = true;
-            this.colCod.Visible = false;
-            // 
-            // colCliente
-            // 
-            this.colCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCliente.HeaderText = "Nome";
-            this.colCliente.Name = "colCliente";
-            this.colCliente.ReadOnly = true;
             // 
             // colPlaca
             // 
@@ -239,19 +219,12 @@
             this.colMarca.Name = "colMarca";
             this.colMarca.ReadOnly = true;
             // 
-            // colPotencia
+            // Column21
             // 
-            this.colPotencia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPotencia.HeaderText = "+Potencia";
-            this.colPotencia.Name = "colPotencia";
-            this.colPotencia.ReadOnly = true;
-            // 
-            // colTorque
-            // 
-            this.colTorque.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTorque.HeaderText = "+Torque";
-            this.colTorque.Name = "colTorque";
-            this.colTorque.ReadOnly = true;
+            this.Column21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column21.HeaderText = "CpfCliente";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
             // 
             // tabPage1
             // 
@@ -559,6 +532,7 @@
             this.txtPesquisaServ.Text = "Digite o Codigo do Serviço, Placa do Carro ou CPF do Cliente";
             this.txtPesquisaServ.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPesquisaServ.UseSystemPasswordChar = false;
+            this.txtPesquisaServ.TextChanged += new System.EventHandler(this.txtPesquisaServ_TextChanged);
             this.txtPesquisaServ.Enter += new System.EventHandler(this.txtPesquisaServ_Enter);
             this.txtPesquisaServ.Leave += new System.EventHandler(this.txtPesquisaServ_Leave);
             // 
@@ -883,13 +857,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPlacaServico;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNomeFuncionario;
         private System.Windows.Forms.DataGridViewTextBoxColumn colValorServico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
@@ -919,5 +886,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
     }
 }

@@ -47,6 +47,31 @@ namespace car_tuning.Modelo
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
+        public List<Servico> Listar(int busca)
+        {
+            
+            List<Servico> lista = new List<Servico>();
+            Servico s = new Servico();
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM SERVICO WHERE codigo = '{0}'" + busca, conn);
+
+
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                s.Codigo = int.Parse(dr["codigo"].ToString());
+                s.PlacaCarro1 = dr["placaCarro"].ToString();
+                s.CpfCliente1 = dr["cpfcliente"].ToString();
+                s.CpfFuncionario1 = dr["cpfFunc"].ToString();
+                s.ValorTotal = double.Parse(dr["valorTotal"].ToString());
+                lista.Add(new Servico(s.Codigo,s.CpfCliente1,s.CpfFuncionario1,s.PlacaCarro1,s.ValorTotal));
+            }
+            return lista;
+         }
         public List<Servico> Carregar()
         {
             List<Servico> lista = new List<Servico>();

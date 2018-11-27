@@ -23,6 +23,7 @@ namespace car_tuning
             FillFunc();
             FillPeca();
             fillStage();
+            
         }
         private void FillFunc()
         {
@@ -207,7 +208,24 @@ namespace car_tuning
             foreach (Funcionario f in funcionarios)
                 dgvFuncP.Rows.Add(f.Cpf, f.Nome, f.Telefone);
         }
-
+        private void txtPesquisaServ_TextChanged(object sender, EventArgs e)
+        {
+            ServicoDAO servicoDAO = new ServicoDAO();
+            List<Servico> servicos;
+            servicos = servicoDAO.Carregar();
+            dgvServP.Rows.Clear();
+            foreach (Servico s in servicos)
+                dgvServP.Rows.Add(s.Codigo,s.CpfCliente1,s.PlacaCarro1,s.CpfFuncionario1,s.ValorTotal);
+        }
+        private void txtPesquisaCarro_TextChanged(object sender, EventArgs e)
+        {
+            CarroDAO carroDAO = new CarroDAO();
+            List<Carro> carros;
+            carros = carroDAO.Listar(txtPesquisaCarro.Text);
+            dgvCarroP.Rows.Clear();
+            foreach (Carro c in carros)
+                dgvCarroP.Rows.Add(c.Placa,c.Modelo,c.Marca,c.CpfCliente);
+        }
         private void txtPesquisaPecas_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -228,9 +246,7 @@ namespace car_tuning
                 txtPesquisaServ.Text = "";
             }
         }
-        
 
-        
         
     }
 }
