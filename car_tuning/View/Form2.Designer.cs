@@ -67,7 +67,7 @@
             series2.YValuesPerPoint = 4;
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(406, 272);
+            this.chart1.Size = new System.Drawing.Size(667, 407);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -77,7 +77,7 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(399, 0);
+            this.chart2.Location = new System.Drawing.Point(683, 0);
             this.chart2.Name = "chart2";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
@@ -87,7 +87,7 @@
             series4.Name = "torque";
             this.chart2.Series.Add(series3);
             this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(845, 462);
+            this.chart2.Size = new System.Drawing.Size(687, 384);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
             title1.Name = "potencia";

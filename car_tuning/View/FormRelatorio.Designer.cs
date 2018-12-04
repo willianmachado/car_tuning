@@ -31,18 +31,10 @@
             this.btCarregar = new iTalk.iTalk_Button_2();
             this.ambiance_TabControl1 = new Ambiance.Ambiance_TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.crvTeste = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crvCliente = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.iTalk_Button_21 = new iTalk.iTalk_Button_2();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crvCarro = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,9 +54,7 @@
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.ambiance_TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -109,9 +99,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage1.Controls.Add(this.crvTeste);
+            this.tabPage1.Controls.Add(this.crvCliente);
             this.tabPage1.Controls.Add(this.iTalk_Button_21);
-            this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
@@ -120,15 +109,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clientes";
             // 
-            // crvTeste
+            // crvCliente
             // 
-            this.crvTeste.ActiveViewIndex = -1;
-            this.crvTeste.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crvTeste.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crvTeste.Location = new System.Drawing.Point(3, 44);
-            this.crvTeste.Name = "crvTeste";
-            this.crvTeste.Size = new System.Drawing.Size(1256, 576);
-            this.crvTeste.TabIndex = 3;
+            this.crvCliente.ActiveViewIndex = -1;
+            this.crvCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvCliente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvCliente.Location = new System.Drawing.Point(2, 2);
+            this.crvCliente.Name = "crvCliente";
+            this.crvCliente.Size = new System.Drawing.Size(1284, 612);
+            this.crvCliente.TabIndex = 2;
+            this.crvCliente.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // iTalk_Button_21
             // 
@@ -145,49 +136,10 @@
             this.iTalk_Button_21.Text = "Carregar";
             this.iTalk_Button_21.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(-3, -2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1296, 648);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "N°Clientes";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "valorMax";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Cleinte Media";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "N°de compras";
-            this.Column4.Name = "Column4";
-            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Controls.Add(this.crvCarro);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
@@ -196,37 +148,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carros";
             // 
-            // dataGridView2
+            // crvCarro
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1296, 648);
-            this.dataGridView2.TabIndex = 0;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "N°Carros";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "N° por marca";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "N° por Modelo";
-            this.Column7.Name = "Column7";
+            this.crvCarro.ActiveViewIndex = -1;
+            this.crvCarro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvCarro.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvCarro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvCarro.Location = new System.Drawing.Point(2, 2);
+            this.crvCarro.Name = "crvCarro";
+            this.crvCarro.Size = new System.Drawing.Size(1284, 612);
+            this.crvCarro.TabIndex = 4;
+            this.crvCarro.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // tabPage3
             // 
@@ -394,9 +326,7 @@
             this.Load += new System.EventHandler(this.FormRelatorio_Load);
             this.ambiance_TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage4.ResumeLayout(false);
@@ -422,28 +352,19 @@
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private iTalk.iTalk_Button_2 iTalk_Button_21;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private iTalk.iTalk_Button_2 btCarregar;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvTeste;
-
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvCarro;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvCliente;
     }
 }
           

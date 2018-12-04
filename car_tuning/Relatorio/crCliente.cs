@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace car_tuning {
+namespace car_tuning.Relatorio {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace car_tuning {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class crCliente : ReportClass {
         
-        public CrystalReport1() {
+        public crCliente() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "crCliente.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace car_tuning {
         
         public override string FullResourceName {
             get {
-                return "car_tuning.CrystalReport1.rpt";
+                return "car_tuning.Relatorio.crCliente.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace car_tuning {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedcrCliente : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedcrCliente() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace car_tuning {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            crCliente rpt = new crCliente();
             rpt.Site = this.Site;
             return rpt;
         }

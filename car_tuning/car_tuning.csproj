@@ -74,10 +74,10 @@
   <ItemGroup>
     <Compile Include="Ambiance Theme.cs" />
     <Compile Include="Controle\ValidaCPF.cs" />
-    <Compile Include="CrystalReport1.cs">
+    <Compile Include="Relatorio\CrCarro.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <DependentUpon>CrCarro.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DAO\CarroDAO.cs" />
@@ -91,6 +91,12 @@
     <Compile Include="Modelo\Marca.cs" />
     <Compile Include="Modelo\ServPeca.cs" />
     <Compile Include="Modelo\Stage.cs" />
+    <Compile Include="Relatorio\crCliente.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crCliente.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,9 +186,13 @@
     <Compile Include="Resouces\MonoFlat Theme.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CrystalReport1.rpt">
+    <EmbeddedResource Include="Relatorio\CrCarro.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+      <LastGenOutput>CrCarro.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crCliente.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crCliente.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
