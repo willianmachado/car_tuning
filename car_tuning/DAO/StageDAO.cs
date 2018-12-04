@@ -84,7 +84,7 @@ namespace car_tuning.DAO
 
         }
 
-        public List<Stage> BuscaServ(int codServ)
+        public List<Stage> BuscaServ(string codServ)
         {
             List<Stage> lista = new List<Stage>();
             Stage st = new Stage();
@@ -95,7 +95,7 @@ namespace car_tuning.DAO
             SQLiteConnection conn = new SQLiteConnection(Data);
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
-            SQLiteCommand cmd = new SQLiteCommand("select * from STAGE where codServ = " + codServ, conn);
+            SQLiteCommand cmd = new SQLiteCommand("select * from STAGE where codServ like " + codServ, conn);
 
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())

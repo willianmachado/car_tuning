@@ -175,7 +175,7 @@
             this.txtBuscaFunc.TabIndex = 3;
             this.txtBuscaFunc.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBuscaFunc.UseSystemPasswordChar = false;
-            this.txtBuscaFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscaFunc_KeyPress);
+            this.txtBuscaFunc.TextChanged += new System.EventHandler(this.txtBuscaFunc_TextChanged);
             // 
             // iTalk_Label3
             // 

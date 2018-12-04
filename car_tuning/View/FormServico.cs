@@ -630,21 +630,21 @@ namespace car_tuning
                     potencia = 1;
                 }
             
-            lbAceleracao.Text = aceleracao.ToString();
-            lbConsumo.Text = consumo.ToString();
-            lbPeso.Text = peso.ToString();
-            lbPotencia.Text = potencia.ToString();
-            lbRotacao.Text = rotacao.ToString();
-            lbTorque.Text = torque.ToString();
-            lbVelocidade.Text = velocidade.ToString();
+            lbAceleracao.Text = txtAceleIni.Text;
+            lbConsumo.Text = txtConsumoIni.Text;
+            lbPeso.Text = txtPesoIni.Text;
+            lbPotencia.Text = txtPotenciaIni.Text;
+            lbRotacao.Text = txtRotMaxIni.Text;
+            lbTorque.Text = txtTorqueIni.Text;
+            lbVelocidade.Text = txtVeloMaxIni.Text;
 
-            lbAceleracaoFin.Text = aceleracao.ToString();
-            lbConsumoFin.Text = consumo.ToString();
-            lbPesoFin.Text = peso.ToString();
-            lbPotenciaFin.Text = potencia.ToString();
-            lbRotacaoFin.Text = rotacao.ToString();
-            lbTorqueFin.Text = torque.ToString();
-            lbVelocidadeFin.Text = velocidade.ToString();
+            lbAceleracaoFin.Text = txtAceleFin.Text;
+            lbConsumoFin.Text = txtConsumoFin.Text;
+            lbPesoFin.Text = txtPesoFin.Text;
+            lbPotenciaFin.Text = txtPotenciaFin.Text;
+            lbRotacaoFin.Text = txtRotaMaxFin.Text;
+            lbTorqueFin.Text = txtTorqueFin.Text;
+            lbVelocidadeFin.Text = txtVelocMaxFin.Text;
         }
 
         private void txtRotMaxIni_TextChanged(object sender, EventArgs e)

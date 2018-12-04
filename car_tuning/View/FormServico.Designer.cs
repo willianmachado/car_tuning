@@ -743,7 +743,7 @@
             this.txtRotMaxIni.Mask = "0000";
             this.txtRotMaxIni.Name = "txtRotMaxIni";
             this.txtRotMaxIni.Size = new System.Drawing.Size(57, 26);
-            this.txtRotMaxIni.TabIndex = 79;
+            this.txtRotMaxIni.TabIndex = 6;
             this.txtRotMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtRotMaxIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
@@ -754,7 +754,7 @@
             this.txtAceleIni.Mask = "0000";
             this.txtAceleIni.Name = "txtAceleIni";
             this.txtAceleIni.Size = new System.Drawing.Size(57, 26);
-            this.txtAceleIni.TabIndex = 78;
+            this.txtAceleIni.TabIndex = 5;
             this.txtAceleIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtAceleIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
@@ -765,7 +765,7 @@
             this.txtTorqueIni.Mask = "0000";
             this.txtTorqueIni.Name = "txtTorqueIni";
             this.txtTorqueIni.Size = new System.Drawing.Size(57, 26);
-            this.txtTorqueIni.TabIndex = 77;
+            this.txtTorqueIni.TabIndex = 4;
             this.txtTorqueIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTorqueIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
@@ -776,7 +776,7 @@
             this.txtVeloMaxIni.Mask = "0000";
             this.txtVeloMaxIni.Name = "txtVeloMaxIni";
             this.txtVeloMaxIni.Size = new System.Drawing.Size(57, 26);
-            this.txtVeloMaxIni.TabIndex = 76;
+            this.txtVeloMaxIni.TabIndex = 3;
             this.txtVeloMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtVeloMaxIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
@@ -787,7 +787,7 @@
             this.txtPotenciaIni.Mask = "0000";
             this.txtPotenciaIni.Name = "txtPotenciaIni";
             this.txtPotenciaIni.Size = new System.Drawing.Size(57, 26);
-            this.txtPotenciaIni.TabIndex = 75;
+            this.txtPotenciaIni.TabIndex = 2;
             this.txtPotenciaIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPotenciaIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
@@ -798,7 +798,7 @@
             this.txtPesoIni.Mask = "0000";
             this.txtPesoIni.Name = "txtPesoIni";
             this.txtPesoIni.Size = new System.Drawing.Size(57, 26);
-            this.txtPesoIni.TabIndex = 74;
+            this.txtPesoIni.TabIndex = 1;
             this.txtPesoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPesoIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
@@ -809,7 +809,7 @@
             this.txtConsumoIni.Mask = "0000";
             this.txtConsumoIni.Name = "txtConsumoIni";
             this.txtConsumoIni.Size = new System.Drawing.Size(57, 26);
-            this.txtConsumoIni.TabIndex = 73;
+            this.txtConsumoIni.TabIndex = 0;
             this.txtConsumoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtConsumoIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
             // 
@@ -1159,7 +1159,7 @@
             this.txtRotaMaxFin.Mask = "0000";
             this.txtRotaMaxFin.Name = "txtRotaMaxFin";
             this.txtRotaMaxFin.Size = new System.Drawing.Size(57, 26);
-            this.txtRotaMaxFin.TabIndex = 93;
+            this.txtRotaMaxFin.TabIndex = 6;
             this.txtRotaMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtRotaMaxFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
@@ -1170,7 +1170,7 @@
             this.txtAceleFin.Mask = "0000";
             this.txtAceleFin.Name = "txtAceleFin";
             this.txtAceleFin.Size = new System.Drawing.Size(57, 26);
-            this.txtAceleFin.TabIndex = 92;
+            this.txtAceleFin.TabIndex = 5;
             this.txtAceleFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtAceleFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
@@ -1181,7 +1181,7 @@
             this.txtTorqueFin.Mask = "0000";
             this.txtTorqueFin.Name = "txtTorqueFin";
             this.txtTorqueFin.Size = new System.Drawing.Size(57, 26);
-            this.txtTorqueFin.TabIndex = 91;
+            this.txtTorqueFin.TabIndex = 4;
             this.txtTorqueFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTorqueFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
@@ -1192,7 +1192,7 @@
             this.txtVelocMaxFin.Mask = "0000";
             this.txtVelocMaxFin.Name = "txtVelocMaxFin";
             this.txtVelocMaxFin.Size = new System.Drawing.Size(57, 26);
-            this.txtVelocMaxFin.TabIndex = 90;
+            this.txtVelocMaxFin.TabIndex = 3;
             this.txtVelocMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtVelocMaxFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
@@ -1203,7 +1203,7 @@
             this.txtPotenciaFin.Mask = "0000";
             this.txtPotenciaFin.Name = "txtPotenciaFin";
             this.txtPotenciaFin.Size = new System.Drawing.Size(57, 26);
-            this.txtPotenciaFin.TabIndex = 89;
+            this.txtPotenciaFin.TabIndex = 2;
             this.txtPotenciaFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPotenciaFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
@@ -1214,7 +1214,7 @@
             this.txtPesoFin.Mask = "0000";
             this.txtPesoFin.Name = "txtPesoFin";
             this.txtPesoFin.Size = new System.Drawing.Size(57, 26);
-            this.txtPesoFin.TabIndex = 88;
+            this.txtPesoFin.TabIndex = 1;
             this.txtPesoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPesoFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
@@ -1225,7 +1225,7 @@
             this.txtConsumoFin.Mask = "0000";
             this.txtConsumoFin.Name = "txtConsumoFin";
             this.txtConsumoFin.Size = new System.Drawing.Size(57, 26);
-            this.txtConsumoFin.TabIndex = 87;
+            this.txtConsumoFin.TabIndex = 0;
             this.txtConsumoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtConsumoFin.TextChanged += new System.EventHandler(this.txtRotaMaxFin_TextChanged);
             // 
@@ -1600,7 +1600,6 @@
             this.MinimizeBox = false;
             this.Name = "FormServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Serviços";
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             this.iTalk_GroupBox4.ResumeLayout(false);

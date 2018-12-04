@@ -1,4 +1,5 @@
-﻿using System;
+﻿using car_tuning.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace car_tuning
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormHome());
 
-            
+            //Application.Run(new Form2());
         }
     }
 }

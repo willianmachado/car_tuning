@@ -1,4 +1,6 @@
-﻿using System;
+﻿using car_tuning.Modelo;
+using car_tuning.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,17 @@ namespace car_tuning
             InitializeComponent();
         }
 
-        
+        private void btCarregar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void FormRelatorio_Load(object sender, EventArgs e)
+        {
+            List<Carro> listaCarro = new CarroDAO().Carregar();
+            CrystalReport1 relatorio = new CrystalReport1();
+            relatorio.SetDataSource(listaCarro);
+            crvTeste.ReportSource = relatorio;
+        }
     }
 }

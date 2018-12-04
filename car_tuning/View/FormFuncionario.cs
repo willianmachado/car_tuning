@@ -201,14 +201,17 @@ namespace car_tuning
             }
         }
 
-        private void txtBuscaFunc_KeyPress(object sender, KeyPressEventArgs e)
+        
+
+        private void txtBuscaFunc_TextChanged(object sender, EventArgs e)
         {
             List<Funcionario> funcionarios;
-            funcionarios = f.Listar(txtBuscaFunc.Text);
             dgvFunc.Rows.Clear();
+            funcionarios = f.Listar(txtBuscaFunc.Text);
+            
 
             foreach (Funcionario f in funcionarios)
-                dgvFunc.Rows.Add(f.Codigo, f.Cpf, f.Telefone);
+                dgvFunc.Rows.Add(f.Cpf, f.Nome, f.Telefone);
         }
     }
 }

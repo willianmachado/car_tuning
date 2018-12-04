@@ -150,7 +150,7 @@ namespace car_tuning.Modelo
             SQLiteCommand cmd = con.CreateCommand();
 
             cmd.CommandText = String.Format("INSERT INTO CARRO (foto) VALUES ('{0}') where placa ='" + placa + "';'");
-            SQLiteParameter param = new SQLiteParameter("@0", System.Data.DbType.Binary);
+            SQLiteParameter param = new SQLiteParameter("'{0}'", System.Data.DbType.Binary);
             param.Value = imagem;
             cmd.Parameters.Add(param);
             con.Open();

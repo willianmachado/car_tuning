@@ -63,8 +63,8 @@
             this.tbServiço = new System.Windows.Forms.TabPage();
             this.dgvServP = new System.Windows.Forms.DataGridView();
             this.colCodServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCpfServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPlacaServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCpfServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNomeFuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colValorServico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtPesquisaServ = new iTalk.iTalk_TextBox_Small();
@@ -137,6 +137,7 @@
             this.tabCliente.SelectedIndex = 0;
             this.tabCliente.Size = new System.Drawing.Size(1331, 665);
             this.tabCliente.TabIndex = 6;
+            this.tabCliente.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabCliente_Selecting);
             // 
             // tabPage2
             // 
@@ -197,6 +198,7 @@
             this.dgvCarroP.ReadOnly = true;
             this.dgvCarroP.Size = new System.Drawing.Size(1311, 571);
             this.dgvCarroP.TabIndex = 4;
+            this.dgvCarroP.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCarroP_CellDoubleClick);
             // 
             // colPlaca
             // 
@@ -470,8 +472,8 @@
             this.dgvServP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvServP.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodServico,
-            this.colCpfServico,
             this.colPlacaServico,
+            this.colCpfServico,
             this.colNomeFuncionario,
             this.colValorServico});
             this.dgvServP.Location = new System.Drawing.Point(6, 62);
@@ -489,19 +491,19 @@
             this.colCodServico.Name = "colCodServico";
             this.colCodServico.ReadOnly = true;
             // 
-            // colCpfServico
-            // 
-            this.colCpfServico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCpfServico.HeaderText = "Cliente";
-            this.colCpfServico.Name = "colCpfServico";
-            this.colCpfServico.ReadOnly = true;
-            // 
             // colPlacaServico
             // 
             this.colPlacaServico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colPlacaServico.HeaderText = "Placa";
             this.colPlacaServico.Name = "colPlacaServico";
             this.colPlacaServico.ReadOnly = true;
+            // 
+            // colCpfServico
+            // 
+            this.colCpfServico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCpfServico.HeaderText = "Cliente";
+            this.colCpfServico.Name = "colCpfServico";
+            this.colCpfServico.ReadOnly = true;
             // 
             // colNomeFuncionario
             // 
@@ -576,6 +578,7 @@
             this.txtBuscaStage.Text = "Digite o Codigo do Serviço";
             this.txtBuscaStage.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBuscaStage.UseSystemPasswordChar = false;
+            this.txtBuscaStage.TextChanged += new System.EventHandler(this.txtBuscaStage_TextChanged);
             this.txtBuscaStage.Enter += new System.EventHandler(this.txtBuscaStage_Enter);
             this.txtBuscaStage.Leave += new System.EventHandler(this.txtBuscaStage_Leave);
             // 
@@ -619,6 +622,7 @@
             this.dgvStage.RowTemplate.Height = 24;
             this.dgvStage.Size = new System.Drawing.Size(1311, 571);
             this.dgvStage.TabIndex = 18;
+            this.dgvStage.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStage_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -852,11 +856,6 @@
         private System.Windows.Forms.DataGridView dgvServP;
         private iTalk.iTalk_TextBox_Small txtPesquisaServ;
         private iTalk.iTalk_Label iTalk_Label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCodServico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCpfServico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlacaServico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeFuncionario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colValorServico;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescricao;
@@ -890,5 +889,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCodServico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPlacaServico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCpfServico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNomeFuncionario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colValorServico;
     }
 }

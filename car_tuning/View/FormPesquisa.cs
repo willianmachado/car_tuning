@@ -23,7 +23,9 @@ namespace car_tuning
             FillFunc();
             FillPeca();
             fillStage();
-            
+            fillCarro();
+            fillServico();
+
         }
         private void FillFunc()
         {
@@ -53,7 +55,7 @@ namespace car_tuning
             StageDAO stageDAO = new StageDAO();
             List<Stage> stages;
             stages = stageDAO.Carregar();
-            dgvServP.Rows.Clear();
+            dgvStage.Rows.Clear();
             foreach (Stage s in stages)
             {
                 dgvStage.Rows.Add(s.CodServ1,
@@ -66,6 +68,24 @@ namespace car_tuning
                     s.Rotacao_maxIni, s.Rotacao_maxFin);
 
             }
+        }
+        private void fillCarro()
+        {
+            CarroDAO carroDAO = new CarroDAO();
+            List<Carro> carros;
+            carros = carroDAO.Carregar();
+            dgvCarroP.Rows.Clear();
+            foreach (Carro c in carros)
+                dgvCarroP.Rows.Add(c.Placa, c.Modelo, c.Marca, c.CpfCliente);
+        }
+        private void fillServico()
+        {
+            ServicoDAO servicoDAO = new ServicoDAO();
+            List<Servico> servicos;
+            servicos = servicoDAO.Carregar();
+            dgvServP.Rows.Clear();
+            foreach (Servico s in servicos)
+                dgvServP.Rows.Add(s.Codigo, s.CpfCliente1, s.PlacaCarro1, s.CpfFuncionario1, s.ValorTotal);
         }
         private void dgCliente_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -180,6 +200,27 @@ namespace car_tuning
             }
         }
 
+
+
+
+
+        private void txtBuscaStage_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscaStage.Text == "")
+            {
+                txtBuscaStage.Text = "Digite o Codigo do Serviço";
+            }
+        }
+
+        private void txtBuscaStage_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscaStage.Text == "Digite o Codigo do Serviço")
+            {   
+                txtBuscaStage.Text = "";
+            }
+        }
+
+
         private void dgCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -212,11 +253,16 @@ namespace car_tuning
         {
             ServicoDAO servicoDAO = new ServicoDAO();
             List<Servico> servicos;
-            servicos = servicoDAO.Carregar();
-            dgvServP.Rows.Clear();
-            foreach (Servico s in servicos)
-                dgvServP.Rows.Add(s.Codigo,s.CpfCliente1,s.PlacaCarro1,s.CpfFuncionario1,s.ValorTotal);
+            if(txtPesquisaServ.Text != "")
+            {
+                servicos = servicoDAO.Listar(txtPesquisaServ.Text);
+                dgvServP.Rows.Clear();
+                foreach (Servico s in servicos)
+                    dgvServP.Rows.Add(s.Codigo, s.CpfCliente1, s.PlacaCarro1, s.CpfFuncionario1, s.ValorTotal);
+            }
+            
         }
+
         private void txtPesquisaCarro_TextChanged(object sender, EventArgs e)
         {
             CarroDAO carroDAO = new CarroDAO();
@@ -231,22 +277,66 @@ namespace car_tuning
 
         }
 
-        private void txtBuscaStage_Leave(object sender, EventArgs e)
-        {
-            if (txtPesquisaServ.Text == "")
-            {
-                txtPesquisaServ.Text = "Digite o Codigo do Serviço";
-            }
-        }
+        
 
-        private void txtBuscaStage_Enter(object sender, EventArgs e)
+        private void txtBuscaStage_TextChanged(object sender, EventArgs e)
         {
-            if (txtPesquisaServ.Text == "Digite o Codigo do Serviço")
+            try
             {
-                txtPesquisaServ.Text = "";
+                StageDAO stageDAO = new StageDAO();
+                List<Stage> stages;
+                stages = stageDAO.BuscaServ(txtBuscaStage.Text);
+                dgvStage.Rows.Clear();
+                foreach (Stage s in stages)
+                {
+                    dgvStage.Rows.Add(s.CodServ1,
+                        s.PesoIni, s.PesoFin,
+                        s.AceleracaoIni, s.AceleracaoFin,
+                        s.TorqueIni, s.TorqueFin,
+                        s.Velocidade_maxIni, s.Velocidade_maxFin,
+                        s.PotenciaIni, s.PotenciaFin,
+                        s.ConsumoIni, s.ConsumoFin,
+                        s.Rotacao_maxIni, s.Rotacao_maxFin);
+
+                }
             }
+            catch
+            {
+                // Prevenindo erro do
+
+            }
+                
+            
+
+            
+            
         }
 
         
+
+        private void tabCliente_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            FillFunc();
+            FillPeca();
+            fillStage();
+            fillCarro();
+            fillServico();
+        }
+
+        private void dgvCarroP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form2 form2 = new Form2();
+            //form2.carragaG(dgvCarroP.CurrentRow.Cells[0].Value.ToString());
+            
+            form2.Show(this);
+            
+        }
+
+        private void dgvStage_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.carragaG(dgvStage.CurrentRow.Cells[0].Value.ToString());
+            form2.Show(this);
+        }
     }
 }

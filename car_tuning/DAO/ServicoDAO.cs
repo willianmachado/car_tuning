@@ -47,7 +47,11 @@ namespace car_tuning.Modelo
             DataBase bd = DataBase.GetInstance();
             bd.GetConnection();
         }
-        public List<Servico> Listar(int busca)
+
+        
+
+
+        public List<Servico> Listar(string busca)
         {
             
             List<Servico> lista = new List<Servico>();
@@ -57,8 +61,9 @@ namespace car_tuning.Modelo
             SQLiteConnection conn = new SQLiteConnection(Data);
             if (conn.State == ConnectionState.Closed)
                 conn.Open();
-            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM SERVICO WHERE codigo = '{0}'" + busca, conn);
-
+            
+            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM SERVICO WHERE codigo like '%" + busca + "%' OR cpfcliente LIKE '%" + busca +"%'" , conn);
+            
 
             SQLiteDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -68,7 +73,7 @@ namespace car_tuning.Modelo
                 s.CpfCliente1 = dr["cpfcliente"].ToString();
                 s.CpfFuncionario1 = dr["cpfFunc"].ToString();
                 s.ValorTotal = double.Parse(dr["valorTotal"].ToString());
-                lista.Add(new Servico(s.Codigo,s.CpfCliente1,s.CpfFuncionario1,s.PlacaCarro1,s.ValorTotal));
+                lista.Add(new Servico(s.Codigo, s.PlacaCarro1, s.CpfCliente1,s.CpfFuncionario1,s.ValorTotal));
             }
             return lista;
          }
