@@ -97,6 +97,18 @@
       <DependentUpon>crCliente.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Relatorio\CrPeca.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrPeca.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\CrServico.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrServico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +205,14 @@
     <EmbeddedResource Include="Relatorio\crCliente.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCliente.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\CrPeca.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrPeca.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\CrServico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrServico.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
