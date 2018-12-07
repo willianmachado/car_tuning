@@ -483,6 +483,7 @@
             this.dgvServP.RowTemplate.Height = 24;
             this.dgvServP.Size = new System.Drawing.Size(1311, 571);
             this.dgvServP.TabIndex = 17;
+            this.dgvServP.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvServP_CellMouseDoubleClick);
             // 
             // colCodServico
             // 

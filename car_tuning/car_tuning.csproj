@@ -73,7 +73,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ambiance Theme.cs" />
+    <Compile Include="Controle\Evolocao.cs" />
+    <Compile Include="Controle\NotaF.cs" />
     <Compile Include="Controle\ValidaCPF.cs" />
+    <Compile Include="DAO\RelatorioDAO.cs" />
     <Compile Include="Relatorio\CrCarro.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,6 +100,18 @@
       <DependentUpon>crCliente.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Relatorio\crFuncionario.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crFuncionario.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\CrNotaFiscal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrNotaFiscal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Relatorio\CrPeca.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,11 +124,17 @@
       <DependentUpon>CrServico.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\Form2.cs">
+    <Compile Include="Relatorio\test.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\GraphStage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="View\GraphStage.Designer.cs">
+      <DependentUpon>GraphStage.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormCadastroCarro.cs">
       <SubType>Form</SubType>
@@ -187,11 +208,11 @@
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="Resouces\DataBase.cs" />
-    <Compile Include="View\Form1.cs">
+    <Compile Include="View\NotaFiscal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\NotaFiscal.Designer.cs">
+      <DependentUpon>NotaFiscal.cs</DependentUpon>
     </Compile>
     <Compile Include="Resouces\iTalk Theme.cs" />
     <Compile Include="Resouces\MephTheme.cs" />
@@ -206,6 +227,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crCliente.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\crFuncionario.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crFuncionario.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\CrNotaFiscal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrNotaFiscal.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Relatorio\CrPeca.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrPeca.cs</LastGenOutput>
@@ -214,8 +243,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrServico.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Relatorio\test.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>test.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\GraphStage.resx">
+      <DependentUpon>GraphStage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormCadastroCarro.resx">
       <DependentUpon>FormCadastroCarro.cs</DependentUpon>
@@ -223,8 +256,8 @@
     <EmbeddedResource Include="View\FormCarro.resx">
       <DependentUpon>FormCarro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="View\NotaFiscal.resx">
+      <DependentUpon>NotaFiscal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>

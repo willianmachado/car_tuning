@@ -325,7 +325,7 @@ namespace car_tuning
 
         private void dgvCarroP_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form2 form2 = new Form2();
+            GraphStage form2 = new GraphStage();
             //form2.carragaG(dgvCarroP.CurrentRow.Cells[0].Value.ToString());
             
             form2.Show(this);
@@ -334,8 +334,15 @@ namespace car_tuning
 
         private void dgvStage_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Form2 form2 = new Form2();
+            GraphStage form2 = new GraphStage();
             form2.carragaG(dgvStage.CurrentRow.Cells[0].Value.ToString());
+            form2.Show(this);
+        }
+
+        private void dgvServP_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            GraphStage form2 = new GraphStage();
+            form2.carragaG(dgvServP.CurrentRow.Cells[0].Value.ToString());
             form2.Show(this);
         }
     }

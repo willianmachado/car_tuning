@@ -11,16 +11,7 @@ namespace car_tuning.Modelo
 {
     class FuncionarioDAO
     {
-        //private Database bd;
-        //public FuncionarioDAO()
-        //{
-        //    DataBase bd = Database.GetInstance();
-        //}
-
-        // public void banco()
-        //{
-        //    bd = Database.GetInstance();
-        // }
+        
         private const string Data = "Data Source = car.db";
 
         public void Salvar(Funcionario f)
@@ -71,6 +62,8 @@ namespace car_tuning.Modelo
             return lista;
 
         }
+
+
         public List<Funcionario> Listar(string busca)
         {
             
@@ -94,6 +87,28 @@ namespace car_tuning.Modelo
                 lista.Add(new Funcionario(f.Cpf, f.Nome, f.Telefone));
             }
             return lista;
+        }
+
+        public List<string> ListarLucroFunc()
+        {
+
+            List<Funcionario> lista = new List<Funcionario>();
+            List<string> l = new List<string>();
+            Funcionario f = new Funcionario();
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+            SQLiteCommand cmd = new SQLiteCommand("select nome,cpfFunc,sum(valorTotal) from Servico,FUNCIONARIO where cpfFunc=cpf  group by cpfFunc", conn);
+
+
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                l.Add(cmd.ToString());
+            }
+            return l;
         }
     }
 }

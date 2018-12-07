@@ -180,7 +180,6 @@ C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\bin\Debug\System.Data.SQLi
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.csprojAssemblyReference.cache
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormCadastroCarro.resources
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.View.FormCarro.resources
-C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.Form1.resources
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormCliente.resources
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormFuncionario.resources
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.FormHome.resources
@@ -219,4 +218,5 @@ C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\bin\Debug\CrystalDecisions
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\bin\Debug\ShockwaveFlashObjects.dll
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\bin\Debug\stdole.dll
-C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.View.Form2.resources
+C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.View.GraphStage.resources
+C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\obj\Debug\car_tuning.NotaFiscal.resources

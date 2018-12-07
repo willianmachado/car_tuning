@@ -117,7 +117,7 @@ namespace car_tuning.DAO
                 st.Rotacao_maxFin = double.Parse(dr["rotacao_maxFin"].ToString());
 
                 st.CodServ1 = Int32.Parse(dr["codServ"].ToString());
-                lista.Add(new Stage(st.PesoIni, st.PotenciaIni, st.Velocidade_maxIni, st.TorqueIni, st.AceleracaoIni, st.ConsumoIni, st.Rotacao_maxIni, st.PesoFin, st.PotenciaFin, st.Velocidade_maxFin, st.TorqueFin, st.AceleracaoFin, st.ConsumoFin, st.Rotacao_maxFin, st.CodServ1));
+                lista.Add(new Stage(st.PesoIni,  st.Velocidade_maxIni, st.PotenciaIni, st.AceleracaoIni, st.TorqueIni,  st.ConsumoIni, st.Rotacao_maxIni, st.PesoFin,  st.Velocidade_maxFin, st.PotenciaFin, st.AceleracaoFin, st.TorqueFin,  st.ConsumoFin, st.Rotacao_maxFin, st.CodServ1));
 
             }
             return lista;

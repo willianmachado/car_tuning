@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.crPeca1 = new car_tuning.Relatorio.CrPeca();
             this.btCarregar = new iTalk.iTalk_Button_2();
             this.ambiance_TabControl1 = new Ambiance.Ambiance_TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -36,15 +38,25 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.crvCarro = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.crvPecas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.crvFuncionario = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.crvTest = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.pecasDAOBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ambiance_TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pecasDAOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btCarregar
@@ -70,12 +82,13 @@
             this.ambiance_TabControl1.Controls.Add(this.tabPage4);
             this.ambiance_TabControl1.Controls.Add(this.tabPage5);
             this.ambiance_TabControl1.Controls.Add(this.tabPage6);
+            this.ambiance_TabControl1.Controls.Add(this.tabPage7);
             this.ambiance_TabControl1.ItemSize = new System.Drawing.Size(80, 24);
             this.ambiance_TabControl1.Location = new System.Drawing.Point(0, 0);
             this.ambiance_TabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.ambiance_TabControl1.Name = "ambiance_TabControl1";
             this.ambiance_TabControl1.SelectedIndex = 0;
-            this.ambiance_TabControl1.Size = new System.Drawing.Size(1296, 648);
+            this.ambiance_TabControl1.Size = new System.Drawing.Size(1318, 658);
             this.ambiance_TabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -87,7 +100,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1288, 616);
+            this.tabPage1.Size = new System.Drawing.Size(1310, 626);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Clientes";
             // 
@@ -99,7 +112,7 @@
             this.crvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvCliente.Location = new System.Drawing.Point(2, 2);
             this.crvCliente.Name = "crvCliente";
-            this.crvCliente.Size = new System.Drawing.Size(1284, 612);
+            this.crvCliente.Size = new System.Drawing.Size(1306, 622);
             this.crvCliente.TabIndex = 2;
             this.crvCliente.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
@@ -126,7 +139,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1288, 616);
+            this.tabPage2.Size = new System.Drawing.Size(1310, 626);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Carros";
             // 
@@ -138,20 +151,34 @@
             this.crvCarro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crvCarro.Location = new System.Drawing.Point(2, 2);
             this.crvCarro.Name = "crvCarro";
-            this.crvCarro.Size = new System.Drawing.Size(1284, 612);
+            this.crvCarro.Size = new System.Drawing.Size(1306, 622);
             this.crvCarro.TabIndex = 4;
             this.crvCarro.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.tabPage3.Controls.Add(this.crvPecas);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(1288, 616);
+            this.tabPage3.Size = new System.Drawing.Size(1310, 626);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Peças";
+            // 
+            // crvPecas
+            // 
+            this.crvPecas.ActiveViewIndex = -1;
+            this.crvPecas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvPecas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvPecas.DisplayToolbar = false;
+            this.crvPecas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvPecas.Location = new System.Drawing.Point(2, 2);
+            this.crvPecas.Name = "crvPecas";
+            this.crvPecas.Size = new System.Drawing.Size(1306, 622);
+            this.crvPecas.TabIndex = 0;
+            this.crvPecas.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // tabPage4
             // 
@@ -160,32 +187,59 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(1288, 616);
+            this.tabPage4.Size = new System.Drawing.Size(1310, 626);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Serviços";
             // 
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.tabPage5.Controls.Add(this.crvFuncionario);
             this.tabPage5.Location = new System.Drawing.Point(4, 28);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(1288, 616);
+            this.tabPage5.Size = new System.Drawing.Size(1310, 626);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Funcionário";
+            // 
+            // crvFuncionario
+            // 
+            this.crvFuncionario.ActiveViewIndex = -1;
+            this.crvFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvFuncionario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvFuncionario.DisplayToolbar = false;
+            this.crvFuncionario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvFuncionario.Location = new System.Drawing.Point(2, 2);
+            this.crvFuncionario.Name = "crvFuncionario";
+            this.crvFuncionario.Size = new System.Drawing.Size(1306, 622);
+            this.crvFuncionario.TabIndex = 0;
+            this.crvFuncionario.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.tabPage6.Controls.Add(this.crystalReportViewer1);
             this.tabPage6.Controls.Add(this.dataGridView6);
             this.tabPage6.Location = new System.Drawing.Point(4, 28);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Size = new System.Drawing.Size(1288, 616);
+            this.tabPage6.Size = new System.Drawing.Size(1310, 626);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Rank ";
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(2, 2);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1306, 622);
+            this.crystalReportViewer1.TabIndex = 1;
+            this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.ParameterPanel;
             // 
             // dataGridView6
             // 
@@ -196,6 +250,32 @@
             this.dataGridView6.RowTemplate.Height = 24;
             this.dataGridView6.Size = new System.Drawing.Size(1286, 612);
             this.dataGridView6.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.tabPage7.Controls.Add(this.crvTest);
+            this.tabPage7.Location = new System.Drawing.Point(4, 28);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(1310, 626);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            // 
+            // crvTest
+            // 
+            this.crvTest.ActiveViewIndex = -1;
+            this.crvTest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvTest.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvTest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvTest.Location = new System.Drawing.Point(3, 3);
+            this.crvTest.Name = "crvTest";
+            this.crvTest.Size = new System.Drawing.Size(1304, 620);
+            this.crvTest.TabIndex = 0;
+            // 
+            // pecasDAOBindingSource
+            // 
+            this.pecasDAOBindingSource.DataSource = typeof(car_tuning.Modelo.PecasDAO);
             // 
             // FormRelatorio
             // 
@@ -210,8 +290,12 @@
             this.ambiance_TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pecasDAOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,6 +314,13 @@
         private iTalk.iTalk_Button_2 btCarregar;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvCarro;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvCliente;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvPecas;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvFuncionario;
+        private System.Windows.Forms.BindingSource pecasDAOBindingSource;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private Relatorio.CrPeca crPeca1;
+        private System.Windows.Forms.TabPage tabPage7;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvTest;
     }
 }
           

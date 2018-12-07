@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using car_tuning.View;
 namespace car_tuning
 {
     public partial class FormServico : Form
@@ -178,12 +178,18 @@ namespace car_tuning
         {
             ControlaBotoes(true);
             limparCampos();
+            
+
         }
 
         private void btNovo_Click(object sender, EventArgs e)
         {
             ControlaBotoes(false);
             limparCampos();
+
+            NotaFiscal n = new NotaFiscal();
+            n.ShowDialog(this);
+
         }
 
         private void btEditar_Click(object sender, EventArgs e)

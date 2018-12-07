@@ -37,7 +37,29 @@ namespace car_tuning
             crCliente crCliente = new crCliente();
             crCliente.SetDataSource(listaClientes);
             crvCliente.ReportSource = crCliente;
+
+
+
+            List<Pecas> listaPecas = new PecasDAO().Carregar();
+            CrPeca crPecas = new CrPeca();
+            crPecas.SetDataSource(listaPecas);
+            crvPecas.ReportSource = crPecas;
+
+
+            List<Funcionario> f = new FuncionarioDAO().Carregar();
+            crFuncionario crFuncionario = new crFuncionario();
+            crFuncionario.SetDataSource(f);   
+            crvFuncionario.ReportSource = crFuncionario;
+
+            test();
         }
 
+
+        public void test()
+        {
+                
+        }
+
+        
     }
 }
