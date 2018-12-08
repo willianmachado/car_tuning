@@ -1,4 +1,5 @@
-﻿using car_tuning.Modelo;
+﻿using car_tuning.Controle;
+using car_tuning.Modelo;
 using car_tuning.View;
 using System;
 using System.Collections.Generic;
@@ -43,36 +44,45 @@ namespace car_tuning
             ClienteDAO clienteDAO = new ClienteDAO();
             Cliente cliente = getDTO();
 
-            if (txtCpf.Text != "")
+            if (txtCpf.Text != ""||txtNome.Text != "")
             {
-                if (btSalvar.Text == "Salvar")
+                if (ValidaCPF.IsCpf(txtCpf.Text))
                 {
-                    clienteDAO.Salvar(cliente);
-                    MessageBox.Show("Cadastrado com Sucesso!");
+                    if (btSalvar.Text == "Salvar")
+                    {
+                        clienteDAO.Salvar(cliente);
+                        MessageBox.Show("Cadastrado com Sucesso!");
+                    }
+                    else
+                    {
+                        clienteDAO.Atualizar(cliente);
+                        MessageBox.Show("Atualizado com Sucesso!");
+                        btSalvar.Text = "Salvar";
+                    }
+
+                    try
+                    {
+                        Fill();
+                        ControlaBotoes(true);
+                        limparCampos();
+                    }
+
+                    catch (Exception)
+                    {
+                        MessageBox.Show("CPF Já cadastrado! ");
+                    }
                 }
                 else
                 {
-                    clienteDAO.Atualizar(cliente);
-                    MessageBox.Show("Atualizado com Sucesso!");
-                    btSalvar.Text = "Salvar";
+                    MessageBox.Show(this, "Favor preencher com CPF valido ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
 
-                try
-                {
-                    Fill();
-                    ControlaBotoes(true);
-                    limparCampos();
-                }
-
-                catch (Exception)
-                {
-                    MessageBox.Show("CPF Já cadastrado! ");
-                }
             }
 
             else
             {
-                MessageBox.Show(this, "Favor preencher: CPF/EMAIL ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Favor preencher: CPF/Nome ", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 

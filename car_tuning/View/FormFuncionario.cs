@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using car_tuning.Controle;
 namespace car_tuning
 {
     public partial class FormFuncionario : Form
@@ -62,30 +62,38 @@ namespace car_tuning
 
             if (txtCpf.Text != "" || txtNome.Text != "")
             {
-                
-                Fill();
-                if (btSalvar.Text == "Salvar")
+                if (ValidaCPF.IsCpf(txtCpf.Text))
                 {
-                    funcionarioDAO.Salvar(funcionario);
-                    MessageBox.Show("Cadastrado com Sucesso!");
+                    Fill();
+                    if (btSalvar.Text == "Salvar")
+                    {
+                        funcionarioDAO.Salvar(funcionario);
+                        MessageBox.Show("Cadastrado com Sucesso!");
+                    }
+                    else
+                    {
+                        funcionarioDAO.atualizar(funcionario);
+                        MessageBox.Show("Atualizado com Sucesso!");
+                        btSalvar.Text = "Salvar";
+                    }
+                    try
+                    {
+                        Fill();
+                        ControlaBotoes(true);
+                        limparCampos();
+                    }
+
+                    catch (Exception)
+                    {
+                        MessageBox.Show("CPF Já cadastrado! ");
+                    }
                 }
                 else
                 {
-                    funcionarioDAO.atualizar(funcionario);
-                    MessageBox.Show("Atualizado com Sucesso!");
-                    btSalvar.Text = "Salvar";
-                }
-                try
-                {
-                    Fill();
-                    ControlaBotoes(true);
-                    limparCampos();
+                    MessageBox.Show(this, "campo CPF invalido", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 }
 
-                catch (Exception)
-                {
-                    MessageBox.Show("CPF Já cadastrado! ");
-                }
             }
             else
             {

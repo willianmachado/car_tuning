@@ -73,7 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ambiance Theme.cs" />
-    <Compile Include="Controle\Evolocao.cs" />
     <Compile Include="Controle\NotaF.cs" />
     <Compile Include="Controle\ValidaCPF.cs" />
     <Compile Include="DAO\RelatorioDAO.cs" />
