@@ -196,5 +196,124 @@ namespace car_tuning.DAO
             }
             return lista;
         }
+
+
+
+
+        public List<NotaF> ListaEvolucao(string placa)
+        {
+            geraView();
+
+
+            List<NotaF> lista = new List<NotaF>();
+
+            NotaF nf = new NotaF();
+
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("select * from NotaFiscal where placa like '%"+placa+"%' group by codigoServ", conn);
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                nf.PlacaC = dr["placa"].ToString();
+                nf.MarcaC = dr["marca"].ToString();
+                nf.ModeloC = dr["modelo"].ToString();
+
+                nf.CpfCli = (dr["cpfCli"].ToString());
+                nf.NomeCli = dr["nomeCli"].ToString();
+
+                nf.CpfFunc = (dr["cpfFunc"].ToString());
+                nf.NomeFunc = dr["nomeFunc"].ToString();
+
+
+                nf.CodigoP = Int32.Parse(dr["codPeca"].ToString());
+                nf.FabricanteP = dr["fabricante"].ToString();
+                nf.PrecoP = double.Parse(dr["preco"].ToString());
+                nf.CompatibilidadeP = dr["compatibilidade"].ToString();
+                nf.TipoP = dr["tipo"].ToString();
+                nf.DescricaoP = dr["descricao"].ToString();
+                nf.AddTorqueP = double.Parse(dr["addTorque"].ToString());
+                nf.AddPesoP = double.Parse(dr["addPeso"].ToString());
+                nf.AddPotenciaP = double.Parse(dr["addPotencia"].ToString());
+
+                nf.QuantidadeP = int.Parse(dr["quantidade"].ToString());
+
+                nf.PesoIni = double.Parse(dr["pesoIni"].ToString());
+                nf.PotenciaIni = double.Parse(dr["potenciaIni"].ToString());
+                nf.Velocidade_maxIni = double.Parse(dr["velocidade_maxIni"].ToString());
+                nf.TorqueIni = double.Parse(dr["torqueIni"].ToString());
+                nf.AceleracaoIni = double.Parse(dr["aceleracaoIni"].ToString());
+                nf.ConsumoIni = double.Parse(dr["consumoIni"].ToString());
+                nf.Rotacao_maxIni = double.Parse(dr["rotacao_maxIni"].ToString());
+
+                nf.PesoFin = double.Parse(dr["pesoFin"].ToString());
+                nf.PotenciaFin = double.Parse(dr["potenciaFin"].ToString());
+                nf.Velocidade_maxFin = double.Parse(dr["velocidade_maxFin"].ToString());
+                nf.TorqueFin = double.Parse(dr["torqueFin"].ToString());
+                nf.AceleracaoFin = double.Parse(dr["consumoFin"].ToString());
+                nf.ConsumoFin = double.Parse(dr["consumoFin"].ToString());
+                nf.Rotacao_maxFin = double.Parse(dr["rotacao_maxFin"].ToString());
+
+                nf.CodServico1 = Int32.Parse(dr["codigoServ"].ToString());
+                nf.ValorTotal = double.Parse(dr["valorTotal"].ToString());
+
+                lista.Add(new NotaF(nf.PlacaC, nf.ModeloC, nf.MarcaC, nf.CpfCli, nf.NomeCli, nf.CpfFunc,
+                    nf.NomeFunc, nf.CodigoP, nf.FabricanteP, nf.PrecoP, nf.CompatibilidadeP, nf.TipoP,
+                    nf.DescricaoP, nf.AddTorqueP, nf.AddPesoP, nf.AddPotenciaP, nf.QuantidadeP,
+                    nf.PesoIni, nf.PotenciaIni, nf.Velocidade_maxIni, nf.TorqueIni, nf.AceleracaoIni, nf.ConsumoIni,
+                    nf.Rotacao_maxIni, nf.PesoFin, nf.PotenciaFin, nf.Velocidade_maxFin, nf.TorqueFin, nf.AceleracaoFin,
+                    nf.ConsumoFin, nf.Rotacao_maxFin, nf.CodServico1, nf.ValorTotal));
+
+            }
+            return lista;
+        }
+
+        public List<NotaF> ListaPecaVenda()
+        {
+            geraView();
+
+
+            List<NotaF> lista = new List<NotaF>();
+
+            NotaF nf = new NotaF();
+
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("select tipo,codPeca,fabricante,descricao,preco,count(quantidade)as quantidade from NotaFiscal group by tipo order by quantidade desc ", conn);
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                
+
+
+                nf.CodigoP = Int32.Parse(dr["codPeca"].ToString());
+                nf.FabricanteP = dr["fabricante"].ToString();
+                nf.PrecoP = double.Parse(dr["preco"].ToString());
+                nf.TipoP = dr["tipo"].ToString();
+                nf.DescricaoP = dr["descricao"].ToString();
+               
+
+                nf.QuantidadeP = int.Parse(dr["quantidade"].ToString());
+
+                
+
+                lista.Add(new NotaF(nf.PlacaC, nf.ModeloC, nf.MarcaC, nf.CpfCli, nf.NomeCli, nf.CpfFunc,
+                    nf.NomeFunc, nf.CodigoP, nf.FabricanteP, nf.PrecoP, nf.CompatibilidadeP, nf.TipoP,
+                    nf.DescricaoP, nf.AddTorqueP, nf.AddPesoP, nf.AddPotenciaP, nf.QuantidadeP,
+                    nf.PesoIni, nf.PotenciaIni, nf.Velocidade_maxIni, nf.TorqueIni, nf.AceleracaoIni, nf.ConsumoIni,
+                    nf.Rotacao_maxIni, nf.PesoFin, nf.PotenciaFin, nf.Velocidade_maxFin, nf.TorqueFin, nf.AceleracaoFin,
+                    nf.ConsumoFin, nf.Rotacao_maxFin, nf.CodServico1, nf.ValorTotal));
+
+            }
+            return lista;
+        }
     }
 }

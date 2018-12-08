@@ -118,16 +118,16 @@
       <DependentUpon>CrPeca.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Relatorio\CrServico.cs">
+    <Compile Include="Relatorio\CrEvolucao.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrServico.rpt</DependentUpon>
+      <DependentUpon>CrEvolucao.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Relatorio\test.cs">
+    <Compile Include="Relatorio\CrVendaPeca.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>test.rpt</DependentUpon>
+      <DependentUpon>CrVendaPeca.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\GraphStage.cs">
@@ -239,13 +239,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrPeca.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatorio\CrServico.rpt">
+    <EmbeddedResource Include="Relatorio\CrEvolucao.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrServico.cs</LastGenOutput>
+      <LastGenOutput>CrEvolucao.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Relatorio\test.rpt">
+    <EmbeddedResource Include="Relatorio\CrVendaPeca.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>test.cs</LastGenOutput>
+      <LastGenOutput>CrVendaPeca.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\GraphStage.resx">
       <DependentUpon>GraphStage.cs</DependentUpon>

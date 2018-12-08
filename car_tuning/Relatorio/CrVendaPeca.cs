@@ -16,14 +16,14 @@ namespace car_tuning.Relatorio {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class test : ReportClass {
+    public class CrVendaPeca : ReportClass {
         
-        public test() {
+        public CrVendaPeca() {
         }
         
         public override string ResourceName {
             get {
-                return "test.rpt";
+                return "CrVendaPeca.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace car_tuning.Relatorio {
         
         public override string FullResourceName {
             get {
-                return "car_tuning.Relatorio.test.rpt";
+                return "car_tuning.Relatorio.CrVendaPeca.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace car_tuning.Relatorio {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedtest : Component, ICachedReport {
+    public class CachedCrVendaPeca : Component, ICachedReport {
         
-        public Cachedtest() {
+        public CachedCrVendaPeca() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace car_tuning.Relatorio {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            test rpt = new test();
+            CrVendaPeca rpt = new CrVendaPeca();
             rpt.Site = this.Site;
             return rpt;
         }

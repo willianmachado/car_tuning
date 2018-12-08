@@ -21,8 +21,6 @@ namespace car_tuning
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
 
-            
-
         }
 
         
@@ -31,7 +29,6 @@ namespace car_tuning
         {
             List<NotaF> notas = new RelatorioDAO().ListaCodigo(txtBusca.Text);
             CrNotaFiscal crNota = new CrNotaFiscal();
-            test t = new test();
             crNota.SetDataSource(notas);
             crvNotaF.ReportSource = crNota;
         }

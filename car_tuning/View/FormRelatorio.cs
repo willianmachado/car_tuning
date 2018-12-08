@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using car_tuning.DAO;
+using car_tuning.Controle;
 
 namespace car_tuning
 {
@@ -22,7 +24,10 @@ namespace car_tuning
 
         private void btCarregar_Click(object sender, EventArgs e)
         {
-            
+            List<NotaF> notaFiscals = new RelatorioDAO().ListaEvolucao(txtPlacaEvolu.Text);
+            CrEvolucao crEvolucao = new CrEvolucao();
+            crEvolucao.SetDataSource(notaFiscals);
+            crvEvolucao.ReportSource = crEvolucao;
         }
 
         private void FormRelatorio_Load(object sender, EventArgs e)
@@ -42,8 +47,9 @@ namespace car_tuning
 
             List<Pecas> listaPecas = new PecasDAO().Carregar();
             CrPeca crPecas = new CrPeca();
+
             crPecas.SetDataSource(listaPecas);
-            crvPecas.ReportSource = crPecas;
+            crvPeca.ReportSource = crPecas;
 
 
             List<Funcionario> f = new FuncionarioDAO().Carregar();
@@ -51,13 +57,19 @@ namespace car_tuning
             crFuncionario.SetDataSource(f);   
             crvFuncionario.ReportSource = crFuncionario;
 
-            test();
+            
+            List<NotaF> pecaRel = new RelatorioDAO().ListaPecaVenda();
+            CrVendaPeca crVendaPeca = new CrVendaPeca();
+            crVendaPeca.SetDataSource(pecaRel);
+            crvVendapeca.ReportSource = crVendaPeca;
         }
 
 
         public void test()
         {
-                
+            
+
+            
         }
 
         
