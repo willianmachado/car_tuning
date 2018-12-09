@@ -170,15 +170,15 @@ namespace car_tuning.View
             carro.Ano = txtAno.Text;
             carro.Marca = txtMarca.Text.Trim();
             carro.Modelo = txtModelo.Text;
-            carro.Peso = int.Parse(txtPeso.Text);
-            carro.Potencia = int.Parse(txtPotencia.Text);
-            carro.VelocidadeMax = int.Parse(txtVelocidadeMax.Text);
-            carro.Torque = int.Parse(txtTorque.Text);
-            carro.Aceleracao = int.Parse(txtAceleracao.Text);
-            carro.Consumo = int.Parse(txtConsumo.Text);
-            carro.RotacaoMax = int.Parse(txtRotacaoMax.Text);
+            carro.Peso = 0;
+            carro.Potencia = 0;
+            carro.VelocidadeMax = 0;
+            carro.Torque = 0;
+            carro.Aceleracao = 0;
+            carro.Consumo = 0;
+            carro.RotacaoMax = 0;
 
-
+    
 
             return carro;
         }

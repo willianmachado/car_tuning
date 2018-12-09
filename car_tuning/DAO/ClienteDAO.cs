@@ -26,6 +26,22 @@ namespace car_tuning
 
         }
 
+        public Cliente CpfToName(string nome)
+        {
+            string qry = "select CPF from CLIENTE where nome like " + nome;
+            Cliente cliente = new Cliente();
+            DataBase bd = DataBase.GetInstance();
+            DataSet ds = bd.ExecuteQuery(qry);
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                cliente.Cpf = dr["cpf"].ToString();
+                cliente.Nome = dr["nome"].ToString();
+            }
+            return cliente;
+        }
+
 
         public void Deletar(string index)
         {

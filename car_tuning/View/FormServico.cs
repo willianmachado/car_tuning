@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using car_tuning.View;
+
 namespace car_tuning
 {
     public partial class FormServico : Form
@@ -99,25 +99,40 @@ namespace car_tuning
             if (dgvCarrinho.Rows.Count > 0)
             {
                 preco -= (double.Parse(dgvCarrinho.CurrentRow.Cells["Column5preco"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+                peso -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colPeso"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+                potencia -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colPotencia"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+                torque -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colTorque"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
 
                 dgvCarrinho.Rows.RemoveAt(this.dgvCarrinho.CurrentRow.Index);
 
 
                 rtValor.Text = preco.ToString();
+                lbPesoIni.Text = peso.ToString();
+                lbPotenciaIni.Text = potencia.ToString();
+                lbTorqueIni.Text = torque.ToString();
+                rtValor.Text = preco.ToString();
             }
             else
             {
-                MessageBox.Show("digite adicione ao carrinho com o duplo click.");
+                MessageBox.Show("Adicione ao carrinho com o duplo click.");
 
             }
             
         }
-
-
+        
         PecasDAO pecasDAO = new PecasDAO();
         List<Pecas> pecas;
         List<int> itens = new List<int>();
-        double preco=0; 
+
+        double preco=0;
+        double consumo = 0;
+        double peso = 0;
+        double potencia = 0;
+        double velocidade = 0;
+        double torque = 0;
+        double aceleracao = 0;
+        double rotacao = 0;
+
         private void dgvPecasServ_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if(txtQuant.Text != "")
@@ -130,14 +145,21 @@ namespace car_tuning
 
                 foreach (Pecas p in pecas)
                 {
-
-                    dgvCarrinho.Rows.Add(p.Codigo, p.Tipo, p.Fabricante, p.Preco, p.Descricao,txtQuant.Text);
+                    dgvCarrinho.Rows.Add(p.Codigo, p.Tipo, p.Fabricante, p.Preco, p.Descricao,txtQuant.Text, p.AddTorque, p.AddPotencia, p.AddPeso);
                     preco += (double.Parse(p.Preco.ToString()) * (double.Parse(txtQuant.Text)));
+                    peso += (double.Parse(p.AddPeso.ToString()) * (double.Parse(txtQuant.Text)));
+                    potencia += (double.Parse(p.AddPotencia.ToString()) * (double.Parse(txtQuant.Text)));
+                    torque += (double.Parse(p.AddTorque.ToString()) * (double.Parse(txtQuant.Text)));
+                    
                 }
 
-
+                
                 txtQuant.Clear();
+                lbPesoIni.Text = peso.ToString();
+                lbPotenciaIni.Text = potencia.ToString();
+                lbTorqueIni.Text = torque.ToString();
                 rtValor.Text = preco.ToString();
+               
             }
             else
             {
@@ -194,9 +216,7 @@ namespace car_tuning
 
         private void btEditar_Click(object sender, EventArgs e)
         {
-            ControlaBotoes(true);
-            btEditar.Enabled = true;
-            btSalvar.Enabled = false;
+            
         }
         private void btSalvar_Click(object sender, EventArgs e)
         {
@@ -219,6 +239,8 @@ namespace car_tuning
             clientes = clienteDAO.Carregar();
             foreach (Cliente c in clientes)
                 txtCliente.Items.Add(c.Cpf);
+                
+
         }
         public void fillCarro()
         {
@@ -245,14 +267,6 @@ namespace car_tuning
             {
                 this.btNovo.Enabled = true;
                 this.btNovo.ForeColor = Color.White;
-                this.btExcluir.Enabled = true;
-                this.btExcluir.ForeColor = Color.White;
-                this.btEditar.Enabled = true;
-                this.btEditar.ForeColor = Color.White;
-                this.btSalvar.Enabled = false;
-                this.btSalvar.ForeColor = Color.Gray;
-                this.btLimpar.Enabled = false;
-                this.btLimpar.ForeColor = Color.Gray;
                 this.btPesquisar.Enabled = true;
                 this.btPesquisar.ForeColor = Color.White;
 
@@ -261,15 +275,7 @@ namespace car_tuning
             {
                 this.btNovo.Enabled = false;
                 this.btNovo.ForeColor = Color.Gray;
-                this.btExcluir.Enabled = false;
-                this.btExcluir.ForeColor = Color.Gray;
-                this.btEditar.Enabled = false;
-                this.btEditar.ForeColor = Color.Gray;
                 
-                this.btSalvar.Enabled = true;
-                this.btSalvar.ForeColor = Color.White;
-                this.btLimpar.Enabled = true;
-                this.btLimpar.ForeColor = Color.White;
                 this.btPesquisar.Enabled = false;
                 this.btPesquisar.ForeColor = Color.Gray;
             }
@@ -284,48 +290,56 @@ namespace car_tuning
         int r=0;
         private void btExecutar_Click(object sender, EventArgs e)
         {
-            
-            if (MessageBox.Show("Executar o Serviço? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtCarro.Text != "")
             {
-                ServicoDAO servicoDAO = new ServicoDAO();
-                Servico servico = getDTOServ();
-                servicoDAO.Salvar(servico);
 
-                StageDAO stageDAO = new StageDAO();
-                Stage stage = getDTO();
-                stageDAO.Salvar(stage);
 
-                for(int i = 0; i < dgvCarrinho.Rows.Count; i++)
+                if (MessageBox.Show("Executar o Serviço? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    ServPecaDAO servPecaDAO = new ServPecaDAO();
-                    ServPeca servPeca = getDTOPecaServ();
-                    servPecaDAO.Salvar(servPeca);
-                    r++;
+                    ServicoDAO servicoDAO = new ServicoDAO();
+                    Servico servico = getDTOServ();
+                    servicoDAO.Salvar(servico);
+
+                    StageDAO stageDAO = new StageDAO();
+                    Stage stage = getDTO();
+                    stageDAO.Salvar(stage);
+
+                    for (int i = 0; i < dgvCarrinho.Rows.Count; i++)
+                    {
+                        ServPecaDAO servPecaDAO = new ServPecaDAO();
+                        ServPeca servPeca = getDTOPecaServ();
+                        servPecaDAO.Salvar(servPeca);
+                        r++;
+                    }
+
+                    CarroDAO car = new CarroDAO();
+                    Carro c = getDTOCar();
+                    car.AtualizaSpecs(c);
+
+
+                    //para chamar o splash
+                    Thread t = new Thread((new ThreadStart(Loading)));
+                    ////inicializar a thread
+                    t.Start();
+                    Thread.Sleep(1200);
+                    t.Abort();
+
+
+                    MessageBox.Show("Serviço encaminhado com sucesso!");
+
+                    NotaFiscal n = new NotaFiscal();
+                    n.ShowDialog(this);
+                    n.mostra(labalCod.Text);
                 }
 
-                CarroDAO car = new CarroDAO();
-                Carro c = getDTOCar();
-                car.AtualizaSpecs(c);
-
-
-                NotaFiscal n = new NotaFiscal();
-                n.ShowDialog(this);
-                n.mostra(labalCod.Text);
-
-
-                //para chamar o splash
-                Thread t = new Thread((new ThreadStart(Loading)));
-                ////inicializar a thread
-                t.Start();
-                Thread.Sleep(1200);
-                t.Abort();
-
-                MessageBox.Show("Serviço encaminhado com sucesso!");
+                else
+                {
+                    MessageBox.Show("Serviço cancelado");
+                }
             }
-
             else
             {
-                MessageBox.Show("Serviço cancelado");
+                MessageBox.Show("Preencha os campos para iniciar o serviço");
             }
         }
 

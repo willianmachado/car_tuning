@@ -47,15 +47,6 @@
             this.labalQuant = new iTalk.iTalk_Label();
             this.txtQuant = new System.Windows.Forms.MaskedTextBox();
             this.dgvPecasServ = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemoverPeca = new iTalk.iTalk_Button_2();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
             this.btnBuscarPeca = new iTalk.iTalk_Button_2();
@@ -69,6 +60,9 @@
             this.txtRotMaxIni = new System.Windows.Forms.MaskedTextBox();
             this.txtAceleIni = new System.Windows.Forms.MaskedTextBox();
             this.txtTorqueIni = new System.Windows.Forms.MaskedTextBox();
+            this.lbTorqueIni = new iTalk.iTalk_Label();
+            this.lbPotenciaIni = new iTalk.iTalk_Label();
+            this.lbPesoIni = new iTalk.iTalk_Label();
             this.txtVeloMaxIni = new System.Windows.Forms.MaskedTextBox();
             this.txtPotenciaIni = new System.Windows.Forms.MaskedTextBox();
             this.txtPesoIni = new System.Windows.Forms.MaskedTextBox();
@@ -144,10 +138,21 @@
             this.Column5preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btExcluir = new iTalk.iTalk_Button_2();
-            this.btLimpar = new iTalk.iTalk_Button_2();
-            this.btSalvar = new iTalk.iTalk_Button_2();
-            this.btEditar = new iTalk.iTalk_Button_2();
+            this.colTorque = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbCpfFunc = new iTalk.iTalk_Label();
+            this.lbCpfCliente = new iTalk.iTalk_Label();
+            this.lbMarcaCarro = new iTalk.iTalk_Label();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iTalk_GroupBox1.SuspendLayout();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).BeginInit();
@@ -167,7 +172,7 @@
             this.btNovo.Name = "btNovo";
             this.btNovo.Size = new System.Drawing.Size(116, 40);
             this.btNovo.TabIndex = 1;
-            this.btNovo.Text = "Novo";
+            this.btNovo.Text = "NF";
             this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
             // 
@@ -197,8 +202,10 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
             this.iTalk_GroupBox1.Controls.Add(this.rtValor);
             this.iTalk_GroupBox1.Controls.Add(this.btExecutar);
+            this.iTalk_GroupBox1.Controls.Add(this.lbMarcaCarro);
+            this.iTalk_GroupBox1.Controls.Add(this.lbCpfCliente);
+            this.iTalk_GroupBox1.Controls.Add(this.lbCpfFunc);
             this.iTalk_GroupBox1.Controls.Add(this.LabelFunc);
-            this.iTalk_GroupBox1.Controls.Add(this.btCancelar);
             this.iTalk_GroupBox1.Controls.Add(this.btIniciar);
             this.iTalk_GroupBox1.Controls.Add(this.btVoltar);
             this.iTalk_GroupBox1.Controls.Add(this.ambiance_Label2);
@@ -245,7 +252,7 @@
             this.txtFunc.ItemHeight = 20;
             this.txtFunc.Location = new System.Drawing.Point(197, 110);
             this.txtFunc.Name = "txtFunc";
-            this.txtFunc.Size = new System.Drawing.Size(232, 26);
+            this.txtFunc.Size = new System.Drawing.Size(166, 26);
             this.txtFunc.StartIndex = 0;
             this.txtFunc.TabIndex = 13;
             this.txtFunc.Click += new System.EventHandler(this.txtFunc_Click);
@@ -308,9 +315,9 @@
             this.btCancelar.ForeColor = System.Drawing.Color.White;
             this.btCancelar.Image = null;
             this.btCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btCancelar.Location = new System.Drawing.Point(989, 601);
+            this.btCancelar.Location = new System.Drawing.Point(12, 110);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(83, 40);
+            this.btCancelar.Size = new System.Drawing.Size(116, 40);
             this.btCancelar.TabIndex = 1;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -434,69 +441,6 @@
             this.dgvPecasServ.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPecasServ_CellMouseClick);
             this.dgvPecasServ.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPecasServ_CellMouseDoubleClick);
             // 
-            // Codigo
-            // 
-            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "Marca Compativel";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Tipo";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Fabricante";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "Preco";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "Descrição";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column6.HeaderText = "+torque";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column7.HeaderText = "+Potencia";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column8.HeaderText = "+peso";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
             // btnRemoverPeca
             // 
             this.btnRemoverPeca.BackColor = System.Drawing.Color.Transparent;
@@ -569,7 +513,7 @@
             this.txtCarro.ItemHeight = 20;
             this.txtCarro.Location = new System.Drawing.Point(197, 181);
             this.txtCarro.Name = "txtCarro";
-            this.txtCarro.Size = new System.Drawing.Size(232, 26);
+            this.txtCarro.Size = new System.Drawing.Size(166, 26);
             this.txtCarro.StartIndex = 0;
             this.txtCarro.TabIndex = 3;
             this.txtCarro.Click += new System.EventHandler(this.txtCarro_Click);
@@ -586,9 +530,9 @@
             this.txtCliente.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.txtCliente.IntegralHeight = false;
             this.txtCliente.ItemHeight = 20;
-            this.txtCliente.Location = new System.Drawing.Point(197, 147);
+            this.txtCliente.Location = new System.Drawing.Point(197, 145);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(232, 26);
+            this.txtCliente.Size = new System.Drawing.Size(166, 26);
             this.txtCliente.StartIndex = 0;
             this.txtCliente.TabIndex = 2;
             this.txtCliente.Click += new System.EventHandler(this.txtCliente_Click);
@@ -611,7 +555,7 @@
             this.LabelCli.BackColor = System.Drawing.Color.Transparent;
             this.LabelCli.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelCli.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.LabelCli.Location = new System.Drawing.Point(124, 147);
+            this.LabelCli.Location = new System.Drawing.Point(124, 145);
             this.LabelCli.Name = "LabelCli";
             this.LabelCli.Size = new System.Drawing.Size(58, 21);
             this.LabelCli.TabIndex = 1;
@@ -635,6 +579,9 @@
             this.iTalk_GroupBox2.Controls.Add(this.txtRotMaxIni);
             this.iTalk_GroupBox2.Controls.Add(this.txtAceleIni);
             this.iTalk_GroupBox2.Controls.Add(this.txtTorqueIni);
+            this.iTalk_GroupBox2.Controls.Add(this.lbTorqueIni);
+            this.iTalk_GroupBox2.Controls.Add(this.lbPotenciaIni);
+            this.iTalk_GroupBox2.Controls.Add(this.lbPesoIni);
             this.iTalk_GroupBox2.Controls.Add(this.txtVeloMaxIni);
             this.iTalk_GroupBox2.Controls.Add(this.txtPotenciaIni);
             this.iTalk_GroupBox2.Controls.Add(this.txtPesoIni);
@@ -708,6 +655,42 @@
             this.txtTorqueIni.TabIndex = 4;
             this.txtTorqueIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTorqueIni.TextChanged += new System.EventHandler(this.txtRotMaxIni_TextChanged);
+            // 
+            // lbTorqueIni
+            // 
+            this.lbTorqueIni.AutoSize = true;
+            this.lbTorqueIni.BackColor = System.Drawing.Color.Transparent;
+            this.lbTorqueIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTorqueIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbTorqueIni.Location = new System.Drawing.Point(538, 170);
+            this.lbTorqueIni.Name = "lbTorqueIni";
+            this.lbTorqueIni.Size = new System.Drawing.Size(45, 21);
+            this.lbTorqueIni.TabIndex = 4;
+            this.lbTorqueIni.Text = "cons";
+            // 
+            // lbPotenciaIni
+            // 
+            this.lbPotenciaIni.AutoSize = true;
+            this.lbPotenciaIni.BackColor = System.Drawing.Color.Transparent;
+            this.lbPotenciaIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPotenciaIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbPotenciaIni.Location = new System.Drawing.Point(538, 113);
+            this.lbPotenciaIni.Name = "lbPotenciaIni";
+            this.lbPotenciaIni.Size = new System.Drawing.Size(45, 21);
+            this.lbPotenciaIni.TabIndex = 4;
+            this.lbPotenciaIni.Text = "cons";
+            // 
+            // lbPesoIni
+            // 
+            this.lbPesoIni.AutoSize = true;
+            this.lbPesoIni.BackColor = System.Drawing.Color.Transparent;
+            this.lbPesoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPesoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbPesoIni.Location = new System.Drawing.Point(538, 81);
+            this.lbPesoIni.Name = "lbPesoIni";
+            this.lbPesoIni.Size = new System.Drawing.Size(45, 21);
+            this.lbPesoIni.TabIndex = 4;
+            this.lbPesoIni.Text = "cons";
             // 
             // txtVeloMaxIni
             // 
@@ -1473,7 +1456,10 @@
             this.dataGridViewTextBoxColumn4,
             this.Column5preco,
             this.dataGridViewTextBoxColumn6,
-            this.quantidade});
+            this.quantidade,
+            this.colTorque,
+            this.colPotencia,
+            this.colPeso});
             this.dgvCarrinho.Location = new System.Drawing.Point(16, 31);
             this.dgvCarrinho.Name = "dgvCarrinho";
             this.dgvCarrinho.ReadOnly = true;
@@ -1519,69 +1505,132 @@
             // quantidade
             // 
             this.quantidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.quantidade.HeaderText = "quantidade";
+            this.quantidade.HeaderText = "Quantidade";
             this.quantidade.Name = "quantidade";
             this.quantidade.ReadOnly = true;
             // 
-            // btExcluir
+            // colTorque
             // 
-            this.btExcluir.BackColor = System.Drawing.Color.Transparent;
-            this.btExcluir.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btExcluir.ForeColor = System.Drawing.Color.White;
-            this.btExcluir.Image = null;
-            this.btExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btExcluir.Location = new System.Drawing.Point(12, 248);
-            this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(116, 40);
-            this.btExcluir.TabIndex = 1;
-            this.btExcluir.Text = "Excluir";
-            this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            this.colTorque.HeaderText = "Torque";
+            this.colTorque.Name = "colTorque";
+            this.colTorque.ReadOnly = true;
+            this.colTorque.Visible = false;
             // 
-            // btLimpar
+            // colPotencia
             // 
-            this.btLimpar.BackColor = System.Drawing.Color.Transparent;
-            this.btLimpar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btLimpar.ForeColor = System.Drawing.Color.White;
-            this.btLimpar.Image = null;
-            this.btLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLimpar.Location = new System.Drawing.Point(12, 156);
-            this.btLimpar.Name = "btLimpar";
-            this.btLimpar.Size = new System.Drawing.Size(116, 40);
-            this.btLimpar.TabIndex = 1;
-            this.btLimpar.Text = "Cancelar";
-            this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            this.colPotencia.HeaderText = "Potencia";
+            this.colPotencia.Name = "colPotencia";
+            this.colPotencia.ReadOnly = true;
+            this.colPotencia.Visible = false;
             // 
-            // btSalvar
+            // colPeso
             // 
-            this.btSalvar.BackColor = System.Drawing.Color.Transparent;
-            this.btSalvar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btSalvar.ForeColor = System.Drawing.Color.White;
-            this.btSalvar.Image = null;
-            this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSalvar.Location = new System.Drawing.Point(12, 110);
-            this.btSalvar.Name = "btSalvar";
-            this.btSalvar.Size = new System.Drawing.Size(116, 40);
-            this.btSalvar.TabIndex = 1;
-            this.btSalvar.Text = "Salvar";
-            this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            this.colPeso.HeaderText = "Peso";
+            this.colPeso.Name = "colPeso";
+            this.colPeso.ReadOnly = true;
+            this.colPeso.Visible = false;
             // 
-            // btEditar
+            // lbCpfFunc
             // 
-            this.btEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btEditar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btEditar.ForeColor = System.Drawing.Color.White;
-            this.btEditar.Image = null;
-            this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditar.Location = new System.Drawing.Point(12, 202);
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(116, 40);
-            this.btEditar.TabIndex = 1;
-            this.btEditar.Text = "Editar";
-            this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
+            this.lbCpfFunc.AutoSize = true;
+            this.lbCpfFunc.BackColor = System.Drawing.Color.Transparent;
+            this.lbCpfFunc.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpfFunc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.lbCpfFunc.Location = new System.Drawing.Point(369, 112);
+            this.lbCpfFunc.Name = "lbCpfFunc";
+            this.lbCpfFunc.Size = new System.Drawing.Size(35, 21);
+            this.lbCpfFunc.TabIndex = 12;
+            this.lbCpfFunc.Text = "cp1";
+            this.lbCpfFunc.Visible = false;
+            // 
+            // lbCpfCliente
+            // 
+            this.lbCpfCliente.AutoSize = true;
+            this.lbCpfCliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbCpfCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCpfCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.lbCpfCliente.Location = new System.Drawing.Point(369, 147);
+            this.lbCpfCliente.Name = "lbCpfCliente";
+            this.lbCpfCliente.Size = new System.Drawing.Size(35, 21);
+            this.lbCpfCliente.TabIndex = 12;
+            this.lbCpfCliente.Text = "cp2";
+            this.lbCpfCliente.Visible = false;
+            // 
+            // lbMarcaCarro
+            // 
+            this.lbMarcaCarro.AutoSize = true;
+            this.lbMarcaCarro.BackColor = System.Drawing.Color.Transparent;
+            this.lbMarcaCarro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMarcaCarro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.lbMarcaCarro.Location = new System.Drawing.Point(369, 181);
+            this.lbMarcaCarro.Name = "lbMarcaCarro";
+            this.lbMarcaCarro.Size = new System.Drawing.Size(53, 21);
+            this.lbMarcaCarro.TabIndex = 12;
+            this.lbMarcaCarro.Text = "marca";
+            this.lbMarcaCarro.Visible = false;
+            // 
+            // Codigo
+            // 
+            this.Codigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "Marca Compativel";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Tipo";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Fabricante";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "Preco";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "Descrição";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "+Torque";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "+Potencia";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "+Peso";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // FormServico
             // 
@@ -1589,12 +1638,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1349, 676);
             this.Controls.Add(this.btNovo);
-            this.Controls.Add(this.btExcluir);
-            this.Controls.Add(this.btEditar);
             this.Controls.Add(this.btPesquisar);
-            this.Controls.Add(this.btLimpar);
-            this.Controls.Add(this.btSalvar);
             this.Controls.Add(this.iTalk_GroupBox1);
+            this.Controls.Add(this.btCancelar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1688,15 +1734,6 @@
         private iTalk.iTalk_Label iTalk_Label26;
         private iTalk.iTalk_Label iTalk_Label27;
         private iTalk.iTalk_Label iTalk_Label34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.MaskedTextBox txtRotMaxIni;
         private System.Windows.Forms.MaskedTextBox txtAceleIni;
         private System.Windows.Forms.MaskedTextBox txtTorqueIni;
@@ -1722,17 +1759,31 @@
         private System.Windows.Forms.DataGridView dgvCarrinho;
         private System.Windows.Forms.MaskedTextBox txtQuant;
         private iTalk.iTalk_Label labalQuant;
+        private iTalk.iTalk_Label labalCodigo;
+        private iTalk.iTalk_Label labalCod;
+        private iTalk.iTalk_Label lbTorqueIni;
+        private iTalk.iTalk_Label lbPotenciaIni;
+        private iTalk.iTalk_Label lbPesoIni;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5preco;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
-        private iTalk.iTalk_Label labalCodigo;
-        private iTalk.iTalk_Label labalCod;
-        private iTalk.iTalk_Button_2 btExcluir;
-        private iTalk.iTalk_Button_2 btLimpar;
-        private iTalk.iTalk_Button_2 btSalvar;
-        private iTalk.iTalk_Button_2 btEditar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
+        private iTalk.iTalk_Label lbMarcaCarro;
+        private iTalk.iTalk_Label lbCpfCliente;
+        private iTalk.iTalk_Label lbCpfFunc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
