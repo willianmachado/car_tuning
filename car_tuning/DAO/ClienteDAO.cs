@@ -26,9 +26,9 @@ namespace car_tuning
 
         }
 
-        public Cliente CpfToName(string nome)
+        public Cliente CpfToName(string cpf)
         {
-            string qry = "select CPF from CLIENTE where nome like " + nome;
+            string qry = "select NOME from CLIENTE where cpf =" + cpf;
             Cliente cliente = new Cliente();
             DataBase bd = DataBase.GetInstance();
             DataSet ds = bd.ExecuteQuery(qry);

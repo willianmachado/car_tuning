@@ -85,7 +85,8 @@ namespace car_tuning
             servicos = servicoDAO.Carregar();
             dgvServP.Rows.Clear();
             foreach (Servico s in servicos)
-                dgvServP.Rows.Add(s.Codigo, s.CpfCliente1, s.PlacaCarro1, s.CpfFuncionario1, s.ValorTotal);
+                dgvServP.Rows.Add(s.Codigo, s.PlacaCarro1, s.CpfCliente1, s.CpfFuncionario1, s.ValorTotal);
+            
         }
         private void dgCliente_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
