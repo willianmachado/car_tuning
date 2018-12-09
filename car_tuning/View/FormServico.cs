@@ -153,8 +153,8 @@ namespace car_tuning
                     
                 }
 
-                
-                txtQuant.Clear();
+
+                txtQuant.Value = 1;
                 lbPesoIni.Text = peso.ToString();
                 lbPotenciaIni.Text = potencia.ToString();
                 lbTorqueIni.Text = torque.ToString();

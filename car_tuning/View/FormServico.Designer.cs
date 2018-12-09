@@ -45,7 +45,6 @@
             this.lbValor = new Ambiance.Ambiance_Label();
             this.iTalk_GroupBox4 = new iTalk.iTalk_GroupBox();
             this.labalQuant = new iTalk.iTalk_Label();
-            this.txtQuant = new System.Windows.Forms.MaskedTextBox();
             this.dgvPecasServ = new System.Windows.Forms.DataGridView();
             this.btnRemoverPeca = new iTalk.iTalk_Button_2();
             this.iTalk_Label4 = new iTalk.iTalk_Label();
@@ -153,12 +152,14 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtQuant = new System.Windows.Forms.NumericUpDown();
             this.iTalk_GroupBox1.SuspendLayout();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).BeginInit();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuant)).BeginInit();
             this.SuspendLayout();
             // 
             // btNovo
@@ -223,7 +224,7 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1178, 652);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1245, 691);
             this.iTalk_GroupBox1.TabIndex = 8;
             this.iTalk_GroupBox1.Text = "Serviço";
             // 
@@ -263,7 +264,7 @@
             this.iTalk_Label7.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label7.Location = new System.Drawing.Point(783, 601);
+            this.iTalk_Label7.Location = new System.Drawing.Point(835, 622);
             this.iTalk_Label7.Name = "iTalk_Label7";
             this.iTalk_Label7.Size = new System.Drawing.Size(45, 32);
             this.iTalk_Label7.TabIndex = 4;
@@ -275,7 +276,7 @@
             this.rtValor.BackColor = System.Drawing.Color.Transparent;
             this.rtValor.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtValor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.rtValor.Location = new System.Drawing.Point(822, 601);
+            this.rtValor.Location = new System.Drawing.Point(874, 622);
             this.rtValor.Name = "rtValor";
             this.rtValor.Size = new System.Drawing.Size(92, 32);
             this.rtValor.TabIndex = 4;
@@ -288,7 +289,7 @@
             this.btExecutar.ForeColor = System.Drawing.Color.White;
             this.btExecutar.Image = null;
             this.btExecutar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btExecutar.Location = new System.Drawing.Point(1078, 601);
+            this.btExecutar.Location = new System.Drawing.Point(1130, 622);
             this.btExecutar.Name = "btExecutar";
             this.btExecutar.Size = new System.Drawing.Size(83, 40);
             this.btExecutar.TabIndex = 1;
@@ -380,8 +381,8 @@
             // iTalk_GroupBox4
             // 
             this.iTalk_GroupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.iTalk_GroupBox4.Controls.Add(this.labalQuant);
             this.iTalk_GroupBox4.Controls.Add(this.txtQuant);
+            this.iTalk_GroupBox4.Controls.Add(this.labalQuant);
             this.iTalk_GroupBox4.Controls.Add(this.dgvPecasServ);
             this.iTalk_GroupBox4.Controls.Add(this.btnRemoverPeca);
             this.iTalk_GroupBox4.Controls.Add(this.iTalk_Label4);
@@ -391,7 +392,7 @@
             this.iTalk_GroupBox4.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox4.Name = "iTalk_GroupBox4";
             this.iTalk_GroupBox4.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox4.Size = new System.Drawing.Size(557, 408);
+            this.iTalk_GroupBox4.Size = new System.Drawing.Size(609, 408);
             this.iTalk_GroupBox4.TabIndex = 7;
             this.iTalk_GroupBox4.Text = "Items";
             // 
@@ -406,17 +407,6 @@
             this.labalQuant.Size = new System.Drawing.Size(116, 25);
             this.labalQuant.TabIndex = 15;
             this.labalQuant.Text = "Quantidade";
-            // 
-            // txtQuant
-            // 
-            this.txtQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuant.Location = new System.Drawing.Point(434, 357);
-            this.txtQuant.Mask = "00000";
-            this.txtQuant.Name = "txtQuant";
-            this.txtQuant.Size = new System.Drawing.Size(100, 31);
-            this.txtQuant.TabIndex = 3;
-            this.txtQuant.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txtQuant.ValidatingType = typeof(int);
             // 
             // dgvPecasServ
             // 
@@ -436,7 +426,7 @@
             this.dgvPecasServ.Location = new System.Drawing.Point(8, 72);
             this.dgvPecasServ.Name = "dgvPecasServ";
             this.dgvPecasServ.ReadOnly = true;
-            this.dgvPecasServ.Size = new System.Drawing.Size(541, 264);
+            this.dgvPecasServ.Size = new System.Drawing.Size(593, 264);
             this.dgvPecasServ.TabIndex = 2;
             this.dgvPecasServ.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPecasServ_CellMouseClick);
             this.dgvPecasServ.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPecasServ_CellMouseDoubleClick);
@@ -615,7 +605,7 @@
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label13);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label5);
             this.iTalk_GroupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iTalk_GroupBox2.Location = new System.Drawing.Point(571, 31);
+            this.iTalk_GroupBox2.Location = new System.Drawing.Point(623, 52);
             this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -1067,7 +1057,7 @@
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label26);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label27);
             this.iTalk_GroupBox3.Controls.Add(this.iTalk_Label34);
-            this.iTalk_GroupBox3.Location = new System.Drawing.Point(571, 308);
+            this.iTalk_GroupBox3.Location = new System.Drawing.Point(623, 329);
             this.iTalk_GroupBox3.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox3.Name = "iTalk_GroupBox3";
             this.iTalk_GroupBox3.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -1463,7 +1453,7 @@
             this.dgvCarrinho.Location = new System.Drawing.Point(16, 31);
             this.dgvCarrinho.Name = "dgvCarrinho";
             this.dgvCarrinho.ReadOnly = true;
-            this.dgvCarrinho.Size = new System.Drawing.Size(541, 199);
+            this.dgvCarrinho.Size = new System.Drawing.Size(601, 199);
             this.dgvCarrinho.TabIndex = 14;
             this.dgvCarrinho.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrinho_CellMouseDoubleClick);
             // 
@@ -1632,11 +1622,24 @@
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
             // 
+            // txtQuant
+            // 
+            this.txtQuant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuant.Location = new System.Drawing.Point(435, 360);
+            this.txtQuant.Name = "txtQuant";
+            this.txtQuant.Size = new System.Drawing.Size(41, 26);
+            this.txtQuant.TabIndex = 16;
+            this.txtQuant.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // FormServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1349, 676);
+            this.ClientSize = new System.Drawing.Size(1416, 715);
             this.Controls.Add(this.btNovo);
             this.Controls.Add(this.btPesquisar);
             this.Controls.Add(this.iTalk_GroupBox1);
@@ -1656,6 +1659,7 @@
             this.iTalk_GroupBox3.ResumeLayout(false);
             this.iTalk_GroupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuant)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1757,7 +1761,6 @@
         private iTalk.iTalk_Label iTalk_Label33;
         private iTalk.iTalk_ComboBox txtFunc;
         private System.Windows.Forms.DataGridView dgvCarrinho;
-        private System.Windows.Forms.MaskedTextBox txtQuant;
         private iTalk.iTalk_Label labalQuant;
         private iTalk.iTalk_Label labalCodigo;
         private iTalk.iTalk_Label labalCod;
@@ -1785,5 +1788,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.NumericUpDown txtQuant;
     }
 }
