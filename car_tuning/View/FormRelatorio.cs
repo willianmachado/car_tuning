@@ -52,7 +52,7 @@ namespace car_tuning
             crvPeca.ReportSource = crPecas;
 
 
-            List<Funcionario> f = new FuncionarioDAO().Carregar();
+            List<NotaF> f = new RelatorioDAO().RankVendas();
             crFuncionario crFuncionario = new crFuncionario();
             crFuncionario.SetDataSource(f);   
             crvFuncionario.ReportSource = crFuncionario;
@@ -62,6 +62,11 @@ namespace car_tuning
             CrVendaPeca crVendaPeca = new CrVendaPeca();
             crVendaPeca.SetDataSource(pecaRel);
             crvVendapeca.ReportSource = crVendaPeca;
+
+            List<NotaF> Serv = new RelatorioDAO().ListaVendas();
+            CrServico crServico = new CrServico();
+            crServico.SetDataSource(Serv);
+            crvServico.ReportSource = crServico;
         }
 
 

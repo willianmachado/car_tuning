@@ -290,7 +290,6 @@ namespace car_tuning
                 ServicoDAO servicoDAO = new ServicoDAO();
                 Servico servico = getDTOServ();
                 servicoDAO.Salvar(servico);
-                //codigo = servicoDAO.
 
                 StageDAO stageDAO = new StageDAO();
                 Stage stage = getDTO();
@@ -303,9 +302,17 @@ namespace car_tuning
                     servPecaDAO.Salvar(servPeca);
                     r++;
                 }
-                
-                
-                    
+
+                CarroDAO car = new CarroDAO();
+                Carro c = getDTOCar();
+                car.AtualizaSpecs(c);
+
+
+                NotaFiscal n = new NotaFiscal();
+                n.ShowDialog(this);
+                n.mostra(labalCod.Text);
+
+
                 //para chamar o splash
                 Thread t = new Thread((new ThreadStart(Loading)));
                 ////inicializar a thread
@@ -327,7 +334,18 @@ namespace car_tuning
             if (MessageBox.Show("Deseja cancelar o Serviço? ", "Mensagem do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     this.Close();
         }
-
+        private Carro getDTOCar()
+        {
+            Carro c = new Carro();
+            c.Peso = int.Parse(txtPesoFin.Text);
+            c.Potencia = int.Parse(txtPotenciaFin.Text);
+            c.VelocidadeMax = int.Parse(txtVelocMaxFin.Text);
+            c.Torque = int.Parse(txtTorqueFin.Text);
+            c.Aceleracao = int.Parse(txtAceleFin.Text);
+            c.Consumo = int.Parse(txtConsumoFin.Text);
+            c.RotacaoMax = int.Parse(txtRotaMaxFin.Text);
+            return c;
+        }
         private Servico getDTOServ()
         {
             Servico s = new Servico();

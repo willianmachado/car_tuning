@@ -30,11 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormServico));
             this.btNovo = new iTalk.iTalk_Button_2();
-            this.btExcluir = new iTalk.iTalk_Button_2();
-            this.btEditar = new iTalk.iTalk_Button_2();
             this.btPesquisar = new iTalk.iTalk_Button_2();
-            this.btLimpar = new iTalk.iTalk_Button_2();
-            this.btSalvar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
             this.labalCodigo = new iTalk.iTalk_Label();
             this.txtFunc = new iTalk.iTalk_ComboBox();
@@ -148,6 +144,10 @@
             this.Column5preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btExcluir = new iTalk.iTalk_Button_2();
+            this.btLimpar = new iTalk.iTalk_Button_2();
+            this.btSalvar = new iTalk.iTalk_Button_2();
+            this.btEditar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1.SuspendLayout();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPecasServ)).BeginInit();
@@ -171,36 +171,6 @@
             this.btNovo.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btNovo.Click += new System.EventHandler(this.btNovo_Click);
             // 
-            // btExcluir
-            // 
-            this.btExcluir.BackColor = System.Drawing.Color.Transparent;
-            this.btExcluir.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btExcluir.ForeColor = System.Drawing.Color.White;
-            this.btExcluir.Image = null;
-            this.btExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btExcluir.Location = new System.Drawing.Point(12, 248);
-            this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(116, 40);
-            this.btExcluir.TabIndex = 1;
-            this.btExcluir.Text = "Excluir";
-            this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
-            // 
-            // btEditar
-            // 
-            this.btEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btEditar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btEditar.ForeColor = System.Drawing.Color.White;
-            this.btEditar.Image = null;
-            this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditar.Location = new System.Drawing.Point(12, 202);
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(116, 40);
-            this.btEditar.TabIndex = 1;
-            this.btEditar.Text = "Editar";
-            this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
-            // 
             // btPesquisar
             // 
             this.btPesquisar.BackColor = System.Drawing.Color.Transparent;
@@ -215,36 +185,6 @@
             this.btPesquisar.Text = "Pesquisar";
             this.btPesquisar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
-            // 
-            // btLimpar
-            // 
-            this.btLimpar.BackColor = System.Drawing.Color.Transparent;
-            this.btLimpar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btLimpar.ForeColor = System.Drawing.Color.White;
-            this.btLimpar.Image = null;
-            this.btLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLimpar.Location = new System.Drawing.Point(12, 156);
-            this.btLimpar.Name = "btLimpar";
-            this.btLimpar.Size = new System.Drawing.Size(116, 40);
-            this.btLimpar.TabIndex = 1;
-            this.btLimpar.Text = "Cancelar";
-            this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
-            // 
-            // btSalvar
-            // 
-            this.btSalvar.BackColor = System.Drawing.Color.Transparent;
-            this.btSalvar.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.btSalvar.ForeColor = System.Drawing.Color.White;
-            this.btSalvar.Image = null;
-            this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSalvar.Location = new System.Drawing.Point(12, 110);
-            this.btSalvar.Name = "btSalvar";
-            this.btSalvar.Size = new System.Drawing.Size(116, 40);
-            this.btSalvar.TabIndex = 1;
-            this.btSalvar.Text = "Salvar";
-            this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // iTalk_GroupBox1
             // 
@@ -1583,6 +1523,66 @@
             this.quantidade.Name = "quantidade";
             this.quantidade.ReadOnly = true;
             // 
+            // btExcluir
+            // 
+            this.btExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btExcluir.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btExcluir.ForeColor = System.Drawing.Color.White;
+            this.btExcluir.Image = null;
+            this.btExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btExcluir.Location = new System.Drawing.Point(12, 248);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(116, 40);
+            this.btExcluir.TabIndex = 1;
+            this.btExcluir.Text = "Excluir";
+            this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            // 
+            // btLimpar
+            // 
+            this.btLimpar.BackColor = System.Drawing.Color.Transparent;
+            this.btLimpar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btLimpar.ForeColor = System.Drawing.Color.White;
+            this.btLimpar.Image = null;
+            this.btLimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLimpar.Location = new System.Drawing.Point(12, 156);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.Size = new System.Drawing.Size(116, 40);
+            this.btLimpar.TabIndex = 1;
+            this.btLimpar.Text = "Cancelar";
+            this.btLimpar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
+            // btSalvar
+            // 
+            this.btSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btSalvar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btSalvar.ForeColor = System.Drawing.Color.White;
+            this.btSalvar.Image = null;
+            this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSalvar.Location = new System.Drawing.Point(12, 110);
+            this.btSalvar.Name = "btSalvar";
+            this.btSalvar.Size = new System.Drawing.Size(116, 40);
+            this.btSalvar.TabIndex = 1;
+            this.btSalvar.Text = "Salvar";
+            this.btSalvar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
+            // 
+            // btEditar
+            // 
+            this.btEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btEditar.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.btEditar.ForeColor = System.Drawing.Color.White;
+            this.btEditar.Image = null;
+            this.btEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEditar.Location = new System.Drawing.Point(12, 202);
+            this.btEditar.Name = "btEditar";
+            this.btEditar.Size = new System.Drawing.Size(116, 40);
+            this.btEditar.TabIndex = 1;
+            this.btEditar.Text = "Editar";
+            this.btEditar.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
+            // 
             // FormServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1617,10 +1617,6 @@
         #endregion
         private iTalk.iTalk_Button_2 btPesquisar;
         private iTalk.iTalk_Button_2 btNovo;
-        private iTalk.iTalk_Button_2 btSalvar;
-        private iTalk.iTalk_Button_2 btLimpar;
-        private iTalk.iTalk_Button_2 btEditar;
-        private iTalk.iTalk_Button_2 btExcluir;
         private iTalk.iTalk_GroupBox iTalk_GroupBox3;
         private iTalk.iTalk_GroupBox iTalk_GroupBox2;
         private iTalk.iTalk_GroupBox iTalk_GroupBox4;
@@ -1734,5 +1730,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
         private iTalk.iTalk_Label labalCodigo;
         private iTalk.iTalk_Label labalCod;
+        private iTalk.iTalk_Button_2 btExcluir;
+        private iTalk.iTalk_Button_2 btLimpar;
+        private iTalk.iTalk_Button_2 btSalvar;
+        private iTalk.iTalk_Button_2 btEditar;
     }
 }

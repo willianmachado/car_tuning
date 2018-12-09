@@ -197,8 +197,84 @@ namespace car_tuning.DAO
             return lista;
         }
 
+        public List<NotaF> ListaVendas()
+        {
+            geraView();
 
 
+            List<NotaF> lista = new List<NotaF>();
+
+            NotaF nf = new NotaF();
+
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("select  codigoServ,nomeCli,cpfCli,placa,nomeFunc,count(codigoServ) as quantidade,valorTotal from NotaFiscal group by codigoServ", conn);
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                nf.PlacaC = dr["placa"].ToString();
+
+                nf.CpfCli = (dr["cpfCli"].ToString());
+                nf.NomeCli = dr["nomeCli"].ToString();
+    
+                nf.NomeFunc = dr["nomeFunc"].ToString();
+
+                nf.QuantidadeP = int.Parse(dr["quantidade"].ToString());
+
+                nf.CodServico1 = Int32.Parse(dr["codigoServ"].ToString());
+
+                nf.ValorTotal = double.Parse(dr["valorTotal"].ToString());
+
+                lista.Add(new NotaF(nf.PlacaC, nf.ModeloC, nf.MarcaC, nf.CpfCli, nf.NomeCli, nf.CpfFunc,
+                    nf.NomeFunc, nf.CodigoP, nf.FabricanteP, nf.PrecoP, nf.CompatibilidadeP, nf.TipoP,
+                    nf.DescricaoP, nf.AddTorqueP, nf.AddPesoP, nf.AddPotenciaP, nf.QuantidadeP,
+                    nf.PesoIni, nf.PotenciaIni, nf.Velocidade_maxIni, nf.TorqueIni, nf.AceleracaoIni, nf.ConsumoIni,
+                    nf.Rotacao_maxIni, nf.PesoFin, nf.PotenciaFin, nf.Velocidade_maxFin, nf.TorqueFin, nf.AceleracaoFin,
+                    nf.ConsumoFin, nf.Rotacao_maxFin, nf.CodServico1, nf.ValorTotal));
+
+            }
+            return lista;
+        }
+        public List<NotaF> RankVendas()
+        {
+            geraView();
+
+
+            List<NotaF> lista = new List<NotaF>();
+
+            NotaF nf = new NotaF();
+
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            SQLiteConnection conn = new SQLiteConnection(Data);
+            if (conn.State == ConnectionState.Closed)
+                conn.Open();
+
+            SQLiteCommand cmd = new SQLiteCommand("select  nome as nomeFunc,cpfFunc,sum(valorTotal) as valor from Servico,FUNCIONARIO where cpfFunc=cpf  group by cpfFunc order by valor desc", conn);
+            SQLiteDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                
+                nf.CpfFunc = (dr["cpfFunc"].ToString());
+                nf.NomeFunc = dr["nomeFunc"].ToString();
+
+
+                nf.ValorTotal = double.Parse(dr["valor"].ToString());
+
+                lista.Add(new NotaF(nf.PlacaC, nf.ModeloC, nf.MarcaC, nf.CpfCli, nf.NomeCli, nf.CpfFunc,
+                    nf.NomeFunc, nf.CodigoP, nf.FabricanteP, nf.PrecoP, nf.CompatibilidadeP, nf.TipoP,
+                    nf.DescricaoP, nf.AddTorqueP, nf.AddPesoP, nf.AddPotenciaP, nf.QuantidadeP,
+                    nf.PesoIni, nf.PotenciaIni, nf.Velocidade_maxIni, nf.TorqueIni, nf.AceleracaoIni, nf.ConsumoIni,
+                    nf.Rotacao_maxIni, nf.PesoFin, nf.PotenciaFin, nf.Velocidade_maxFin, nf.TorqueFin, nf.AceleracaoFin,
+                    nf.ConsumoFin, nf.Rotacao_maxFin, nf.CodServico1, nf.ValorTotal));
+
+            }
+            return lista;
+        }
 
         public List<NotaF> ListaEvolucao(string placa)
         {

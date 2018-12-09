@@ -40,6 +40,7 @@
             this.crvPeca = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.crvPecas = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.crvServico = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.crvFuncionario = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.tabPage6 = new System.Windows.Forms.TabPage();
@@ -55,6 +56,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
@@ -184,6 +186,7 @@
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.tabPage4.Controls.Add(this.crvServico);
             this.tabPage4.Location = new System.Drawing.Point(4, 28);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
@@ -191,6 +194,18 @@
             this.tabPage4.Size = new System.Drawing.Size(1193, 675);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Serviços";
+            // 
+            // crvServico
+            // 
+            this.crvServico.ActiveViewIndex = -1;
+            this.crvServico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crvServico.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crvServico.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crvServico.Location = new System.Drawing.Point(2, 2);
+            this.crvServico.Name = "crvServico";
+            this.crvServico.Size = new System.Drawing.Size(1189, 671);
+            this.crvServico.TabIndex = 0;
+            this.crvServico.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             // 
             // tabPage5
             // 
@@ -331,6 +346,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
@@ -365,6 +381,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txtPlacaEvolu;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crvPeca;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crvServico;
     }
 }
           

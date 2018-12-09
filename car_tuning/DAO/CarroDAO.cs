@@ -37,6 +37,15 @@ namespace car_tuning.Modelo
             bd.GetConnection();
             bd.ExecuteSQL(qry);
         }
+        public void AtualizaSpecs(Carro c)
+        {
+            DataBase bd = DataBase.GetInstance();
+            bd.GetConnection();
+            string sql = string.Format("UPDATE CARRO SET peso = '{3}', potencia = '{4}', velocidadeMax = '{5}', torque = '{6}', aceleracao = '{7}', consumo = '{8}', rotacao = '{9}' WHERE placa = '{10}'",
+                  c.Peso, c.Potencia, c.VelocidadeMax, c.Torque, c.Aceleracao, c.Consumo, c.RotacaoMax, c.Placa);
+
+            bd.ExecuteSQL(sql);
+        }
         public void Atualizar(Carro c)
         {
             DataBase bd = DataBase.GetInstance();

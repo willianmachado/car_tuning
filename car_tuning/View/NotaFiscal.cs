@@ -23,8 +23,14 @@ namespace car_tuning
 
         }
 
-        
-        
+        public void mostra(string cod)
+        {
+            List<NotaF> notas = new RelatorioDAO().ListaCodigo(cod);
+            CrNotaFiscal crNota = new CrNotaFiscal();
+            crNota.SetDataSource(notas);
+            crvNotaF.ReportSource = crNota;
+        }
+
         private void btnBuscaNota_Click(object sender, EventArgs e)
         {
             List<NotaF> notas = new RelatorioDAO().ListaCodigo(txtBusca.Text);
