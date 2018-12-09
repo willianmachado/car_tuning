@@ -495,6 +495,12 @@ namespace car_tuning.View
                 txtRotacaoMax.Text = dgvCarro.Rows[e.RowIndex].Cells[11].Value.ToString();
             }
         }
+
+        private void txtCpf_Click(object sender, EventArgs e)
+        {
+            FormServico form = new FormServico();
+            form.fillCliente();
+        }
     }
     
 }
