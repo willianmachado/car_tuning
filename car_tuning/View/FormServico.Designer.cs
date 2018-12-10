@@ -72,6 +72,9 @@
             this.txtAceleIni = new System.Windows.Forms.MaskedTextBox();
             this.txtTorqueIni = new System.Windows.Forms.MaskedTextBox();
             this.lbTorqueIni = new iTalk.iTalk_Label();
+            this.lbAceleracaoIni = new iTalk.iTalk_Label();
+            this.lvConsumoIni = new iTalk.iTalk_Label();
+            this.lbVelocidadeIni = new iTalk.iTalk_Label();
             this.lbPotenciaIni = new iTalk.iTalk_Label();
             this.lbPesoIni = new iTalk.iTalk_Label();
             this.txtVeloMaxIni = new System.Windows.Forms.MaskedTextBox();
@@ -153,10 +156,6 @@
             this.colPotencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btCancelar = new iTalk.iTalk_Button_2();
-            this.lbVelocidadeIni = new iTalk.iTalk_Label();
-            this.lvConsumoIni = new iTalk.iTalk_Label();
-            this.lbAceleracaoIni = new iTalk.iTalk_Label();
-            this.lbRotacaoIni = new iTalk.iTalk_Label();
             this.iTalk_GroupBox1.SuspendLayout();
             this.iTalk_GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuant)).BeginInit();
@@ -678,7 +677,6 @@
             this.iTalk_GroupBox2.Controls.Add(this.txtAceleIni);
             this.iTalk_GroupBox2.Controls.Add(this.txtTorqueIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbTorqueIni);
-            this.iTalk_GroupBox2.Controls.Add(this.lbRotacaoIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbAceleracaoIni);
             this.iTalk_GroupBox2.Controls.Add(this.lvConsumoIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbVelocidadeIni);
@@ -769,6 +767,42 @@
             this.lbTorqueIni.Size = new System.Drawing.Size(45, 21);
             this.lbTorqueIni.TabIndex = 4;
             this.lbTorqueIni.Text = "cons";
+            // 
+            // lbAceleracaoIni
+            // 
+            this.lbAceleracaoIni.AutoSize = true;
+            this.lbAceleracaoIni.BackColor = System.Drawing.Color.Transparent;
+            this.lbAceleracaoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAceleracaoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbAceleracaoIni.Location = new System.Drawing.Point(538, 200);
+            this.lbAceleracaoIni.Name = "lbAceleracaoIni";
+            this.lbAceleracaoIni.Size = new System.Drawing.Size(45, 21);
+            this.lbAceleracaoIni.TabIndex = 4;
+            this.lbAceleracaoIni.Text = "cons";
+            // 
+            // lvConsumoIni
+            // 
+            this.lvConsumoIni.AutoSize = true;
+            this.lvConsumoIni.BackColor = System.Drawing.Color.Transparent;
+            this.lvConsumoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvConsumoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lvConsumoIni.Location = new System.Drawing.Point(538, 48);
+            this.lvConsumoIni.Name = "lvConsumoIni";
+            this.lvConsumoIni.Size = new System.Drawing.Size(45, 21);
+            this.lvConsumoIni.TabIndex = 4;
+            this.lvConsumoIni.Text = "cons";
+            // 
+            // lbVelocidadeIni
+            // 
+            this.lbVelocidadeIni.AutoSize = true;
+            this.lbVelocidadeIni.BackColor = System.Drawing.Color.Transparent;
+            this.lbVelocidadeIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVelocidadeIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbVelocidadeIni.Location = new System.Drawing.Point(538, 141);
+            this.lbVelocidadeIni.Name = "lbVelocidadeIni";
+            this.lbVelocidadeIni.Size = new System.Drawing.Size(45, 21);
+            this.lbVelocidadeIni.TabIndex = 4;
+            this.lbVelocidadeIni.Text = "cons";
             // 
             // lbPotenciaIni
             // 
@@ -1647,54 +1681,6 @@
             this.btCancelar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // lbVelocidadeIni
-            // 
-            this.lbVelocidadeIni.AutoSize = true;
-            this.lbVelocidadeIni.BackColor = System.Drawing.Color.Transparent;
-            this.lbVelocidadeIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVelocidadeIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbVelocidadeIni.Location = new System.Drawing.Point(538, 141);
-            this.lbVelocidadeIni.Name = "lbVelocidadeIni";
-            this.lbVelocidadeIni.Size = new System.Drawing.Size(45, 21);
-            this.lbVelocidadeIni.TabIndex = 4;
-            this.lbVelocidadeIni.Text = "cons";
-            // 
-            // lvConsumoIni
-            // 
-            this.lvConsumoIni.AutoSize = true;
-            this.lvConsumoIni.BackColor = System.Drawing.Color.Transparent;
-            this.lvConsumoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvConsumoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lvConsumoIni.Location = new System.Drawing.Point(538, 48);
-            this.lvConsumoIni.Name = "lvConsumoIni";
-            this.lvConsumoIni.Size = new System.Drawing.Size(45, 21);
-            this.lvConsumoIni.TabIndex = 4;
-            this.lvConsumoIni.Text = "cons";
-            // 
-            // lbAceleracaoIni
-            // 
-            this.lbAceleracaoIni.AutoSize = true;
-            this.lbAceleracaoIni.BackColor = System.Drawing.Color.Transparent;
-            this.lbAceleracaoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAceleracaoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbAceleracaoIni.Location = new System.Drawing.Point(538, 200);
-            this.lbAceleracaoIni.Name = "lbAceleracaoIni";
-            this.lbAceleracaoIni.Size = new System.Drawing.Size(45, 21);
-            this.lbAceleracaoIni.TabIndex = 4;
-            this.lbAceleracaoIni.Text = "cons";
-            // 
-            // lbRotacaoIni
-            // 
-            this.lbRotacaoIni.AutoSize = true;
-            this.lbRotacaoIni.BackColor = System.Drawing.Color.Transparent;
-            this.lbRotacaoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRotacaoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbRotacaoIni.Location = new System.Drawing.Point(538, 228);
-            this.lbRotacaoIni.Name = "lbRotacaoIni";
-            this.lbRotacaoIni.Size = new System.Drawing.Size(45, 21);
-            this.lbRotacaoIni.TabIndex = 4;
-            this.lbRotacaoIni.Text = "cons";
-            // 
             // FormServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1849,7 +1835,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.NumericUpDown txtQuant;
-        private iTalk.iTalk_Label lbRotacaoIni;
         private iTalk.iTalk_Label lbAceleracaoIni;
         private iTalk.iTalk_Label lvConsumoIni;
         private iTalk.iTalk_Label lbVelocidadeIni;

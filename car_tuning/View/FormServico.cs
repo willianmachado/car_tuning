@@ -99,31 +99,7 @@ namespace car_tuning
 
         }
 
-        private void dgvCarrinho_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (dgvCarrinho.Rows.Count > 0)
-            {
-                preco -= (double.Parse(dgvCarrinho.CurrentRow.Cells["Column5preco"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
-                peso -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colPeso"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
-                potencia -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colPotencia"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
-                torque -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colTorque"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
-
-                dgvCarrinho.Rows.RemoveAt(this.dgvCarrinho.CurrentRow.Index);
-
-
-                rtValor.Text = preco.ToString();
-                lbPesoIni.Text = peso.ToString();
-                lbPotenciaIni.Text = potencia.ToString();
-                lbTorqueIni.Text = torque.ToString();
-                rtValor.Text = preco.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Adicione ao carrinho com o duplo click.");
-
-            }
-            
-        }
+     
         
         PecasDAO pecasDAO = new PecasDAO();
         List<Pecas> pecas;
@@ -136,7 +112,41 @@ namespace car_tuning
         double velocidade = 0;
         double torque = 0;
         double aceleracao = 0;
-        double rotacao = 0;
+
+        private void dgvCarrinho_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dgvCarrinho.Rows.Count > 0)
+            {
+                preco -= (double.Parse(dgvCarrinho.CurrentRow.Cells["Column5preco"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+                peso -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colPeso"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+                potencia -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colPotencia"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+                torque -= (double.Parse(dgvCarrinho.CurrentRow.Cells["colTorque"].Value.ToString()) * (double.Parse(dgvCarrinho.CurrentRow.Cells["quantidade"].Value.ToString())));
+
+                dgvCarrinho.Rows.RemoveAt(this.dgvCarrinho.CurrentRow.Index);
+
+
+                txtQuant.Value =0;
+                consumo = 0;
+                velocidade = 0;
+                aceleracao = 0;
+
+
+                lbPesoIni.Text = peso.ToString();
+                lvConsumoIni.Text = consumo.ToString();
+                lbPotenciaIni.Text = potencia.ToString();
+                lbVelocidadeIni.Text = velocidade.ToString();
+                lbTorqueIni.Text = torque.ToString();
+                lbAceleracaoIni.Text = aceleracao.ToString();
+
+                rtValor.Text = preco.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Adicione ao carrinho com o duplo click.");
+
+            }
+
+        }
 
         private void dgvPecasServ_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -152,19 +162,38 @@ namespace car_tuning
                 {
                     dgvCarrinho.Rows.Add(p.Codigo, p.Tipo, p.Fabricante, p.Preco, p.Descricao,txtQuant.Text, p.AddTorque, p.AddPotencia, p.AddPeso);
                     preco += (double.Parse(p.Preco.ToString()) * (double.Parse(txtQuant.Text)));
-                    peso += (double.Parse(p.AddPeso.ToString()) * (double.Parse(txtQuant.Text)));
-                    potencia += (double.Parse(p.AddPotencia.ToString()) * (double.Parse(txtQuant.Text)));
-                    torque += (double.Parse(p.AddTorque.ToString()) * (double.Parse(txtQuant.Text)));
-                    
+                    peso += double.Parse(txtPesoIni.Text) + (double.Parse(p.AddPeso.ToString()) * (double.Parse(txtQuant.Text)));
+                    potencia += double.Parse(txtPotenciaIni.Text) + (double.Parse(p.AddPotencia.ToString()) * (double.Parse(txtQuant.Text)));
+                    torque += double.Parse(txtTorqueIni.Text) + (double.Parse(p.AddTorque.ToString()) * (double.Parse(txtQuant.Text)));
+
                 }
 
 
-                txtQuant.Value = 1;
-                lbPesoIni.Text = peso.ToString();
-                lbPotenciaIni.Text = potencia.ToString();
-                lbTorqueIni.Text = torque.ToString();
-                rtValor.Text = preco.ToString();
-               
+                if (dgvCarrinho != null)
+                {
+
+                    txtQuant.Value = 1;
+                    consumo = peso * 0.001 + double.Parse(txtConsumoIni.Text);
+                    velocidade = potencia * 0.07 + double.Parse(txtVeloMaxIni.Text);
+                    aceleracao = double.Parse(txtAceleIni.Text) - (torque * 0.009);
+
+                    
+                    lbPesoIni.Text = peso.ToString();
+                    lbPesoIni.Visible = true;
+                    lvConsumoIni.Text = consumo.ToString();
+                    lvConsumoIni.Visible = true;
+                    lbPotenciaIni.Text = potencia.ToString();
+                    lbPotenciaIni.Visible = true;
+                    lbVelocidadeIni.Text = velocidade.ToString();
+                    lbVelocidadeIni.Visible = true;
+                    lbTorqueIni.Text = torque.ToString();
+                    lbTorqueIni.Visible = true;
+                    lbAceleracaoIni.Text = aceleracao.ToString();
+                    lbAceleracaoIni.Visible = true;
+                    
+
+                    rtValor.Text = preco.ToString();
+                }
             }
             else
             {
