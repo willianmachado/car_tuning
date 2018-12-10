@@ -44,6 +44,9 @@ namespace car_tuning
                 LabelCarro.Visible = false;
                 LabelCli.Visible = false;
                 LabelFunc.Visible = false;
+                lbCpfCliente.Visible = false;
+                lbCpfFunc.Visible = false;
+                lbPlacaCarro.Visible = false;
             }
             else if (estado == false)
             {
@@ -59,6 +62,9 @@ namespace car_tuning
                 LabelCarro.Visible = true;
                 LabelCli.Visible = true;
                 LabelFunc.Visible = true;
+                lbCpfCliente.Visible = true;
+                lbCpfFunc.Visible = true;
+                lbPlacaCarro.Visible = true;
             }
             
         }
@@ -238,7 +244,11 @@ namespace car_tuning
 
             clientes = clienteDAO.Carregar();
             foreach (Cliente c in clientes)
+            {
                 txtCliente.Items.Add(c.Cpf);
+                
+            }
+                
                 
 
         }
@@ -317,6 +327,11 @@ namespace car_tuning
                     car.AtualizaSpecs(c);
 
 
+                    NotaFiscal n = new NotaFiscal();
+                    ServicoDAO s = new ServicoDAO();
+                    n.mostra(s.BuscaCodigo().ToString());
+                    n.ShowDialog(this);
+
                     //para chamar o splash
                     Thread t = new Thread((new ThreadStart(Loading)));
                     ////inicializar a thread
@@ -327,10 +342,7 @@ namespace car_tuning
 
                     MessageBox.Show("Serviço encaminhado com sucesso!");
 
-                    NotaFiscal n = new NotaFiscal();
-                    ServicoDAO s = new ServicoDAO();
-                    n.mostra(s.BuscaCodigo().ToString());
-                    n.ShowDialog(this);
+                    
                 }
 
                 else
@@ -694,6 +706,24 @@ namespace car_tuning
         private void txtRotaMaxFin_TextChanged(object sender, EventArgs e)
         {
             pbFill();
+        }
+
+        private void txtCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ClienteDAO clienteDAO = new ClienteDAO();
+            Cliente cliente = clienteDAO.BuscaCPF(txtCliente.Text);
+            lbCpfCliente.Text = cliente.Nome;
+        }
+
+        private void txtCarro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CarroDAO carroDAO = new CarroDAO();
+            //Carro carro = carroDAO.
+        }
+
+        private void txtFunc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

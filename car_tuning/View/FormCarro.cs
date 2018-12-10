@@ -521,8 +521,25 @@ namespace car_tuning.View
 
         private void txtCpf_Click(object sender, EventArgs e)
         {
-            FormServico form = new FormServico();
-            form.fillCliente();
+            
+            fillCliente();
+        }
+
+        public void fillCliente()
+        {
+            List<Cliente> clientes;
+            ClienteDAO clienteDAO = new ClienteDAO();
+            txtCpf.Items.Clear();
+
+            clientes = clienteDAO.Carregar();
+            foreach (Cliente c in clientes)
+            {
+                txtCpf.Items.Add(c.Cpf);
+
+            }
+
+
+
         }
     }
     

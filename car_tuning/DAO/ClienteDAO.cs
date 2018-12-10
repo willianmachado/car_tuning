@@ -75,7 +75,7 @@ namespace car_tuning
             {
                 DataRow dr = ds.Tables[0].Rows[0];
                 cliente.Cpf = dr["cpf"].ToString();
-                cliente.Nome = dr["nome"].ToString();
+                cliente.Nome = dr["NOME"].ToString();
                 cliente.Telefone = dr["tel"].ToString();
                 cliente.Email = dr["email"].ToString();
             }
