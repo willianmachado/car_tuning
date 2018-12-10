@@ -40,7 +40,6 @@
             this.iTalk_Label26 = new iTalk.iTalk_Label();
             this.txtPlaca = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label27 = new iTalk.iTalk_Label();
-            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.iTalk_Label42 = new iTalk.iTalk_Label();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.btBuscarCarro = new Ambiance.Ambiance_Button_2();
@@ -117,6 +116,7 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
+            this.txtCpf = new System.Windows.Forms.ComboBox();
             this.iTalk_GroupBox2.SuspendLayout();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
@@ -196,6 +196,7 @@
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_GroupBox1.Controls.Add(this.txtModelo);
             this.iTalk_GroupBox1.Controls.Add(this.NovaMarca);
+            this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Controls.Add(this.txtMarca);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label24);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label25);
@@ -203,7 +204,6 @@
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label26);
             this.iTalk_GroupBox1.Controls.Add(this.txtPlaca);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label27);
-            this.iTalk_GroupBox1.Controls.Add(this.txtCpf);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label42);
             this.iTalk_GroupBox1.Controls.Add(this.txtPesquisa);
             this.iTalk_GroupBox1.Controls.Add(this.btBuscarCarro);
@@ -318,20 +318,6 @@
             this.iTalk_Label27.Size = new System.Drawing.Size(46, 21);
             this.iTalk_Label27.TabIndex = 138;
             this.iTalk_Label27.Text = "Placa";
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.ForeColor = System.Drawing.Color.DimGray;
-            this.txtCpf.Location = new System.Drawing.Point(231, 98);
-            this.txtCpf.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCpf.Mask = "000,000,000,00";
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.PromptChar = ' ';
-            this.txtCpf.Size = new System.Drawing.Size(155, 27);
-            this.txtCpf.TabIndex = 0;
-            this.txtCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // iTalk_Label42
             // 
@@ -1232,6 +1218,19 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
+            // txtCpf
+            // 
+            this.txtCpf.AllowDrop = true;
+            this.txtCpf.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
+            this.txtCpf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.FormattingEnabled = true;
+            this.txtCpf.Location = new System.Drawing.Point(231, 96);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(155, 26);
+            this.txtCpf.TabIndex = 3;
+            this.txtCpf.Click += new System.EventHandler(this.txtCpf_Click);
+            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1312,7 +1311,6 @@
         private iTalk.iTalk_Label iTalk_Label26;
         private System.Windows.Forms.MaskedTextBox txtPlaca;
         private iTalk.iTalk_Label iTalk_Label27;
-        private System.Windows.Forms.MaskedTextBox txtCpf;
         private iTalk.iTalk_Label iTalk_Label42;
         private System.Windows.Forms.TextBox txtPesquisa;
         private Ambiance.Ambiance_Button_2 btBuscarCarro;
@@ -1353,5 +1351,6 @@
         private iTalk.iTalk_Label iTalk_Label31;
         private iTalk.iTalk_Label iTalk_Label34;
         private iTalk.iTalk_Label iTalk_Label32;
+        private System.Windows.Forms.ComboBox txtCpf;
     }
 }
