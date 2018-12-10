@@ -175,32 +175,7 @@ namespace car_tuning.Modelo
             con.Close();
         }
         
-        void LoadImage()
-        {
-            Carro c = new Carro();
-            FormCarro form = new FormCarro();
-
-            string query = "SELECT foto FROM CARRO WHERE placa =" + c.Placa;
-
-            SQLiteConnection con = new SQLiteConnection(Data);
-            SQLiteCommand cmd = new SQLiteCommand(query, con);
-            con.Open();
-            try
-            {
-                IDataReader rdr = cmd.ExecuteReader();
-                try
-                {
-                    while (rdr.Read())
-                    {
-                        byte[] a = (System.Byte[])rdr[0];
-                        form.imgCarro.Image = ByteToImage(a);
-                    }
-                }
-                catch (Exception exc) { MessageBox.Show(exc.Message); }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-            con.Close();
-        }
+        
 
     }
 

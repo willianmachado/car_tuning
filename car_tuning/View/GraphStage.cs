@@ -20,6 +20,7 @@ namespace car_tuning.View
             carragaGraf();
             
         }
+        string fp = @"C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\IMG\";
 
         public void carragaGraf()
         {
@@ -56,6 +57,10 @@ namespace car_tuning.View
                 this.chartRotacao.Series["RotacaoFin"].Points.AddY(s.Rotacao_maxFin);
 
             }
+            
+           
+            
+            
 
 
         }

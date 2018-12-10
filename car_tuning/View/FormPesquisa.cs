@@ -98,7 +98,7 @@ namespace car_tuning
                 string nome = dgCliente.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string telefone = dgCliente.Rows[e.RowIndex].Cells[2].Value.ToString();
                 string email = dgCliente.Rows[e.RowIndex].Cells[3].Value.ToString();
-
+                 
             }
         }
 

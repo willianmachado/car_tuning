@@ -328,8 +328,9 @@ namespace car_tuning
                     MessageBox.Show("Serviço encaminhado com sucesso!");
 
                     NotaFiscal n = new NotaFiscal();
+                    ServicoDAO s = new ServicoDAO();
+                    n.mostra(s.BuscaCodigo().ToString());
                     n.ShowDialog(this);
-                    n.mostra(labalCod.Text);
                 }
 
                 else

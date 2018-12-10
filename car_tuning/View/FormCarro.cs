@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -437,17 +438,39 @@ namespace car_tuning.View
                 txtVelocidadeMax.Enabled = false;
             }
         }
-
+        string fp = @"C:\Users\wdragon8\Documents\LP2\car_tuning\car_tuning\IMG\";
         private void btnBuscaIMG_Click(object sender, EventArgs e)
         {
-            if (SfdCarro.ShowDialog() == DialogResult.OK)
+            if (!Directory.Exists(fp))
             {
-                
-                imgCarro.Image = Image.FromFile(SfdCarro.FileName);
-                byte[] pic = c.ImageToByte(imgCarro.Image, System.Drawing.Imaging.ImageFormat.Jpeg);
-                c.SaveImage(pic, txtPlaca.Text);
-                imgCarro.Show();
-                
+                Directory.CreateDirectory(fp);
+                OpenFileDialog open = new OpenFileDialog();
+                open.InitialDirectory = "c:\\";
+                open.Filter = "Image Files(*.jpg|*.jpg|All Files(*.*)|*.*)";
+                open.FilterIndex = 1;
+                if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (open.CheckFileExists)
+                    {
+                        System.IO.File.Copy(open.FileName, @fp + txtPlaca.Text + ".jpg");
+                        pBox.Image = Image.FromFile(@fp + txtPlaca.Text + ".jpg");
+                    }
+                }
+            }
+            else
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.InitialDirectory = "c:\\";
+                open.Filter = "Image Files(*.jpg|*.jpg|All Files(*.*)|*.*)";
+                open.FilterIndex = 1;
+                if (open.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (open.CheckFileExists)
+                    {
+                        System.IO.File.Copy(open.FileName, @fp + txtPlaca.Text + ".jpg");
+                        pBox.Image = Image.FromFile(@fp + txtPlaca.Text + ".jpg");
+                    }
+                }
             }
         }
 

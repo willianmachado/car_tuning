@@ -30,9 +30,11 @@
         {
             this.SfdCarro = new System.Windows.Forms.SaveFileDialog();
             this.iTalk_GroupBox2 = new iTalk.iTalk_GroupBox();
+            this.pBox = new System.Windows.Forms.PictureBox();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
             this.txtModelo = new System.Windows.Forms.TextBox();
             this.NovaMarca = new System.Windows.Forms.LinkLabel();
+            this.txtCpf = new System.Windows.Forms.ComboBox();
             this.txtMarca = new System.Windows.Forms.ComboBox();
             this.iTalk_Label24 = new iTalk.iTalk_Label();
             this.iTalk_Label25 = new iTalk.iTalk_Label();
@@ -81,7 +83,6 @@
             this.iTalk_Label39 = new iTalk.iTalk_Label();
             this.iTalk_Label20 = new iTalk.iTalk_Label();
             this.iTalk_Label40 = new iTalk.iTalk_Label();
-            this.imgCarro = new System.Windows.Forms.PictureBox();
             this.txtVelocidadeMax = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label12 = new iTalk.iTalk_Label();
             this.iTalk_Label38 = new iTalk.iTalk_Label();
@@ -116,11 +117,10 @@
             this.btLimpar = new iTalk.iTalk_Button_2();
             this.btEditar = new iTalk.iTalk_Button_2();
             this.btExcluir = new iTalk.iTalk_Button_2();
-            this.txtCpf = new System.Windows.Forms.ComboBox();
             this.iTalk_GroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox)).BeginInit();
             this.iTalk_GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).BeginInit();
             this.SuspendLayout();
             // 
             // iTalk_GroupBox2
@@ -129,6 +129,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox2.Controls.Add(this.pBox);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_GroupBox1);
             this.iTalk_GroupBox2.Controls.Add(this.btnBuscaIMG);
             this.iTalk_GroupBox2.Controls.Add(this.lbConsumo);
@@ -155,7 +156,6 @@
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label39);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label20);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label40);
-            this.iTalk_GroupBox2.Controls.Add(this.imgCarro);
             this.iTalk_GroupBox2.Controls.Add(this.txtVelocidadeMax);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label12);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label38);
@@ -190,6 +190,14 @@
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
             this.iTalk_GroupBox2.Size = new System.Drawing.Size(1180, 703);
             this.iTalk_GroupBox2.TabIndex = 9;
+            // 
+            // pBox
+            // 
+            this.pBox.Location = new System.Drawing.Point(877, 31);
+            this.pBox.Name = "pBox";
+            this.pBox.Size = new System.Drawing.Size(295, 178);
+            this.pBox.TabIndex = 146;
+            this.pBox.TabStop = false;
             // 
             // iTalk_GroupBox1
             // 
@@ -235,6 +243,19 @@
             this.NovaMarca.TabStop = true;
             this.NovaMarca.Text = "Adicionar nova marca";
             this.NovaMarca.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.NovaMarca_LinkClicked);
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.AllowDrop = true;
+            this.txtCpf.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
+            this.txtCpf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.FormattingEnabled = true;
+            this.txtCpf.Location = new System.Drawing.Point(231, 96);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(155, 26);
+            this.txtCpf.TabIndex = 3;
+            this.txtCpf.Click += new System.EventHandler(this.txtCpf_Click);
             // 
             // txtMarca
             // 
@@ -743,18 +764,6 @@
             this.iTalk_Label40.Text = "cv";
             this.iTalk_Label40.Visible = false;
             // 
-            // imgCarro
-            // 
-            this.imgCarro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgCarro.Image = global::car_tuning.Properties.Resources.carro;
-            this.imgCarro.Location = new System.Drawing.Point(862, 49);
-            this.imgCarro.Name = "imgCarro";
-            this.imgCarro.Size = new System.Drawing.Size(263, 166);
-            this.imgCarro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgCarro.TabIndex = 1;
-            this.imgCarro.TabStop = false;
-            this.imgCarro.Visible = false;
-            // 
             // txtVelocidadeMax
             // 
             this.txtVelocidadeMax.BackColor = System.Drawing.Color.Transparent;
@@ -1218,19 +1227,6 @@
             this.btExcluir.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // txtCpf
-            // 
-            this.txtCpf.AllowDrop = true;
-            this.txtCpf.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystem;
-            this.txtCpf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.FormattingEnabled = true;
-            this.txtCpf.Location = new System.Drawing.Point(231, 96);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(155, 26);
-            this.txtCpf.TabIndex = 3;
-            this.txtCpf.Click += new System.EventHandler(this.txtCpf_Click);
-            // 
             // FormCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1253,10 +1249,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.iTalk_GroupBox2.ResumeLayout(false);
             this.iTalk_GroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBox)).EndInit();
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCarro)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1329,7 +1325,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn aceleracao;
         private System.Windows.Forms.DataGridViewTextBoxColumn consumo;
         private System.Windows.Forms.DataGridViewTextBoxColumn rotacaoMax;
-        public System.Windows.Forms.PictureBox imgCarro;
         private iTalk.iTalk_Label iTalk_Label33;
         private iTalk.iTalk_TextBox_Small txtRotacaoMax;
         private iTalk.iTalk_TextBox_Small txtPeso;
@@ -1352,5 +1347,6 @@
         private iTalk.iTalk_Label iTalk_Label34;
         private iTalk.iTalk_Label iTalk_Label32;
         private System.Windows.Forms.ComboBox txtCpf;
+        private System.Windows.Forms.PictureBox pBox;
     }
 }
