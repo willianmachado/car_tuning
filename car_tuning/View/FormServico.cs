@@ -125,14 +125,17 @@ namespace car_tuning
                 dgvCarrinho.Rows.RemoveAt(this.dgvCarrinho.CurrentRow.Index);
 
 
-                txtQuant.Value =0;
-                consumo = 0;
-                velocidade = 0;
-                aceleracao = 0;
+                
+                 consumo = 0;
+                 peso = 0;
+                 potencia = 0;
+                 velocidade = 0;
+                 torque = 0;
+                 aceleracao = 0;
 
 
                 lbPesoIni.Text = peso.ToString();
-                lvConsumoIni.Text = consumo.ToString();
+                lbConsumoIni.Text = consumo.ToString();
                 lbPotenciaIni.Text = potencia.ToString();
                 lbVelocidadeIni.Text = velocidade.ToString();
                 lbTorqueIni.Text = torque.ToString();
@@ -173,15 +176,15 @@ namespace car_tuning
                 {
 
                     txtQuant.Value = 1;
-                    consumo = peso * 0.001 + double.Parse(txtConsumoIni.Text);
+                    consumo = peso * 0.002 + double.Parse(txtConsumoIni.Text);
                     velocidade = potencia * 0.07 + double.Parse(txtVeloMaxIni.Text);
                     aceleracao = double.Parse(txtAceleIni.Text) - (torque * 0.009);
 
                     
                     lbPesoIni.Text = peso.ToString();
                     lbPesoIni.Visible = true;
-                    lvConsumoIni.Text = consumo.ToString();
-                    lvConsumoIni.Visible = true;
+                    lbConsumoIni.Text = consumo.ToString();
+                    lbConsumoIni.Visible = true;
                     lbPotenciaIni.Text = potencia.ToString();
                     lbPotenciaIni.Visible = true;
                     lbVelocidadeIni.Text = velocidade.ToString();
@@ -190,7 +193,19 @@ namespace car_tuning
                     lbTorqueIni.Visible = true;
                     lbAceleracaoIni.Text = aceleracao.ToString();
                     lbAceleracaoIni.Visible = true;
-                    
+
+                    /*
+                    txtConsumoFin.Text = consumo.ToString();
+                    txtPesoFin.Text = peso.ToString();
+                    txtPotenciaFin.Text = potencia.ToString();
+                    txtVelocMaxFin.Text = velocidade.ToString();
+                    txtTorqueFin.Text = torque.ToString();
+                    txtAceleFin.Text = aceleracao.ToString();
+                    */
+
+
+
+
 
                     rtValor.Text = preco.ToString();
                 }

@@ -73,7 +73,7 @@
             this.txtTorqueIni = new System.Windows.Forms.MaskedTextBox();
             this.lbTorqueIni = new iTalk.iTalk_Label();
             this.lbAceleracaoIni = new iTalk.iTalk_Label();
-            this.lvConsumoIni = new iTalk.iTalk_Label();
+            this.lbConsumoIni = new iTalk.iTalk_Label();
             this.lbVelocidadeIni = new iTalk.iTalk_Label();
             this.lbPotenciaIni = new iTalk.iTalk_Label();
             this.lbPesoIni = new iTalk.iTalk_Label();
@@ -678,7 +678,7 @@
             this.iTalk_GroupBox2.Controls.Add(this.txtTorqueIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbTorqueIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbAceleracaoIni);
-            this.iTalk_GroupBox2.Controls.Add(this.lvConsumoIni);
+            this.iTalk_GroupBox2.Controls.Add(this.lbConsumoIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbVelocidadeIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbPotenciaIni);
             this.iTalk_GroupBox2.Controls.Add(this.lbPesoIni);
@@ -729,6 +729,7 @@
             this.txtRotMaxIni.Location = new System.Drawing.Point(424, 223);
             this.txtRotMaxIni.Mask = "0000";
             this.txtRotMaxIni.Name = "txtRotMaxIni";
+            this.txtRotMaxIni.PromptChar = ' ';
             this.txtRotMaxIni.Size = new System.Drawing.Size(57, 26);
             this.txtRotMaxIni.TabIndex = 6;
             this.txtRotMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -740,6 +741,7 @@
             this.txtAceleIni.Location = new System.Drawing.Point(425, 194);
             this.txtAceleIni.Mask = "0000";
             this.txtAceleIni.Name = "txtAceleIni";
+            this.txtAceleIni.PromptChar = ' ';
             this.txtAceleIni.Size = new System.Drawing.Size(57, 26);
             this.txtAceleIni.TabIndex = 5;
             this.txtAceleIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -751,6 +753,7 @@
             this.txtTorqueIni.Location = new System.Drawing.Point(425, 165);
             this.txtTorqueIni.Mask = "0000";
             this.txtTorqueIni.Name = "txtTorqueIni";
+            this.txtTorqueIni.PromptChar = ' ';
             this.txtTorqueIni.Size = new System.Drawing.Size(57, 26);
             this.txtTorqueIni.TabIndex = 4;
             this.txtTorqueIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -767,6 +770,7 @@
             this.lbTorqueIni.Size = new System.Drawing.Size(45, 21);
             this.lbTorqueIni.TabIndex = 4;
             this.lbTorqueIni.Text = "cons";
+            this.lbTorqueIni.Visible = false;
             // 
             // lbAceleracaoIni
             // 
@@ -779,18 +783,20 @@
             this.lbAceleracaoIni.Size = new System.Drawing.Size(45, 21);
             this.lbAceleracaoIni.TabIndex = 4;
             this.lbAceleracaoIni.Text = "cons";
+            this.lbAceleracaoIni.Visible = false;
             // 
-            // lvConsumoIni
+            // lbConsumoIni
             // 
-            this.lvConsumoIni.AutoSize = true;
-            this.lvConsumoIni.BackColor = System.Drawing.Color.Transparent;
-            this.lvConsumoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvConsumoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lvConsumoIni.Location = new System.Drawing.Point(538, 48);
-            this.lvConsumoIni.Name = "lvConsumoIni";
-            this.lvConsumoIni.Size = new System.Drawing.Size(45, 21);
-            this.lvConsumoIni.TabIndex = 4;
-            this.lvConsumoIni.Text = "cons";
+            this.lbConsumoIni.AutoSize = true;
+            this.lbConsumoIni.BackColor = System.Drawing.Color.Transparent;
+            this.lbConsumoIni.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbConsumoIni.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbConsumoIni.Location = new System.Drawing.Point(538, 48);
+            this.lbConsumoIni.Name = "lbConsumoIni";
+            this.lbConsumoIni.Size = new System.Drawing.Size(45, 21);
+            this.lbConsumoIni.TabIndex = 4;
+            this.lbConsumoIni.Text = "cons";
+            this.lbConsumoIni.Visible = false;
             // 
             // lbVelocidadeIni
             // 
@@ -803,6 +809,7 @@
             this.lbVelocidadeIni.Size = new System.Drawing.Size(45, 21);
             this.lbVelocidadeIni.TabIndex = 4;
             this.lbVelocidadeIni.Text = "cons";
+            this.lbVelocidadeIni.Visible = false;
             // 
             // lbPotenciaIni
             // 
@@ -815,6 +822,7 @@
             this.lbPotenciaIni.Size = new System.Drawing.Size(45, 21);
             this.lbPotenciaIni.TabIndex = 4;
             this.lbPotenciaIni.Text = "cons";
+            this.lbPotenciaIni.Visible = false;
             // 
             // lbPesoIni
             // 
@@ -827,6 +835,7 @@
             this.lbPesoIni.Size = new System.Drawing.Size(45, 21);
             this.lbPesoIni.TabIndex = 4;
             this.lbPesoIni.Text = "cons";
+            this.lbPesoIni.Visible = false;
             // 
             // txtVeloMaxIni
             // 
@@ -834,6 +843,7 @@
             this.txtVeloMaxIni.Location = new System.Drawing.Point(425, 135);
             this.txtVeloMaxIni.Mask = "0000";
             this.txtVeloMaxIni.Name = "txtVeloMaxIni";
+            this.txtVeloMaxIni.PromptChar = ' ';
             this.txtVeloMaxIni.Size = new System.Drawing.Size(57, 26);
             this.txtVeloMaxIni.TabIndex = 3;
             this.txtVeloMaxIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -845,6 +855,7 @@
             this.txtPotenciaIni.Location = new System.Drawing.Point(424, 106);
             this.txtPotenciaIni.Mask = "0000";
             this.txtPotenciaIni.Name = "txtPotenciaIni";
+            this.txtPotenciaIni.PromptChar = ' ';
             this.txtPotenciaIni.Size = new System.Drawing.Size(57, 26);
             this.txtPotenciaIni.TabIndex = 2;
             this.txtPotenciaIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -856,6 +867,7 @@
             this.txtPesoIni.Location = new System.Drawing.Point(425, 76);
             this.txtPesoIni.Mask = "0000";
             this.txtPesoIni.Name = "txtPesoIni";
+            this.txtPesoIni.PromptChar = ' ';
             this.txtPesoIni.Size = new System.Drawing.Size(57, 26);
             this.txtPesoIni.TabIndex = 1;
             this.txtPesoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -867,6 +879,7 @@
             this.txtConsumoIni.Location = new System.Drawing.Point(425, 47);
             this.txtConsumoIni.Mask = "0000";
             this.txtConsumoIni.Name = "txtConsumoIni";
+            this.txtConsumoIni.PromptChar = ' ';
             this.txtConsumoIni.Size = new System.Drawing.Size(57, 26);
             this.txtConsumoIni.TabIndex = 0;
             this.txtConsumoIni.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1215,8 +1228,8 @@
             // 
             this.txtRotaMaxFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRotaMaxFin.Location = new System.Drawing.Point(423, 216);
-            this.txtRotaMaxFin.Mask = "0000";
             this.txtRotaMaxFin.Name = "txtRotaMaxFin";
+            this.txtRotaMaxFin.PromptChar = ' ';
             this.txtRotaMaxFin.Size = new System.Drawing.Size(57, 26);
             this.txtRotaMaxFin.TabIndex = 6;
             this.txtRotaMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1226,8 +1239,8 @@
             // 
             this.txtAceleFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAceleFin.Location = new System.Drawing.Point(424, 187);
-            this.txtAceleFin.Mask = "0000";
             this.txtAceleFin.Name = "txtAceleFin";
+            this.txtAceleFin.PromptChar = ' ';
             this.txtAceleFin.Size = new System.Drawing.Size(57, 26);
             this.txtAceleFin.TabIndex = 5;
             this.txtAceleFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1237,8 +1250,8 @@
             // 
             this.txtTorqueFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTorqueFin.Location = new System.Drawing.Point(424, 158);
-            this.txtTorqueFin.Mask = "0000";
             this.txtTorqueFin.Name = "txtTorqueFin";
+            this.txtTorqueFin.PromptChar = ' ';
             this.txtTorqueFin.Size = new System.Drawing.Size(57, 26);
             this.txtTorqueFin.TabIndex = 4;
             this.txtTorqueFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1248,8 +1261,8 @@
             // 
             this.txtVelocMaxFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVelocMaxFin.Location = new System.Drawing.Point(424, 128);
-            this.txtVelocMaxFin.Mask = "0000";
             this.txtVelocMaxFin.Name = "txtVelocMaxFin";
+            this.txtVelocMaxFin.PromptChar = ' ';
             this.txtVelocMaxFin.Size = new System.Drawing.Size(57, 26);
             this.txtVelocMaxFin.TabIndex = 3;
             this.txtVelocMaxFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1259,8 +1272,8 @@
             // 
             this.txtPotenciaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPotenciaFin.Location = new System.Drawing.Point(423, 99);
-            this.txtPotenciaFin.Mask = "0000";
             this.txtPotenciaFin.Name = "txtPotenciaFin";
+            this.txtPotenciaFin.PromptChar = ' ';
             this.txtPotenciaFin.Size = new System.Drawing.Size(57, 26);
             this.txtPotenciaFin.TabIndex = 2;
             this.txtPotenciaFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1270,8 +1283,8 @@
             // 
             this.txtPesoFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPesoFin.Location = new System.Drawing.Point(424, 69);
-            this.txtPesoFin.Mask = "0000";
             this.txtPesoFin.Name = "txtPesoFin";
+            this.txtPesoFin.PromptChar = ' ';
             this.txtPesoFin.Size = new System.Drawing.Size(57, 26);
             this.txtPesoFin.TabIndex = 1;
             this.txtPesoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1281,8 +1294,8 @@
             // 
             this.txtConsumoFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConsumoFin.Location = new System.Drawing.Point(424, 40);
-            this.txtConsumoFin.Mask = "0000";
             this.txtConsumoFin.Name = "txtConsumoFin";
+            this.txtConsumoFin.PromptChar = ' ';
             this.txtConsumoFin.Size = new System.Drawing.Size(57, 26);
             this.txtConsumoFin.TabIndex = 0;
             this.txtConsumoFin.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
@@ -1836,7 +1849,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.NumericUpDown txtQuant;
         private iTalk.iTalk_Label lbAceleracaoIni;
-        private iTalk.iTalk_Label lvConsumoIni;
+        private iTalk.iTalk_Label lbConsumoIni;
         private iTalk.iTalk_Label lbVelocidadeIni;
     }
 }
