@@ -29,7 +29,30 @@ namespace car_tuning.Modelo
             bd.ExecuteSQL(qry);
 
         }
-
+        public Carro BuscaCarro(string placa)
+        {
+            DataBase bd = DataBase.GetInstance();
+            string qry = "select * from CARRO where placa like " + placa;
+            Carro c = new Carro();
+            DataSet ds = bd.ExecuteQuery(qry);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                c.Placa = dr["placa"].ToString();
+                c.CpfCliente = dr["cpfCli"].ToString();
+                c.Ano = dr["ano"].ToString();
+                c.Marca = dr["marca"].ToString();
+                c.Modelo = dr["modelo"].ToString();
+                c.Peso = int.Parse(dr["peso"].ToString());
+                c.Potencia = int.Parse(dr["potencia"].ToString());
+                c.VelocidadeMax = int.Parse(dr["velocidadeMax"].ToString());
+                c.Torque = int.Parse(dr["torque"].ToString());
+                c.Aceleracao = int.Parse(dr["aceleracao"].ToString());
+                c.Consumo = int.Parse(dr["consumo"].ToString());
+                c.RotacaoMax = int.Parse(dr["rotacao"].ToString());
+            }
+            return c;
+        }
         public void Deletar(string index)
         {
             String qry = string.Format("DELETE FROM CARRO WHERE placa='" + index + "';");

@@ -32,12 +32,13 @@
             this.btNovo = new iTalk.iTalk_Button_2();
             this.btPesquisar = new iTalk.iTalk_Button_2();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
+            this.lbMarca = new iTalk.iTalk_Label();
             this.labalCodigo = new iTalk.iTalk_Label();
             this.txtFunc = new iTalk.iTalk_ComboBox();
             this.iTalk_Label7 = new iTalk.iTalk_Label();
             this.rtValor = new iTalk.iTalk_Label();
             this.btExecutar = new iTalk.iTalk_Button_2();
-            this.lbPlacaCarro = new iTalk.iTalk_Label();
+            this.lbModelo = new iTalk.iTalk_Label();
             this.lbCpfCliente = new iTalk.iTalk_Label();
             this.lbCpfFunc = new iTalk.iTalk_Label();
             this.LabelFunc = new iTalk.iTalk_Label();
@@ -201,12 +202,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.iTalk_GroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iTalk_GroupBox1.Controls.Add(this.lbMarca);
             this.iTalk_GroupBox1.Controls.Add(this.labalCodigo);
             this.iTalk_GroupBox1.Controls.Add(this.txtFunc);
             this.iTalk_GroupBox1.Controls.Add(this.iTalk_Label7);
             this.iTalk_GroupBox1.Controls.Add(this.rtValor);
             this.iTalk_GroupBox1.Controls.Add(this.btExecutar);
-            this.iTalk_GroupBox1.Controls.Add(this.lbPlacaCarro);
+            this.iTalk_GroupBox1.Controls.Add(this.lbModelo);
             this.iTalk_GroupBox1.Controls.Add(this.lbCpfCliente);
             this.iTalk_GroupBox1.Controls.Add(this.lbCpfFunc);
             this.iTalk_GroupBox1.Controls.Add(this.LabelFunc);
@@ -230,6 +232,19 @@
             this.iTalk_GroupBox1.Size = new System.Drawing.Size(1245, 691);
             this.iTalk_GroupBox1.TabIndex = 8;
             this.iTalk_GroupBox1.Text = "Serviço";
+            // 
+            // lbMarca
+            // 
+            this.lbMarca.AutoSize = true;
+            this.lbMarca.BackColor = System.Drawing.Color.Transparent;
+            this.lbMarca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.lbMarca.Location = new System.Drawing.Point(514, 181);
+            this.lbMarca.Name = "lbMarca";
+            this.lbMarca.Size = new System.Drawing.Size(53, 21);
+            this.lbMarca.TabIndex = 16;
+            this.lbMarca.Text = "Marca";
+            this.lbMarca.Visible = false;
             // 
             // labalCodigo
             // 
@@ -301,18 +316,18 @@
             this.btExecutar.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btExecutar.Click += new System.EventHandler(this.btExecutar_Click);
             // 
-            // lbPlacaCarro
+            // lbModelo
             // 
-            this.lbPlacaCarro.AutoSize = true;
-            this.lbPlacaCarro.BackColor = System.Drawing.Color.Transparent;
-            this.lbPlacaCarro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPlacaCarro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.lbPlacaCarro.Location = new System.Drawing.Point(369, 181);
-            this.lbPlacaCarro.Name = "lbPlacaCarro";
-            this.lbPlacaCarro.Size = new System.Drawing.Size(46, 21);
-            this.lbPlacaCarro.TabIndex = 12;
-            this.lbPlacaCarro.Text = "placa";
-            this.lbPlacaCarro.Visible = false;
+            this.lbModelo.AutoSize = true;
+            this.lbModelo.BackColor = System.Drawing.Color.Transparent;
+            this.lbModelo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            this.lbModelo.Location = new System.Drawing.Point(369, 181);
+            this.lbModelo.Name = "lbModelo";
+            this.lbModelo.Size = new System.Drawing.Size(63, 21);
+            this.lbModelo.TabIndex = 12;
+            this.lbModelo.Text = "Modelo";
+            this.lbModelo.Visible = false;
             // 
             // lbCpfCliente
             // 
@@ -1708,6 +1723,7 @@
             this.MinimizeBox = false;
             this.Name = "FormServico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            
             this.iTalk_GroupBox1.ResumeLayout(false);
             this.iTalk_GroupBox1.PerformLayout();
             this.iTalk_GroupBox4.ResumeLayout(false);
@@ -1835,7 +1851,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTorque;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPotencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPeso;
-        private iTalk.iTalk_Label lbPlacaCarro;
+        private iTalk.iTalk_Label lbModelo;
         private iTalk.iTalk_Label lbCpfCliente;
         private iTalk.iTalk_Label lbCpfFunc;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
@@ -1851,5 +1867,6 @@
         private iTalk.iTalk_Label lbAceleracaoIni;
         private iTalk.iTalk_Label lbConsumoIni;
         private iTalk.iTalk_Label lbVelocidadeIni;
+        private iTalk.iTalk_Label lbMarca;
     }
 }

@@ -502,6 +502,7 @@ namespace car_tuning.View
 
         private void dgvCarro_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            Fill();
             if (e.RowIndex >= 0)
             {
                 txtPlaca.Text = dgvCarro.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -516,6 +517,15 @@ namespace car_tuning.View
                 txtAceleracao.Text = dgvCarro.Rows[e.RowIndex].Cells[9].Value.ToString();
                 txtConsumo.Text = dgvCarro.Rows[e.RowIndex].Cells[10].Value.ToString();
                 txtRotacaoMax.Text = dgvCarro.Rows[e.RowIndex].Cells[11].Value.ToString();
+                try
+                {
+                    pBox.Image = Image.FromFile(@fp + txtPlaca.Text + ".jpg");
+                }
+                catch
+                {
+
+                }
+
             }
         }
 

@@ -110,5 +110,22 @@ namespace car_tuning.Modelo
             }
             return l;
         }
+
+
+        public Funcionario BuscaCPF(string cpf)
+        {
+            Funcionario f = new Funcionario();
+            DataBase bd = DataBase.GetInstance();
+            string qry = "select * from FUNCIONARIO where cpf = " + cpf;
+            DataSet ds = bd.ExecuteQuery(qry);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                DataRow dr = ds.Tables[0].Rows[0];
+                f.Cpf = (dr["cpf"].ToString());
+                f.Nome = dr["nome"].ToString();
+                f.Telefone = dr["telefone"].ToString();
+            }
+            return f;
+        }    
     }
 }

@@ -90,11 +90,8 @@
             this.iTalk_Label28 = new iTalk.iTalk_Label();
             this.iTalk_Label9 = new iTalk.iTalk_Label();
             this.txtTorque = new iTalk.iTalk_TextBox_Small();
-            this.lbAno = new iTalk.iTalk_Label();
             this.iTalk_Label37 = new iTalk.iTalk_Label();
-            this.lbMarca = new iTalk.iTalk_Label();
             this.iTalk_Label29 = new iTalk.iTalk_Label();
-            this.lbModelo = new iTalk.iTalk_Label();
             this.txtAceleracao = new iTalk.iTalk_TextBox_Small();
             this.iTalk_Label10 = new iTalk.iTalk_Label();
             this.iTalk_Label36 = new iTalk.iTalk_Label();
@@ -163,11 +160,8 @@
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label28);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label9);
             this.iTalk_GroupBox2.Controls.Add(this.txtTorque);
-            this.iTalk_GroupBox2.Controls.Add(this.lbAno);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label37);
-            this.iTalk_GroupBox2.Controls.Add(this.lbMarca);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label29);
-            this.iTalk_GroupBox2.Controls.Add(this.lbModelo);
             this.iTalk_GroupBox2.Controls.Add(this.txtAceleracao);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label10);
             this.iTalk_GroupBox2.Controls.Add(this.iTalk_Label36);
@@ -188,14 +182,14 @@
             this.iTalk_GroupBox2.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox2.Name = "iTalk_GroupBox2";
             this.iTalk_GroupBox2.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox2.Size = new System.Drawing.Size(1180, 703);
+            this.iTalk_GroupBox2.Size = new System.Drawing.Size(1180, 644);
             this.iTalk_GroupBox2.TabIndex = 9;
             // 
             // pBox
             // 
-            this.pBox.Location = new System.Drawing.Point(877, 31);
+            this.pBox.Location = new System.Drawing.Point(688, 39);
             this.pBox.Name = "pBox";
-            this.pBox.Size = new System.Drawing.Size(295, 178);
+            this.pBox.Size = new System.Drawing.Size(419, 268);
             this.pBox.TabIndex = 146;
             this.pBox.TabStop = false;
             // 
@@ -220,14 +214,14 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(616, 664);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(616, 596);
             this.iTalk_GroupBox1.TabIndex = 38;
             this.iTalk_GroupBox1.Text = "Carro";
             // 
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(231, 230);
+            this.txtModelo.Location = new System.Drawing.Point(252, 211);
             this.txtModelo.MaxLength = 20;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(155, 27);
@@ -236,7 +230,7 @@
             // NovaMarca
             // 
             this.NovaMarca.AutoSize = true;
-            this.NovaMarca.Location = new System.Drawing.Point(251, 263);
+            this.NovaMarca.Location = new System.Drawing.Point(272, 244);
             this.NovaMarca.Name = "NovaMarca";
             this.NovaMarca.Size = new System.Drawing.Size(110, 13);
             this.NovaMarca.TabIndex = 142;
@@ -251,7 +245,7 @@
             this.txtCpf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtCpf.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCpf.FormattingEnabled = true;
-            this.txtCpf.Location = new System.Drawing.Point(231, 96);
+            this.txtCpf.Location = new System.Drawing.Point(252, 77);
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(155, 26);
             this.txtCpf.TabIndex = 3;
@@ -264,7 +258,7 @@
             this.txtMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMarca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarca.FormattingEnabled = true;
-            this.txtMarca.Location = new System.Drawing.Point(231, 198);
+            this.txtMarca.Location = new System.Drawing.Point(252, 179);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(155, 26);
             this.txtMarca.TabIndex = 3;
@@ -276,7 +270,7 @@
             this.iTalk_Label24.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label24.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label24.Location = new System.Drawing.Point(188, 165);
+            this.iTalk_Label24.Location = new System.Drawing.Point(209, 146);
             this.iTalk_Label24.Name = "iTalk_Label24";
             this.iTalk_Label24.Size = new System.Drawing.Size(38, 21);
             this.iTalk_Label24.TabIndex = 141;
@@ -288,7 +282,7 @@
             this.iTalk_Label25.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label25.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label25.Location = new System.Drawing.Point(173, 198);
+            this.iTalk_Label25.Location = new System.Drawing.Point(194, 179);
             this.iTalk_Label25.Name = "iTalk_Label25";
             this.iTalk_Label25.Size = new System.Drawing.Size(53, 21);
             this.iTalk_Label25.TabIndex = 140;
@@ -297,7 +291,7 @@
             // txtAno
             // 
             this.txtAno.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAno.Location = new System.Drawing.Point(231, 165);
+            this.txtAno.Location = new System.Drawing.Point(252, 146);
             this.txtAno.MaxLength = 4;
             this.txtAno.Name = "txtAno";
             this.txtAno.Size = new System.Drawing.Size(155, 27);
@@ -309,7 +303,7 @@
             this.iTalk_Label26.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label26.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label26.Location = new System.Drawing.Point(163, 231);
+            this.iTalk_Label26.Location = new System.Drawing.Point(184, 212);
             this.iTalk_Label26.Name = "iTalk_Label26";
             this.iTalk_Label26.Size = new System.Drawing.Size(63, 21);
             this.iTalk_Label26.TabIndex = 139;
@@ -320,7 +314,7 @@
             this.txtPlaca.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPlaca.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPlaca.ForeColor = System.Drawing.Color.Black;
-            this.txtPlaca.Location = new System.Drawing.Point(231, 131);
+            this.txtPlaca.Location = new System.Drawing.Point(252, 112);
             this.txtPlaca.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlaca.Mask = "aaa-0000";
             this.txtPlaca.Name = "txtPlaca";
@@ -334,7 +328,7 @@
             this.iTalk_Label27.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label27.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label27.Location = new System.Drawing.Point(183, 131);
+            this.iTalk_Label27.Location = new System.Drawing.Point(204, 112);
             this.iTalk_Label27.Name = "iTalk_Label27";
             this.iTalk_Label27.Size = new System.Drawing.Size(46, 21);
             this.iTalk_Label27.TabIndex = 138;
@@ -346,7 +340,7 @@
             this.iTalk_Label42.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label42.Location = new System.Drawing.Point(189, 98);
+            this.iTalk_Label42.Location = new System.Drawing.Point(210, 79);
             this.iTalk_Label42.Name = "iTalk_Label42";
             this.iTalk_Label42.Size = new System.Drawing.Size(37, 21);
             this.iTalk_Label42.TabIndex = 119;
@@ -355,7 +349,7 @@
             // txtPesquisa
             // 
             this.txtPesquisa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisa.Location = new System.Drawing.Point(104, 370);
+            this.txtPesquisa.Location = new System.Drawing.Point(113, 314);
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(483, 23);
             this.txtPesquisa.TabIndex = 12;
@@ -367,7 +361,7 @@
             this.btBuscarCarro.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btBuscarCarro.Image = null;
             this.btBuscarCarro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btBuscarCarro.Location = new System.Drawing.Point(14, 369);
+            this.btBuscarCarro.Location = new System.Drawing.Point(23, 313);
             this.btBuscarCarro.Margin = new System.Windows.Forms.Padding(2);
             this.btBuscarCarro.Name = "btBuscarCarro";
             this.btBuscarCarro.Size = new System.Drawing.Size(85, 24);
@@ -394,7 +388,7 @@
             this.aceleracao,
             this.consumo,
             this.rotacaoMax});
-            this.dgvCarro.Location = new System.Drawing.Point(14, 398);
+            this.dgvCarro.Location = new System.Drawing.Point(23, 342);
             this.dgvCarro.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCarro.Name = "dgvCarro";
             this.dgvCarro.ReadOnly = true;
@@ -490,7 +484,7 @@
             this.btnBuscaIMG.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnBuscaIMG.Image = null;
             this.btnBuscaIMG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscaIMG.Location = new System.Drawing.Point(922, 229);
+            this.btnBuscaIMG.Location = new System.Drawing.Point(922, 323);
             this.btnBuscaIMG.Name = "btnBuscaIMG";
             this.btnBuscaIMG.Size = new System.Drawing.Size(185, 35);
             this.btnBuscaIMG.TabIndex = 0;
@@ -862,19 +856,6 @@
             this.txtTorque.Visible = false;
             this.txtTorque.TextChanged += new System.EventHandler(this.txtPeso_TextChanged);
             // 
-            // lbAno
-            // 
-            this.lbAno.AutoSize = true;
-            this.lbAno.BackColor = System.Drawing.Color.Transparent;
-            this.lbAno.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.lbAno.Location = new System.Drawing.Point(728, 142);
-            this.lbAno.Name = "lbAno";
-            this.lbAno.Size = new System.Drawing.Size(38, 21);
-            this.lbAno.TabIndex = 0;
-            this.lbAno.Text = "Ano";
-            this.lbAno.Visible = false;
-            // 
             // iTalk_Label37
             // 
             this.iTalk_Label37.AutoSize = true;
@@ -888,19 +869,6 @@
             this.iTalk_Label37.Text = "seg";
             this.iTalk_Label37.Visible = false;
             // 
-            // lbMarca
-            // 
-            this.lbMarca.AutoSize = true;
-            this.lbMarca.BackColor = System.Drawing.Color.Transparent;
-            this.lbMarca.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.lbMarca.Location = new System.Drawing.Point(711, 87);
-            this.lbMarca.Name = "lbMarca";
-            this.lbMarca.Size = new System.Drawing.Size(76, 25);
-            this.lbMarca.TabIndex = 0;
-            this.lbMarca.Text = "Marca";
-            this.lbMarca.Visible = false;
-            // 
             // iTalk_Label29
             // 
             this.iTalk_Label29.AutoSize = true;
@@ -913,19 +881,6 @@
             this.iTalk_Label29.TabIndex = 128;
             this.iTalk_Label29.Text = "Consumo";
             this.iTalk_Label29.Visible = false;
-            // 
-            // lbModelo
-            // 
-            this.lbModelo.AutoSize = true;
-            this.lbModelo.BackColor = System.Drawing.Color.Transparent;
-            this.lbModelo.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbModelo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.lbModelo.Location = new System.Drawing.Point(702, 117);
-            this.lbModelo.Name = "lbModelo";
-            this.lbModelo.Size = new System.Drawing.Size(96, 25);
-            this.lbModelo.TabIndex = 0;
-            this.lbModelo.Text = "Modelo";
-            this.lbModelo.Visible = false;
             // 
             // txtAceleracao
             // 
@@ -1231,7 +1186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 766);
+            this.ClientSize = new System.Drawing.Size(1358, 705);
             this.ControlBox = false;
             this.Controls.Add(this.iTalk_GroupBox2);
             this.Controls.Add(this.btPesquisar);
@@ -1270,9 +1225,6 @@
         private iTalk.iTalk_Label iTalk_Label12;
         private iTalk.iTalk_Label iTalk_Label11;
         private iTalk.iTalk_Label iTalk_Label9;
-        private iTalk.iTalk_Label lbAno;
-        private iTalk.iTalk_Label lbMarca;
-        private iTalk.iTalk_Label lbModelo;
         private iTalk.iTalk_Label iTalk_Label10;
         private iTalk.iTalk_Label iTalk_Label21;
         private iTalk.iTalk_Label iTalk_Label17;

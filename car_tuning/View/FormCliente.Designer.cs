@@ -72,7 +72,7 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1030, 588);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(1161, 644);
             this.iTalk_GroupBox1.TabIndex = 3;
             this.iTalk_GroupBox1.Text = "Clientes";
             // 
@@ -124,12 +124,12 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvCliente.Location = new System.Drawing.Point(435, 79);
+            this.dgvCliente.Location = new System.Drawing.Point(435, 106);
             this.dgvCliente.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.RowTemplate.Height = 24;
-            this.dgvCliente.Size = new System.Drawing.Size(576, 470);
+            this.dgvCliente.Size = new System.Drawing.Size(682, 520);
             this.dgvCliente.TabIndex = 28;
             this.dgvCliente.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentDoubleClick);
             // 
@@ -328,7 +328,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1211, 628);
+            this.ClientSize = new System.Drawing.Size(1352, 700);
             this.ControlBox = false;
             this.Controls.Add(this.iTalk_GroupBox1);
             this.Controls.Add(this.btPesquisar);

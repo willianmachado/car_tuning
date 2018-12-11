@@ -45,7 +45,7 @@ namespace car_tuning
                 LabelFunc.Visible = false;
                 lbCpfCliente.Visible = false;
                 lbCpfFunc.Visible = false;
-                lbPlacaCarro.Visible = false;
+                lbModelo.Visible = false;
             }
             else if (estado == false)
             {
@@ -63,7 +63,7 @@ namespace car_tuning
                 LabelFunc.Visible = true;
                 lbCpfCliente.Visible = true;
                 lbCpfFunc.Visible = true;
-                lbPlacaCarro.Visible = true;
+                lbModelo.Visible = true;
             }
             
         }
@@ -153,7 +153,7 @@ namespace car_tuning
 
         private void dgvPecasServ_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if(txtQuant.Text != "")
+            if(txtPesoIni.Text != "" && txtAceleIni.Text != "" && txtPotenciaIni.Text != "" && txtConsumoIni.Text != "" && txtRotMaxIni.Text != "" && txtTorqueIni.Text != "" && txtVeloMaxIni.Text != "")
             {
                 
                 pecas = pecasDAO.Listar(dgvPecasServ.Rows[e.RowIndex].Cells[0].Value.ToString());
@@ -389,6 +389,7 @@ namespace car_tuning
         private Carro getDTOCar()
         {
             Carro c = new Carro();
+            c.Placa = txtCarro.Text;
             c.Peso = int.Parse(txtPesoFin.Text);
             c.Potencia = int.Parse(txtPotenciaFin.Text);
             c.VelocidadeMax = int.Parse(txtVelocMaxFin.Text);
@@ -742,14 +743,30 @@ namespace car_tuning
 
         private void txtCarro_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CarroDAO carroDAO = new CarroDAO();
-            //Carro carro = carroDAO.
+            try
+            {
+                CarroDAO carroDAO = new CarroDAO();
+                Carro carro = carroDAO.BuscaCarro(txtCarro.Text);
+                lbMarca.Text = carro.Marca;
+                lbModelo.Text = carro.Modelo;
+            }
+            catch
+            {
+
+            }
+            
+
         }
 
         private void txtFunc_SelectedIndexChanged(object sender, EventArgs e)
         {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            Funcionario funcionario = funcionarioDAO.BuscaCPF(txtFunc.Text);
+            lbCpfFunc.Text = funcionario.Nome;
 
         }
+
+        
     }
 
 

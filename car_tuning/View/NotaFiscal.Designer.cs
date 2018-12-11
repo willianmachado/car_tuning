@@ -37,6 +37,7 @@
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscaNota = new iTalk.iTalk_Button_2();
             this.btSair = new Ambiance.Ambiance_Button_1();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -82,6 +83,9 @@
             // crvNotaF
             // 
             this.crvNotaF.ActiveViewIndex = -1;
+            this.crvNotaF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.crvNotaF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crvNotaF.Cursor = System.Windows.Forms.Cursors.Default;
             this.crvNotaF.Location = new System.Drawing.Point(-1, 58);
@@ -92,7 +96,7 @@
             // 
             // txtBusca
             // 
-            this.txtBusca.Location = new System.Drawing.Point(27, 21);
+            this.txtBusca.Location = new System.Drawing.Point(231, 22);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(183, 20);
             this.txtBusca.TabIndex = 10;
@@ -104,7 +108,7 @@
             this.btnBuscaNota.ForeColor = System.Drawing.Color.White;
             this.btnBuscaNota.Image = null;
             this.btnBuscaNota.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscaNota.Location = new System.Drawing.Point(234, 12);
+            this.btnBuscaNota.Location = new System.Drawing.Point(459, 11);
             this.btnBuscaNota.Name = "btnBuscaNota";
             this.btnBuscaNota.Size = new System.Drawing.Size(120, 40);
             this.btnBuscaNota.TabIndex = 11;
@@ -126,11 +130,22 @@
             this.btSair.TextAlignment = System.Drawing.StringAlignment.Center;
             this.btSair.Click += new System.EventHandler(this.btSair_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Digite o Codigo do Serviço";
+            // 
             // NotaFiscal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 734);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscaNota);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.btSair);
@@ -140,7 +155,7 @@
             this.MinimumSize = new System.Drawing.Size(94, 32);
             this.Name = "NotaFiscal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "monoFlat_ThemeContainer1";
+            this.Text = "Nota Fiscal";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,6 +172,7 @@
         private iTalk.iTalk_Button_2 btnBuscaNota;
         private System.Windows.Forms.TextBox txtBusca;
         private Ambiance.Ambiance_Button_1 btSair;
+        private System.Windows.Forms.Label label1;
     }
 }
 
